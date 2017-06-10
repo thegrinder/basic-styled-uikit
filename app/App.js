@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import theme from './theme';
 import Button from 'components/Button/Button';
+import theme from './theme';
 
 class App extends Component {
   render() {
