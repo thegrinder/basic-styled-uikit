@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 
-const getBtnTypes = props => props.theme.uiKit.buttons.btnTypes;
+const getBtnTypes = props => props.theme.uiKit.button.btnTypes;
 const getBtnType = (props, buttonState) => getBtnTypes(props)[props.btnType][buttonState];
 
 export const getBtnTypeStyle = buttonState => (
@@ -11,8 +11,8 @@ export const getBtnTypeStyle = buttonState => (
   `
 );
 
-const getBtnSizes = props => props.theme.uiKit.buttons.btnSizes;
-const getBtnSize = (props, buttonSize) => getBtnSizes(props)[props.btnSize];
+const getBtnSizes = props => props.theme.uiKit.button.btnSizes;
+const getBtnSize = props => getBtnSizes(props)[props.btnSize];
 
 export const getBtnSizeStyle = css`
   padding: ${props => getBtnSize(props).padding};

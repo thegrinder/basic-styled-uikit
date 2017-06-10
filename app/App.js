@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { ThemeProvider } from 'styled-components';
 
 import Button from 'components/Button/Button';
-import theme from './theme';
+import Link from 'components/Link/Link';
+import theme from './theme/theme';
 
 class App extends Component {
   render() {
@@ -20,6 +21,10 @@ class App extends Component {
             <Button btnType="default" btnSize="small">Small</Button>
             <Button btnType="primary" btnSize="default">Default</Button>
             <Button btnType="secondary" btnSize="large">Large</Button>
+          </div>
+          <br />
+          <div>
+            <Link>Link</Link>
           </div>
         </div>
       </ThemeProvider>
