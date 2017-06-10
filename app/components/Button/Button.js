@@ -26,17 +26,21 @@ const Button = styled.button`
   color: #222;
   border-width: 1px;
   border-style: solid;
-  ${getBtnStateStyle('default', 'regular')}
+  ${getBtnStateStyle('regular')}
   &:hover,
   &:focus {
-    ${getBtnStateStyle('default', 'hover')}
+    ${getBtnStateStyle('hover')}
   }
   &:active {
-    ${getBtnStateStyle('default', 'pressed')}
+    ${getBtnStateStyle('pressed')}
   }
   &:disabled {
-    ${getBtnStateStyle('default', 'disabled')}
+    ${getBtnStateStyle('disabled')}
   }
 `;
+
+Button.defaultProps = {
+  kind: 'default',
+};
 
 export default Button;

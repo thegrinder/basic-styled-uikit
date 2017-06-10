@@ -8,7 +8,12 @@ class App extends Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
-        <Button>Button</Button>
+        <div>
+          <Button kind="default">Default</Button>
+          <Button kind="primary">Primary</Button>
+          <Button kind="secondary">Secondary</Button>
+          <Button kind="danger">Danger</Button>
+        </div>
       </ThemeProvider>
     );
   }
