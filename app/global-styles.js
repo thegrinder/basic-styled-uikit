@@ -9,6 +9,13 @@ injectGlobal`
   body {
     width: 100%;
     height: 100%;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+  }
+  button {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+  }
+  a {
+    font-weight: 300;
   }
 `;

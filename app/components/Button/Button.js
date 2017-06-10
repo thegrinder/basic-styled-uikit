@@ -5,9 +5,6 @@ const Button = styled.button`
   margin: 0;
   border: none;
   overflow: visible;
-  font: inherit;
-  color: inherit;
-  text-transform: none;
   display: inline-block;
   box-sizing: border-box;
   vertical-align: middle;
@@ -19,8 +16,6 @@ const Button = styled.button`
   touch-action: manipulation;
   cursor: pointer;
   outline: none;
-  background-color: transparent;
-  color: #222;
   border-width: 1px;
   border-style: solid;
   ${getBtnSizeStyle}
