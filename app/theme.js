@@ -17,11 +17,6 @@ const theme = {
           bgColor: 'transparent',
           borderColor: '#999',
         },
-        disabled: {
-          color: '#999',
-          bgColor: 'transparent',
-          borderColor: '#e5e5e5',
-        },
       },
       primary: {
         regular: {
@@ -38,11 +33,6 @@ const theme = {
           color: '#fff',
           bgColor: '#0e6dcd',
           borderColor: 'transparent',
-        },
-        disabled: {
-          color: '#999',
-          bgColor: 'transparent',
-          borderColor: '#e5e5e5',
         },
       },
       secondary: {
@@ -61,11 +51,6 @@ const theme = {
           bgColor: '#080808',
           borderColor: 'transparent',
         },
-        disabled: {
-          color: '#999',
-          bgColor: 'transparent',
-          borderColor: '#e5e5e5',
-        },
       },
       danger: {
         regular: {
@@ -82,11 +67,6 @@ const theme = {
           color: '#fff',
           bgColor: '#ec2147',
           borderColor: 'transparent',
-        },
-        disabled: {
-          color: '#999',
-          bgColor: 'transparent',
-          borderColor: '#e5e5e5',
         },
       },
     },

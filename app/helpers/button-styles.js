@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 
-const getBtnState = (props, buttonState) => props.theme.uiKit.buttons[props.kind][buttonState];
+const getBtnState = (props, buttonState) => props.theme.uiKit.buttons[props.btnType][buttonState];
 
 export const getBtnStateStyle = buttonState => (
   css`

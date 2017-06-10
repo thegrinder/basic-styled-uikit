@@ -9,10 +9,10 @@ class App extends Component {
     return (
       <ThemeProvider theme={theme}>
         <div>
-          <Button kind="default">Default</Button>
-          <Button kind="primary">Primary</Button>
-          <Button kind="secondary">Secondary</Button>
-          <Button kind="danger">Danger</Button>
+          <Button btnType="default">Default</Button>
+          <Button btnType="primary">Primary</Button>
+          <Button btnType="secondary">Secondary</Button>
+          <Button btnType="danger">Danger</Button>
         </div>
       </ThemeProvider>
     );

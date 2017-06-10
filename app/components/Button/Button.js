@@ -35,12 +35,14 @@ const Button = styled.button`
     ${getBtnStateStyle('pressed')}
   }
   &:disabled {
-    ${getBtnStateStyle('disabled')}
+    ${getBtnStateStyle('regular')}
+    opacity: .6;
+    cursor: default;
   }
 `;
 
 Button.defaultProps = {
-  kind: 'default',
+  btnType: 'default',
 };
 
 export default Button;
