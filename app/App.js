@@ -24,7 +24,9 @@ class App extends Component {
           </div>
           <br />
           <div>
-            <Link>Link</Link>
+            <Link linkType="default">Default Link</Link>
+            <br />
+            <Link linkType="muted">Muted Link</Link>
           </div>
         </div>
       </ThemeProvider>
