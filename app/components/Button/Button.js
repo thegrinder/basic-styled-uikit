@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { getBtnStateStyle } from 'helpers/button-styles';
+import { getBtnTypeStyle, getBtnSizeStyle } from 'helpers/button-styles';
 
 const Button = styled.button`
   margin: 0;
@@ -10,10 +10,7 @@ const Button = styled.button`
   text-transform: none;
   display: inline-block;
   box-sizing: border-box;
-  padding: 0 30px;
   vertical-align: middle;
-  font-size: 14px;
-  line-height: 38px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -26,16 +23,17 @@ const Button = styled.button`
   color: #222;
   border-width: 1px;
   border-style: solid;
-  ${getBtnStateStyle('regular')}
+  ${getBtnSizeStyle}
+  ${getBtnTypeStyle('regular')}
   &:hover,
   &:focus {
-    ${getBtnStateStyle('hover')}
+    ${getBtnTypeStyle('hover')}
   }
   &:active {
-    ${getBtnStateStyle('pressed')}
+    ${getBtnTypeStyle('pressed')}
   }
   &:disabled {
-    ${getBtnStateStyle('regular')}
+    ${getBtnTypeStyle('regular')}
     opacity: .6;
     cursor: default;
   }
@@ -43,6 +41,7 @@ const Button = styled.button`
 
 Button.defaultProps = {
   btnType: 'default',
+  btnSize: 'default',
 };
 
 export default Button;
