@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components';
 
 import Button from 'components/Button/Button';
 import Link from 'components/Link/Link';
+import Spinner from 'components/Spinner/Spinner';
 import theme from './theme/theme';
 
 class App extends Component {
@@ -28,6 +29,7 @@ class App extends Component {
             <br />
             <Link linkType="muted">Muted Link</Link>
           </div>
+          <Spinner color="#ddd"/>
         </div>
       </ThemeProvider>
     );
