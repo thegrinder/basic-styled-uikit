@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { oneOf } from 'prop-types';
 import { getLinkTypeStyle } from 'helpers/link-styles';
 
 const Link = styled.a`
@@ -11,6 +12,10 @@ const Link = styled.a`
   }
   ${getLinkTypeStyle}
 `;
+
+Link.propTypes = {
+  linkType: oneOf(['default', 'muted']),
+};
 
 Link.defaultProps = {
   linkType: 'muted',

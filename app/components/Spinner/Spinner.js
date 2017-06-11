@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { number, string } from 'prop-types';
 
 const loading = keyframes`
   0% { transform: rotate(0deg); }
@@ -16,6 +17,11 @@ const Spinner = styled.span`
   display: inline-block;
   box-sizing: border-box;
 `;
+
+Spinner.propTypes = {
+  size: number,
+  color: string,
+};
 
 Spinner.defaultProps = {
   size: 20,

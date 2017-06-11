@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { oneOf } from 'prop-types';
 import { getBtnTypeStyle, getBtnSizeStyle } from 'helpers/button-styles';
 
 const Button = styled.button`
@@ -33,6 +34,11 @@ const Button = styled.button`
     cursor: default;
   }
 `;
+
+Button.propTypes = {
+  btnType: oneOf(['default', 'primary', 'secondary', 'danger']),
+  btnSize: oneOf(['small', 'default', 'large']),
+};
 
 Button.defaultProps = {
   btnType: 'default',

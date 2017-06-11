@@ -26,6 +26,7 @@
     "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
+    "prop-types": "^15.5.10",
     "babel-preset-env": "^1.5.1",
     "html-webpack-plugin": "^2.28.0",
     "react": "^15.5.4",
