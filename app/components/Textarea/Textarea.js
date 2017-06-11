@@ -2,38 +2,37 @@ import styled from 'styled-components';
 import { bool } from 'prop-types';
 import { getInputTypeStyle } from 'helpers/form-styles';
 
-const Input = styled.input`
-  vertical-align: middle;
-  display: inline-block;
+const Textarea = styled.textarea`
   max-width: 100%;
   width: 100%;
+  border: 0 none;
   padding: 0 10px;
   transition: .2s ease-in-out;
-  transition-property: color,background-color,border-color;
-  -webkit-appearance: none;
-  overflow: visible;
+  transition-property: color,background-color,border;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  vertical-align: top;
+  overflow: auto;
   box-sizing: border-box;
   margin: 0;
   border-radius: 0;
-  touch-action: manipulation;
   border-width: 1px;
   border-style: solid;
   background: #fff;
-  height: 40px;
   ${getInputTypeStyle('regular')}
   &:focus {
-    ${getInputTypeStyle('focus')}
     outline: none;
     background-color: #fff;
+    ${getInputTypeStyle('focus')}
   }
 `;
 
-Input.propTypes = {
+Textarea.propTypes = {
   isValid: bool,
 };
 
-Input.defaultProps = {
+Textarea.defaultProps = {
   isValid: true,
 };
 
-export default Input;
+export default Textarea;

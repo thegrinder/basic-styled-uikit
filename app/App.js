@@ -5,6 +5,7 @@ import Button from 'components/Button/Button';
 import Link from 'components/Link/Link';
 import Spinner from 'components/Spinner/Spinner';
 import Input from 'components/Input/Input';
+import Textarea from 'components/Textarea/Textarea';
 import theme from './theme/theme';
 
 class App extends Component {
@@ -31,10 +32,13 @@ class App extends Component {
             <Spinner color="#ddd" size={30} />
           </div>
           <div style={{ width: '50%', marginBottom: '20px' }}>
-            <Input isValid={true} value="Valid"/>
+            <Input isValid={true} value="Valid" />
           </div>
           <div style={{ width: '50%', marginBottom: '20px' }}>
-            <Input isValid={false} value="Invalid"/>
+            <Input isValid={false} value="Invalid" />
+          </div>
+          <div style={{ width: '50%', marginBottom: '20px' }}>
+            <Textarea rows={5}/>
           </div>
         </div>
       </ThemeProvider>

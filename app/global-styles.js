@@ -7,20 +7,21 @@ injectGlobal`
     height: 100%;
   }
   body {
+    font-family: 'Open Sans', sans-serif;
     width: 100%;
     height: 100%;
-    font-family: 'Open Sans', sans-serif;
   }
   button {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
   }
   a {
+    font-family: 'Open Sans', sans-serif;
     font-weight: 300;
   }
-  input {
+  input, textarea {
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
     font-weight: 300;
+    font-size: 16px;
   }
 `;
