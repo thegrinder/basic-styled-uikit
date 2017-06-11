@@ -18,4 +18,9 @@ injectGlobal`
   a {
     font-weight: 300;
   }
+  input {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+  }
 `;
