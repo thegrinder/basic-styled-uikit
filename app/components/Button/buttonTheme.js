@@ -11,7 +11,7 @@ const buttonTheme = {
         backgroundColor: 'transparent',
         borderColor: '#b2b2b2',
       },
-      pressed: {
+      active: {
         color: '#222',
         backgroundColor: 'transparent',
         borderColor: '#999',
@@ -28,7 +28,7 @@ const buttonTheme = {
         backgroundColor: '#0f7ae5',
         borderColor: 'transparent',
       },
-      pressed: {
+      active: {
         color: '#fff',
         backgroundColor: '#0e6dcd',
         borderColor: 'transparent',
@@ -45,7 +45,7 @@ const buttonTheme = {
         backgroundColor: '#151515',
         borderColor: 'transparent',
       },
-      pressed: {
+      active: {
         color: '#fff',
         backgroundColor: '#080808',
         borderColor: 'transparent',
@@ -62,7 +62,7 @@ const buttonTheme = {
         backgroundColor: '#ee395b',
         borderColor: 'transparent',
       },
-      pressed: {
+      active: {
         color: '#fff',
         backgroundColor: '#ec2147',
         borderColor: 'transparent',

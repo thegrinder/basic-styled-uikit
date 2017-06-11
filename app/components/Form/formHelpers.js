@@ -8,8 +8,9 @@ const getInputType = ({ theme, isValid }, state) => {
     : inputTypes.invalid;
 };
 
-export const getInputTypeStyle = state => (
-  css`
-    ${getStyle(getInputType, state)}
-  `
-);
+const getInputTypeStyle = state => css`
+  ${getStyle(getInputType, state)}
+`;
+
+export const inputNormalStyles = getInputTypeStyle('normal');
+export const inputActiveStyles = getInputTypeStyle('active');

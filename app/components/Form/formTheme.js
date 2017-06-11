@@ -5,7 +5,7 @@ const formTheme = {
         borderColor: '#e5e5e5',
         color: '#666',
       },
-      focus: {
+      active: {
         borderColor: '#1e87f0',
         color: '#666',
       },

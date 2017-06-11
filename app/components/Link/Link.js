@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 import { oneOf } from 'prop-types';
-import { getLinkTypeStyle } from './linkHelpers';
+import { linkNormalStyles, linkHoverStyles } from './linkHelpers';
 
 const Link = styled.a`
   cursor: pointer;
   touch-action: manipulation;
   text-decoration: none;
-  ${getLinkTypeStyle('normal')}
+  ${linkNormalStyles}
   &:hover {
-    ${getLinkTypeStyle('hover')}
+    ${linkHoverStyles}
     outline: none;
     text-decoration: underline;
   }

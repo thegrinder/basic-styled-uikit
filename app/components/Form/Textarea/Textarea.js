@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { bool } from 'prop-types';
-import { getInputTypeStyle } from '../formHelpers';
+import { inputNormalStyles, inputActiveStyles } from '../formHelpers';
 
 const Textarea = styled.textarea`
   max-width: 100%;
@@ -19,11 +19,11 @@ const Textarea = styled.textarea`
   border-width: 1px;
   border-style: solid;
   background: #fff;
-  ${getInputTypeStyle('normal')}
+  ${inputNormalStyles}
   &:focus {
     outline: none;
     background-color: #fff;
-    ${getInputTypeStyle('focus')}
+    ${inputActiveStyles}
   }
 `;
 

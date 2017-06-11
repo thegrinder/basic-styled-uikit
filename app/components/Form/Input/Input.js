@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { bool } from 'prop-types';
-import { getInputTypeStyle } from '../formHelpers';
+import { inputNormalStyles, inputActiveStyles } from '../formHelpers';
 
 const Input = styled.input`
   vertical-align: middle;
@@ -20,9 +20,9 @@ const Input = styled.input`
   border-style: solid;
   background: #fff;
   height: 40px;
-  ${getInputTypeStyle('normal')}
+  ${inputNormalStyles}
   &:focus {
-    ${getInputTypeStyle('focus')}
+    ${inputActiveStyles}
     outline: none;
     background-color: #fff;
   }
