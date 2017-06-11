@@ -6,6 +6,7 @@ import Link from 'components/Link/Link';
 import Spinner from 'components/Spinner/Spinner';
 import Input from 'components/Input/Input';
 import Textarea from 'components/Textarea/Textarea';
+import Notification from 'components/Notification/Notification';
 import theme from './theme/theme';
 
 class App extends Component {
@@ -39,6 +40,13 @@ class App extends Component {
           </div>
           <div style={{ width: '50%', marginBottom: '20px' }}>
             <Textarea rows={5}/>
+          </div>
+          <div style={{ width: '50%', marginBottom: '20px' }}>
+            <Notification status="default">Default</Notification>
+            <Notification status="primary">Primary</Notification>
+            <Notification status="warning">Warning</Notification>
+            <Notification status="success">Success</Notification>
+            <Notification status="danger">Danger</Notification>
           </div>
         </div>
       </ThemeProvider>
