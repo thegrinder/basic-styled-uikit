@@ -1,7 +1,7 @@
 const formTheme = {
   inputTypes: {
     valid: {
-      regular: {
+      normal: {
         borderColor: '#e5e5e5',
         color: '#666',
       },

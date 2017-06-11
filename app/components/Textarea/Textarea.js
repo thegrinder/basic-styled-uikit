@@ -19,7 +19,7 @@ const Textarea = styled.textarea`
   border-width: 1px;
   border-style: solid;
   background: #fff;
-  ${getInputTypeStyle('regular')}
+  ${getInputTypeStyle('normal')}
   &:focus {
     outline: none;
     background-color: #fff;

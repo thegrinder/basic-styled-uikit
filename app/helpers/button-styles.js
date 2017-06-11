@@ -1,21 +1,16 @@
 import { css } from 'styled-components';
+import { getStyle } from './utils';
 
-const getBtnTypes = props => props.theme.uiKit.button.btnTypes;
-const getBtnType = (props, buttonState) => getBtnTypes(props)[props.btnType][buttonState];
+const getBtnTypeStyle = ({ theme, btnType }, state) => theme.uiKit.button.btnTypes[btnType][state];
 
-export const getBtnTypeStyle = buttonState => (
+export const getBtnTypeStyles = state => (
   css`
-    color: ${props => getBtnType(props, buttonState).color};
-    background-color: ${props => getBtnType(props, buttonState).bgColor};
-    border-color: ${props => getBtnType(props, buttonState).borderColor};
+    ${getStyle(getBtnTypeStyle, state)};
   `
 );
 
-const getBtnSizes = props => props.theme.uiKit.button.btnSizes;
-const getBtnSize = props => getBtnSizes(props)[props.btnSize];
+const getBtnSizeStyle = ({ theme, btnSize }) => theme.uiKit.button.btnSizes[btnSize];
 
-export const getBtnSizeStyle = css`
-  padding: ${props => getBtnSize(props).padding};
-  line-height: ${props => getBtnSize(props).lineHeight};
-  font-size: ${props => getBtnSize(props).fontSize};;
+export const getBtnSizeStyles = css`
+  ${getStyle(getBtnSizeStyle)};
 `;

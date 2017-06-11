@@ -1,15 +1,15 @@
 import { css } from 'styled-components';
+import { getStyle } from './utils';
 
-const getInputTypes = props => props.theme.uiKit.form.inputTypes;
-const getInputType = (props, formState) => (
-  props.isValid
-    ? getInputTypes(props).valid[formState]
-    : getInputTypes(props).invalid
-);
+const getInputType = ({ theme, isValid }, state) => {
+  const { inputTypes } = theme.uiKit.form;
+  return isValid
+    ? inputTypes.valid[state]
+    : inputTypes.invalid;
+};
 
-export const getInputTypeStyle = formState => (
+export const getInputTypeStyle = state => (
   css`
-    border-color: ${props => getInputType(props, formState).borderColor};
-    color: ${props => getInputType(props, formState).color};
+    ${getStyle(getInputType, state)}
   `
 );

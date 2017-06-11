@@ -1,14 +1,14 @@
-import buttonTheme from './button-theme';
-import linkTheme from './link-theme';
-import formTheme from './form-theme';
-import notificationTheme from './notification-theme';
+import button from './button-theme';
+import link from './link-theme';
+import form from './form-theme';
+import notification from './notification-theme';
 
 const theme = {
   uiKit: {
-    button: buttonTheme,
-    link: linkTheme,
-    form: formTheme,
-    notification: notificationTheme,
+    button,
+    link,
+    form,
+    notification,
   },
 };
 

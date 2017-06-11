@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { oneOf } from 'prop-types';
-import { getBtnTypeStyle, getBtnSizeStyle } from 'helpers/button-styles';
+import { getBtnTypeStyles, getBtnSizeStyles } from 'helpers/button-styles';
 
 const Button = styled.button`
   margin: 0;
@@ -19,17 +19,17 @@ const Button = styled.button`
   outline: none;
   border-width: 1px;
   border-style: solid;
-  ${getBtnSizeStyle}
-  ${getBtnTypeStyle('regular')}
+  ${getBtnSizeStyles}
+  ${getBtnTypeStyles('normal')}
   &:hover,
   &:focus {
-    ${getBtnTypeStyle('hover')}
+    ${getBtnTypeStyles('hover')}
   }
   &:active {
-    ${getBtnTypeStyle('pressed')}
+    ${getBtnTypeStyles('pressed')}
   }
   &:disabled {
-    ${getBtnTypeStyle('regular')}
+    ${getBtnTypeStyles('normal')}
     opacity: .6;
     cursor: default;
   }

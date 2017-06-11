@@ -1,12 +1,20 @@
 const linkTheme = {
   linkTypes: {
     default: {
-      color: '#1e87f0',
-      hoverColor: '#0f6ecd',
+      normal: {
+        color: '#1e87f0',
+      },
+      hover: {
+        color: '#0f6ecd',
+      },
     },
     muted: {
-      color: '#999',
-      hoverColor: '#666',
+      normal: {
+        color: '#999',
+      },
+      hover: {
+        color: '#666',
+      },
     },
   },
 };

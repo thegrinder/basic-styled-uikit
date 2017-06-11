@@ -6,11 +6,12 @@ const Link = styled.a`
   cursor: pointer;
   touch-action: manipulation;
   text-decoration: none;
+  ${getLinkTypeStyle('normal')}
   &:hover {
+    ${getLinkTypeStyle('hover')}
     outline: none;
     text-decoration: underline;
   }
-  ${getLinkTypeStyle}
 `;
 
 Link.propTypes = {

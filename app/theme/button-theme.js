@@ -1,70 +1,70 @@
 const buttonTheme = {
   btnTypes: {
     default: {
-      regular: {
+      normal: {
         color: '#222',
-        bgColor: 'transparent',
+        backgroundColor: 'transparent',
         borderColor: '#e5e5e5',
       },
       hover: {
         color: '#222',
-        bgColor: 'transparent',
+        backgroundColor: 'transparent',
         borderColor: '#b2b2b2',
       },
       pressed: {
         color: '#222',
-        bgColor: 'transparent',
+        backgroundColor: 'transparent',
         borderColor: '#999',
       },
     },
     primary: {
-      regular: {
+      normal: {
         color: '#fff',
-        bgColor: '#1e87f0',
+        backgroundColor: '#1e87f0',
         borderColor: 'transparent',
       },
       hover: {
         color: '#fff',
-        bgColor: '#0f7ae5',
+        backgroundColor: '#0f7ae5',
         borderColor: 'transparent',
       },
       pressed: {
         color: '#fff',
-        bgColor: '#0e6dcd',
+        backgroundColor: '#0e6dcd',
         borderColor: 'transparent',
       },
     },
     secondary: {
-      regular: {
+      normal: {
         color: '#fff',
-        bgColor: '#222',
+        backgroundColor: '#222',
         borderColor: 'transparent',
       },
       hover: {
         color: '#fff',
-        bgColor: '#151515',
+        backgroundColor: '#151515',
         borderColor: 'transparent',
       },
       pressed: {
         color: '#fff',
-        bgColor: '#080808',
+        backgroundColor: '#080808',
         borderColor: 'transparent',
       },
     },
     danger: {
-      regular: {
+      normal: {
         color: '#fff',
-        bgColor: '#f0506e',
+        backgroundColor: '#f0506e',
         borderColor: 'transparent',
       },
       hover: {
         color: '#fff',
-        bgColor: '#ee395b',
+        backgroundColor: '#ee395b',
         borderColor: 'transparent',
       },
       pressed: {
         color: '#fff',
-        bgColor: '#ec2147',
+        backgroundColor: '#ec2147',
         borderColor: 'transparent',
       },
     },

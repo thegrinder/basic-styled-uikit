@@ -20,7 +20,7 @@ const Input = styled.input`
   border-style: solid;
   background: #fff;
   height: 40px;
-  ${getInputTypeStyle('regular')}
+  ${getInputTypeStyle('normal')}
   &:focus {
     ${getInputTypeStyle('focus')}
     outline: none;

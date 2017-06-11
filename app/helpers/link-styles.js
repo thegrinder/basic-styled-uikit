@@ -1,11 +1,10 @@
 import { css } from 'styled-components';
+import { getStyle } from './utils';
 
-const getLinkTypes = props => props.theme.uiKit.link.linkTypes;
-const getLinkType = props => getLinkTypes(props)[props.linkType];
+const getLinkType = ({ theme, linkType }, state) => theme.uiKit.link.linkTypes[linkType][state];
 
-export const getLinkTypeStyle = css`
-  color: ${props => getLinkType(props).color};
-  &:hover {
-    color: ${props => getLinkType(props).hoverColor};
-  }
-`;
+export const getLinkTypeStyle = state => (
+  css`
+    ${getStyle(getLinkType, state)};
+  `
+);

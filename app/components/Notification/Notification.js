@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { oneOf } from 'prop-types';
-import { getNotificationStatus } from 'helpers/notification-styles';
+import { getNotificationStatusStyle } from 'helpers/notification-styles';
 
 const Notification = styled.div`
   position: relative;
@@ -10,7 +10,7 @@ const Notification = styled.div`
   font-size: 20px;
   line-height: 1.4;
   cursor: pointer;
-  color: ${props => getNotificationStatus(props)};
+  ${getNotificationStatusStyle};
 `;
 
 Notification.propTypes = {
