@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { bool } from 'prop-types';
-import { getInputTypeStyle } from 'helpers/form-styles';
+import { getInputTypeStyle } from '../formHelpers';
 
 const Textarea = styled.textarea`
   max-width: 100%;

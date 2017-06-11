@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { oneOf } from 'prop-types';
-import { getLinkTypeStyle } from 'helpers/link-styles';
+import { getLinkTypeStyle } from './linkHelpers';
 
 const Link = styled.a`
   cursor: pointer;

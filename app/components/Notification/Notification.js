@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { oneOf } from 'prop-types';
-import { getNotificationStatusStyle } from 'helpers/notification-styles';
+import { getNotificationStatusStyle } from './notificationHelpers';
 
 const Notification = styled.div`
   position: relative;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { oneOf } from 'prop-types';
-import { getBtnTypeStyles, getBtnSizeStyles } from 'helpers/button-styles';
+import { getBtnTypeStyles, getBtnSizeStyles } from './buttonHelpers';
 
 const Button = styled.button`
   margin: 0;

@@ -4,10 +4,10 @@ import { ThemeProvider } from 'styled-components';
 import Button from 'components/Button/Button';
 import Link from 'components/Link/Link';
 import Spinner from 'components/Spinner/Spinner';
-import Input from 'components/Input/Input';
-import Textarea from 'components/Textarea/Textarea';
+import Input from 'components/Form/Input/Input';
+import Textarea from 'components/Form/Textarea/Textarea';
 import Notification from 'components/Notification/Notification';
-import theme from './theme/theme';
+import theme from './theme';
 
 class App extends Component {
   render() {

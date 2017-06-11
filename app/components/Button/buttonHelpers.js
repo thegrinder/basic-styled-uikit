@@ -1,5 +1,5 @@
 import { css } from 'styled-components';
-import { getStyle } from './utils';
+import { getStyle } from 'helpers/utils';
 
 const getBtnTypeStyle = ({ theme, btnType }, state) => theme.uiKit.button.btnTypes[btnType][state];
 
