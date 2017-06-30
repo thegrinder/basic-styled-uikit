@@ -4,7 +4,9 @@ import commonFormStyles from '../commonFormStyles';
 import { inputNormalStyles, inputActiveStyles,
   inputDisabledStyles } from '../formHelpers';
 
-const Input = styled.input`
+const TextInput = styled.input.attrs({
+  type: 'text',
+})`
   ${commonFormStyles}
   vertical-align: middle;
   display: inline-block;
@@ -27,12 +29,12 @@ const Input = styled.input`
   }
 `;
 
-Input.propTypes = {
+TextInput.propTypes = {
   isValid: bool,
 };
 
-Input.defaultProps = {
+TextInput.defaultProps = {
   isValid: true,
 };
 
-export default Input;
+export default TextInput;
