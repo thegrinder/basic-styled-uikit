@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { bool } from 'prop-types';
 import commonFormStyles from '../commonFormStyles';
-import { inputNormalStyles, inputActiveStyles } from '../formHelpers';
+import { inputNormalStyles, inputActiveStyles,
+  inputDisabledStyles } from '../formHelpers';
 
 const Textarea = styled.textarea`
   ${commonFormStyles}
@@ -21,6 +22,9 @@ const Textarea = styled.textarea`
   &:focus {
     background-color: #fff;
     ${inputActiveStyles}
+  }
+  &:disabled {
+    ${inputDisabledStyles}
   }
 `;
 

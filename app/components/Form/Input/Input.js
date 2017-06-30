@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { bool } from 'prop-types';
 import commonFormStyles from '../commonFormStyles';
-import { inputNormalStyles, inputActiveStyles } from '../formHelpers';
+import { inputNormalStyles, inputActiveStyles,
+  inputDisabledStyles } from '../formHelpers';
 
 const Input = styled.input`
   ${commonFormStyles}
@@ -20,6 +21,9 @@ const Input = styled.input`
   &:focus {
     ${inputActiveStyles}
     background-color: #fff;
+  }
+  &:disabled {
+    ${inputDisabledStyles}
   }
 `;
 

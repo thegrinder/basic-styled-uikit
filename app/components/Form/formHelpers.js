@@ -14,3 +14,4 @@ const getInputTypeStyle = state => css`
 
 export const inputNormalStyles = getInputTypeStyle('normal');
 export const inputActiveStyles = getInputTypeStyle('active');
+export const inputDisabledStyles = getInputTypeStyle('disabled');
