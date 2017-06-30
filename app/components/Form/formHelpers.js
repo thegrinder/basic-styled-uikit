@@ -23,4 +23,5 @@ export const inputDisabledStyles = getInputTypeStyle('disabled');
 
 export const miscNormalStyles = getMiscStyle('normal');
 export const miscActiveStyles = getMiscStyle('active');
+export const miscCheckedStyles = getMiscStyle('checked');
 export const miscDisabledStyles = getMiscStyle('disabled');

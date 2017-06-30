@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { bool } from 'prop-types';
-import commonFormStyles from '../commonFormStyles';
+import { commonInputReset } from '../commonFormStyles';
 import { inputNormalStyles, inputActiveStyles,
   inputDisabledStyles } from '../formHelpers';
 
 const Textarea = styled.textarea`
-  ${commonFormStyles}
+  ${commonInputReset}
   max-width: 100%;
   width: 100%;
   border: 0 none;

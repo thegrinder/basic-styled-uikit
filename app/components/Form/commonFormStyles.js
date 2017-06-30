@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 
-const commonFormStyles = css`
+export const commonInputReset = css`
   box-sizing: border-box;
   margin: 0;
   border-radius: 0;
@@ -12,4 +12,14 @@ const commonFormStyles = css`
   }
 `;
 
-export default commonFormStyles;
+export const miscInputReset = css`
+  box-sizing: border-box;
+  touch-action: manipulation;
+  -webkit-appearance: none;
+  overflow: hidden;
+  padding: 0;
+  &:focus {
+    outline: none;
+  }
+`;
+

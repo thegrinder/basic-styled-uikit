@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 import { bool } from 'prop-types';
-import commonFormStyles from '../commonFormStyles';
+import { commonInputReset } from '../commonFormStyles';
 import { inputNormalStyles, inputActiveStyles,
   inputDisabledStyles } from '../formHelpers';
 
 const TextInput = styled.input.attrs({
   type: 'text',
 })`
-  ${commonFormStyles}
+  ${commonInputReset}
   vertical-align: middle;
+  overflow: visible;
   display: inline-block;
   max-width: 100%;
   width: 100%;

@@ -28,6 +28,9 @@ const formTheme = {
       backgroundColor: 'transparent',
     },
     active: {
+      borderColor: '#1e87f0',
+    },
+    checked: {
       borderColor: 'transparent',
       backgroundColor: '#1e87f0',
     },

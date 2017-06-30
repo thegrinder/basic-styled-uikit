@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 import radioCheckedIcon from './radio_checked_icon.svg';
-import { miscNormalStyles, miscActiveStyles,
+import { miscInputReset } from '../commonFormStyles';
+import { miscNormalStyles, miscActiveStyles, miscCheckedStyles,
   miscDisabledStyles } from '../formHelpers';
 
 const Radio = styled.input.attrs({
   type: 'radio',
 })`
+  ${miscInputReset}
   display: inline-block;
   height: 16px;
   width: 16px;
-  overflow: hidden;
   margin-top: -4px;
   vertical-align: middle;
-  -webkit-appearance: none;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   border-width: 1px;
@@ -23,15 +23,15 @@ const Radio = styled.input.attrs({
   cursor: pointer;
   ${miscNormalStyles}
   &:focus {
-    outline: none;
+    ${miscActiveStyles}
+  }
+  &:checked {
+    ${miscCheckedStyles}
+    background-image: url(${radioCheckedIcon});
   }
   &:disabled {
     ${miscDisabledStyles}
     cursor: default;
-  }
-  &:checked {
-    ${miscActiveStyles}
-    background-image: url(${radioCheckedIcon});
   }
 `;
 
