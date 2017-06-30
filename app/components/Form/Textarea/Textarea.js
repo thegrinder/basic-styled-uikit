@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 import { bool } from 'prop-types';
+import commonFormStyles from '../commonFormStyles';
 import { inputNormalStyles, inputActiveStyles } from '../formHelpers';
 
 const Textarea = styled.textarea`
+  ${commonFormStyles}
   max-width: 100%;
   width: 100%;
   border: 0 none;
@@ -12,16 +14,11 @@ const Textarea = styled.textarea`
   padding-top: 4px;
   padding-bottom: 4px;
   vertical-align: top;
-  overflow: auto;
-  box-sizing: border-box;
-  margin: 0;
-  border-radius: 0;
   border-width: 1px;
   border-style: solid;
   background: #fff;
   ${inputNormalStyles}
   &:focus {
-    outline: none;
     background-color: #fff;
     ${inputActiveStyles}
   }

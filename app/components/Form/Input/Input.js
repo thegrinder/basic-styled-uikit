@@ -1,21 +1,17 @@
 import styled from 'styled-components';
 import { bool } from 'prop-types';
+import commonFormStyles from '../commonFormStyles';
 import { inputNormalStyles, inputActiveStyles } from '../formHelpers';
 
 const Input = styled.input`
+  ${commonFormStyles}
   vertical-align: middle;
   display: inline-block;
   max-width: 100%;
   width: 100%;
   padding: 0 10px;
   transition: .2s ease-in-out;
-  transition-property: color,background-color,border-color;
-  -webkit-appearance: none;
-  overflow: visible;
-  box-sizing: border-box;
-  margin: 0;
-  border-radius: 0;
-  touch-action: manipulation;
+  transition-property: color, background-color, border-color;
   border-width: 1px;
   border-style: solid;
   background: #fff;
@@ -23,7 +19,6 @@ const Input = styled.input`
   ${inputNormalStyles}
   &:focus {
     ${inputActiveStyles}
-    outline: none;
     background-color: #fff;
   }
 `;
