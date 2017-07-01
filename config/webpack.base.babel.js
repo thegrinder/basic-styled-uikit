@@ -27,17 +27,8 @@ export const baseConfig = {
   module: {
     rules: [
       { test: /\.(js)$/, use: 'babel-loader' },
-      {
-        test: /\.(svg)$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192
-            }
-          }
-        ]
-      },
+      { test: /\.inline.svg$/, use: 'svg-react-loader' },
+      { test: /^(?!.*\.inline\.svg$).*\.svg$/, use: 'url-loader' },
     ],
   },
 };
