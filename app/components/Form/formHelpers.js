@@ -8,20 +8,26 @@ const getRegularInput = ({ theme, isValid }, state) => {
     : regular.invalid;
 };
 
-const getInputTypeStyle = state => css`
+const getMiscInput = ({ theme, isValid }, state) => {
+  const { misc } = theme.uiKit.form;
+  return isValid
+    ? misc.valid[state]
+    : misc.invalid;
+};
+
+const getRegularInputStyle = state => css`
   ${getStyle(getRegularInput, state)}
 `;
 
-const getMisc = ({ theme }, state) => theme.uiKit.form.misc[state];
-const getMiscStyle = state => css`
-  ${getStyle(getMisc, state)}
+const getMiscInputStyle = state => css`
+  ${getStyle(getMiscInput, state)}
 `;
 
-export const inputNormalStyles = getInputTypeStyle('normal');
-export const inputActiveStyles = getInputTypeStyle('active');
-export const inputDisabledStyles = getInputTypeStyle('disabled');
+export const inputNormalStyles = getRegularInputStyle('normal');
+export const inputActiveStyles = getRegularInputStyle('active');
+export const inputDisabledStyles = getRegularInputStyle('disabled');
 
-export const miscNormalStyles = getMiscStyle('normal');
-export const miscActiveStyles = getMiscStyle('active');
-export const miscCheckedStyles = getMiscStyle('checked');
-export const miscDisabledStyles = getMiscStyle('disabled');
+export const miscNormalStyles = getMiscInputStyle('normal');
+export const miscActiveStyles = getMiscInputStyle('active');
+export const miscCheckedStyles = getMiscInputStyle('checked');
+export const miscDisabledStyles = getMiscInputStyle('disabled');

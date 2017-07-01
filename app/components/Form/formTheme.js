@@ -26,20 +26,27 @@ const formTheme = {
   },
   // radio and checkbox styles
   misc: {
-    normal: {
-      borderColor: '#ccc',
+    valid: {
+      normal: {
+        borderColor: '#ccc',
+        backgroundColor: 'transparent',
+      },
+      active: {
+        borderColor: '#1e87f0',
+        backgroundColor: 'transparent',
+      },
+      checked: {
+        borderColor: 'transparent',
+        backgroundColor: '#1e87f0',
+      },
+      disabled: {
+        bordeColor: '#e5e5e5',
+        backgroundColor: '#f8f8f8',
+      },
+    },
+    invalid: {
+      borderColor: '#f0506e',
       backgroundColor: 'transparent',
-    },
-    active: {
-      borderColor: '#1e87f0',
-    },
-    checked: {
-      borderColor: 'transparent',
-      backgroundColor: '#1e87f0',
-    },
-    disabled: {
-      bordeColor: '#e5e5e5',
-      backgroundColor: '#f8f8f8',
     },
   },
 };

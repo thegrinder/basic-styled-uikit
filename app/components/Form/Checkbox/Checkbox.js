@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { bool } from 'prop-types';
 import checkIcon from './check_icon.svg';
 import { miscInputStyles } from '../commonFormStyles';
 
@@ -11,5 +12,13 @@ const Checkbox = styled.input.attrs({
     background-image: url(${checkIcon});
   }
 `;
+
+Checkbox.propTypes = {
+  isValid: bool,
+};
+
+Checkbox.defaultProps = {
+  isValid: true,
+};
 
 export default Checkbox;
