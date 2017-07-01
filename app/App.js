@@ -7,6 +7,7 @@ import Spinner from 'components/Spinner/Spinner';
 import TextInput from 'components/Form/TextInput/TextInput';
 import Textarea from 'components/Form/Textarea/Textarea';
 import Radio from 'components/Form/Radio/Radio';
+import Checkbox from 'components/Form/Checkbox/Checkbox';
 import Notification from 'components/Notification/Notification';
 import theme from './theme';
 
@@ -45,6 +46,10 @@ class App extends Component {
           <div style={{ width: '50%', marginBottom: '20px' }}>
             <Radio />
             <Radio />
+          </div>
+          <div style={{ width: '50%', marginBottom: '20px' }}>
+            <Checkbox />
+            <Checkbox />
           </div>
           <div style={{ width: '50%', marginBottom: '20px' }}>
             <Notification status="default">Default</Notification>
