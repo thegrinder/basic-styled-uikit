@@ -11,7 +11,6 @@ export const commonInputStyles = css`
   touch-action: manipulation;
   max-width: 100%;
   width: 100%;
-  background: #fff;
   border-width: 1px;
   border-style: solid;
   transition: .2s ease-in-out;
@@ -19,9 +18,6 @@ export const commonInputStyles = css`
   ${inputNormalStyles}
   &:focus {
     outline: none;
-    background-color: #fff;
-  }
-  &:focus {
     ${inputActiveStyles}
   }
   &:disabled {

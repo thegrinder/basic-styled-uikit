@@ -3,20 +3,23 @@ const formTheme = {
   regular: {
     valid: {
       normal: {
+        backgroundColor: '#fff',
         borderColor: '#e5e5e5',
         color: '#666',
       },
       active: {
+        backgroundColor: '#fff',
         borderColor: '#1e87f0',
         color: '#666',
       },
       disabled: {
         backgroundColor: '#f8f8f8',
-        color: '#999',
         borderColor: '#e5e5e5',
+        color: '#999',
       },
     },
     invalid: {
+      backgroundColor: '#fff',
       color: '#f0506e',
       borderColor: '#f0506e',
     },
