@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import Button from 'components/Button/Button';
 import Link from 'components/Link/Link';
 import Spinner from 'components/Spinner/Spinner';
-import TextInput from 'components/Form/TextInput/TextInput';
+import Input from 'components/Form/Input/Input';
 import Select from 'components/Form/Select/Select';
 import Textarea from 'components/Form/Textarea/Textarea';
 import Radio from 'components/Form/Radio/Radio';
@@ -37,10 +37,10 @@ class App extends Component {
             <Spinner color="#ddd" size={30} />
           </div>
           <div style={{ width: '50%', marginBottom: '20px' }}>
-            <TextInput isValid={true} value="Valid" />
+            <Input isValid={true} value="Valid" />
           </div>
           <div style={{ width: '50%', marginBottom: '20px' }}>
-            <TextInput isValid={false} value="Invalid" />
+            <Input isValid={false} value="Invalid" />
           </div>
           <div style={{ width: '50%', marginBottom: '20px' }}>
             <Select>

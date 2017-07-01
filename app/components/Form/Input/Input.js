@@ -2,9 +2,7 @@ import styled from 'styled-components';
 import { bool } from 'prop-types';
 import { commonInputStyles } from '../commonFormStyles';
 
-const TextInput = styled.input.attrs({
-  type: 'text',
-})`
+const Input = styled.input`
   ${commonInputStyles}
   vertical-align: middle;
   display: inline-block;
@@ -13,12 +11,12 @@ const TextInput = styled.input.attrs({
   overflow: visible;
 `;
 
-TextInput.propTypes = {
+Input.propTypes = {
   isValid: bool.isRequired,
 };
 
-TextInput.defaultProps = {
+Input.defaultProps = {
   isValid: true,
 };
 
-export default TextInput;
+export default Input;
