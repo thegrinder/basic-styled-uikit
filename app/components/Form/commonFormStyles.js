@@ -1,20 +1,35 @@
 import { css } from 'styled-components';
 import { miscNormalStyles, miscActiveStyles, miscCheckedStyles,
-  miscDisabledStyles } from './formHelpers';
+  miscDisabledStyles, inputNormalStyles, inputActiveStyles,
+  inputDisabledStyles } from './formHelpers';
 
-export const commonInputReset = css`
+export const commonInputStyles = css`
   box-sizing: border-box;
   margin: 0;
   border-radius: 0;
   -webkit-appearance: none;
   touch-action: manipulation;
-  overflow: visible;
+  max-width: 100%;
+  width: 100%;
+  background: #fff;
+  border-width: 1px;
+  border-style: solid;
+  transition: .2s ease-in-out;
+  transition-property: color, background-color, border;
+  ${inputNormalStyles}
   &:focus {
     outline: none;
+    background-color: #fff;
+  }
+  &:focus {
+    ${inputActiveStyles}
+  }
+  &:disabled {
+    ${inputDisabledStyles}
   }
 `;
 
-export const miscInputReset = css`
+export const miscInputStyles = css`
   box-sizing: border-box;
   touch-action: manipulation;
   -webkit-appearance: none;

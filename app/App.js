@@ -5,6 +5,7 @@ import Button from 'components/Button/Button';
 import Link from 'components/Link/Link';
 import Spinner from 'components/Spinner/Spinner';
 import TextInput from 'components/Form/TextInput/TextInput';
+import Select from 'components/Form/Select/Select';
 import Textarea from 'components/Form/Textarea/Textarea';
 import Radio from 'components/Form/Radio/Radio';
 import Checkbox from 'components/Form/Checkbox/Checkbox';
@@ -39,6 +40,12 @@ class App extends Component {
           </div>
           <div style={{ width: '50%', marginBottom: '20px' }}>
             <TextInput isValid={false} value="Invalid" />
+          </div>
+          <div style={{ width: '50%', marginBottom: '20px' }}>
+            <Select>
+              <option>Option one</option>
+              <option>Option two</option>
+            </Select>
           </div>
           <div style={{ width: '50%', marginBottom: '20px' }}>
             <Textarea rows={5}/>

@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import radioCheckedIcon from './radio_checked_icon.svg';
-import { miscInputReset } from '../commonFormStyles';
+import { miscInputStyles } from '../commonFormStyles';
 
 const Radio = styled.input.attrs({
   type: 'radio',
 })`
-  ${miscInputReset}
+  ${miscInputStyles}
   border-radius: 50%;
   &:checked {
     background-image: url(${radioCheckedIcon});

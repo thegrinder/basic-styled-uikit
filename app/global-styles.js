@@ -23,7 +23,7 @@ injectGlobal`
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
   }
-  input, textarea {
+  input, textarea, select {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: 16px;

@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import checkIcon from './check_icon.svg';
-import { miscInputReset } from '../commonFormStyles';
+import { miscInputStyles } from '../commonFormStyles';
 
 const Checkbox = styled.input.attrs({
   type: 'checkbox',
 })`
-  ${miscInputReset}
+  ${miscInputStyles}
   border-radius: 0;
   &:checked {
     background-image: url(${checkIcon});
