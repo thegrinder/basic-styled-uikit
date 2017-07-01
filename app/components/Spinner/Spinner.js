@@ -19,8 +19,8 @@ const Spinner = styled.span`
 `;
 
 Spinner.propTypes = {
-  size: number,
-  color: string,
+  size: number.isRequired,
+  color: string.isRequired,
 };
 
 Spinner.defaultProps = {

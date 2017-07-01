@@ -24,8 +24,8 @@ const CloseButton = styled.button`
 `;
 
 CloseButton.propTypes = {
-  btnColor: string,
-  btnHoverColor: string,
+  btnColor: string.isRequired,
+  btnHoverColor: string.isRequired,
 };
 
 export default CloseButton;

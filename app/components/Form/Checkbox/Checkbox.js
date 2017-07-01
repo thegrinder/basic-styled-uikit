@@ -14,7 +14,7 @@ const Checkbox = styled.input.attrs({
 `;
 
 Checkbox.propTypes = {
-  isValid: bool,
+  isValid: bool.isRequired,
 };
 
 Checkbox.defaultProps = {

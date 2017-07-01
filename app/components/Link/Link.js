@@ -15,7 +15,7 @@ const Link = styled.a`
 `;
 
 Link.propTypes = {
-  linkType: oneOf(['default', 'muted']),
+  linkType: oneOf(['default', 'muted']).isRequired,
 };
 
 Link.defaultProps = {

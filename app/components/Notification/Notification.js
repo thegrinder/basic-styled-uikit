@@ -20,7 +20,7 @@ Notification.propTypes = {
     'warning',
     'success',
     'danger',
-  ]),
+  ]).isRequired,
 };
 
 Notification.defaultProps = {

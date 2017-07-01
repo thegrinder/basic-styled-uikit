@@ -12,9 +12,9 @@ function Close({ iconSize, btnColor, btnHoverColor }) {
 }
 
 Close.propTypes = {
-  iconSize: number,
-  btnColor: string,
-  btnHoverColor: string,
+  iconSize: number.isRequired,
+  btnColor: string.isRequired,
+  btnHoverColor: string.isRequired,
 };
 
 Close.defaultProps = {

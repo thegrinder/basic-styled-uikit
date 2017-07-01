@@ -37,8 +37,8 @@ const Button = styled.button`
 `;
 
 Button.propTypes = {
-  btnType: oneOf(['default', 'primary', 'secondary', 'danger']),
-  btnSize: oneOf(['small', 'default', 'large']),
+  btnType: oneOf(['default', 'primary', 'secondary', 'danger']).isRequired,
+  btnSize: oneOf(['small', 'default', 'large']).isRequired,
 };
 
 Button.defaultProps = {

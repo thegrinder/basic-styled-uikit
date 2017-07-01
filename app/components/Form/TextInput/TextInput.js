@@ -14,7 +14,7 @@ const TextInput = styled.input.attrs({
 `;
 
 TextInput.propTypes = {
-  isValid: bool,
+  isValid: bool.isRequired,
 };
 
 TextInput.defaultProps = {

@@ -14,7 +14,7 @@ const Radio = styled.input.attrs({
 `;
 
 Radio.propTypes = {
-  isValid: bool,
+  isValid: bool.isRequired,
 };
 
 Radio.defaultProps = {
