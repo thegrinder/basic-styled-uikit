@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 import { oneOf } from 'prop-types';
+import sharedStyles from '../../helpers/sharedStyles';
 import { getNotificationStatusStyle } from './notificationHelpers';
 
 const Notification = styled.div`
+  ${sharedStyles}
   position: relative;
   margin-bottom: 10px;
   padding: 15px;

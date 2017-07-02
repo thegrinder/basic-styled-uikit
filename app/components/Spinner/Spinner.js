@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import { number, string } from 'prop-types';
+import sharedStyles from '../../helpers/sharedStyles';
 
 const loading = keyframes`
   0% { transform: rotate(0deg); }
@@ -7,6 +8,7 @@ const loading = keyframes`
 `;
 
 const Spinner = styled.span`
+  ${sharedStyles}
   width: ${props => props.size}px;
   height: ${props => props.size}px;
   border-radius: 100%;
@@ -15,7 +17,6 @@ const Spinner = styled.span`
   animation: ${loading} 0.75s 0s infinite linear;
   vertical-align: middle;
   display: inline-block;
-  box-sizing: border-box;
 `;
 
 Spinner.propTypes = {

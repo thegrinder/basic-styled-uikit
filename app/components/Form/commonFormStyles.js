@@ -1,10 +1,11 @@
 import { css } from 'styled-components';
+import sharedStyles from '../../helpers/sharedStyles';
 import { miscNormalStyles, miscActiveStyles, miscCheckedStyles,
   miscDisabledStyles, inputNormalStyles, inputActiveStyles,
   inputDisabledStyles } from './formHelpers';
 
 export const commonInputStyles = css`
-  box-sizing: border-box;
+  ${sharedStyles}
   margin: 0;
   border-radius: 0;
   -webkit-appearance: none;
@@ -26,7 +27,7 @@ export const commonInputStyles = css`
 `;
 
 export const miscInputStyles = css`
-  box-sizing: border-box;
+  ${sharedStyles}
   touch-action: manipulation;
   -webkit-appearance: none;
   overflow: hidden;

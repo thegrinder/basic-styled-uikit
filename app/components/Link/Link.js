@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 import { oneOf } from 'prop-types';
+import sharedStyles from '../../helpers/sharedStyles';
 import { linkNormalStyles, linkHoverStyles } from './linkHelpers';
 
 const Link = styled.a`
+  ${sharedStyles}
   cursor: pointer;
   touch-action: manipulation;
   text-decoration: none;

@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 import { oneOf } from 'prop-types';
+import sharedStyles from '../../helpers/sharedStyles';
 import { btnNormalStyles, btnHoverStyles, btnActiveStyles,
   getBtnSizeStyles } from './buttonHelpers';
 
 const Button = styled.button`
+  ${sharedStyles}
   margin: 0;
   border: none;
   overflow: visible;
   display: inline-block;
-  box-sizing: border-box;
   vertical-align: middle;
   text-align: center;
   text-decoration: none;
