@@ -3,9 +3,10 @@ import { number, string } from 'prop-types';
 import CloseButton from './CloseButton';
 import CloseIcon from './close_icon.inline.svg';
 
-function Close({ iconSize, btnColor, btnHoverColor }) {
+function Close(props) {
+  const { iconSize, btnColor, btnHoverColor } = props;
   return (
-      <CloseButton btnColor={btnColor} btnHoverColor={btnHoverColor}>
+      <CloseButton btnColor={btnColor} btnHoverColor={btnHoverColor} {...props}>
         <CloseIcon width={iconSize} height={iconSize} />
       </CloseButton>
   );

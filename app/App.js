@@ -10,8 +10,17 @@ import Textarea from 'components/Form/Textarea/Textarea';
 import Radio from 'components/Form/Radio/Radio';
 import Checkbox from 'components/Form/Checkbox/Checkbox';
 import Notification from 'components/Notification/Notification';
+import Alert from 'components/Alert/Alert';
 import Close from 'components/Close/Close';
 import theme from './theme';
+
+const AlertClose = () => (
+  <Close
+    style={{ position: 'absolute', right: '15px', top: '20px' }}
+    btnColor="inherit"
+    btnHoverColor="inherit"
+  />
+);
 
 class App extends Component {
   render() {
@@ -69,6 +78,13 @@ class App extends Component {
             <Notification status="warning">Warning</Notification>
             <Notification status="success">Success</Notification>
             <Notification status="danger">Danger</Notification>
+          </div>
+          <div style={{ width: '50%', marginBottom: '20px' }}>
+            <Alert status="default">Default<AlertClose /></Alert>
+            <Alert status="primary">Primary<AlertClose /></Alert>
+            <Alert status="warning">Warning<AlertClose /></Alert>
+            <Alert status="success">Success<AlertClose /></Alert>
+            <Alert status="danger">Danger<AlertClose /></Alert>
           </div>
         </div>
       </ThemeProvider>

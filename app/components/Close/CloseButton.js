@@ -15,10 +15,14 @@ const CloseButton = styled.button`
   line-height: 0;
   outline: none;
   transition: .1s ease-in-out;
-  transition-property: color;
+  transition-property: color, opacity;
+  opacity: ${props => (
+    props.btnColor === 'inherit' && props.btnHoverColor === 'inherit' ? '.4' : '1'
+  )};
   color: ${props => props.btnColor};
   &:focus,
   &:hover {
+    opacity: 1;
     color: ${props => props.btnHoverColor};
   }
 `;
