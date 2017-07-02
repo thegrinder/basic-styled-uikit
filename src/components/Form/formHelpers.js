@@ -1,5 +1,5 @@
 import { css } from 'styled-components';
-import { getStyle } from 'helpers/utils';
+import { getStyle } from '../../helpers/utils';
 
 const getRegularInput = ({ theme, isValid }, state) => {
   const { regular } = theme.uiKit.form;

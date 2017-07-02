@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
-import App from './App';
+import Demo from './Demo';
 import './global-styles';
 
 const render = (Component) => {
@@ -9,14 +9,14 @@ const render = (Component) => {
     <AppContainer>
       <Component />
     </AppContainer>,
-    document.getElementById('app'),
+    document.getElementById('demo'),
   );
 };
 
-render(App);
+render(Demo);
 
 if (module.hot) {
-  module.hot.accept('./App', () => {
-    render(App);
+  module.hot.accept('./Demo', () => {
+    render(Demo);
   });
 }
