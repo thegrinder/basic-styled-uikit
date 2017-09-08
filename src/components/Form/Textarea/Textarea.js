@@ -10,7 +10,7 @@ const Textarea = styled.textarea`
 `;
 
 Textarea.propTypes = {
-  isValid: bool.isRequired,
+  isValid: bool,
 };
 
 Textarea.defaultProps = {

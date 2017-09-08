@@ -20,8 +20,8 @@ const Spinner = styled.span`
 `;
 
 Spinner.propTypes = {
-  size: number.isRequired,
-  color: string.isRequired,
+  size: number,
+  color: string,
 };
 
 Spinner.defaultProps = {

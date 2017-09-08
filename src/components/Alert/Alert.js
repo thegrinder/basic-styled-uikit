@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { oneOf } from 'prop-types';
 import sharedStyles from '../../helpers/sharedStyles';
-import { getAlertStatusStyle } from './alertHelpers';
+import getAlertStatusStyle from './alertHelpers';
 
 const Alert = styled.div`
   ${sharedStyles}
@@ -18,7 +18,7 @@ Alert.propTypes = {
     'warning',
     'success',
     'danger',
-  ]).isRequired,
+  ]),
 };
 
 Alert.defaultProps = {

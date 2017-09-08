@@ -12,7 +12,7 @@ const Input = styled.input`
 `;
 
 Input.propTypes = {
-  isValid: bool.isRequired,
+  isValid: bool,
 };
 
 Input.defaultProps = {

@@ -3,6 +3,8 @@ import { getStyle } from '../../helpers/utils';
 
 const getAlertStatus = ({ theme, status }) => theme.uiKit.alert[status];
 
-export const getAlertStatusStyle = css`
+const getAlertStatusStyle = css`
   ${getStyle(getAlertStatus)}
 `;
+
+export default getAlertStatusStyle;

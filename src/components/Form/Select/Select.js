@@ -20,7 +20,7 @@ const Select = styled.select`
 `;
 
 Select.propTypes = {
-  isValid: bool.isRequired,
+  isValid: bool,
 };
 
 Select.defaultProps = {

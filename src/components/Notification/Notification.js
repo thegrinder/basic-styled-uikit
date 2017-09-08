@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { oneOf } from 'prop-types';
 import sharedStyles from '../../helpers/sharedStyles';
-import { getNotificationStatusStyle } from './notificationHelpers';
+import getNotificationStatusStyle from './notificationHelpers';
 
 const Notification = styled.div`
   ${sharedStyles}
@@ -22,7 +22,7 @@ Notification.propTypes = {
     'warning',
     'success',
     'danger',
-  ]).isRequired,
+  ]),
 };
 
 Notification.defaultProps = {
