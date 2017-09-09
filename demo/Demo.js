@@ -18,8 +18,8 @@ class App extends Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
-        <div style={{ padding: '20px' }}>
-          <div style={{ marginBottom: '20px' }}>
+        <div className="pa4">
+          <div className="mb4">
             <Heading sizing="h1">Heading</Heading>
             <Heading sizing="h2">Heading</Heading>
             <Heading sizing="h3">Heading</Heading>
@@ -27,7 +27,7 @@ class App extends Component {
             <Heading sizing="h5">Heading</Heading>
             <Heading sizing="h6">Heading</Heading>
           </div>
-          <div style={{ marginBottom: '20px' }}>
+          <div className="mb4">
             <Paragraph sizing="large">Large paragraph</Paragraph>
             <Paragraph>Medium paragraph</Paragraph>
             <Paragraph sizing="small">Small paragraph</Paragraph>
@@ -35,65 +35,65 @@ class App extends Component {
             <Paragraph colour="light">Light Paragraph</Paragraph>
             <Span>Span</Span>
           </div>
-          <div style={{ marginBottom: '20px' }}>
-            <Card style={{ width: '300px', padding: '30px' }}>
+          <div className="mb4">
+            <Card className="pa4 mw5">
               <Heading sizing="h5">Card Heading</Heading>
               <Paragraph>Paragraph</Paragraph>
             </Card>
           </div>
-          <div style={{ marginBottom: '20px' }}>
+          <div className="mb4">
             <Button btnType="default">Default</Button>
             <Button btnType="primary">Primary</Button>
             <Button btnType="secondary">Secondary</Button>
             <Button btnType="danger">Danger</Button>
           </div>
-          <div style={{ marginBottom: '20px' }}>
+          <div className="mb4">
             <Button btnType="default" btnSize="small">Small</Button>
             <Button btnType="primary" btnSize="default">Default</Button>
             <Button btnType="secondary" btnSize="large">Large</Button>
           </div>
-          <div style={{ marginBottom: '20px' }}>
+          <div className="mb4">
             <Link linkType="default">Default Link</Link>
             <Link linkType="muted">Muted Link</Link>
           </div>
-          <div style={{ marginBottom: '20px' }}>
+          <div className="mb4">
             <Spinner color="#ddd" size={30} />
           </div>
-          <div style={{ width: '50%', marginBottom: '20px' }}>
+          <div className="w-50 mb4">
             <Input isValid={true} value="Valid" />
           </div>
-          <div style={{ width: '50%', marginBottom: '20px' }}>
+          <div className="w-50 mb4">
             <Input isValid={false} value="Invalid" />
           </div>
-          <div style={{ width: '50%', marginBottom: '20px' }}>
+          <div className="w-50 mb4">
             <Select>
               <option>Option one</option>
               <option>Option two</option>
             </Select>
           </div>
-          <div style={{ width: '50%', marginBottom: '20px' }}>
+          <div className="w-50 mb4">
             <Textarea rows={5}/>
           </div>
-          <div style={{ width: '50%', marginBottom: '20px' }}>
+          <div className="w-50 mb4">
             <Radio />
             <Radio />
           </div>
-          <div style={{ width: '50%', marginBottom: '20px' }}>
+          <div className="w-50 mb4">
             <Checkbox />
             <Checkbox />
           </div>
-          <div style={{ width: '50%', marginBottom: '20px' }}>
+          <div className="w-50 mb4">
             <Close />
             <Close iconSize={20} />
           </div>
-          <div style={{ width: '50%', marginBottom: '20px' }}>
+          <div className="w-50 mb4">
             <Notification status="default">Default</Notification>
             <Notification status="primary">Primary</Notification>
             <Notification status="warning">Warning</Notification>
             <Notification status="success">Success</Notification>
             <Notification status="danger">Danger</Notification>
           </div>
-          <div style={{ width: '50%', marginBottom: '20px' }}>
+          <div className="w-50 mb4">
             <Alert status="default">Default<AlertClose /></Alert>
             <Alert status="primary">Primary<AlertClose /></Alert>
             <Alert status="warning">Warning<AlertClose /></Alert>

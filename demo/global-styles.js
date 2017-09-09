@@ -1,10 +1,11 @@
 import { injectGlobal } from 'styled-components';
-
+import tachyons from '../src/tachyons/tachyons';
 /* eslint no-unused-expressions: 0 */
 injectGlobal`
   body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+    ${tachyons}
   }
   button {
     font-family: 'Montserrat', sans-serif;

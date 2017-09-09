@@ -14,6 +14,7 @@ import Span from './components/Text/Span/Span';
 import Heading from './components/Heading/Heading';
 import Card from './components/Card/Card';
 import theme from './theme/theme';
+import tachyons from './tachyons/tachyons';
 
 export {
   Button,
@@ -31,5 +32,7 @@ export {
   Span,
   Heading,
   Card,
+
   theme,
+  tachyons,
 };
