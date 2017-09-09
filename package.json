@@ -2,15 +2,25 @@
   "name": "basic-styled-uikit",
   "version": "0.0.1",
   "description": "A set of basic react UIkit-inspired components built with styled-components",
-  "main": "index.js",
+  "keywords": [
+    "react",
+    "redux",
+    "styled-components"
+  ],
+  "homepage": "https://github.com/thegrinder/basic-styled-uikit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thegrinder/basic-styled-uikit.git"
+  },
+  "main": "./dist/index.js",
   "scripts": {
     "start": "webpack-dev-server --config config/webpack.dev.babel.js",
     "production": "NODE_ENV=production webpack -p --config config/webpack.prod.babel.js",
     "lint": "eslint src/. demo/. config/.; exit 0",
     "fix": "eslint --fix src/. demo/. config/.; exit 0"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Pawel Szczepkowski",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^7.2.3",
