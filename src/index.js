@@ -12,6 +12,7 @@ import Close from './components/Close/Close';
 import Paragraph from './components/Text/Paragraph/Paragraph';
 import Span from './components/Text/Span/Span';
 import Heading from './components/Heading/Heading';
+import Card from './components/Card/Card';
 import theme from './theme/theme';
 
 export {
@@ -29,5 +30,6 @@ export {
   Paragraph,
   Span,
   Heading,
+  Card,
   theme,
 };

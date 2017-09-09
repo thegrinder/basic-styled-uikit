@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { Button, Link, Spinner, Input,
   Select, Textarea, Radio, Checkbox,
   Notification, Alert, Close, Paragraph,
-  Span, Heading, theme } from '../src/index';
+  Span, Heading, Card, theme } from '../src/index';
 
 const AlertClose = () => (
   <Close
@@ -34,6 +34,12 @@ class App extends Component {
             <Paragraph colour="lightest">Lightest Paragraph</Paragraph>
             <Paragraph colour="light">Light Paragraph</Paragraph>
             <Span>Span</Span>
+          </div>
+          <div style={{ marginBottom: '20px' }}>
+            <Card style={{ width: '300px', padding: '30px' }}>
+              <Heading sizing="h5">Card Heading</Heading>
+              <Paragraph>Paragraph</Paragraph>
+            </Card>
           </div>
           <div style={{ marginBottom: '20px' }}>
             <Button btnType="default">Default</Button>
