@@ -8,6 +8,7 @@ const Link = styled.a`
   cursor: pointer;
   touch-action: manipulation;
   text-decoration: none;
+  font-family: inherit;
   ${linkNormalStyles}
   &:hover {
     ${linkHoverStyles}

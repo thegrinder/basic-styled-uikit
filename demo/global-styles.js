@@ -11,11 +11,6 @@ injectGlobal`
     font-weight: 400;
     letter-spacing: 1px;
   }
-  a {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-  }
   input, textarea, select {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
