@@ -2,6 +2,9 @@ import { injectGlobal } from 'styled-components';
 import tachyons from '../src/tachyons/tachyons';
 /* eslint no-unused-expressions: 0 */
 injectGlobal`
+  * {
+    box-sizing: border-box;
+  }
   body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
