@@ -1,7 +1,7 @@
 {
   "name": "basic-styled-uikit",
   "version": "0.0.0",
-  "description": "A set of basic react UIkit components built with styled-components",
+  "description": "A set of basic react UIkit-inspired components built with styled-components",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config config/webpack.dev.babel.js",
