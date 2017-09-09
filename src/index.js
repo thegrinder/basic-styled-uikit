@@ -9,6 +9,8 @@ import Checkbox from './components/Form/Checkbox/Checkbox';
 import Notification from './components/Notification/Notification';
 import Alert from './components/Alert/Alert';
 import Close from './components/Close/Close';
+import Paragraph from './components/Text/Paragraph/Paragraph';
+import Span from './components/Text/Span/Span';
 import theme from './theme/theme';
 
 export {
@@ -23,5 +25,7 @@ export {
   Notification,
   Alert,
   Close,
+  Paragraph,
+  Span,
   theme,
 };

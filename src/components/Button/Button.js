@@ -21,6 +21,7 @@ const Button = styled.button`
   outline: none;
   border-width: 1px;
   border-style: solid;
+  letter-spacing: 1px;
   ${getBtnSizeStyles}
   ${btnNormalStyles}
   &:hover,

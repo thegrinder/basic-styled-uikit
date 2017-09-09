@@ -3,7 +3,8 @@ import { ThemeProvider } from 'styled-components';
 
 import { Button, Link, Spinner, Input,
   Select, Textarea, Radio, Checkbox,
-  Notification, Alert, Close, theme } from '../src/index';
+  Notification, Alert, Close, Paragraph,
+  Span, theme } from '../src/index';
 
 const AlertClose = () => (
   <Close
@@ -18,6 +19,14 @@ class App extends Component {
     return (
       <ThemeProvider theme={theme}>
         <div style={{ padding: '20px' }}>
+          <div style={{ marginBottom: '20px' }}>
+            <Paragraph sizing="large">Large paragraph</Paragraph>
+            <Paragraph>Medium paragraph</Paragraph>
+            <Paragraph sizing="small">Small paragraph</Paragraph>
+            <Paragraph colour="lightest">Lightest Paragraph</Paragraph>
+            <Paragraph colour="light">Light Paragraph</Paragraph>
+            <Span>Span</Span>
+          </div>
           <div style={{ marginBottom: '20px' }}>
             <Button btnType="default">Default</Button>
             <Button btnType="primary">Primary</Button>

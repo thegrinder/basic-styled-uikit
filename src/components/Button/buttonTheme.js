@@ -73,17 +73,17 @@ const buttonTheme = {
     small: {
       padding: '0 15px',
       lineHeight: '28px',
-      fontSize: '14px',
+      fontSize: '10px',
     },
     default: {
       padding: '0 30px',
-      fontSize: '14px',
+      fontSize: '12px',
       lineHeight: '38px',
     },
     large: {
       padding: '0 40px',
       lineHeight: '53px',
-      fontSize: '16px',
+      fontSize: '14px',
     },
   },
 };
