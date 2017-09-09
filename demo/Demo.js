@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { Button, Link, Spinner, Input,
   Select, Textarea, Radio, Checkbox,
   Notification, Alert, Close, Paragraph,
-  Span, theme } from '../src/index';
+  Span, Heading, theme } from '../src/index';
 
 const AlertClose = () => (
   <Close
@@ -19,6 +19,14 @@ class App extends Component {
     return (
       <ThemeProvider theme={theme}>
         <div style={{ padding: '20px' }}>
+          <div style={{ marginBottom: '20px' }}>
+            <Heading sizing="h1">Heading</Heading>
+            <Heading sizing="h2">Heading</Heading>
+            <Heading sizing="h3">Heading</Heading>
+            <Heading sizing="h4">Heading</Heading>
+            <Heading sizing="h5">Heading</Heading>
+            <Heading sizing="h6">Heading</Heading>
+          </div>
           <div style={{ marginBottom: '20px' }}>
             <Paragraph sizing="large">Large paragraph</Paragraph>
             <Paragraph>Medium paragraph</Paragraph>

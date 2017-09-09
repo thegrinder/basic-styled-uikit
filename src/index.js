@@ -11,6 +11,7 @@ import Alert from './components/Alert/Alert';
 import Close from './components/Close/Close';
 import Paragraph from './components/Text/Paragraph/Paragraph';
 import Span from './components/Text/Span/Span';
+import Heading from './components/Heading/Heading';
 import theme from './theme/theme';
 
 export {
@@ -27,5 +28,6 @@ export {
   Close,
   Paragraph,
   Span,
+  Heading,
   theme,
 };
