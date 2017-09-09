@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { oneOf } from 'prop-types';
 import sharedStyles from '../../helpers/sharedStyles';
-import { btnNormalStyles, btnHoverStyles, btnActiveStyles,
-  getBtnSizeStyles } from './buttonHelpers';
+import { btnNormalStyle, btnHoverStyle, btnActiveStyle,
+  btnSizeStyle } from './buttonHelpers';
 
 const Button = styled.button`
   ${sharedStyles}
@@ -22,17 +22,17 @@ const Button = styled.button`
   border-width: 1px;
   border-style: solid;
   letter-spacing: 1px;
-  ${getBtnSizeStyles}
-  ${btnNormalStyles}
+  ${btnSizeStyle}
+  ${btnNormalStyle}
   &:hover,
   &:focus {
-    ${btnHoverStyles}
+    ${btnHoverStyle}
   }
   &:active {
-    ${btnActiveStyles}
+    ${btnActiveStyle}
   }
   &:disabled {
-    ${btnNormalStyles}
+    ${btnNormalStyle}
     opacity: .6;
     cursor: default;
   }

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { oneOf } from 'prop-types';
 import sharedStyles from '../../helpers/sharedStyles';
-import { linkNormalStyles, linkHoverStyles } from './linkHelpers';
+import { linkNormalStyle, linkHoverStyle } from './linkHelpers';
 
 const Link = styled.a`
   ${sharedStyles}
@@ -9,9 +9,9 @@ const Link = styled.a`
   touch-action: manipulation;
   text-decoration: none;
   font-family: inherit;
-  ${linkNormalStyles}
+  ${linkNormalStyle}
   &:hover {
-    ${linkHoverStyles}
+    ${linkHoverStyle}
     outline: none;
     text-decoration: underline;
   }

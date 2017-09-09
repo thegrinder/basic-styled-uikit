@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 import { oneOf } from 'prop-types';
 import sharedStyles from '../../helpers/sharedStyles';
-import getAlertStatusStyle from './alertHelpers';
+import { alertStatusStyle } from './alertHelpers';
 
 const Alert = styled.div`
   ${sharedStyles}
   position: relative;
   padding: 15px 30px 15px 15px;
   margin-bottom: 10px;
-  ${getAlertStatusStyle}
+  ${alertStatusStyle}
 `;
 
 Alert.propTypes = {

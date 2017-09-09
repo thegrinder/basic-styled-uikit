@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 import { string } from 'prop-types';
 import sharedStyles from '../../../helpers/sharedStyles';
-import { textSizingStyles, textColourStyles } from '../textHelpers';
+import { textSizingStyle, textColourStyle } from '../textHelpers';
 
 const Paragraph = styled.p`
   ${sharedStyles}
   margin: 0;
   padding: 0;
-  ${textSizingStyles}
-  ${textColourStyles}
+  ${textSizingStyle}
+  ${textColourStyle}
 `;
 
 Paragraph.propTypes = {

@@ -1,8 +1,8 @@
 import { css } from 'styled-components';
 import sharedStyles from '../../helpers/sharedStyles';
-import { miscNormalStyles, miscActiveStyles, miscCheckedStyles,
-  miscDisabledStyles, inputNormalStyles, inputActiveStyles,
-  inputDisabledStyles } from './formHelpers';
+import { miscNormalStyle, miscActiveStyle, miscCheckedStyle,
+  miscDisabledStyle, inputNormalStyle, inputActiveStyle,
+  inputDisabledStyle } from './formHelpers';
 
 export const commonInputStyles = css`
   ${sharedStyles}
@@ -16,13 +16,13 @@ export const commonInputStyles = css`
   border-style: solid;
   transition: .2s ease-in-out;
   transition-property: color, background-color, border;
-  ${inputNormalStyles}
+  ${inputNormalStyle}
   &:focus {
     outline: none;
-    ${inputActiveStyles}
+    ${inputActiveStyle}
   }
   &:disabled {
-    ${inputDisabledStyles}
+    ${inputDisabledStyle}
   }
 `;
 
@@ -44,16 +44,16 @@ export const miscInputStyles = css`
   transition: .2s ease-in-out;
   transition-property: background-color, border;
   cursor: pointer;
-  ${miscNormalStyles}
+  ${miscNormalStyle}
   &:focus {
     outline: none;
-    ${miscActiveStyles}
+    ${miscActiveStyle}
   }
   &:checked {
-    ${miscCheckedStyles}
+    ${miscCheckedStyle}
   }
   &:disabled {
-    ${miscDisabledStyles}
+    ${miscDisabledStyle}
     cursor: default;
   }
 `;
