@@ -22,7 +22,7 @@ Link.propTypes = {
 };
 
 Link.defaultProps = {
-  linkType: 'muted',
+  linkType: 'default',
 };
 
 export default Link;
