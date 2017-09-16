@@ -7,8 +7,6 @@ const StyledHeading = styled.h1`
   display: block;
   margin: 0;
   padding: 0;
-  font-weight: 500;
-  letter-spacing: -.5px;
   ${headingSizingStyle}
 `;
 
