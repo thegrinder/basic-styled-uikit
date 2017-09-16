@@ -5,10 +5,15 @@ injectGlobal`
   * {
     box-sizing: border-box;
   }
+  html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    ${tachyons}
+  }
   body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    ${tachyons}
   }
   button {
     font-family: 'Montserrat', sans-serif;
