@@ -49,6 +49,7 @@ const prodConfig = {
     'react',
     'react-dom',
     'webpack',
+    'styled-components',
   ],
 };
 
