@@ -1,5 +1,6 @@
 import Button from './components/Button/Button';
 import Link from './components/Link/Link';
+import RouterLink from './components/Link/RouterLink';
 import Spinner from './components/Spinner/Spinner';
 import Input from './components/Form/Input/Input';
 import Select from './components/Form/Select/Select';
@@ -19,6 +20,7 @@ import tachyons from './tachyons/tachyons';
 export {
   Button,
   Link,
+  RouterLink,
   Spinner,
   Input,
   Select,

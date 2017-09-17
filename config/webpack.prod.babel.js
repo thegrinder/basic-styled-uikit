@@ -50,6 +50,7 @@ const prodConfig = {
     'react-dom',
     'webpack',
     'styled-components',
+    'react-router-dom',
   ],
 };
 
