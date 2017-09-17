@@ -5,7 +5,7 @@ import { Link as ReactRouterLink } from 'react-router-dom';
 import sharedStyles from '../../helpers/sharedStyles';
 import { linkNormalStyle, linkHoverStyle } from './linkHelpers';
 
-const Link = styled(({ linkType, rest }) => <ReactRouterLink {...rest} />)`
+const Link = styled(({ linkType, ...rest }) => <ReactRouterLink {...rest} />)`
   ${sharedStyles}
   cursor: pointer;
   touch-action: manipulation;
