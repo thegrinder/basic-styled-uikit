@@ -9,19 +9,19 @@ const textTheme = {
     default: {
       color: '#666',
     },
+    danger: {
+      color: '#f0506e',
+    },
   },
   sizings: {
     small: {
       fontSize: '14px',
-      fontWeight: '300',
     },
     medium: {
       fontSize: '16px',
-      fontWeight: '300',
     },
     large: {
       fontSize: '20px',
-      fontWeight: '300',
     },
   },
 };
