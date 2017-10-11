@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import { number, string } from 'prop-types';
 import sharedStyles from '../../helpers/sharedStyles';
+import { rem } from '../../helpers/utils';
 
 const loading = keyframes`
   0% { transform: rotate(0deg); }
@@ -9,8 +10,8 @@ const loading = keyframes`
 
 const Spinner = styled.span`
   ${sharedStyles}
-  width: ${props => props.size}px;
-  height: ${props => props.size}px;
+  width: ${props => rem(props.size)};
+  height: ${props => rem(props.size)};
   border-radius: 100%;
   border: 2px solid ${props => props.color};
   border-bottom-color: transparent;

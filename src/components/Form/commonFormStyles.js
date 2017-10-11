@@ -3,6 +3,7 @@ import sharedStyles from '../../helpers/sharedStyles';
 import { miscNormalStyle, miscActiveStyle, miscCheckedStyle,
   miscDisabledStyle, inputNormalStyle, inputActiveStyle,
   inputDisabledStyle } from './formHelpers';
+import { rem } from '../../helpers/utils';
 
 export const commonInputStyles = css`
   ${sharedStyles}
@@ -33,9 +34,9 @@ export const miscInputStyles = css`
   overflow: hidden;
   padding: 0;
   display: inline-block;
-  height: 16px;
-  width: 16px;
-  margin-top: -4px;
+  height: ${rem(16)};
+  width: ${rem(16)};
+  margin-top: ${rem(-4)};
   vertical-align: middle;
   background-repeat: no-repeat;
   background-position: 50% 50%;

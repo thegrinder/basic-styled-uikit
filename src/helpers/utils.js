@@ -15,3 +15,5 @@ export const getStyle = (selector, state) => (props) => {
   const selectedStyles = state ? selector(props, state) : selector(props);
   return createStyles(selectedStyles);
 };
+
+export const rem = pxValue => `${pxValue / 16}rem`;

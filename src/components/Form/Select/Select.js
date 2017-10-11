@@ -3,14 +3,15 @@ import { bool } from 'prop-types';
 import selectIcon from './select_icon.svg';
 import selectDisabledIcon from './select_disabled_icon.svg';
 import { commonInputStyles } from '../commonFormStyles';
+import { rem } from '../../../helpers/utils';
 
 const Select = styled.select`
   ${commonInputStyles}
   text-transform: none;
-  padding: 0 10px;
+  padding: 0 ${rem(10)};
   vertical-align: middle;
   display: inline-block;
-  height: 40px;
+  height: ${rem(40)};
   background-image: url(${selectIcon});
   background-repeat: no-repeat;
   background-position: 100% 50%;
