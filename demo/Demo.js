@@ -2,17 +2,8 @@ import React, { Component } from 'react';
 import { ThemeProvider } from 'styled-components';
 
 import { Button, Link, Spinner, Input,
-  Select, Textarea, Radio, Checkbox,
-  Notification, Alert, Close, Paragraph,
+  Select, Textarea, Radio, Checkbox, Close, Paragraph,
   Span, Heading, Card, ColorBox, theme } from '../src/index';
-
-const AlertClose = () => (
-  <Close
-    style={{ position: 'absolute', right: '15px', top: '20px' }}
-    btnColor="inherit"
-    btnHoverColor="inherit"
-  />
-);
 
 class App extends Component {
   render() {
@@ -88,20 +79,6 @@ class App extends Component {
           <div className="w-50 mb4">
             <Close />
             <Close iconSize={20} />
-          </div>
-          <div className="w-50 mb4">
-            <Notification status="default">Default</Notification>
-            <Notification status="primary">Primary</Notification>
-            <Notification status="warning">Warning</Notification>
-            <Notification status="success">Success</Notification>
-            <Notification status="danger">Danger</Notification>
-          </div>
-          <div className="w-50 mb4">
-            <Alert status="default">Default<AlertClose /></Alert>
-            <Alert status="primary">Primary<AlertClose /></Alert>
-            <Alert status="warning">Warning<AlertClose /></Alert>
-            <Alert status="success">Success<AlertClose /></Alert>
-            <Alert status="danger">Danger<AlertClose /></Alert>
           </div>
         </div>
       </ThemeProvider>
