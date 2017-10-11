@@ -1,4 +1,6 @@
 import webpack from 'webpack';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import autoprefixer from 'autoprefixer';
 import PATHS from './paths';
 
 const productionPlugin = new webpack.DefinePlugin({
@@ -16,6 +18,10 @@ const uglifyJsPlugin = new webpack.optimize.UglifyJsPlugin({
   compress: {
     screw_ie8: true,
   },
+});
+const extractSass = new ExtractTextPlugin({
+  filename: 'basic-styled-uikit.css',
+  disable: process.env.NODE_ENV === 'development',
 });
 
 const prodConfig = {
@@ -42,9 +48,26 @@ const prodConfig = {
       },
       { test: /\.inline.svg$/, use: 'svg-react-loader' },
       { test: /^(?!.*\.inline\.svg$).*\.svg$/, use: 'url-loader' },
+      {
+        test: /\.scss$/,
+        use: extractSass.extract({
+          use: [
+            { loader: 'css-loader' },
+            {
+              loader: 'postcss-loader',
+              options: {
+                ident: 'postcss',
+                plugins: () => [autoprefixer()],
+              },
+            },
+            { loader: 'sass-loader' },
+          ],
+          fallback: 'style-loader',
+        }),
+      },
     ],
   },
-  plugins: [productionPlugin, uglifyJsPlugin],
+  plugins: [productionPlugin, uglifyJsPlugin, extractSass],
   externals: [
     'react',
     'react-dom',

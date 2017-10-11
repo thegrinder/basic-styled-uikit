@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { Button, Link, Spinner, Input,
   Select, Textarea, Radio, Checkbox, Close, Paragraph,
   Span, Heading, Card, ColorBox, theme } from '../src/index';
+import '../src/tachyons/tachyons.scss';
 
 class App extends Component {
   render() {

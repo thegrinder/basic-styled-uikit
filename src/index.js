@@ -15,6 +15,7 @@ import Card from './components/Card/Card';
 import ColorBox from './components/ColorBox/ColorBox';
 import theme from './theme/theme';
 import tachyons from './tachyons/tachyons';
+import './tachyons/tachyons.scss';
 
 export {
   Button,

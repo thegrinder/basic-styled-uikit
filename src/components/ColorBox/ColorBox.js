@@ -16,7 +16,9 @@ const defaultProps = {
   tagName: 'div',
 };
 
-function ColorBox({ bgColor, borderColor, tagName, className, children }) {
+function ColorBox({
+  bgColor, borderColor, tagName, className, children,
+}) {
   const SpecificColorBox = StyledColorBox.withComponent(tagName);
   return (
     <SpecificColorBox bgColor={bgColor} borderColor={borderColor} className={className}>

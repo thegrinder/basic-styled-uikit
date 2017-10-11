@@ -14,7 +14,9 @@ const defaultProps = {
   colour: 'dark',
 };
 
-function Heading({ tagName, sizing, children, className, colour }) {
+function Heading({
+  tagName, sizing, children, className, colour,
+}) {
   const SpecificHeading = StyledHeading.withComponent(tagName || sizing);
   return (
     <SpecificHeading colour={colour} sizing={sizing} className={className}>
