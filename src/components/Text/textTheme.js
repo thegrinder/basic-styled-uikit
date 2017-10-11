@@ -1,5 +1,8 @@
 const textTheme = {
   colours: {
+    white: {
+      color: '#fff',
+    },
     lightest: {
       color: '#ccc',
     },

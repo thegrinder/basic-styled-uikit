@@ -14,6 +14,7 @@ import Paragraph from './components/Text/Paragraph/Paragraph';
 import Span from './components/Text/Span/Span';
 import Heading from './components/Heading/Heading';
 import Card from './components/Card/Card';
+import ColorBox from './components/ColorBox/ColorBox';
 import theme from './theme/theme';
 import tachyons from './tachyons/tachyons';
 
@@ -34,7 +35,7 @@ export {
   Span,
   Heading,
   Card,
-
+  ColorBox,
   theme,
   tachyons,
 };

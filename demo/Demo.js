@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { Button, Link, Spinner, Input,
   Select, Textarea, Radio, Checkbox,
   Notification, Alert, Close, Paragraph,
-  Span, Heading, Card, theme } from '../src/index';
+  Span, Heading, Card, ColorBox, theme } from '../src/index';
 
 const AlertClose = () => (
   <Close
@@ -19,6 +19,9 @@ class App extends Component {
     return (
       <ThemeProvider theme={theme}>
         <div className="pa4">
+          <div className="pa4">
+            <ColorBox bgColor="lightPrimary" borderColor="primary" className="pa4" />
+          </div>
           <div className="mb4">
             <Heading sizing="h1">Heading</Heading>
             <Heading sizing="h2">Heading</Heading>

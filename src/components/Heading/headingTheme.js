@@ -1,5 +1,8 @@
 const headingTheme = {
   colours: {
+    white: {
+      color: '#fff',
+    },
     lightest: {
       color: '#ccc',
     },
