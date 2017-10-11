@@ -4,20 +4,26 @@ import StyledHeading from './StyledHeading';
 
 const propTypes = {
   sizing: string.isRequired,
-  children: node.isRequired,
   tagName: string,
+  colour: string,
   className: string,
+  children: node.isRequired,
 };
 
-function Heading({ tagName, sizing, children, className }) {
+const defaultProps = {
+  colour: 'dark',
+};
+
+function Heading({ tagName, sizing, children, className, colour }) {
   const SpecificHeading = StyledHeading.withComponent(tagName || sizing);
   return (
-    <SpecificHeading sizing={sizing} className={className}>
+    <SpecificHeading colour={colour} sizing={sizing} className={className}>
       {children}
     </SpecificHeading>
   );
 }
 
 Heading.propTypes = propTypes;
+Heading.defaultProps = defaultProps;
 
 export default Heading;

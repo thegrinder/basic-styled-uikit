@@ -6,8 +6,20 @@ const textTheme = {
     light: {
       color: '#999',
     },
-    default: {
+    normal: {
       color: '#666',
+    },
+    dark: {
+      color: '#424242',
+    },
+    primary: {
+      color: '#1e87f0',
+    },
+    success: {
+      color: '#32d296',
+    },
+    warning: {
+      color: '#faa05a',
     },
     danger: {
       color: '#f0506e',

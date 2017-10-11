@@ -5,6 +5,7 @@ import { textSizingStyle, textColourStyle } from '../textHelpers';
 
 const Paragraph = styled.p`
   ${sharedStyles}
+  display: block;
   margin: 0;
   padding: 0;
   ${textSizingStyle}
@@ -17,7 +18,7 @@ Paragraph.propTypes = {
 };
 
 Paragraph.defaultProps = {
-  colour: 'default',
+  colour: 'normal',
   sizing: 'medium',
 };
 

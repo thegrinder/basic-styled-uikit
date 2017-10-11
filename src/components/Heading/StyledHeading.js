@@ -1,17 +1,20 @@
 import styled from 'styled-components';
 import { string } from 'prop-types';
-import { headingSizingStyle } from './headingHelpers';
+import sharedStyles from '../../helpers/sharedStyles';
+import { headingSizingStyle, headingColourStyle } from './headingHelpers';
 
 const StyledHeading = styled.h1`
-  color: #424242;
+  ${sharedStyles}
   display: block;
   margin: 0;
   padding: 0;
   ${headingSizingStyle}
+  ${headingColourStyle}
 `;
 
 StyledHeading.propTypes = {
   sizing: string.isRequired,
+  colour: string.isRequired,
 };
 
 export default StyledHeading;

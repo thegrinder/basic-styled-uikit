@@ -1,28 +1,48 @@
 const headingTheme = {
+  colours: {
+    lightest: {
+      color: '#ccc',
+    },
+    light: {
+      color: '#999',
+    },
+    normal: {
+      color: '#666',
+    },
+    dark: {
+      color: '#424242',
+    },
+    primary: {
+      color: '#1e87f0',
+    },
+    success: {
+      color: '#32d296',
+    },
+    warning: {
+      color: '#faa05a',
+    },
+    danger: {
+      color: '#f0506e',
+    },
+  },
   sizings: {
     h1: {
       fontSize: '96px',
-      fontWeight: '300',
     },
     h2: {
       fontSize: '80px',
-      fontWeight: '300',
     },
     h3: {
       fontSize: '48px',
-      fontWeight: '300',
     },
     h4: {
       fontSize: '36px',
-      fontWeight: '300',
     },
     h5: {
       fontSize: '24px',
-      fontWeight: '300',
     },
     h6: {
       fontSize: '20px',
-      fontWeight: '300',
     },
   },
 };
