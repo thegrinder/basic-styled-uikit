@@ -1,3 +1,5 @@
+import { rem } from '../../helpers/utils';
+
 const headingTheme = {
   colours: {
     white: {
@@ -30,22 +32,22 @@ const headingTheme = {
   },
   sizings: {
     h1: {
-      fontSize: '96px',
+      fontSize: rem(96),
     },
     h2: {
-      fontSize: '80px',
+      fontSize: rem(80),
     },
     h3: {
-      fontSize: '48px',
+      fontSize: rem(48),
     },
     h4: {
-      fontSize: '36px',
+      fontSize: rem(36),
     },
     h5: {
-      fontSize: '24px',
+      fontSize: rem(24),
     },
     h6: {
-      fontSize: '20px',
+      fontSize: rem(20),
     },
   },
 };

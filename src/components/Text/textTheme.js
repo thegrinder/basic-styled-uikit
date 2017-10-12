@@ -1,3 +1,5 @@
+import { rem } from '../../helpers/utils';
+
 const textTheme = {
   colours: {
     white: {
@@ -30,13 +32,13 @@ const textTheme = {
   },
   sizings: {
     small: {
-      fontSize: '14px',
+      fontSize: rem(14),
     },
     medium: {
-      fontSize: '16px',
+      fontSize: rem(16),
     },
     large: {
-      fontSize: '20px',
+      fontSize: rem(20),
     },
   },
 };

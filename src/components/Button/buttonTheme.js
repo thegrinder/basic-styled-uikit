@@ -1,3 +1,5 @@
+import { rem } from '../../helpers/utils';
+
 const buttonTheme = {
   btnTypes: {
     default: {
@@ -71,19 +73,19 @@ const buttonTheme = {
   },
   btnSizes: {
     small: {
-      padding: '0 15px',
-      lineHeight: '28px',
-      fontSize: '10px',
+      padding: `0 ${rem(15)}`,
+      lineHeight: rem(28),
+      fontSize: rem(10),
     },
     default: {
-      padding: '0 30px',
-      fontSize: '12px',
-      lineHeight: '38px',
+      padding: `0 ${rem(30)}`,
+      fontSize: rem(12),
+      lineHeight: rem(38),
     },
     large: {
-      padding: '0 40px',
-      lineHeight: '53px',
-      fontSize: '14px',
+      padding: `0 ${rem(40)}`,
+      lineHeight: rem(53),
+      fontSize: rem(14),
     },
   },
 };
