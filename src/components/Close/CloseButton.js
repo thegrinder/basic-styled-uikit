@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 import { string } from 'prop-types';
-import sharedStyles from '../../helpers/sharedStyles';
 
 const CloseButton = styled.button`
-  ${sharedStyles}
   touch-action: manipulation;
   margin: 0;
   border: none;

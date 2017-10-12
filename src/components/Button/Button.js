@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 import { oneOf } from 'prop-types';
-import sharedStyles from '../../helpers/sharedStyles';
 import { btnNormalStyle, btnHoverStyle, btnActiveStyle,
   btnSizeStyle } from './buttonHelpers';
 
 const Button = styled.button`
-  ${sharedStyles}
   margin: 0;
   border: none;
   overflow: visible;

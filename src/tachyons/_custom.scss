@@ -1,0 +1,21 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-size: 16px;
+  height: 100%;
+  min-height: 30rem;
+  width: 100%;
+  min-width: 20rem;
+  margin: 0;
+  box-sizing: border-box;
+}

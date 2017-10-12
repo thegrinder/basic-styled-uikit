@@ -3,10 +3,12 @@ body {
   @import './border-radius';
   @import './borders';
   @import './coordinates';
+  @import './custom';
   @import './display';
   @import './flex';
   @import './font-style';
   @import './font-weight';
+  @import './grid';
   @import './heights';
   @import './line-height';
   @import './lists';
@@ -26,5 +28,4 @@ body {
   @import './vertical-align';
   @import './widths';
   @import './z-index';
-  @import './grid';
 }
