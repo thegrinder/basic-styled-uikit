@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 
 import { Button, Link, Spinner, Input,
   Select, Textarea, Radio, Checkbox, Close, Paragraph,
-  Span, Heading, Card, ColorBox, theme } from '../src/index';
+  Span, H1, H2, H3, H4, H5, H6, Card, ColorBox, theme } from '../src/index';
 import '../src/tachyons/tachyons.scss';
 
 class App extends Component {
@@ -15,12 +15,12 @@ class App extends Component {
             <ColorBox bgColor="lightPrimary" borderColor="primary" className="pa4" />
           </div>
           <div className="mb4">
-            <Heading sizing="h1">Heading</Heading>
-            <Heading sizing="h2">Heading</Heading>
-            <Heading sizing="h3">Heading</Heading>
-            <Heading sizing="h4">Heading</Heading>
-            <Heading sizing="h5">Heading</Heading>
-            <Heading sizing="h6">Heading</Heading>
+            <H1 sizing="h1">Heading</H1>
+            <H2 sizing="h2">Heading</H2>
+            <H3 sizing="h3">Heading</H3>
+            <H4 sizing="h4">Heading</H4>
+            <H5 sizing="h5">Heading</H5>
+            <H6 sizing="h6">Heading</H6>
           </div>
           <div className="mb4">
             <Paragraph sizing="large">Large paragraph</Paragraph>
@@ -32,7 +32,7 @@ class App extends Component {
           </div>
           <div className="mb4">
             <Card className="pa4 mw5">
-              <Heading sizing="h5">Card Heading</Heading>
+              <H5>Card Heading</H5>
               <Paragraph>Paragraph</Paragraph>
             </Card>
           </div>

@@ -1,33 +1,22 @@
-import React from 'react';
-import { string, node } from 'prop-types';
-import StyledColorBox from './StyledColorBox';
+import styled from 'styled-components';
+import { string } from 'prop-types';
+import sharedStyles from '../../helpers/sharedStyles';
+import { colorBoxBgStyle, colorBoxBorderStyle } from './colorBoxHelpers';
 
-const propTypes = {
+const ColorBox = styled.div`
+  ${sharedStyles}
+  ${colorBoxBgStyle}
+  ${colorBoxBorderStyle}
+`;
+
+ColorBox.propTypes = {
   bgColor: string,
   borderColor: string,
-  tagName: string,
-  className: string,
-  children: node,
 };
 
-const defaultProps = {
-  bgColor: 'lightGray',
-  borderColor: 'gray',
-  tagName: 'div',
+ColorBox.defaultProps = {
+  bgColor: 'transparent',
+  borderColor: 'transparent',
 };
-
-function ColorBox({
-  bgColor, borderColor, tagName, className, children,
-}) {
-  const SpecificColorBox = StyledColorBox.withComponent(tagName);
-  return (
-    <SpecificColorBox bgColor={bgColor} borderColor={borderColor} className={className}>
-      {children}
-    </SpecificColorBox>
-  );
-}
-
-ColorBox.propTypes = propTypes;
-ColorBox.defaultProps = defaultProps;
 
 export default ColorBox;

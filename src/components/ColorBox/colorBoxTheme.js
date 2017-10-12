@@ -1,5 +1,8 @@
 const colorBoxTheme = {
   bgColors: {
+    transparent: {
+      backgroundColor: 'transparent',
+    },
     white: {
       backgroundColor: '#fff',
     },
@@ -35,6 +38,9 @@ const colorBoxTheme = {
     },
   },
   borderColors: {
+    transparent: {
+      borderColor: 'transparent',
+    },
     white: {
       borderColor: '#fff',
     },
