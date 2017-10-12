@@ -39,7 +39,7 @@ const devConfig = {
       { test: /\.inline.svg$/, use: 'svg-react-loader' },
       { test: /^(?!.*\.inline\.svg$).*\.svg$/, use: 'url-loader' },
       {
-        test: /\.scss$/,
+        test: /\.s?css$/,
         use: [
           { loader: 'style-loader' },
           { loader: 'css-loader' },

@@ -1,3 +1,5 @@
+import 'normalize.css/normalize.css';
+import './tachyons/tachyons.scss';
 import { H1, H2, H3, H4, H5, H6 } from './components/Headings/Headings';
 import Button from './components/Button/Button';
 import Link from './components/Link/Link';
@@ -14,7 +16,6 @@ import Span from './components/Text/Span/Span';
 import Card from './components/Card/Card';
 import ColorBox from './components/ColorBox/ColorBox';
 import theme from './theme/theme';
-import './tachyons/tachyons.scss';
 
 export {
   H1,
