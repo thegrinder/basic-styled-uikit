@@ -1,5 +1,5 @@
 import { injectGlobal } from 'styled-components';
-import tachyons from '../src/tachyons/tachyons';
+
 /* eslint no-unused-expressions: 0 */
 injectGlobal`
   * {
@@ -9,7 +9,6 @@ injectGlobal`
     line-height: 1.15;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
-    ${tachyons}
   }
   body {
     font-family: 'Montserrat', sans-serif;

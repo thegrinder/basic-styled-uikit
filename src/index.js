@@ -14,7 +14,6 @@ import Heading from './components/Heading/Heading';
 import Card from './components/Card/Card';
 import ColorBox from './components/ColorBox/ColorBox';
 import theme from './theme/theme';
-import tachyons from './tachyons/tachyons';
 import './tachyons/tachyons.scss';
 
 export {
@@ -34,5 +33,4 @@ export {
   Card,
   ColorBox,
   theme,
-  tachyons,
 };

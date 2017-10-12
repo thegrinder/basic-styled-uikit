@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import Demo from './Demo';
 import './global-styles';
-import '../src/tachyons/tachyons';
+import '../src/tachyons/tachyons.scss';
 
 const render = (Component) => {
   ReactDOM.render(

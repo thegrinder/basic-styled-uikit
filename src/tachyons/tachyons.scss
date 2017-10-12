@@ -1,6 +1,30 @@
-html {
-  body {
-    margin-bottom: 20px;
-    display: flex;
-  }
+body {
+  @import './variables';
+  @import './border-radius';
+  @import './borders';
+  @import './coordinates';
+  @import './display';
+  @import './flex';
+  @import './font-style';
+  @import './font-weight';
+  @import './heights';
+  @import './line-height';
+  @import './lists';
+  @import './max-widths';
+  @import './negative-margins';
+  @import './opacity';
+  @import './overflow';
+  @import './position';
+  @import './skins';
+  @import './spacing';
+  @import './text-align';
+  @import './text-decoration';
+  @import './text-transform';
+  @import './type-scale';
+  @import './typography';
+  @import './utilities';
+  @import './vertical-align';
+  @import './widths';
+  @import './z-index';
+  @import './grid';
 }
