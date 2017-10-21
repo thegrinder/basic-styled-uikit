@@ -1,14 +1,14 @@
 import React from 'react';
 import { number, string } from 'prop-types';
-import CloseButton from './CloseButton';
+import PlainButton from '../PlainButton/PlainButton';
 import CloseIcon from './close_icon.inline.svg';
 
 function Close(props) {
   const { iconSize, btnColor, btnHoverColor } = props;
   return (
-    <CloseButton btnColor={btnColor} btnHoverColor={btnHoverColor} {...props}>
+    <PlainButton btnColor={btnColor} btnHoverColor={btnHoverColor} {...props}>
       <CloseIcon width={iconSize} height={iconSize} />
-    </CloseButton>
+    </PlainButton>
   );
 }
 

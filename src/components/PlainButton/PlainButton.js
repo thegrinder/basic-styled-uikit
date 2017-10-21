@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { string } from 'prop-types';
 
-const CloseButton = styled.button`
+const PlainButton = styled.button`
   touch-action: manipulation;
   margin: 0;
   border: none;
@@ -27,9 +27,14 @@ const CloseButton = styled.button`
   }
 `;
 
-CloseButton.propTypes = {
-  btnColor: string.isRequired,
-  btnHoverColor: string.isRequired,
+PlainButton.propTypes = {
+  btnColor: string,
+  btnHoverColor: string,
 };
 
-export default CloseButton;
+PlainButton.defaultProps = {
+  btnColor: '#999',
+  btnHoverColor: '#666',
+};
+
+export default PlainButton;

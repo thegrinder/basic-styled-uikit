@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import { Button, Link, Spinner, Input,
+import { Button, Link, Spinner, Input, PlainButton,
   Select, Textarea, Radio, Checkbox, Close, Paragraph,
   Span, H1, H2, H3, H4, H5, H6, Card, ColorBox, theme } from '../src/index';
 import '../src/tachyons/tachyons.scss';
@@ -46,6 +46,9 @@ class App extends Component {
             <Button btnType="default" btnSize="small">Small</Button>
             <Button btnType="primary" btnSize="default">Default</Button>
             <Button btnType="secondary" btnSize="large">Large</Button>
+          </div>
+          <div className="mb4">
+            <PlainButton>Plain Button</PlainButton>
           </div>
           <div className="mb4">
             <Link linkType="default">Default Link</Link>
