@@ -12,6 +12,7 @@ import Radio from './components/Form/Radio/Radio';
 import Checkbox from './components/Form/Checkbox/Checkbox';
 import PlainButton from './components/PlainButton/PlainButton';
 import CloseBtn from './components/CloseBtn/CloseBtn';
+import MenuBtn from './components/MenuBtn/MenuBtn';
 import Paragraph from './components/Text/Paragraph/Paragraph';
 import Span from './components/Text/Span/Span';
 import Card from './components/Card/Card';
@@ -36,6 +37,7 @@ export {
   Checkbox,
   PlainButton,
   CloseBtn,
+  MenuBtn,
   Paragraph,
   Span,
   Card,
