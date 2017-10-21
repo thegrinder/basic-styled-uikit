@@ -11,7 +11,7 @@ import Textarea from './components/Form/Textarea/Textarea';
 import Radio from './components/Form/Radio/Radio';
 import Checkbox from './components/Form/Checkbox/Checkbox';
 import PlainButton from './components/PlainButton/PlainButton';
-import Close from './components/Close/Close';
+import CloseBtn from './components/CloseBtn/CloseBtn';
 import Paragraph from './components/Text/Paragraph/Paragraph';
 import Span from './components/Text/Span/Span';
 import Card from './components/Card/Card';
@@ -35,7 +35,7 @@ export {
   Radio,
   Checkbox,
   PlainButton,
-  Close,
+  CloseBtn,
   Paragraph,
   Span,
   Card,
