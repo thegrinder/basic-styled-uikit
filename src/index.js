@@ -1,6 +1,7 @@
 import 'normalize.css/normalize.css';
 import './tachyons/tachyons.scss';
 import { H1, H2, H3, H4, H5, H6 } from './components/Headings/Headings';
+import Aux from './components/Aux/Aux';
 import Button from './components/Button/Button';
 import Link from './components/Link/Link';
 import RouterLink from './components/Link/RouterLink';
@@ -20,6 +21,7 @@ import ColorBox from './components/ColorBox/ColorBox';
 import theme from './theme/theme';
 
 export {
+  Aux,
   H1,
   H2,
   H3,

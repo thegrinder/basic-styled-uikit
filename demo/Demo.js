@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 
 import { Button, Link, Spinner, Input, PlainButton, MenuBtn,
   Select, Textarea, Radio, Checkbox, CloseBtn, Paragraph,
-  Span, H1, H2, H3, H4, H5, H6, Card, ColorBox, theme } from '../src/index';
+  Span, H1, H2, H3, H4, H5, H6, Card, ColorBox, Aux, theme } from '../src/index';
 import '../src/tachyons/tachyons.scss';
 
 class App extends Component {
@@ -12,7 +12,9 @@ class App extends Component {
       <ThemeProvider theme={theme}>
         <div className="pa4">
           <div className="pa4">
-            <ColorBox bgColor="lightPrimary" borderColor="primary" className="pa4" />
+            <Aux>
+              <ColorBox bgColor="lightPrimary" borderColor="primary" className="pa4" />
+            </Aux>
           </div>
           <div className="mb4">
             <H1 sizing="h1">Heading</H1>
