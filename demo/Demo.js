@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import { Button, Link, Spinner, Input, PlainButton, MenuBtn,
-  Select, Textarea, Radio, Checkbox, CloseBtn, Paragraph,
+import { Button, Link, Spinner, Input, PlainButton, MenuBtn, Paragraph,
+  Select, Textarea, Radio, Checkbox, CloseBtn, TrashBtn, PencilBtn,
   Span, H1, H2, H3, H4, H5, H6, Card, ColorBox, Aux, theme } from '../src/index';
 import '../src/tachyons/tachyons.scss';
 
@@ -85,6 +85,10 @@ class App extends Component {
           <div className="w-50 mb4">
             <CloseBtn />
             <CloseBtn iconSize={20} />
+            <TrashBtn />
+            <TrashBtn iconSize={20} />
+            <PencilBtn />
+            <PencilBtn iconSize={20} />
           </div>
           <div className="w-50 mb4">
             <MenuBtn />
