@@ -26,3 +26,18 @@ export const miscNormalStyle = getMiscInputStyle('normal');
 export const miscActiveStyle = getMiscInputStyle('active');
 export const miscCheckedStyle = getMiscInputStyle('checked');
 export const miscDisabledStyle = getMiscInputStyle('disabled');
+
+
+const getInlineInput = ({ theme, isValid }, state) => {
+  const { inline } = theme.uiKit.form;
+  return isValid
+    ? inline.valid[state]
+    : inline.invalid;
+};
+
+const getInlineInputStyle = state => getStyle(getInlineInput, state);
+
+export const inlineInputNormalStyle = getInlineInputStyle('normal');
+export const inlineInputHoverStyle = getInlineInputStyle('hover');
+export const inlineInputActiveStyle = getInlineInputStyle('active');
+export const inlineInputDisabledStyle = getInlineInputStyle('disabled');

@@ -9,6 +9,7 @@ export Link from './components/Link/Link';
 export RouterLink from './components/Link/RouterLink';
 export Spinner from './components/Spinner/Spinner';
 export Input from './components/Form/Input/Input';
+export InlineInput from './components/Form/InlineInput/InlineInput';
 export Select from './components/Form/Select/Select';
 export Textarea from './components/Form/Textarea/Textarea';
 export Radio from './components/Form/Radio/Radio';

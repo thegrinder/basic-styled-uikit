@@ -24,6 +24,36 @@ const formTheme = {
       borderColor: '#f0506e',
     },
   },
+  // inputs for inline editing
+  inline: {
+    valid: {
+      normal: {
+        backgroundColor: 'transparent',
+        borderColor: 'transparent',
+        color: '#666',
+      },
+      hover: {
+        backgroundColor: 'transparent',
+        borderColor: '#e5e5e5',
+        color: '#666',
+      },
+      active: {
+        backgroundColor: 'transparent',
+        borderColor: '#1e87f0',
+        color: '#666',
+      },
+      disabled: {
+        backgroundColor: 'transparent',
+        borderColor: '#e5e5e5',
+        color: '#999',
+      },
+    },
+    invalid: {
+      backgroundColor: 'transparent',
+      color: '#f0506e',
+      borderColor: '#f0506e',
+    },
+  },
   // radio and checkbox styles
   misc: {
     valid: {
