@@ -66,10 +66,13 @@ class App extends Component {
             <Input isValid={false} value="Invalid" />
           </div>
           <div className="w-50 mb4">
-            <InlineInput isValid={true} value="Valid inline"/>
+            <InlineInput submitting={false} isValid={true} value="Valid inline" />
           </div>
           <div className="w-50 mb4">
-            <InlineInput isValid={false} value="Invalid inline"/>
+            <InlineInput submitting={false} isValid={false} value="Invalid inline" />
+          </div>
+          <div className="w-50 mb4">
+            <InlineInput submitting={true} isValid={true} value="Submitting inline" />
           </div>
           <div className="w-50 mb4">
             <Select>

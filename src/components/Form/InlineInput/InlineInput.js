@@ -1,37 +1,35 @@
+import React from 'react';
+import { bool } from 'prop-types';
 import styled from 'styled-components';
-import { inlineInputNormalStyle, inlineInputHoverStyle, inlineInputActiveStyle,
-  inlineInputDisabledStyle } from '../formHelpers';
-import { rem } from '../../../helpers/utils';
+import StyledInlineInput from './StyledInlineInput';
+import Spinner from '../../Spinner/Spinner';
 
-const InlineInput = styled.input`
-  margin: 0;
-  border-radius: 0;
-  -webkit-appearance: none;
-  touch-action: manipulation;
-  max-width: 100%;
-  width: 100%;
-  border-width: 1px;
-  border-style: solid;
-  transition: .2s ease-in-out;
-  transition-property: color, background-color, border;
-  overflow: visible;
-
-  vertical-align: middle;
-  display: inline-block;
-  height: ${rem(40)};
-  padding: 0 ${rem(10)};
-
-  ${inlineInputNormalStyle}
-  &:hover {
-    ${inlineInputHoverStyle}
-  }
-  &:focus {
-    outline: none;
-    ${inlineInputActiveStyle}
-  }
-  &:disabled {
-    ${inlineInputDisabledStyle}
-  }
+const Wrapper = styled.div`
+  position: relative;
 `;
+
+const SpinnerWrapper = styled.div`
+  position: absolute;
+  right: 8px;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+`;
+
+
+function InlineInput({ submitting, disabled, ...propsRest }) {
+  return (
+    <Wrapper>
+      <StyledInlineInput disabled={submitting || disabled} {...propsRest} />
+      {submitting && <SpinnerWrapper><Spinner color="#ccc"/></SpinnerWrapper>}
+    </Wrapper>
+  );
+}
+
+InlineInput.propTypes = {
+  submitting: bool.isRequired,
+  disabled: bool.isRequired,
+};
 
 export default InlineInput;

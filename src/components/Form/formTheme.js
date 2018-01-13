@@ -43,7 +43,7 @@ const formTheme = {
         color: '#666',
       },
       disabled: {
-        backgroundColor: 'transparent',
+        backgroundColor: '#f8f8f8',
         borderColor: '#e5e5e5',
         color: '#999',
       },
