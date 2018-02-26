@@ -11,11 +11,11 @@ const Textarea = styled.textarea`
 `;
 
 Textarea.propTypes = {
-  isValid: bool,
+  invalid: bool,
 };
 
 Textarea.defaultProps = {
-  isValid: true,
+  invalid: false,
 };
 
 export default Textarea;

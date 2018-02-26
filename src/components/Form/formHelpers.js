@@ -1,10 +1,10 @@
 import { getStyle } from '../../helpers/utils';
 
-const getRegularInput = ({ theme, isValid }, state) => {
+const getRegularInput = ({ theme, invalid }, state) => {
   const { regular } = theme.uiKit.form;
-  return isValid
-    ? regular.valid[state]
-    : regular.invalid;
+  return invalid
+    ? regular.invalid
+    : regular.valid[state];
 };
 const getRegularInputStyle = state => getStyle(getRegularInput, state);
 
@@ -13,11 +13,11 @@ export const inputActiveStyle = getRegularInputStyle('active');
 export const inputDisabledStyle = getRegularInputStyle('disabled');
 
 
-const getMiscInput = ({ theme, isValid }, state) => {
+const getMiscInput = ({ theme, invalid }, state) => {
   const { misc } = theme.uiKit.form;
-  return isValid
-    ? misc.valid[state]
-    : misc.invalid;
+  return invalid
+    ? misc.invalid
+    : misc.valid[state];
 };
 
 const getMiscInputStyle = state => getStyle(getMiscInput, state);
@@ -28,11 +28,11 @@ export const miscCheckedStyle = getMiscInputStyle('checked');
 export const miscDisabledStyle = getMiscInputStyle('disabled');
 
 
-const getInlineInput = ({ theme, isValid }, state) => {
+const getInlineInput = ({ theme, invalid }, state) => {
   const { inline } = theme.uiKit.form;
-  return isValid
-    ? inline.valid[state]
-    : inline.invalid;
+  return invalid
+    ? inline.invalid
+    : inline.valid[state];
 };
 
 const getInlineInputStyle = state => getStyle(getInlineInput, state);

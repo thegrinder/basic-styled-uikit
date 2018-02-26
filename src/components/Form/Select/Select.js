@@ -21,11 +21,11 @@ const Select = styled.select`
 `;
 
 Select.propTypes = {
-  isValid: bool,
+  invalid: bool,
 };
 
 Select.defaultProps = {
-  isValid: true,
+  invalid: false,
 };
 
 

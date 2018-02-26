@@ -13,11 +13,11 @@ const Input = styled.input`
 `;
 
 Input.propTypes = {
-  isValid: bool,
+  invalid: bool,
 };
 
 Input.defaultProps = {
-  isValid: true,
+  invalid: false,
 };
 
 export default Input;

@@ -60,19 +60,19 @@ class App extends Component {
             <Spinner color="#ddd" size={30} />
           </div>
           <div className="w-50 mb4">
-            <Input isValid={true} value="Valid" />
+            <Input invalid={false} value="Valid" />
           </div>
           <div className="w-50 mb4">
-            <Input isValid={false} value="Invalid" />
+            <Input invalid={true} value="Invalid" />
           </div>
           <div className="w-50 mb4">
-            <InlineInput submitting={false} isValid={true} value="Valid inline" />
+            <InlineInput submitting={false} invalid={false} value="Valid inline" />
           </div>
           <div className="w-50 mb4">
-            <InlineInput submitting={false} isValid={false} value="Invalid inline" />
+            <InlineInput submitting={false} invalid={true} value="Invalid inline" />
           </div>
           <div className="w-50 mb4">
-            <InlineInput submitting={true} isValid={true} value="Submitting inline" />
+            <InlineInput submitting={true} invalid={false} value="Submitting inline" />
           </div>
           <div className="w-50 mb4">
             <Select>
