@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 
 import { Button, Link, Spinner, Input, PlainButton, MenuBtn, Paragraph,
   Select, Textarea, Radio, Checkbox, CloseBtn, TrashBtn, PencilBtn, InlineInput,
-  Span, H1, H2, H3, H4, H5, H6, Card, ColorBox, Aux, theme } from '../src/index';
+  Span, H1, H2, H3, H4, H5, H6, Card, ColorBox, Aux, List, ListItem, theme } from '../src/index';
 import '../src/tachyons/tachyons.scss';
 
 class App extends Component {
@@ -31,6 +31,12 @@ class App extends Component {
             <Paragraph colour="lightest">Lightest Paragraph</Paragraph>
             <Paragraph colour="light">Light Paragraph</Paragraph>
             <Span>Span</Span>
+          </div>
+          <div className="mb4">
+            <List>
+              <ListItem>List Item</ListItem>
+              <ListItem>List Item</ListItem>
+            </List>
           </div>
           <div className="mb4">
             <Card className="pa4 mw5">
@@ -66,13 +72,28 @@ class App extends Component {
             <Input invalid={true} value="Invalid" />
           </div>
           <div className="w-50 mb4">
-            <InlineInput submitting={false} invalid={false} value="Valid inline" />
+            <InlineInput
+              disabled={false}
+              submitting={false}
+              invalid={false}
+              value="Valid inline"
+            />
           </div>
           <div className="w-50 mb4">
-            <InlineInput submitting={false} invalid={true} value="Invalid inline" />
+            <InlineInput
+              disabled={true}
+              submitting={false}
+              invalid={true}
+              value="Invalid inline"
+            />
           </div>
           <div className="w-50 mb4">
-            <InlineInput submitting={true} invalid={false} value="Submitting inline" />
+            <InlineInput
+              disabled={true}
+              submitting={true}
+              invalid={false}
+              value="Submitting inline"
+            />
           </div>
           <div className="w-50 mb4">
             <Select>

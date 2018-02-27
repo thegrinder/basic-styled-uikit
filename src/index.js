@@ -16,8 +16,10 @@ export Radio from './components/Form/Radio/Radio';
 export Checkbox from './components/Form/Checkbox/Checkbox';
 export PlainButton from './components/PlainButton/PlainButton';
 export MenuBtn from './components/MenuBtn/MenuBtn';
+export List from './components/List/List';
 export Paragraph from './components/Text/Paragraph/Paragraph';
 export Span from './components/Text/Span/Span';
+export ListItem from './components/Text/ListItem/ListItem';
 export Card from './components/Card/Card';
 export ColorBox from './components/ColorBox/ColorBox';
 
