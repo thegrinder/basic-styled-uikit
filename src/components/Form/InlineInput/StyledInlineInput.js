@@ -1,6 +1,8 @@
 import styled from 'styled-components';
-import { inlineInputNormalStyle, inlineInputHoverStyle, inlineInputActiveStyle,
-  inlineInputDisabledStyle } from '../formHelpers';
+import {
+  inlineInputNormalStyle, inlineInputHoverStyle, inlineInputActiveStyle,
+  inlineInputDisabledStyle,
+} from '../formHelpers';
 import { rem } from '../../../helpers/utils';
 
 const StyledInlineInput = styled.input`

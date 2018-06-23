@@ -79,6 +79,14 @@ const formTheme = {
       backgroundColor: 'transparent',
     },
   },
+  toggle: {
+    normal: {
+      backgroundColor: '#ccc',
+    },
+    checked: {
+      backgroundColor: '#1e87f0',
+    },
+  },
 };
 
 export default formTheme;

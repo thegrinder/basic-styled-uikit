@@ -1,7 +1,9 @@
 import 'normalize.css/normalize.css';
 import './tachyons/tachyons.scss';
 
-export { H1, H2, H3, H4, H5, H6 } from './components/Headings/Headings';
+export {
+  H1, H2, H3, H4, H5, H6,
+} from './components/Headings/Headings';
 export { CloseBtn, TrashBtn, PencilBtn } from './components/IconButtons/IconButtons';
 export Aux from './components/Aux/Aux';
 export Button from './components/Button/Button';
@@ -14,6 +16,7 @@ export Select from './components/Form/Select/Select';
 export Textarea from './components/Form/Textarea/Textarea';
 export Radio from './components/Form/Radio/Radio';
 export Checkbox from './components/Form/Checkbox/Checkbox';
+export Toggle from './components/Form/Toggle/Toggle';
 export PlainButton from './components/PlainButton/PlainButton';
 export MenuBtn from './components/MenuBtn/MenuBtn';
 export List from './components/List/List';

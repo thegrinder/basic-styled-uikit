@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import { oneOf } from 'prop-types';
-import { btnNormalStyle, btnHoverStyle, btnActiveStyle,
-  btnSizeStyle } from './buttonHelpers';
+import {
+  btnNormalStyle, btnHoverStyle, btnActiveStyle,
+  btnSizeStyle,
+} from './buttonHelpers';
 
 const Button = styled.button`
   margin: 0;

@@ -6,4 +6,3 @@ import PencilIcon from './icons/pencil_icon.inline.svg';
 export const CloseBtn = iconButtonFactory(CloseIcon, { iconSize: 14 });
 export const TrashBtn = iconButtonFactory(TrashIcon);
 export const PencilBtn = iconButtonFactory(PencilIcon);
-

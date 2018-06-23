@@ -17,3 +17,5 @@ export const getStyle = (selector, state) => (props) => {
 };
 
 export const rem = pxValue => `${pxValue / 16}rem`;
+
+export const em = (pxValue, base) => `${pxValue / base}em`;

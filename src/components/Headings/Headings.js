@@ -84,4 +84,3 @@ H6.defaultProps = {
   sizing: 'h6',
   colour: 'dark',
 };
-

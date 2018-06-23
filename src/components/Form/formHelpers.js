@@ -41,3 +41,9 @@ export const inlineInputNormalStyle = getInlineInputStyle('normal');
 export const inlineInputHoverStyle = getInlineInputStyle('hover');
 export const inlineInputActiveStyle = getInlineInputStyle('active');
 export const inlineInputDisabledStyle = getInlineInputStyle('disabled');
+
+
+const getToggle = ({ theme }, state) => theme.uiKit.form.toggle[state];
+const getToggleStyle = state => getStyle(getToggle, state);
+export const toggleNormalStyle = getToggleStyle('normal');
+export const toggleCheckedStyle = getToggleStyle('checked');

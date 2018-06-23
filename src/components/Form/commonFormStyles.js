@@ -1,7 +1,9 @@
 import { css } from 'styled-components';
-import { miscNormalStyle, miscActiveStyle, miscCheckedStyle,
+import {
+  miscNormalStyle, miscActiveStyle, miscCheckedStyle,
   miscDisabledStyle, inputNormalStyle, inputActiveStyle,
-  inputDisabledStyle } from './formHelpers';
+  inputDisabledStyle,
+} from './formHelpers';
 import { rem } from '../../helpers/utils';
 
 export const commonInputStyles = css`
@@ -55,4 +57,3 @@ export const miscInputStyles = css`
     cursor: default;
   }
 `;
-
