@@ -1,30 +1,14 @@
-import webpack from 'webpack';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import autoprefixer from 'autoprefixer';
 import PATHS from './paths';
 
-const productionPlugin = new webpack.DefinePlugin({
-  'process.env': {
-    NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-  },
-});
-const uglifyJsPlugin = new webpack.optimize.UglifyJsPlugin({
-  comments: false,
-  beautify: false,
-  mangle: {
-    screw_ie8: true,
-    keep_fnames: true,
-  },
-  compress: {
-    screw_ie8: true,
-  },
-});
 const extractSass = new ExtractTextPlugin({
   filename: 'basic-styled-uikit.css',
   disable: process.env.NODE_ENV === 'development',
 });
 
 const prodConfig = {
+  mode: 'production',
   entry: [
     PATHS.src,
   ],
@@ -67,7 +51,7 @@ const prodConfig = {
       },
     ],
   },
-  plugins: [productionPlugin, uglifyJsPlugin, extractSass],
+  plugins: [extractSass],
   externals: [
     'react',
     'react-dom',

@@ -11,6 +11,7 @@ const htmlPlugin = new HtmlWebpackPlugin({
 const hmrePlugin = new webpack.HotModuleReplacementPlugin();
 
 const devConfig = {
+  mode: 'development',
   entry: [
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:8080',
