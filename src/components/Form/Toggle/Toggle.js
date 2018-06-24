@@ -1,5 +1,5 @@
 import React from 'react';
-import { number, bool } from 'prop-types';
+import { number, bool, func } from 'prop-types';
 import ToggleLabel from './ToggleLabel';
 import ToggleCheckbox from './ToggleCheckbox';
 import ToggleSlider from './ToggleSlider';
@@ -7,6 +7,7 @@ import ToggleSlider from './ToggleSlider';
 const propTypes = {
   h: number,
   disabled: bool,
+  onChange: func.isRequired,
 };
 
 const defaultProps = {
@@ -14,10 +15,10 @@ const defaultProps = {
   disabled: false,
 };
 
-function Toggle({ h, disabled }) {
+function Toggle({ h, disabled, onChange }) {
   return (
     <ToggleLabel>
-      <ToggleCheckbox h={h} disabled={disabled}/>
+      <ToggleCheckbox onChange={onChange} h={h} disabled={disabled}/>
       <ToggleSlider h={h} disabled={disabled}/>
     </ToggleLabel>
   );

@@ -115,7 +115,7 @@ class App extends Component {
             <Checkbox />
           </div>
           <div>
-            <Toggle checked={true} />
+            <Toggle onChange={(e) => { console.log(e.target.checked); }}/>
           </div>
           <div className="w-50 mb4">
             <CloseBtn />
