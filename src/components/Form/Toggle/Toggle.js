@@ -15,10 +15,17 @@ const defaultProps = {
   disabled: false,
 };
 
-function Toggle({ h, disabled, onChange }) {
+function Toggle({
+  h, disabled, onChange, ...rest
+}) {
   return (
     <ToggleLabel>
-      <ToggleCheckbox onChange={onChange} h={h} disabled={disabled}/>
+      <ToggleCheckbox
+        h={h}
+        onChange={onChange}
+        disabled={disabled}
+        {...rest}
+      />
       <ToggleSlider h={h} disabled={disabled}/>
     </ToggleLabel>
   );
