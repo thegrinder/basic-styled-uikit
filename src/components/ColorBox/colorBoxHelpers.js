@@ -1,9 +1,15 @@
-import { getStyle } from '../../helpers/utils';
+import { css } from 'styled-components';
 
-const getColorBoxBg = ({ theme, bgColor }) => theme.uiKit.colorBox.bgColors[bgColor];
-export const colorBoxBgStyle = getStyle(getColorBoxBg);
+export const getBgColor = (theme, bgColor) => (
+  theme.uiKit.colorBox.bgColors[bgColor]
+);
+export const colorBoxBgStyle = ({ theme, bgColor }) => (
+  css`background-color: ${getBgColor(theme, bgColor)};`
+);
 
-const getColorBoxBorder = ({ theme, borderColor }) => (
+export const getBorderColor = (theme, borderColor) => (
   theme.uiKit.colorBox.borderColors[borderColor]
 );
-export const colorBoxBorderStyle = getStyle(getColorBoxBorder);
+export const colorBoxBorderStyle = ({ theme, borderColor }) => (
+  css`border-color: ${getBorderColor(theme, borderColor)};`
+);
