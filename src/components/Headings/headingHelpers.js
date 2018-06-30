@@ -7,9 +7,9 @@ export const headingSizingStyle = ({ theme, sizing }) => (
   css`font-size: ${getHeadingSizing(theme, sizing)};`
 );
 
-export const getHeadingColour = (theme, colour) => (
+export const getHeadingColor = (theme, colour) => (
   theme.uiKit.heading.colours[colour]
 );
-export const headingColourStyle = ({ theme, colour }) => (
-  css`color: ${getHeadingColour(theme, colour)};`
+export const headingColorStyle = ({ theme, colour }) => (
+  css`color: ${getHeadingColor(theme, colour)};`
 );

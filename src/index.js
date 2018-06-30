@@ -26,5 +26,6 @@ export Card from './components/Card/Card';
 export ColorBox from './components/ColorBox/ColorBox';
 
 export theme from './theme/theme';
+export * as themeSelectors from './theme/themeSelectors';
 
 export iconButtonFactory from './components/IconButtons/iconButtonFactory';

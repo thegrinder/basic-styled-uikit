@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import { string } from 'prop-types';
-import { textSizingStyle, textColourStyle } from '../textHelpers';
+import { textSizingStyle, textColorStyle } from '../textHelpers';
 
 const Paragraph = styled.p`
   display: block;
   margin: 0;
   padding: 0;
   ${textSizingStyle}
-  ${textColourStyle}
+  ${textColorStyle}
 `;
 
 Paragraph.propTypes = {

@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import { string } from 'prop-types';
-import { headingSizingStyle, headingColourStyle } from './headingHelpers';
+import { headingSizingStyle, headingColorStyle } from './headingHelpers';
 
 export const H1 = styled.h1`
   display: block;
   margin: 0;
   padding: 0;
   ${headingSizingStyle}
-  ${headingColourStyle}
+  ${headingColorStyle}
 `;
 
 H1.propTypes = {
