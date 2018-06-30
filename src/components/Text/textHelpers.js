@@ -1,7 +1,15 @@
-import { getStyle } from '../../helpers/utils';
+import { css } from 'styled-components';
 
-const getTextSizing = ({ theme, sizing }) => theme.uiKit.text.sizings[sizing];
-const getTextColour = ({ theme, colour }) => theme.uiKit.text.colours[colour];
+export const getTextSizing = (theme, sizing) => (
+  theme.uiKit.text.sizings[sizing]
+);
+export const textSizingStyle = ({ theme, sizing }) => (
+  css`font-size: ${getTextSizing(theme, sizing)};`
+);
 
-export const textSizingStyle = getStyle(getTextSizing);
-export const textColourStyle = getStyle(getTextColour);
+export const getTextColour = (theme, colour) => (
+  theme.uiKit.text.colours[colour]
+);
+export const textColourStyle = ({ theme, colour }) => (
+  css`color: ${getTextColour(theme, colour)};`
+);
