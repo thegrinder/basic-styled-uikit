@@ -1,6 +1,16 @@
 import styled from 'styled-components';
 import { string } from 'prop-types';
 
+const propTypes = {
+  btnColor: string,
+  btnHoverColor: string,
+};
+
+const defaultProps = {
+  btnColor: '#999',
+  btnHoverColor: '#666',
+};
+
 const PlainButton = styled.button`
   touch-action: manipulation;
   margin: 0;
@@ -11,6 +21,7 @@ const PlainButton = styled.button`
   background-color: transparent;
   cursor: pointer;
   display: inline-block;
+  position: relative;
   fill: currentcolor;
   line-height: 0;
   outline: none;
@@ -27,14 +38,7 @@ const PlainButton = styled.button`
   }
 `;
 
-PlainButton.propTypes = {
-  btnColor: string,
-  btnHoverColor: string,
-};
-
-PlainButton.defaultProps = {
-  btnColor: '#999',
-  btnHoverColor: '#666',
-};
+PlainButton.propTypes = propTypes;
+PlainButton.defaultProps = defaultProps;
 
 export default PlainButton;

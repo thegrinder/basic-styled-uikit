@@ -4,6 +4,14 @@ import { oneOf } from 'prop-types';
 import { Link as ReactRouterLink } from 'react-router-dom';
 import { linkNormalStyle, linkHoverStyle } from './linkHelpers';
 
+const propTypes = {
+  linkType: oneOf(['default', 'muted']),
+};
+
+const defaultProps = {
+  linkType: 'default',
+};
+
 const Link = styled(({ linkType, ...rest }) => <ReactRouterLink {...rest} />)`
   cursor: pointer;
   touch-action: manipulation;
@@ -17,12 +25,7 @@ const Link = styled(({ linkType, ...rest }) => <ReactRouterLink {...rest} />)`
   }
 `;
 
-Link.propTypes = {
-  linkType: oneOf(['default', 'muted']),
-};
-
-Link.defaultProps = {
-  linkType: 'default',
-};
+Link.propTypes = propTypes;
+Link.defaultProps = defaultProps;
 
 export default Link;

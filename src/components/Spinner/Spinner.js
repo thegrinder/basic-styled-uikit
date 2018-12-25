@@ -2,6 +2,16 @@ import styled, { keyframes } from 'styled-components';
 import { number, string } from 'prop-types';
 import { rem } from '../../helpers/utils';
 
+const propTypes = {
+  size: number,
+  color: string,
+};
+
+const defaultProps = {
+  size: 20,
+  color: '#fff',
+};
+
 const loading = keyframes`
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -18,14 +28,7 @@ const Spinner = styled.span`
   display: inline-block;
 `;
 
-Spinner.propTypes = {
-  size: number,
-  color: string,
-};
-
-Spinner.defaultProps = {
-  size: 20,
-  color: '#fff',
-};
+Spinner.propTypes = propTypes;
+Spinner.defaultProps = defaultProps;
 
 export default Spinner;
