@@ -1,51 +1,46 @@
-import styled from 'styled-components';
-import { oneOf } from 'prop-types';
-import {
-  btnNormalStyle, btnHoverStyle, btnActiveStyle,
-  btnSizeStyle,
-} from './buttonHelpers';
+import React from 'react';
+import { node, bool, oneOf } from 'prop-types';
+import Spinner from '../Spinner/Spinner';
+import ChildrenWrapper from './ChildrenWrapper';
+import SpinnerWrapper from './SpinnerWrapper';
+import StyledButton from './StyledButton';
 
-const Button = styled.button`
-  margin: 0;
-  border: none;
-  overflow: visible;
-  display: inline-block;
-  vertical-align: middle;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: .1s ease-in-out;
-  transition-property: color, background-color, border-color;
-  touch-action: manipulation;
-  cursor: pointer;
-  outline: none;
-  border-width: 1px;
-  border-style: solid;
-  letter-spacing: 1px;
-  ${btnSizeStyle}
-  ${btnNormalStyle}
-  &:hover,
-  &:focus {
-    ${btnHoverStyle}
-  }
-  &:active {
-    ${btnActiveStyle}
-  }
-  &:disabled {
-    ${btnNormalStyle}
-    opacity: .6;
-    cursor: default;
-  }
-`;
-
-Button.propTypes = {
+const propTypes = {
+  submitting: bool,
   btnType: oneOf(['default', 'primary', 'secondary', 'danger']),
   btnSize: oneOf(['small', 'default', 'large']),
+  left: node,
+  right: node,
 };
 
-Button.defaultProps = {
-  btnType: 'default',
+const defaultProps = {
   btnSize: 'default',
+  btnType: 'default',
+  submitting: false,
 };
+
+const Button = ({ left, right, btnType, btnSize, submitting, children, ...rest }) => (
+  <StyledButton
+    left={left}
+    right={right}
+    btnSize={btnSize}
+    btnType={btnType}
+    {...rest}
+  >
+    {submitting && (
+      <SpinnerWrapper>
+        <Spinner />
+      </SpinnerWrapper>
+    )}
+    <ChildrenWrapper submitting={submitting}>
+      {left && left}
+      {children}
+      {right && right}
+    </ChildrenWrapper>
+  </StyledButton>
+);
+
+Button.propTypes = propTypes;
+Button.defaultProps = defaultProps;
 
 export default Button;

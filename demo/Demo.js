@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 
 import {
   Button, Link, Spinner, Input, PlainButton, MenuBtn, Paragraph, Toggle,
@@ -7,6 +7,15 @@ import {
   Span, H1, H2, H3, H4, H5, H6, Card, ColorBox, List, ListItem, theme,
 } from '../src/index';
 import '../src/tachyons/tachyons.scss';
+
+const Circle = styled.span`
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin: 0 15px;
+  background-color: #000;
+`;
 
 class App extends Component {
   render() {
@@ -54,6 +63,8 @@ class App extends Component {
             <Button btnType="default" btnSize="small">Small</Button>
             <Button btnType="primary" btnSize="default">Default</Button>
             <Button btnType="secondary" btnSize="large">Large</Button>
+            <Button submitting={true} btnType="primary">submitting</Button>
+            <Button left={<Circle />}>Icon Button</Button>
           </div>
           <div className="mb4">
             <PlainButton>Plain Button</PlainButton>
