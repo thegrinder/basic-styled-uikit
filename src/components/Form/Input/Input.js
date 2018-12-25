@@ -3,6 +3,14 @@ import { bool } from 'prop-types';
 import { commonInputStyles } from '../commonFormStyles';
 import { rem } from '../../../helpers/utils';
 
+const propTypes = {
+  invalid: bool,
+};
+
+const defaultProps = {
+  invalid: false,
+};
+
 const Input = styled.input`
   ${commonInputStyles}
   vertical-align: middle;
@@ -12,12 +20,7 @@ const Input = styled.input`
   overflow: visible;
 `;
 
-Input.propTypes = {
-  invalid: bool,
-};
-
-Input.defaultProps = {
-  invalid: false,
-};
+Input.propTypes = propTypes;
+Input.defaultProps = defaultProps;
 
 export default Input;
