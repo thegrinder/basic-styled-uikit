@@ -1,6 +1,6 @@
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import autoprefixer from 'autoprefixer';
-import PATHS from './paths';
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const autoprefixer = require('autoprefixer');
+const PATHS = require('./paths');
 
 const extractSass = new ExtractTextPlugin({
   filename: 'basic-styled-uikit.css',
@@ -59,4 +59,4 @@ const prodConfig = {
   ],
 };
 
-export default prodConfig;
+module.exports = prodConfig;

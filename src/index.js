@@ -1,9 +1,8 @@
+import * as selectors from './theme/themeSelectors';
 import 'normalize.css/normalize.css';
 import './tachyons/tachyons.scss';
 
-export {
-  H1, H2, H3, H4, H5, H6,
-} from './components/Headings/Headings';
+export { H1, H2, H3, H4, H5, H6 } from './components/Headings/Headings';
 export Button from './components/Button/Button';
 export Link from './components/Link/Link';
 export RouterLink from './components/Link/RouterLink';
@@ -24,4 +23,4 @@ export Card from './components/Card/Card';
 export ColorBox from './components/ColorBox/ColorBox';
 
 export theme from './theme/theme';
-export * as themeSelectors from './theme/themeSelectors';
+export const themeSelectors = selectors;
