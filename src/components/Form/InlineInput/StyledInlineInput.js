@@ -1,9 +1,17 @@
+import { bool } from 'prop-types';
 import styled from 'styled-components';
 import {
-  inlineInputNormalStyle, inlineInputHoverStyle, inlineInputActiveStyle,
+  inlineInputNormalStyle,
+  inlineInputHoverStyle,
+  inlineInputActiveStyle,
   inlineInputDisabledStyle,
 } from '../formHelpers';
 import { rem } from '../../../helpers/utils';
+
+const propTypes = {
+  invalid: bool.isRequired,
+  submitting: bool.isRequired,
+};
 
 const StyledInlineInput = styled.input`
   margin: 0;
@@ -22,6 +30,7 @@ const StyledInlineInput = styled.input`
   display: inline-block;
   height: ${rem(40)};
   padding: 0 ${rem(10)};
+  ${({ submitting }) => (submitting ? `padding-right : ${rem(36)};` : '')}
   ${inlineInputNormalStyle}
   &:hover {
     ${inlineInputHoverStyle}
@@ -34,5 +43,7 @@ const StyledInlineInput = styled.input`
     ${inlineInputDisabledStyle}
   }
 `;
+
+StyledInlineInput.propTypes = propTypes;
 
 export default StyledInlineInput;
