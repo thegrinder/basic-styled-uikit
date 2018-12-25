@@ -2,6 +2,42 @@ import styled from 'styled-components';
 import { string } from 'prop-types';
 import { headingSizingStyle, headingColorStyle } from './headingHelpers';
 
+const propTypes = {
+  sizing: string,
+  colour: string,
+};
+
+const h1defaultProps = {
+  sizing: 'h1',
+  colour: 'dark',
+};
+
+const h2defaultProps = {
+  sizing: 'h2',
+  colour: 'dark',
+};
+
+const h3defaultProps = {
+  sizing: 'h3',
+  colour: 'dark',
+};
+
+const h4defaultProps = {
+  sizing: 'h4',
+  colour: 'dark',
+};
+
+const h5defaultProps = {
+  sizing: 'h5',
+  colour: 'dark',
+};
+
+
+const h6defaultProps = {
+  sizing: 'h6',
+  colour: 'dark',
+};
+
 export const H1 = styled.h1`
   display: block;
   margin: 0;
@@ -10,77 +46,30 @@ export const H1 = styled.h1`
   ${headingColorStyle}
 `;
 
-H1.propTypes = {
-  sizing: string,
-  colour: string,
-};
-
-H1.defaultProps = {
-  sizing: 'h1',
-  colour: 'dark',
-};
-
+H1.propTypes = propTypes;
+H1.defaultProps = h1defaultProps;
 
 export const H2 = H1.withComponent('h2');
 
-H2.propTypes = {
-  sizing: string,
-  colour: string,
-};
-
-H2.defaultProps = {
-  sizing: 'h2',
-  colour: 'dark',
-};
-
+H2.propTypes = propTypes;
+H2.defaultProps = h2defaultProps;
 
 export const H3 = H1.withComponent('h3');
 
-H3.propTypes = {
-  sizing: string,
-  colour: string,
-};
-
-H3.defaultProps = {
-  sizing: 'h3',
-  colour: 'dark',
-};
-
+H3.propTypes = propTypes;
+H3.defaultProps = h3defaultProps;
 
 export const H4 = H1.withComponent('h4');
 
-H4.propTypes = {
-  sizing: string,
-  colour: string,
-};
-
-H4.defaultProps = {
-  sizing: 'h4',
-  colour: 'dark',
-};
-
+H4.propTypes = propTypes;
+H4.defaultProps = h4defaultProps;
 
 export const H5 = H1.withComponent('h5');
 
-H5.propTypes = {
-  sizing: string,
-  colour: string,
-};
-
-H5.defaultProps = {
-  sizing: 'h5',
-  colour: 'dark',
-};
-
+H5.propTypes = propTypes;
+H5.defaultProps = h5defaultProps;
 
 export const H6 = H1.withComponent('h6');
 
-H6.propTypes = {
-  sizing: string,
-  colour: string,
-};
-
-H6.defaultProps = {
-  sizing: 'h6',
-  colour: 'dark',
-};
+H6.propTypes = propTypes;
+H6.defaultProps = h6defaultProps;
