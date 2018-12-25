@@ -37,8 +37,6 @@ const devConfig = {
         use: 'babel-loader',
         exclude: [/node_modules/],
       },
-      { test: /\.inline.svg$/, use: 'svg-react-loader' },
-      { test: /^(?!.*\.inline\.svg$).*\.svg$/, use: 'url-loader' },
       {
         test: /\.s?css$/,
         use: [

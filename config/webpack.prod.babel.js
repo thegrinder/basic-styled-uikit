@@ -30,8 +30,6 @@ const prodConfig = {
           /node_modules/,
         ],
       },
-      { test: /\.inline.svg$/, use: 'svg-react-loader' },
-      { test: /^(?!.*\.inline\.svg$).*\.svg$/, use: 'url-loader' },
       {
         test: /\.s?css$/,
         use: extractSass.extract({
