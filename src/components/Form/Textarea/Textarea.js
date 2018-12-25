@@ -3,6 +3,14 @@ import { bool } from 'prop-types';
 import { commonInputStyles } from '../commonFormStyles';
 import { rem } from '../../../helpers/utils';
 
+const propTypes = {
+  invalid: bool,
+};
+
+const defaultProps = {
+  invalid: false,
+};
+
 const Textarea = styled.textarea`
   ${commonInputStyles}
   padding: ${rem(4)} ${rem(10)};
@@ -10,12 +18,8 @@ const Textarea = styled.textarea`
   overflow: auto;
 `;
 
-Textarea.propTypes = {
-  invalid: bool,
-};
+Textarea.propTypes = propTypes;
 
-Textarea.defaultProps = {
-  invalid: false,
-};
+Textarea.defaultProps = defaultProps;
 
 export default Textarea;

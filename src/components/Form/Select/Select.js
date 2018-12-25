@@ -1,9 +1,16 @@
 import styled from 'styled-components';
 import { bool } from 'prop-types';
-import selectIcon from './select_icon.svg';
-import selectDisabledIcon from './select_disabled_icon.svg';
 import { commonInputStyles } from '../commonFormStyles';
+import { inputDisabledStyle } from '../formHelpers';
 import { rem } from '../../../helpers/utils';
+
+const propTypes = {
+  invalid: bool,
+};
+
+const defaultProps = {
+  invalid: false,
+};
 
 const Select = styled.select`
   ${commonInputStyles}
@@ -12,21 +19,13 @@ const Select = styled.select`
   vertical-align: middle;
   display: inline-block;
   height: ${rem(40)};
-  background-image: url(${selectIcon});
-  background-repeat: no-repeat;
-  background-position: 100% 50%;
+  background-color: #fff;
   &:disabled {
-    background-image: url(${selectDisabledIcon});
+    ${inputDisabledStyle}
   }
 `;
 
-Select.propTypes = {
-  invalid: bool,
-};
-
-Select.defaultProps = {
-  invalid: false,
-};
-
+Select.propTypes = propTypes;
+Select.defaultProps = defaultProps;
 
 export default Select;

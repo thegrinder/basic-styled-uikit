@@ -3,6 +3,10 @@ import { number } from 'prop-types';
 import { toggleNormalStyle, toggleCheckedStyle } from '../formHelpers';
 import { rem } from '../../../helpers/utils';
 
+const propTypes = {
+  h: number.isRequired,
+};
+
 const ToggleCheckbox = styled.input.attrs({
   type: 'checkbox',
 })`
@@ -21,8 +25,6 @@ const ToggleCheckbox = styled.input.attrs({
   }
 `;
 
-ToggleCheckbox.propTypes = {
-  h: number.isRequired,
-};
+ToggleCheckbox.propTypes = propTypes;
 
 export default ToggleCheckbox;

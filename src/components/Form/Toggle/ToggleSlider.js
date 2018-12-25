@@ -2,6 +2,11 @@ import styled from 'styled-components';
 import { number, bool } from 'prop-types';
 import { rem } from '../../../helpers/utils';
 
+const propTypes = {
+  h: number.isRequired,
+  disabled: bool.isRequired,
+};
+
 const ToggleSlider = styled.span`
   position: relative;
   display: inline-block;
@@ -26,9 +31,6 @@ const ToggleSlider = styled.span`
   }
 `;
 
-ToggleSlider.propTypes = {
-  h: number.isRequired,
-  disabled: bool.isRequired,
-};
+ToggleSlider.propTypes = propTypes;
 
 export default ToggleSlider;
