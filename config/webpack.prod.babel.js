@@ -53,9 +53,10 @@ const prodConfig = {
   externals: [
     'react',
     'react-dom',
+    'react-router-dom',
+    'prop-types',
     'webpack',
     'styled-components',
-    'react-router-dom',
   ],
 };
 
