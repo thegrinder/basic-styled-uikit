@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 
 import {
-  Button, Link, Spinner, Input, PlainButton, Paragraph, Toggle,
+  Button, Link, Spinner, Input, PlainButton, Paragraph, Toggle, Container,
   Select, Textarea, Radio, Checkbox, InlineInput, InfiniteProgressBar,
   Span, H1, H2, H3, H4, H5, H6, Card, ColorBox, List, ListItem, theme,
 } from '../src/index';
@@ -19,7 +19,7 @@ const Circle = styled.span`
 
 const App = () => (
   <ThemeProvider theme={theme}>
-    <div className="pa4">
+    <Container>
       <div className="pa4">
         <ColorBox bgColor="lightPrimary" borderColor="primary" className="pa4" />
       </div>
@@ -127,7 +127,7 @@ const App = () => (
       <div>
         <Toggle onChange={(e) => { console.log(e.target.checked); }}/>
       </div>
-    </div>
+    </Container>
   </ThemeProvider>
 );
 
