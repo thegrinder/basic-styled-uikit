@@ -21,6 +21,7 @@ export Span from './components/Text/Span/Span';
 export ListItem from './components/Text/ListItem/ListItem';
 export Card from './components/Card/Card';
 export ColorBox from './components/ColorBox/ColorBox';
+export InfiniteProgressBar from './components/InfiniteProgressBar/InfiniteProgressBar';
 
 export theme from './theme/theme';
 export const themeSelectors = selectors;

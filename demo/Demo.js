@@ -3,7 +3,7 @@ import styled, { ThemeProvider } from 'styled-components';
 
 import {
   Button, Link, Spinner, Input, PlainButton, Paragraph, Toggle,
-  Select, Textarea, Radio, Checkbox, InlineInput,
+  Select, Textarea, Radio, Checkbox, InlineInput, InfiniteProgressBar,
   Span, H1, H2, H3, H4, H5, H6, Card, ColorBox, List, ListItem, theme,
 } from '../src/index';
 import '../src/tachyons/tachyons.scss';
@@ -22,6 +22,9 @@ const App = () => (
     <div className="pa4">
       <div className="pa4">
         <ColorBox bgColor="lightPrimary" borderColor="primary" className="pa4" />
+      </div>
+      <div className="mb4">
+        <InfiniteProgressBar />
       </div>
       <div className="mb4">
         <H1 sizing="h1">Heading</H1>
