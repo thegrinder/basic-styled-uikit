@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 
 import {
   Button, Link, Spinner, Input, PlainButton, Paragraph, Toggle, Container,
@@ -7,6 +7,12 @@ import {
   Span, H1, H2, H3, H4, H5, H6, Card, ColorBox, List, ListItem, theme,
 } from '../src/index';
 import '../src/tachyons/tachyons.scss';
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    font-family: Lato;
+  }
+`;
 
 const Circle = styled.span`
   display: inline-block;
@@ -20,6 +26,7 @@ const Circle = styled.span`
 const App = () => (
   <ThemeProvider theme={theme}>
     <Container>
+      <GlobalStyle />
       <div className="pa4">
         <ColorBox bgColor="lightPrimary" borderColor="primary" className="pa4" />
       </div>

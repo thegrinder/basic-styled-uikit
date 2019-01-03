@@ -75,17 +75,17 @@ const buttonTheme = {
     small: {
       padding: `0 ${rem(15)}`,
       lineHeight: rem(28),
-      fontSize: rem(10),
+      fontSize: rem(14),
     },
     default: {
       padding: `0 ${rem(30)}`,
-      fontSize: rem(12),
+      fontSize: rem(16),
       lineHeight: rem(38),
     },
     large: {
       padding: `0 ${rem(40)}`,
       lineHeight: rem(53),
-      fontSize: rem(14),
+      fontSize: rem(22),
     },
   },
 };

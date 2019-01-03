@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { oneOf, node } from 'prop-types';
+import { rem } from '../../helpers/utils';
 import {
   btnNormalStyle,
   btnHoverStyle,
@@ -23,7 +24,6 @@ const StyledButton = styled.button`
   vertical-align: middle;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
   transition: .1s ease-in-out;
   transition-property: color, background-color, border-color;
   touch-action: manipulation;
@@ -31,7 +31,7 @@ const StyledButton = styled.button`
   outline: none;
   border-width: 1px;
   border-style: solid;
-  letter-spacing: 1px;
+  border-radius: ${rem(6)};
   ${btnSizeStyle}
   ${btnNormalStyle}
   ${({ left }) => (left ? 'padding-left: 0;' : '')}
