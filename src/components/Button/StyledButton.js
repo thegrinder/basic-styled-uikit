@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { oneOf, node } from 'prop-types';
+import { node, string } from 'prop-types';
 import { rem } from '../../helpers/utils';
 import {
   btnNormalStyle,
@@ -10,8 +10,8 @@ import {
 } from './buttonHelpers';
 
 const propTypes = {
-  btnType: oneOf(['default', 'primary', 'secondary', 'danger']).isRequired,
-  btnSize: oneOf(['small', 'default', 'large']).isRequired,
+  btnType: string.isRequired,
+  btnSize: string.isRequired,
   left: node,
   right: node,
 };

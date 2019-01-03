@@ -1,5 +1,5 @@
 import React from 'react';
-import { node, bool, oneOf } from 'prop-types';
+import { node, bool, string } from 'prop-types';
 import Spinner from '../Spinner/Spinner';
 import ChildrenWrapper from './ChildrenWrapper';
 import SpinnerWrapper from './SpinnerWrapper';
@@ -7,8 +7,8 @@ import StyledButton from './StyledButton';
 
 const propTypes = {
   submitting: bool,
-  btnType: oneOf(['default', 'primary', 'secondary', 'danger']),
-  btnSize: oneOf(['small', 'default', 'large']),
+  btnType: string,
+  btnSize: string,
   left: node,
   right: node,
 };
@@ -19,7 +19,15 @@ const defaultProps = {
   submitting: false,
 };
 
-const Button = ({ left, right, btnType, btnSize, submitting, children, ...rest }) => (
+const Button = ({
+  left,
+  right,
+  btnType,
+  btnSize,
+  submitting,
+  children,
+  ...rest
+}) => (
   <StyledButton
     left={left}
     right={right}

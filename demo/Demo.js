@@ -20,7 +20,7 @@ const Circle = styled.span`
   height: 10px;
   border-radius: 100%;
   margin: 0 15px;
-  background-color: #000;
+  background-color: #fff;
 `;
 
 const App = () => (
@@ -62,17 +62,16 @@ const App = () => (
         </Card>
       </div>
       <div className="mb4">
+        <Button btnType="basic">Basic</Button>
         <Button btnType="default">Default</Button>
         <Button btnType="primary">Primary</Button>
-        <Button btnType="secondary">Secondary</Button>
         <Button btnType="danger">Danger</Button>
       </div>
       <div className="mb4">
-        <Button btnType="default" btnSize="small">Small</Button>
-        <Button btnType="primary" btnSize="default">Default</Button>
-        <Button btnType="secondary" btnSize="large">Large</Button>
-        <Button submitting={true} btnType="primary">submitting</Button>
-        <Button left={<Circle />}>Icon Button</Button>
+        <Button btnType="basic" btnSize="small">Small</Button>
+        <Button btnType="default" btnSize="default">Default</Button>
+        <Button submitting={true} btnType="primary" btnSize="large">submitting</Button>
+        <Button btnType="danger" left={<Circle />}>Icon Button</Button>
       </div>
       <div className="mb4">
         <PlainButton>Plain Button</PlainButton>

@@ -2,7 +2,7 @@ import { rem } from '../../helpers/utils';
 
 const buttonTheme = {
   btnTypes: {
-    default: {
+    basic: {
       normal: {
         color: '#222',
         backgroundColor: 'transparent',
@@ -19,6 +19,23 @@ const buttonTheme = {
         borderColor: '#999',
       },
     },
+    default: {
+      normal: {
+        color: '#3d4852',
+        backgroundColor: '#e0e1e2',
+        borderColor: 'transparent',
+      },
+      hover: {
+        color: '#22292f',
+        backgroundColor: '#cacbcd',
+        borderColor: 'transparent',
+      },
+      active: {
+        color: '#22292f',
+        backgroundColor: '#babbbc',
+        borderColor: 'transparent',
+      },
+    },
     primary: {
       normal: {
         color: '#fff',
@@ -33,23 +50,6 @@ const buttonTheme = {
       active: {
         color: '#fff',
         backgroundColor: '#0e6dcd',
-        borderColor: 'transparent',
-      },
-    },
-    secondary: {
-      normal: {
-        color: '#fff',
-        backgroundColor: '#222',
-        borderColor: 'transparent',
-      },
-      hover: {
-        color: '#fff',
-        backgroundColor: '#151515',
-        borderColor: 'transparent',
-      },
-      active: {
-        color: '#fff',
-        backgroundColor: '#080808',
         borderColor: 'transparent',
       },
     },
