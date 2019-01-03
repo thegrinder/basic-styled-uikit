@@ -17,7 +17,12 @@ const defaultProps = {
   invalid: false,
 };
 
-const InlineInput = ({ submitting, disabled, invalid, ...rest }) => (
+const InlineInput = ({
+  submitting,
+  disabled,
+  invalid,
+  ...rest
+}) => (
   <Wrapper>
     <StyledInlineInput
       submitting={submitting}

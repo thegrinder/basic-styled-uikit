@@ -8,7 +8,6 @@ import { rem } from '../../helpers/utils';
 
 export const commonInputStyles = css`
   margin: 0;
-  border-radius: 0;
   -webkit-appearance: none;
   touch-action: manipulation;
   max-width: 100%;
@@ -17,6 +16,7 @@ export const commonInputStyles = css`
   border-style: solid;
   transition: .2s ease-in-out;
   transition-property: color, background-color, border;
+  border-radius: ${rem(6)};
   ${inputNormalStyle}
   &:focus {
     outline: none;

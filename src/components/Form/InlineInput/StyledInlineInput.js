@@ -15,7 +15,6 @@ const propTypes = {
 
 const StyledInlineInput = styled.input`
   margin: 0;
-  border-radius: 0;
   -webkit-appearance: none;
   touch-action: manipulation;
   max-width: 100%;
@@ -28,6 +27,7 @@ const StyledInlineInput = styled.input`
 
   vertical-align: middle;
   display: inline-block;
+  border-radius: ${rem(6)};
   height: ${rem(40)};
   padding: 0 ${rem(10)};
   ${({ submitting }) => (submitting ? `padding-right : ${rem(36)};` : '')}
