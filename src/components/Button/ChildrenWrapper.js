@@ -6,7 +6,7 @@ const propTypes = {
 };
 
 const ChildrenWrapper = styled.span`
-  opacity: ${({ submitting }) => submitting ? '0' : '100%'};
+  opacity: ${({ submitting }) => (submitting ? '0' : '1')};
 `;
 
 ChildrenWrapper.propTypes = propTypes;
