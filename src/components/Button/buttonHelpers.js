@@ -8,3 +8,6 @@ export const btnActiveStyle = getBtnTypeStyle('active');
 
 const getBtnSize = ({ theme, btnSize }) => theme.uiKit.button.btnSizes[btnSize];
 export const btnSizeStyle = getStyle(getBtnSize);
+
+const getBtnCommonStyle = ({ theme }) => theme.uiKit.button.common;
+export const btnCommonStyle = getStyle(getBtnCommonStyle);

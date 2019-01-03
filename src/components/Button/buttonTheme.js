@@ -88,6 +88,10 @@ const buttonTheme = {
       fontSize: rem(22),
     },
   },
+  common: {
+    fontWeight: '700',
+    letterSpacing: '.4px',
+  },
 };
 
 export default buttonTheme;

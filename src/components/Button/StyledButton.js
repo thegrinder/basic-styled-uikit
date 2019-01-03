@@ -6,6 +6,7 @@ import {
   btnHoverStyle,
   btnActiveStyle,
   btnSizeStyle,
+  btnCommonStyle,
 } from './buttonHelpers';
 
 const propTypes = {
@@ -32,6 +33,7 @@ const StyledButton = styled.button`
   border-width: 1px;
   border-style: solid;
   border-radius: ${rem(6)};
+  ${btnCommonStyle}
   ${btnSizeStyle}
   ${btnNormalStyle}
   ${({ left }) => (left ? 'padding-left: 0;' : '')}
