@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
+import colors from '../../theme/colors';
 import { rem } from '../../helpers/utils';
 
 const increase = keyframes`
@@ -18,8 +19,8 @@ const propTypes = {
 };
 
 const defaultProps = {
-  colour: '#4a8df8',
-  bgColor: '#d8eafc',
+  colour: colors.primary500,
+  bgColor: colors.primary100,
 };
 
 const InfiniteProgressBar = styled.div`
