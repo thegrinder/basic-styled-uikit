@@ -1,3 +1,7 @@
+export const getColor = (theme, color) => (
+  theme.uiKit.colors[color]
+);
+
 const colors = {
   transparent: 'transparent',
   white: '#fff',

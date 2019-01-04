@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { string } from 'prop-types';
-import { getColor } from './colorBoxHelpers';
+import { getColor } from '../../theme/colors';
 
 const propTypes = {
   bgColor: string,
