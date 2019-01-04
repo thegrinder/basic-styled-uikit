@@ -1,9 +1,9 @@
+import colors from './colors';
 import button from '../components/Button/buttonTheme';
 import link from '../components/Link/linkTheme';
 import form from '../components/Form/formTheme';
 import text from '../components/Text/textTheme';
 import heading from '../components/Headings/headingTheme';
-import colorBox from '../components/ColorBox/colorBoxTheme';
 
 const theme = {
   uiKit: {
@@ -12,7 +12,7 @@ const theme = {
     form,
     text,
     heading,
-    colorBox,
+    colors,
   },
 };
 

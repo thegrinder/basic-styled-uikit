@@ -28,7 +28,7 @@ const App = () => (
     <Container>
       <GlobalStyle />
       <div className="pa4">
-        <ColorBox bgColor="lightPrimary" borderColor="primary" className="pa4" />
+        <ColorBox bgColor="success100" borderColor="success200" className="pa4" />
       </div>
       <div className="mb4">
         <InfiniteProgressBar />

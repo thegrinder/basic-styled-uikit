@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { string } from 'prop-types';
-import { colorBoxBgStyle, colorBoxBorderStyle } from './colorBoxHelpers';
+import { getColor } from './colorBoxHelpers';
 
 const propTypes = {
   bgColor: string,
@@ -13,8 +13,10 @@ const defaultProps = {
 };
 
 const ColorBox = styled.div`
-  ${colorBoxBgStyle}
-  ${colorBoxBorderStyle}
+  background-color: ${({ theme, bgColor }) => getColor(theme, bgColor)};
+  border-width: 1px;
+  border-style: solid;
+  border-color: ${({ theme, borderColor }) => getColor(theme, borderColor)};
 `;
 
 ColorBox.propTypes = propTypes;

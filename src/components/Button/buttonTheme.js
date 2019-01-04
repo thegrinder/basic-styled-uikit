@@ -4,69 +4,69 @@ const buttonTheme = {
   btnTypes: {
     basic: {
       normal: {
-        color: '#222',
+        color: '#212529',
         backgroundColor: 'transparent',
-        borderColor: '#e5e5e5',
+        borderColor: '#dee2e6',
       },
       hover: {
-        color: '#222',
+        color: '#212529',
         backgroundColor: 'transparent',
-        borderColor: '#b2b2b2',
+        borderColor: '#adb5bd',
       },
       active: {
-        color: '#222',
+        color: '#212529',
         backgroundColor: 'transparent',
-        borderColor: '#999',
+        borderColor: '#495057',
       },
     },
     default: {
       normal: {
-        color: '#3d4852',
-        backgroundColor: '#e0e1e2',
+        color: '#161616',
+        backgroundColor: '#dee2e6',
         borderColor: 'transparent',
       },
       hover: {
-        color: '#22292f',
-        backgroundColor: '#cacbcd',
+        color: '#161616',
+        backgroundColor: '#ced4da',
         borderColor: 'transparent',
       },
       active: {
-        color: '#22292f',
-        backgroundColor: '#babbbc',
+        color: '#161616',
+        backgroundColor: '#adb5bd',
         borderColor: 'transparent',
       },
     },
     primary: {
       normal: {
         color: '#fff',
-        backgroundColor: '#1e87f0',
+        backgroundColor: '#03a9f4',
         borderColor: 'transparent',
       },
       hover: {
         color: '#fff',
-        backgroundColor: '#0f7ae5',
+        backgroundColor: '#039be5',
         borderColor: 'transparent',
       },
       active: {
         color: '#fff',
-        backgroundColor: '#0e6dcd',
+        backgroundColor: '#0288d1',
         borderColor: 'transparent',
       },
     },
     danger: {
       normal: {
         color: '#fff',
-        backgroundColor: '#f0506e',
+        backgroundColor: '#f44336',
         borderColor: 'transparent',
       },
       hover: {
         color: '#fff',
-        backgroundColor: '#ee395b',
+        backgroundColor: '#e53935',
         borderColor: 'transparent',
       },
       active: {
         color: '#fff',
-        backgroundColor: '#ec2147',
+        backgroundColor: '#d32f2f',
         borderColor: 'transparent',
       },
     },
