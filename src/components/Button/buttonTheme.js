@@ -7,7 +7,7 @@ const buttonTheme = {
       normal: {
         color: colors.gray900,
         backgroundColor: colors.transparent,
-        borderColor: colors.gray200,
+        borderColor: colors.gray300,
       },
       hover: {
         color: colors.gray900,

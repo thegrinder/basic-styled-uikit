@@ -1,90 +1,93 @@
+import colors from '../../theme/colors';
+
 const formTheme = {
   // text input, textarea, and select styles
   regular: {
     valid: {
       normal: {
-        backgroundColor: '#fff',
-        borderColor: '#e5e5e5',
-        color: '#666',
+        backgroundColor: colors.white,
+        borderColor: colors.gray300,
+        color: colors.gray700,
       },
       active: {
-        backgroundColor: '#fff',
-        borderColor: '#1e87f0',
-        color: '#666',
+        backgroundColor: colors.white,
+        borderColor: colors.primary500,
+        color: colors.gray700,
       },
       disabled: {
-        backgroundColor: '#f8f8f8',
-        borderColor: '#e5e5e5',
-        color: '#999',
+        backgroundColor: colors.gray100,
+        borderColor: colors.gray300,
+        color: colors.gray600,
       },
     },
     invalid: {
-      backgroundColor: '#fff',
-      color: '#f0506e',
-      borderColor: '#f0506e',
+      backgroundColor: colors.white,
+      color: colors.danger500,
+      borderColor: colors.danger500,
     },
   },
   // inputs for inline editing
   inline: {
     valid: {
       normal: {
-        backgroundColor: 'transparent',
-        borderColor: 'transparent',
-        color: '#666',
+        backgroundColor: colors.transparent,
+        borderColor: colors.transparent,
+        color: colors.gray700,
       },
       hover: {
-        backgroundColor: 'transparent',
-        borderColor: '#e5e5e5',
-        color: '#666',
+        backgroundColor: colors.transparent,
+        borderColor: colors.gray300,
+        color: colors.gray700,
       },
       active: {
-        backgroundColor: 'transparent',
-        borderColor: '#1e87f0',
-        color: '#666',
+        backgroundColor: colors.transparent,
+        borderColor: colors.primary500,
+        color: colors.gray700,
       },
       disabled: {
-        backgroundColor: '#f8f8f8',
-        borderColor: '#e5e5e5',
-        color: '#999',
+        backgroundColor: colors.gray100,
+        borderColor: colors.gray300,
+        color: colors.gray600,
       },
     },
     invalid: {
-      backgroundColor: 'transparent',
-      color: '#f0506e',
-      borderColor: '#f0506e',
+      backgroundColor: colors.transparent,
+      color: colors.danger500,
+      borderColor: colors.danger500,
     },
   },
   // radio and checkbox styles
   misc: {
     valid: {
       normal: {
-        borderColor: '#ccc',
-        backgroundColor: 'transparent',
+        borderColor: colors.gray300,
+        backgroundColor: colors.transparent,
       },
       active: {
-        borderColor: '#1e87f0',
-        backgroundColor: 'transparent',
+        borderColor: colors.primary500,
+        backgroundColor: colors.transparent,
       },
       checked: {
-        borderColor: 'transparent',
-        backgroundColor: '#1e87f0',
+        borderColor: colors.transparent,
+        backgroundColor: colors.primary500,
       },
       disabled: {
-        bordeColor: '#e5e5e5',
-        backgroundColor: '#f8f8f8',
+        borderColor: colors.gray300,
+        backgroundColor: colors.gray100,
       },
     },
     invalid: {
-      borderColor: '#f0506e',
-      backgroundColor: 'transparent',
+      borderColor: colors.danger500,
+      backgroundColor: colors.transparent,
     },
   },
+  // toggle styles
   toggle: {
     normal: {
-      backgroundColor: '#ccc',
+      backgroundColor: colors.gray300,
     },
     checked: {
-      backgroundColor: '#1e87f0',
+      backgroundColor: colors.primary500,
     },
   },
 };
