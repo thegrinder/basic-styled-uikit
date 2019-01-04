@@ -1,73 +1,74 @@
 import { rem } from '../../helpers/utils';
+import colors from '../../theme/colors';
 
 const buttonTheme = {
   btnTypes: {
     basic: {
       normal: {
-        color: '#212529',
-        backgroundColor: 'transparent',
-        borderColor: '#dee2e6',
+        color: colors.gray900,
+        backgroundColor: colors.transparent,
+        borderColor: colors.gray200,
       },
       hover: {
-        color: '#212529',
-        backgroundColor: 'transparent',
-        borderColor: '#adb5bd',
+        color: colors.gray900,
+        backgroundColor: colors.transparent,
+        borderColor: colors.gray400,
       },
       active: {
-        color: '#212529',
-        backgroundColor: 'transparent',
-        borderColor: '#495057',
+        color: colors.gray900,
+        backgroundColor: colors.transparent,
+        borderColor: colors.gray500,
       },
     },
     default: {
       normal: {
-        color: '#161616',
-        backgroundColor: '#dee2e6',
-        borderColor: 'transparent',
+        color: colors.black,
+        backgroundColor: colors.gray300,
+        borderColor: colors.transparent,
       },
       hover: {
-        color: '#161616',
-        backgroundColor: '#ced4da',
-        borderColor: 'transparent',
+        color: colors.black,
+        backgroundColor: colors.gray400,
+        borderColor: colors.transparent,
       },
       active: {
-        color: '#161616',
-        backgroundColor: '#adb5bd',
-        borderColor: 'transparent',
+        color: colors.black,
+        backgroundColor: colors.gray500,
+        borderColor: colors.transparent,
       },
     },
     primary: {
       normal: {
-        color: '#fff',
-        backgroundColor: '#03a9f4',
-        borderColor: 'transparent',
+        color: colors.white,
+        backgroundColor: colors.primary500,
+        borderColor: colors.transparent,
       },
       hover: {
-        color: '#fff',
-        backgroundColor: '#039be5',
-        borderColor: 'transparent',
+        color: colors.white,
+        backgroundColor: colors.primary600,
+        borderColor: colors.transparent,
       },
       active: {
-        color: '#fff',
-        backgroundColor: '#0288d1',
-        borderColor: 'transparent',
+        color: colors.white,
+        backgroundColor: colors.primary700,
+        borderColor: colors.transparent,
       },
     },
     danger: {
       normal: {
-        color: '#fff',
-        backgroundColor: '#f44336',
-        borderColor: 'transparent',
+        color: colors.white,
+        backgroundColor: colors.danger500,
+        borderColor: colors.transparent,
       },
       hover: {
-        color: '#fff',
-        backgroundColor: '#e53935',
-        borderColor: 'transparent',
+        color: colors.white,
+        backgroundColor: colors.danger600,
+        borderColor: colors.transparent,
       },
       active: {
-        color: '#fff',
-        backgroundColor: '#d32f2f',
-        borderColor: 'transparent',
+        color: colors.white,
+        backgroundColor: colors.danger700,
+        borderColor: colors.transparent,
       },
     },
   },
