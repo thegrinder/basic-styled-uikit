@@ -53,7 +53,7 @@ export const miscInputStyles = css`
     ${miscCheckedStyle}
   }
   &:disabled {
-    ${miscDisabledStyle}
     cursor: default;
+    opacity: .6;
   }
 `;

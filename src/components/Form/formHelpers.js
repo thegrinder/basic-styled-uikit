@@ -25,7 +25,6 @@ const getMiscInputStyle = state => getStyle(getMiscInput, state);
 export const miscNormalStyle = getMiscInputStyle('normal');
 export const miscActiveStyle = getMiscInputStyle('active');
 export const miscCheckedStyle = getMiscInputStyle('checked');
-export const miscDisabledStyle = getMiscInputStyle('disabled');
 
 
 const getInlineInput = ({ theme, invalid }, state) => {

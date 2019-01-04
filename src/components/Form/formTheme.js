@@ -71,10 +71,8 @@ const formTheme = {
         borderColor: colors.transparent,
         backgroundColor: colors.primary500,
       },
-      disabled: {
-        borderColor: colors.gray300,
-        backgroundColor: colors.gray100,
-      },
+      // no theme for disabled because it's not simple
+      // enough to handle all the cases (e.g disabled checked)
     },
     invalid: {
       borderColor: colors.danger500,
