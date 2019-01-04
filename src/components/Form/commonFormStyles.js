@@ -33,8 +33,8 @@ export const miscInputStyles = css`
   overflow: hidden;
   padding: 0;
   display: inline-block;
-  height: ${rem(16)};
-  width: ${rem(16)};
+  height: ${rem(24)};
+  width: ${rem(24)};
   margin-top: ${rem(-4)};
   vertical-align: middle;
   background-repeat: no-repeat;
