@@ -5,6 +5,7 @@ export const getColor = (theme, color) => (
 const colors = {
   transparent: 'transparent',
   white: '#fff',
+  gray50: '#fafafa',
   gray100: '#f8f9fa',
   gray200: '#e9ecef',
   gray300: '#dee2e6',
@@ -16,6 +17,7 @@ const colors = {
   gray900: '#212529',
   black: '#161616',
 
+  primary50: '#e3f2fd',
   primary100: '#bbdefb',
   primary200: '#90caf9',
   primary300: '#64b5f6',
@@ -26,6 +28,7 @@ const colors = {
   primary800: '#1565c0',
   primary900: '#0d47a1',
 
+  success50: '#e8f5e9',
   success100: '#c8e6c9',
   success200: '#a5d6a7',
   success300: '#81c784',
@@ -36,6 +39,7 @@ const colors = {
   success800: '#2e7d32',
   success900: '#1b5e20',
 
+  warning50: '#fffde7',
   warning100: '#fff9c4',
   warning200: '#fff59d',
   warning300: '#fff176',
@@ -46,6 +50,7 @@ const colors = {
   warning800: '#f9a825',
   warning900: '#f57f17',
 
+  danger50: '#ffebee',
   danger100: '#ffcdd2',
   danger200: '#ef9a9a',
   danger300: '#e57373',
