@@ -15,7 +15,12 @@ const defaultProps = {
   disabled: false,
 };
 
-const Toggle = ({ h, disabled, onChange, ...rest }) => (
+const Toggle = ({
+  h,
+  disabled,
+  onChange,
+  ...rest
+}) => (
   <ToggleLabel>
     <ToggleCheckbox
       h={h}

@@ -1,7 +1,10 @@
 import { css } from 'styled-components';
 import {
-  miscNormalStyle, miscActiveStyle, miscCheckedStyle,
-  miscDisabledStyle, inputNormalStyle, inputActiveStyle,
+  miscNormalStyle,
+  miscActiveStyle,
+  miscCheckedStyle,
+  inputNormalStyle,
+  inputActiveStyle,
   inputDisabledStyle,
 } from './formHelpers';
 import { rem } from '../../helpers/utils';
