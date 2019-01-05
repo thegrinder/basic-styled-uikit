@@ -15,7 +15,8 @@
   "main": "./dist/index.js",
   "scripts": {
     "start": "webpack-dev-server --config config/webpack.dev.js",
-    "production": "NODE_ENV=production webpack -p --config config/webpack.prod.js",
+    "production": "rm -rf lib && webpack --config config/webpack.prod.js",
+    "prepublishOnly": "npm run production",
     "lint": "eslint --fix src/. config/."
   },
   "husky": {
