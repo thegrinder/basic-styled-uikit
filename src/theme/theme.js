@@ -1,4 +1,5 @@
-import colors from './colors';
+import colors, { getColor as getColorSelector } from './colors';
+import { rem as remHelper } from '../helpers/utils';
 import button from '../components/Button/buttonTheme';
 import link from '../components/Link/linkTheme';
 import form from '../components/Form/formTheme';
@@ -15,5 +16,8 @@ const theme = {
     colors,
   },
 };
+
+export const getColor = getColorSelector;
+export const rem = remHelper;
 
 export default theme;

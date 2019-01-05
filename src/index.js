@@ -1,4 +1,3 @@
-import * as selectors from './theme/themeSelectors';
 import 'normalize.css/normalize.css';
 import './tachyons/tachyons.scss';
 
@@ -21,4 +20,3 @@ export InfiniteProgressBar from './components/InfiniteProgressBar/InfiniteProgre
 export Container from './components/Container/Container';
 
 export theme from './theme/theme';
-export const themeSelectors = selectors;
