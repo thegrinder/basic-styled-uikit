@@ -9,33 +9,32 @@ const propTypes = {
 
 const h1defaultProps = {
   sizing: 'h1',
-  colour: 'dark',
+  colour: 'gray800',
 };
 
 const h2defaultProps = {
   sizing: 'h2',
-  colour: 'dark',
+  colour: 'gray800',
 };
 
 const h3defaultProps = {
   sizing: 'h3',
-  colour: 'dark',
+  colour: 'gray800',
 };
 
 const h4defaultProps = {
   sizing: 'h4',
-  colour: 'dark',
+  colour: 'gray800',
 };
 
 const h5defaultProps = {
   sizing: 'h5',
-  colour: 'dark',
+  colour: 'gray800',
 };
-
 
 const h6defaultProps = {
   sizing: 'h6',
-  colour: 'dark',
+  colour: 'gray800',
 };
 
 export const H1 = styled.h1`

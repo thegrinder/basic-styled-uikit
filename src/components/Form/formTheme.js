@@ -82,7 +82,7 @@ const formTheme = {
   // toggle styles
   toggle: {
     normal: {
-      backgroundColor: colors.gray300,
+      backgroundColor: colors.gray400,
     },
     checked: {
       backgroundColor: colors.primary500,
