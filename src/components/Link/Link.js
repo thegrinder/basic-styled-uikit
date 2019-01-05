@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 import { string } from 'prop-types';
-import { linkNormalStyle, linkHoverStyle } from './linkHelpers';
+import { getColor } from '../../theme/colors';
 
 const propTypes = {
-  linktype: string,
+  color: string,
+  hoverColor: string,
 };
 
 const defaultProps = {
-  linktype: 'default',
+  color: 'gray600',
+  hovercolor: 'gray700',
 };
 
 const Link = styled.a`
@@ -15,9 +17,9 @@ const Link = styled.a`
   touch-action: manipulation;
   text-decoration: none;
   font-family: inherit;
-  ${linkNormalStyle}
+  color: ${({ theme, color }) => getColor(theme, color)};
   &:hover {
-    ${linkHoverStyle}
+    color: ${({ theme, hovercolor }) => getColor(theme, hovercolor)};
     outline: none;
     text-decoration: underline;
   }
