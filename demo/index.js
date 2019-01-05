@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { HashRouter, Route } from 'react-router-dom';
 import Demo from './Demo';
 import '../src/tachyons/tachyons.scss';
 
 const render = () => {
   ReactDOM.render(
-    <Demo />,
+    <HashRouter>
+      <Route path="/" component={Demo} />
+    </HashRouter>,
     document.getElementById('demo'),
   );
 };

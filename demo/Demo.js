@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 
 import {
@@ -77,8 +78,8 @@ const App = () => (
         <PlainButton>Plain Button</PlainButton>
       </div>
       <div className="mb4">
-        <Link linkType="default">Default Link</Link>
-        <Link linkType="muted">Muted Link</Link>
+        <Link  to="/test" linkType="default">Default Link</Link>
+        <Link to="/another" linkType="muted">Muted Link</Link>
       </div>
       <div className="mb4">
         <Spinner color="#ddd" size={30} />
