@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { bool } from 'prop-types';
 import { miscInputStyles } from '../commonFormStyles';
+import { rem } from '../../../helpers/utils';
 
 const propTypes = {
   invalid: bool,
@@ -14,7 +15,7 @@ const Checkbox = styled.input.attrs({
   type: 'checkbox',
 })`
   ${miscInputStyles}
-  border-radius: 0;
+  border-radius: ${rem(4)};
   position: relative;
   &:after {
     content: '';

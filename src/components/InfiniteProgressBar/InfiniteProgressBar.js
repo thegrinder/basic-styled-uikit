@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
-import colors from '../../theme/colors';
+import { getColor } from '../../theme/colors';
 import { rem } from '../../helpers/utils';
 
 const increase = keyframes`
@@ -19,20 +19,20 @@ const propTypes = {
 };
 
 const defaultProps = {
-  colour: colors.primary500,
-  bgColor: colors.primary100,
+  colour: 'primary500',
+  bgColor: 'primary100',
 };
 
 const InfiniteProgressBar = styled.div`
   position: relative;
   height: ${rem(5)};
   overflow-x: hidden;
-  background: ${props => props.bgColor};
+  background: ${({ theme, bgColor }) => getColor(theme, bgColor)};
   &:before,
   &:after {
     content: '';
     position: absolute;
-    background: ${props => props.colour};
+    background: ${({ theme, colour }) => getColor(theme, colour)};
     height: ${rem(5)};
     width: 10%;
     left: -15%;

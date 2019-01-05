@@ -1,3 +1,3 @@
 export { getColor } from './colors';
-export { getHeadingSizing, getHeadingColor } from '../components/Headings/headingHelpers';
-export { getTextSizing, getTextColor } from '../components/Text/textHelpers';
+export { getHeadingSizing } from '../components/Headings/headingHelpers';
+export { getTextSizing } from '../components/Text/textHelpers';
