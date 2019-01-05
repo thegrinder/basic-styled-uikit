@@ -81,7 +81,7 @@ const App = () => (
         <Link to="/another" linkType="muted">Muted Link</Link>
       </div>
       <div className="mb4">
-        <Spinner color="#ddd" size={30} />
+        <Spinner color="success500" size={30} />
       </div>
       <div className="w-50 mb4">
         <Input invalid={false} value="Valid" />

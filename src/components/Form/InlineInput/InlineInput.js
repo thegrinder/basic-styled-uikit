@@ -32,7 +32,7 @@ const InlineInput = ({
     />
     {submitting && (
       <SpinnerWrapper>
-        <Spinner color="#ccc"/>
+        <Spinner />
       </SpinnerWrapper>
     )}
   </Wrapper>

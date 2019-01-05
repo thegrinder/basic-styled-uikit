@@ -1,15 +1,16 @@
 import styled, { keyframes } from 'styled-components';
 import { number, string } from 'prop-types';
 import { rem } from '../../helpers/utils';
+import { getColor } from '../../theme/colors';
 
 const propTypes = {
-  size: number,
+  sizing: number,
   color: string,
 };
 
 const defaultProps = {
-  size: 20,
-  color: '#fff',
+  sizing: 20,
+  color: 'gray500',
 };
 
 const loading = keyframes`
@@ -18,10 +19,10 @@ const loading = keyframes`
 `;
 
 const Spinner = styled.span`
-  width: ${props => rem(props.size)};
-  height: ${props => rem(props.size)};
+  width: ${props => rem(props.sizing)};
+  height: ${props => rem(props.sizing)};
   border-radius: 100%;
-  border: 2px solid ${props => props.color};
+  border: 2px solid ${({ theme, color }) => getColor(theme, color)};
   border-bottom-color: transparent;
   animation: ${loading} 0.75s 0s infinite linear;
   vertical-align: middle;

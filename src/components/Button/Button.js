@@ -37,7 +37,7 @@ const Button = ({
   >
     {submitting && (
       <SpinnerWrapper>
-        <Spinner />
+        <Spinner color="white" />
       </SpinnerWrapper>
     )}
     <ChildrenWrapper submitting={submitting}>
