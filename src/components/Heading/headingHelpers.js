@@ -8,6 +8,6 @@ export const headingSizingStyle = ({ theme, sizing }) => (
   css`font-size: ${getHeadingSizing(theme, sizing)};`
 );
 
-export const headingColorStyle = ({ theme, colour }) => (
-  css`color: ${getColor(theme, colour)};`
+export const headingColorStyle = ({ theme, color }) => (
+  css`color: ${getColor(theme, color)};`
 );

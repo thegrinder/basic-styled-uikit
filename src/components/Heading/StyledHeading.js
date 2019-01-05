@@ -3,7 +3,7 @@ import { string } from 'prop-types';
 import { headingSizingStyle, headingColorStyle } from './headingHelpers';
 
 const propTypes = {
-  colour: string.isRequired,
+  color: string.isRequired,
   sizing: string.isRequired,
 };
 

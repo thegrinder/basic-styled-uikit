@@ -4,26 +4,26 @@ import StyledText from './StyledText';
 
 const propTypes = {
   sizing: string,
-  colour: string,
+  color: string,
   as: string,
 };
 
 const defaultProps = {
   sizing: 'medium',
-  colour: 'gray800',
+  color: 'gray800',
   as: 'span',
 };
 
 const Text = ({
   sizing,
-  colour,
+  color,
   as,
   ...rest
 }) => (
   <StyledText
     as={as}
     sizing={sizing}
-    colour={colour}
+    color={color}
     {...rest}
   />
 );

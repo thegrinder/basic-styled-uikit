@@ -14,12 +14,12 @@ const decrease = keyframes`
 `;
 
 const propTypes = {
-  colour: PropTypes.string,
-  bgColour: PropTypes.string,
+  color: PropTypes.string,
+  bgcolor: PropTypes.string,
 };
 
 const defaultProps = {
-  colour: 'primary500',
+  color: 'primary500',
   bgColor: 'primary100',
 };
 
@@ -32,7 +32,7 @@ const InfiniteProgressBar = styled.div`
   &:after {
     content: '';
     position: absolute;
-    background: ${({ theme, colour }) => getColor(theme, colour)};
+    background: ${({ theme, color }) => getColor(theme, color)};
     height: ${rem(5)};
     width: 10%;
     left: -15%;

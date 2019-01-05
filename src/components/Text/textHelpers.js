@@ -8,6 +8,6 @@ export const textSizingStyle = ({ theme, sizing }) => (
   css`font-size: ${getTextSizing(theme, sizing)};`
 );
 
-export const textColorStyle = ({ theme, colour }) => (
-  css`color: ${getColor(theme, colour)};`
+export const textColorStyle = ({ theme, color }) => (
+  css`color: ${getColor(theme, color)};`
 );

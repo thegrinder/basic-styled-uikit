@@ -3,13 +3,13 @@ import { string } from 'prop-types';
 import { getColor } from '../../theme/colors';
 
 const propTypes = {
-  btnColor: string,
-  btnHoverColor: string,
+  color: string,
+  hoverColor: string,
 };
 
 const defaultProps = {
-  btnColor: 'gray700',
-  btnHoverColor: 'gray900',
+  color: 'gray700',
+  hoverColor: 'gray900',
 };
 
 const PlainButton = styled.button`
@@ -28,11 +28,11 @@ const PlainButton = styled.button`
   outline: none;
   transition: .1s ease-in-out;
   transition-property: color;
-  color: ${({ theme, btnColor }) => getColor(theme, btnColor)};
+  color: ${({ theme, color }) => getColor(theme, color)};
   &:focus,
   &:hover {
     opacity: 1;
-    color: ${({ theme, btnHoverColor }) => getColor(theme, btnHoverColor)};
+    color: ${({ theme, hoverColor }) => getColor(theme, hoverColor)};
   }
 `;
 

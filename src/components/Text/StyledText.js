@@ -3,7 +3,7 @@ import { string } from 'prop-types';
 import { textSizingStyle, textColorStyle } from './textHelpers';
 
 const propTypes = {
-  colour: string.isRequired,
+  color: string.isRequired,
   sizing: string.isRequired,
 };
 

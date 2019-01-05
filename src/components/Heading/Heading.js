@@ -4,24 +4,24 @@ import StyledHeading from './StyledHeading';
 
 const propTypes = {
   sizing: string,
-  colour: string,
+  color: string,
   as: node.isRequired,
 };
 
 const defaultProps = {
-  colour: 'gray900',
+  color: 'gray900',
 };
 
 const Heading = ({
   sizing,
-  colour,
+  color,
   as,
   ...rest
 }) => (
   <StyledHeading
     as={as}
     sizing={sizing || as}
-    colour={colour}
+    color={color}
     {...rest}
   />
 );
