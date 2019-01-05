@@ -60,9 +60,23 @@ const colors = {
   danger900: '#b71c1c',
 };
 
+const typography = {
+  global: {
+    baseFontSize: '16px',
+    baseLineHeight: 1.5,
+  },
+  text: {
+    baseFontScale: [3, 2.5, 2, 1.5, 1.25, 1],
+  },
+  heading: {
+    baseFontScale: [3, 2.5, 2, 1.5, 1.25, 1],
+  },
+};
+
 const theme = {
   uiKit: {
     colors,
+    typography,
     // button theme
     button: {
       btnTypes: {

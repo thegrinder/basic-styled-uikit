@@ -34,9 +34,9 @@ const App = () => (
       </div>
       <div className="mb4">
         <Heading as="h1">Heading</Heading>
-        <Heading as="h2">Heading</Heading>
+        <Heading as="h2" marginBottom>Heading with margin</Heading>
         <Heading as="h3">Heading</Heading>
-        <Heading as="h4">Heading</Heading>
+        <Heading as="h4" marginBottom>Heading with margin</Heading>
         <Heading as="h5">Heading</Heading>
         <Heading as="h6">Heading</Heading>
       </div>

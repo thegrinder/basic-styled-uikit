@@ -63,6 +63,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "shevyjs": "git+https://github.com/kyleshevlin/shevyjs.git",
     "webpack": "^4.28.2"
   }
 }

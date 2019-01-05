@@ -1,10 +1,11 @@
 import styled from 'styled-components';
-import { string } from 'prop-types';
+import { string, bool } from 'prop-types';
 import { headingSizingStyle, headingColorStyle } from './headingHelpers';
 
 const propTypes = {
   color: string.isRequired,
   sizing: string.isRequired,
+  marginBottom: bool.isRequired,
 };
 
 const StyledHeading = styled.h1`
@@ -13,6 +14,9 @@ const StyledHeading = styled.h1`
   padding: 0;
   ${headingSizingStyle}
   ${headingColorStyle}
+  ${({ marginBottom }) => !marginBottom && (
+    'margin-bottom: 0;'
+  )}
 `;
 
 StyledHeading.propTypes = propTypes;

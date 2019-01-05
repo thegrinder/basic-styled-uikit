@@ -2,7 +2,7 @@ import { css } from 'styled-components';
 
 const toDashCase = str => str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
 
-const createStyles = selectedStyles => (
+export const createStyles = selectedStyles => (
   css`${
     Object.keys(selectedStyles)
       .reduce((prev, next) => (

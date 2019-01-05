@@ -1,26 +1,30 @@
 import React from 'react';
-import { string, node } from 'prop-types';
+import { string, node, bool } from 'prop-types';
 import StyledHeading from './StyledHeading';
 
 const propTypes = {
   sizing: string,
   color: string,
+  marginBottom: bool,
   as: node.isRequired,
 };
 
 const defaultProps = {
   color: 'gray900',
+  marginBottom: false,
 };
 
 const Heading = ({
   sizing,
   color,
+  marginBottom,
   as,
   ...rest
 }) => (
   <StyledHeading
     as={as}
     sizing={sizing || as}
+    marginBottom={marginBottom}
     color={color}
     {...rest}
   />
