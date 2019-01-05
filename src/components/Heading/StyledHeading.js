@@ -7,7 +7,7 @@ const propTypes = {
   sizing: string.isRequired,
 };
 
-export const StyledHeading = styled.h1`
+const StyledHeading = styled.h1`
   display: block;
   margin: 0;
   padding: 0;

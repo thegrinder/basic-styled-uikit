@@ -2,9 +2,9 @@ import React from 'react';
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 
 import {
-  Button, Link, Spinner, Input, PlainButton, Paragraph, Toggle, Container,
+  Button, Link, Spinner, Input, PlainButton, Toggle, Container,
   Select, Textarea, Radio, Checkbox, InlineInput, InfiniteProgressBar,
-  Span, Heading, Card, ColorBox, ListItem, theme,
+  Text, Heading, Card, ColorBox, theme,
 } from '../src/index';
 import '../src/tachyons/tachyons.scss';
 
@@ -42,23 +42,21 @@ const App = () => (
         <Heading as="h6">Heading</Heading>
       </div>
       <div className="mb4">
-        <Paragraph sizing="large">Large paragraph</Paragraph>
-        <Paragraph>Medium paragraph</Paragraph>
-        <Paragraph sizing="small">Small paragraph</Paragraph>
-        <Paragraph colour="lightest">Lightest Paragraph</Paragraph>
-        <Paragraph colour="light">Light Paragraph</Paragraph>
-        <Span>Span</Span>
+        <Text as="p" sizing="large">Large Paragraph</Text>
+        <Text as="p">Medium Paragraph</Text>
+        <Text as="p" sizing="small">Small Paragraph</Text>
+        <Text >Span</Text>
       </div>
       <div className="mb4">
         <ul>
-          <ListItem>List Item</ListItem>
-          <ListItem>List Item</ListItem>
+          <Text as="li">List Item</Text>
+          <Text as="li">List Item</Text>
         </ul>
       </div>
       <div className="mb4">
         <Card className="pa4 mw5">
           <Heading as="h5">Card Heading</Heading>
-          <Paragraph>Paragraph</Paragraph>
+          <Text as="p">Paragraph</Text>
         </Card>
       </div>
       <div className="mb4">

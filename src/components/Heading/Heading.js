@@ -9,7 +9,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  colour: 'gray800',
+  colour: 'gray900',
 };
 
 const Heading = ({
