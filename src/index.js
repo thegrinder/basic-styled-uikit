@@ -2,14 +2,7 @@ import * as selectors from './theme/themeSelectors';
 import 'normalize.css/normalize.css';
 import './tachyons/tachyons.scss';
 
-export {
-  H1,
-  H2,
-  H3,
-  H4,
-  H5,
-  H6,
-} from './components/Headings/Headings';
+export Heading from './components/Heading/Heading';
 export Button from './components/Button/Button';
 export Link from './components/Link/Link';
 export Spinner from './components/Spinner/Spinner';

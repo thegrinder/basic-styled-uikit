@@ -4,7 +4,7 @@ import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 import {
   Button, Link, Spinner, Input, PlainButton, Paragraph, Toggle, Container,
   Select, Textarea, Radio, Checkbox, InlineInput, InfiniteProgressBar,
-  Span, H1, H2, H3, H4, H5, H6, Card, ColorBox, ListItem, theme,
+  Span, Heading, Card, ColorBox, ListItem, theme,
 } from '../src/index';
 import '../src/tachyons/tachyons.scss';
 
@@ -34,12 +34,12 @@ const App = () => (
         <InfiniteProgressBar />
       </div>
       <div className="mb4">
-        <H1 sizing="h1">Heading</H1>
-        <H2 sizing="h2">Heading</H2>
-        <H3 sizing="h3">Heading</H3>
-        <H4 sizing="h4">Heading</H4>
-        <H5 sizing="h5">Heading</H5>
-        <H6 sizing="h6">Heading</H6>
+        <Heading as="h1">Heading</Heading>
+        <Heading as="h2">Heading</Heading>
+        <Heading as="h3">Heading</Heading>
+        <Heading as="h4">Heading</Heading>
+        <Heading as="h5">Heading</Heading>
+        <Heading as="h6">Heading</Heading>
       </div>
       <div className="mb4">
         <Paragraph sizing="large">Large paragraph</Paragraph>
@@ -57,7 +57,7 @@ const App = () => (
       </div>
       <div className="mb4">
         <Card className="pa4 mw5">
-          <H5>Card Heading</H5>
+          <Heading as="h5">Card Heading</Heading>
           <Paragraph>Paragraph</Paragraph>
         </Card>
       </div>

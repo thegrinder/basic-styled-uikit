@@ -26,10 +26,7 @@ const PlainButton = styled.button`
   line-height: 0;
   outline: none;
   transition: .1s ease-in-out;
-  transition-property: color, opacity;
-  opacity: ${props => (
-    props.btnColor === 'inherit' && props.btnHoverColor === 'inherit' ? '.4' : '1'
-  )};
+  transition-property: color;
   color: ${props => props.btnColor};
   &:focus,
   &:hover {
