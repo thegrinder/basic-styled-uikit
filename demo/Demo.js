@@ -74,8 +74,7 @@ const App = () => (
         <PlainButton>Plain Button</PlainButton>
       </div>
       <div className="mb4">
-        <Link href="#" linktype="default">Default Link</Link>
-        <Link href="#" linktype="muted">Muted Link</Link>
+        <Link href="#">Default Link</Link>
       </div>
       <div className="mb4">
         <Spinner color="success500" size={30} />
