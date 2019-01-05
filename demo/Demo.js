@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
-
 import {
   Button, Link, Spinner, Input, PlainButton, Toggle, Container,
   Select, Textarea, Radio, Checkbox, InlineInput, InfiniteProgressBar,
@@ -75,8 +74,8 @@ const App = () => (
         <PlainButton>Plain Button</PlainButton>
       </div>
       <div className="mb4">
-        <Link to="/test" linkType="default">Default Link</Link>
-        <Link to="/another" linkType="muted">Muted Link</Link>
+        <Link href="#" linktype="default">Default Link</Link>
+        <Link href="#" linktype="muted">Muted Link</Link>
       </div>
       <div className="mb4">
         <Spinner color="success500" size={30} />

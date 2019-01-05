@@ -1,18 +1,16 @@
-import React from 'react';
 import styled from 'styled-components';
 import { string } from 'prop-types';
-import { Link as ReactRouterLink } from 'react-router-dom';
 import { linkNormalStyle, linkHoverStyle } from './linkHelpers';
 
 const propTypes = {
-  linkType: string,
+  linktype: string,
 };
 
 const defaultProps = {
-  linkType: 'default',
+  linktype: 'default',
 };
 
-const RouterLink = styled(({ linkType, ...rest }) => <ReactRouterLink {...rest} />)`
+const Link = styled.a`
   cursor: pointer;
   touch-action: manipulation;
   text-decoration: none;
@@ -25,7 +23,7 @@ const RouterLink = styled(({ linkType, ...rest }) => <ReactRouterLink {...rest} 
   }
 `;
 
-RouterLink.propTypes = propTypes;
-RouterLink.defaultProps = defaultProps;
+Link.propTypes = propTypes;
+Link.defaultProps = defaultProps;
 
-export default RouterLink;
+export default Link;
