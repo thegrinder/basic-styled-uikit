@@ -1,19 +1,21 @@
+import colors from '../../theme/colors';
+
 const linkTheme = {
   linkTypes: {
     default: {
       normal: {
-        color: '#1e87f0',
+        color: colors.primary500,
       },
       hover: {
-        color: '#0f6ecd',
+        color: colors.primary600,
       },
     },
     muted: {
       normal: {
-        color: '#999',
+        color: colors.gray600,
       },
       hover: {
-        color: '#666',
+        color: colors.gray700,
       },
     },
   },
