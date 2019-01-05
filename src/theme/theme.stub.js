@@ -160,78 +160,87 @@ const theme = {
     // form theme
     form: {
       regular: {
-        valid: {
-          normal: {
-            backgroundColor: colors.white,
-            borderColor: colors.gray300,
-            color: colors.gray700,
+        states: {
+          valid: {
+            normal: {
+              backgroundColor: colors.white,
+              borderColor: colors.gray300,
+              color: colors.gray700,
+            },
+            active: {
+              backgroundColor: colors.white,
+              borderColor: colors.primary500,
+              color: colors.gray700,
+            },
+            disabled: {
+              backgroundColor: colors.gray100,
+              borderColor: colors.gray300,
+              color: colors.gray600,
+            },
           },
-          active: {
+          invalid: {
             backgroundColor: colors.white,
-            borderColor: colors.primary500,
-            color: colors.gray700,
-          },
-          disabled: {
-            backgroundColor: colors.gray100,
-            borderColor: colors.gray300,
-            color: colors.gray600,
+            color: colors.danger500,
+            borderColor: colors.danger500,
           },
         },
-        invalid: {
-          backgroundColor: colors.white,
-          color: colors.danger500,
-          borderColor: colors.danger500,
-        },
+        common: {},
       },
       inline: {
-        valid: {
-          normal: {
-            backgroundColor: colors.transparent,
-            borderColor: colors.transparent,
-            color: colors.gray700,
+        states: {
+          valid: {
+            normal: {
+              backgroundColor: colors.transparent,
+              borderColor: colors.transparent,
+              color: colors.gray700,
+            },
+            hover: {
+              backgroundColor: colors.transparent,
+              borderColor: colors.gray300,
+              color: colors.gray700,
+            },
+            active: {
+              backgroundColor: colors.transparent,
+              borderColor: colors.primary500,
+              color: colors.gray700,
+            },
+            disabled: {
+              backgroundColor: colors.gray100,
+              borderColor: colors.gray300,
+              color: colors.gray600,
+            },
           },
-          hover: {
+          invalid: {
             backgroundColor: colors.transparent,
-            borderColor: colors.gray300,
-            color: colors.gray700,
-          },
-          active: {
-            backgroundColor: colors.transparent,
-            borderColor: colors.primary500,
-            color: colors.gray700,
-          },
-          disabled: {
-            backgroundColor: colors.gray100,
-            borderColor: colors.gray300,
-            color: colors.gray600,
+            color: colors.danger500,
+            borderColor: colors.danger500,
           },
         },
-        invalid: {
-          backgroundColor: colors.transparent,
-          color: colors.danger500,
-          borderColor: colors.danger500,
-        },
+        common: {},
       },
       // radio and checkbox theme
       misc: {
-        valid: {
-          normal: {
-            borderColor: colors.gray300,
+        states: {
+          valid: {
+            normal: {
+              borderColor: colors.gray300,
+              backgroundColor: colors.transparent,
+            },
+            active: {
+              borderColor: colors.primary500,
+              backgroundColor: colors.transparent,
+            },
+            checked: {
+              borderColor: colors.transparent,
+              backgroundColor: colors.primary500,
+            },
+          },
+          invalid: {
+            borderColor: colors.danger500,
             backgroundColor: colors.transparent,
           },
-          active: {
-            borderColor: colors.primary500,
-            backgroundColor: colors.transparent,
-          },
-          checked: {
-            borderColor: colors.transparent,
-            backgroundColor: colors.primary500,
-          },
         },
-        invalid: {
-          borderColor: colors.danger500,
-          backgroundColor: colors.transparent,
-        },
+        common: {},
       },
       // toggle theme
       toggle: {

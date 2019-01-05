@@ -5,6 +5,7 @@ import {
   inlineInputHoverStyle,
   inlineInputActiveStyle,
   inlineInputDisabledStyle,
+  inlineInputCommonStyle,
 } from '../formHelpers';
 import { rem } from '../../../helpers/utils';
 
@@ -30,6 +31,7 @@ const StyledInlineInput = styled.input`
   border-radius: ${rem(6)};
   height: ${rem(40)};
   padding: 0 ${rem(10)};
+  ${inlineInputCommonStyle}
   ${({ submitting }) => (submitting ? `padding-right : ${rem(36)};` : '')}
   ${inlineInputNormalStyle}
   &:hover {

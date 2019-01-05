@@ -3,9 +3,11 @@ import {
   miscNormalStyle,
   miscActiveStyle,
   miscCheckedStyle,
+  miscCommonStyle,
   inputNormalStyle,
   inputActiveStyle,
   inputDisabledStyle,
+  inputCommonStyle,
 } from './formHelpers';
 import { rem } from '../../helpers/utils';
 
@@ -20,6 +22,7 @@ export const commonInputStyles = css`
   transition: .2s ease-in-out;
   transition-property: color, background-color, border;
   border-radius: ${rem(6)};
+  ${inputCommonStyle}
   ${inputNormalStyle}
   &:focus {
     outline: none;
@@ -47,6 +50,7 @@ export const miscInputStyles = css`
   transition: .2s ease-in-out;
   transition-property: background-color, border;
   cursor: pointer;
+  ${miscCommonStyle}
   ${miscNormalStyle}
   &:focus {
     outline: none;

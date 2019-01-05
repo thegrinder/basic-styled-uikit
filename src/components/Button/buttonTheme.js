@@ -91,7 +91,6 @@ const buttonTheme = {
   },
   common: {
     fontWeight: '700',
-    letterSpacing: '.4px',
   },
 };
 
