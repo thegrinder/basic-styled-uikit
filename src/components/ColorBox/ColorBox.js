@@ -14,8 +14,6 @@ const defaultProps = {
 
 const ColorBox = styled.div`
   background-color: ${({ theme, bgColor }) => getColor(theme, bgColor)};
-  border-width: 1px;
-  border-style: solid;
   border-color: ${({ theme, borderColor }) => getColor(theme, borderColor)};
 `;
 
