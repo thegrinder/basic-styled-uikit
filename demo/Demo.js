@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 
 import {
   Button, Link, Spinner, Input, PlainButton, Paragraph, Toggle, Container,
   Select, Textarea, Radio, Checkbox, InlineInput, InfiniteProgressBar,
-  Span, H1, H2, H3, H4, H5, H6, Card, ColorBox, List, ListItem, theme,
+  Span, H1, H2, H3, H4, H5, H6, Card, ColorBox, ListItem, theme,
 } from '../src/index';
 import '../src/tachyons/tachyons.scss';
 
@@ -51,10 +50,10 @@ const App = () => (
         <Span>Span</Span>
       </div>
       <div className="mb4">
-        <List>
+        <ul>
           <ListItem>List Item</ListItem>
           <ListItem>List Item</ListItem>
-        </List>
+        </ul>
       </div>
       <div className="mb4">
         <Card className="pa4 mw5">
@@ -78,7 +77,7 @@ const App = () => (
         <PlainButton>Plain Button</PlainButton>
       </div>
       <div className="mb4">
-        <Link  to="/test" linkType="default">Default Link</Link>
+        <Link to="/test" linkType="default">Default Link</Link>
         <Link to="/another" linkType="muted">Muted Link</Link>
       </div>
       <div className="mb4">
