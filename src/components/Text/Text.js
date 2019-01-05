@@ -1,27 +1,31 @@
 import React from 'react';
-import { string } from 'prop-types';
+import { string, bool } from 'prop-types';
 import StyledText from './StyledText';
 
 const propTypes = {
   sizing: string,
   color: string,
   as: string,
+  marginBottom: bool,
 };
 
 const defaultProps = {
-  sizing: 'medium',
+  sizing: 't2',
   color: 'gray800',
   as: 'span',
+  marginBottom: false,
 };
 
 const Text = ({
   sizing,
   color,
+  marginBottom,
   as,
   ...rest
 }) => (
   <StyledText
     as={as}
+    marginBottom={marginBottom}
     sizing={sizing}
     color={color}
     {...rest}

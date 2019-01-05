@@ -60,23 +60,21 @@ const colors = {
   danger900: '#b71c1c',
 };
 
-const typography = {
-  global: {
-    baseFontSize: '16px',
-    baseLineHeight: 1.5,
-  },
-  text: {
-    baseFontScale: [3, 2.5, 2, 1.5, 1.25, 1],
-  },
-  heading: {
-    baseFontScale: [3, 2.5, 2, 1.5, 1.25, 1],
-  },
-};
-
 const theme = {
   uiKit: {
     colors,
-    typography,
+    typography: {
+      global: {
+        baseFontSize: '16px',
+        baseLineHeight: 1.5,
+      },
+      text: {
+        baseFontScale: [3, 2.5, 2, 1.5, 1.25, 1],
+      },
+      heading: {
+        baseFontScale: [3, 2.5, 2, 1.5, 1.25, 1],
+      },
+    },
     // button theme
     button: {
       btnTypes: {
@@ -264,13 +262,6 @@ const theme = {
         checked: {
           backgroundColor: colors.primary500,
         },
-      },
-    },
-    text: {
-      sizings: {
-        small: rem(14),
-        medium: rem(16),
-        large: rem(20),
       },
     },
   },

@@ -22,7 +22,7 @@ const typography = {
     baseLineHeight: 1.5,
   },
   text: {
-    baseFontScale: [3, 2.5, 2, 1.5, 1.25, 1],
+    baseFontScale: [1.25, 1, 0.875],
   },
   heading: {
     baseFontScale: [3, 2.5, 2, 1.5, 1.25, 1],

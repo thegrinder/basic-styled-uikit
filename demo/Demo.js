@@ -41,9 +41,9 @@ const App = () => (
         <Heading as="h6">Heading</Heading>
       </div>
       <div className="mb4">
-        <Text as="p" sizing="large">Large Paragraph</Text>
+        <Text as="p" sizing="t1">Large Paragraph</Text>
         <Text as="p">Medium Paragraph</Text>
-        <Text as="p" sizing="small">Small Paragraph</Text>
+        <Text as="p" sizing="t3">Small Paragraph</Text>
         <Text >Span</Text>
       </div>
       <div className="mb4">
