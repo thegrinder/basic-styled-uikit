@@ -11,12 +11,14 @@ const propTypes = {
   btnSize: string,
   left: node,
   right: node,
+  spinnerColor: string,
 };
 
 const defaultProps = {
   btnSize: 'default',
   btnType: 'default',
   submitting: false,
+  spinnerColor: 'white',
 };
 
 const Button = ({
@@ -25,6 +27,7 @@ const Button = ({
   btnType,
   btnSize,
   submitting,
+  spinnerColor,
   children,
   ...rest
 }) => (
@@ -37,7 +40,7 @@ const Button = ({
   >
     {submitting && (
       <SpinnerWrapper>
-        <Spinner color="white" />
+        <Spinner color={spinnerColor} />
       </SpinnerWrapper>
     )}
     <ChildrenWrapper submitting={submitting}>
