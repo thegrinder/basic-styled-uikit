@@ -71,7 +71,7 @@ const App = () => (
         <Button btnType="danger" left={<Circle />}>Icon Button</Button>
       </div>
       <div className="mb4">
-        <PlainButton color="gray700" hoverColor="gray900">Plain Button</PlainButton>
+        <PlainButton>Plain Button</PlainButton>
       </div>
       <div className="mb4">
         <Link href="#">Default Link</Link>
