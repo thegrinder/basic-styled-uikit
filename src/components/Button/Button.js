@@ -1,9 +1,8 @@
 import React from 'react';
 import { node, bool, string } from 'prop-types';
-import Spinner from '../Spinner/Spinner';
 import ChildrenWrapper from './ChildrenWrapper';
-import SpinnerWrapper from './SpinnerWrapper';
 import StyledButton from './StyledButton';
+import SpinnerWrapper from './SpinnerWrapper';
 
 const propTypes = {
   submitting: bool,
@@ -11,14 +10,13 @@ const propTypes = {
   btnSize: string,
   left: node,
   right: node,
-  spinnerColor: string,
+  renderSpinner: node,
 };
 
 const defaultProps = {
   btnSize: 'default',
   btnType: 'default',
   submitting: false,
-  spinnerColor: 'white',
 };
 
 const Button = ({
@@ -27,7 +25,7 @@ const Button = ({
   btnType,
   btnSize,
   submitting,
-  spinnerColor,
+  renderSpinner,
   children,
   ...rest
 }) => (
@@ -40,7 +38,7 @@ const Button = ({
   >
     {submitting && (
       <SpinnerWrapper>
-        <Spinner color={spinnerColor} />
+        {renderSpinner}
       </SpinnerWrapper>
     )}
     <ChildrenWrapper submitting={submitting}>

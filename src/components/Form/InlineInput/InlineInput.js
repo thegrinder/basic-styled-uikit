@@ -1,29 +1,28 @@
 import React from 'react';
-import { bool, string } from 'prop-types';
+import { bool, node } from 'prop-types';
 import Wrapper from './Wrapper';
 import SpinnerWrapper from './SpinnerWrapper';
-import Spinner from '../../Spinner/Spinner';
 import StyledInlineInput from './StyledInlineInput';
 
 const propTypes = {
   submitting: bool,
   disabled: bool,
   invalid: bool,
-  spinnerColor: string,
+  renderSpinner: node,
 };
 
 const defaultProps = {
   submitting: false,
   disabled: false,
   invalid: false,
-  spinnerColor: 'gray500',
+  renderSpinner: 'gray500',
 };
 
 const InlineInput = ({
   submitting,
   disabled,
   invalid,
-  spinnerColor,
+  renderSpinner,
   ...rest
 }) => (
   <Wrapper>
@@ -35,7 +34,7 @@ const InlineInput = ({
     />
     {submitting && (
       <SpinnerWrapper>
-        <Spinner color={spinnerColor}/>
+        {renderSpinner}
       </SpinnerWrapper>
     )}
   </Wrapper>

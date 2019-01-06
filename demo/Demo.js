@@ -1,11 +1,10 @@
 import React from 'react';
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 import {
-  Button, Link, Spinner, Input, PlainButton, Toggle, Container,
-  Select, Textarea, Radio, Checkbox, InlineInput, InfiniteProgressBar,
-  Text, Heading, Card, ColorBox, theme,
+  Button, Link, Input, PlainButton, Toggle,
+  Select, Textarea, Radio, Checkbox, InlineInput,
+  Text, Heading, ColorBox, theme,
 } from '../src/index';
-import '../src/tachyons/tachyons.scss';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -24,15 +23,12 @@ const Circle = styled.span`
 
 const App = () => (
   <ThemeProvider theme={theme}>
-    <Container>
+    <div>
       <GlobalStyle />
       <div className="pa4">
         <ColorBox bgColor="washedSuccess" borderColor="success" className="ba pa4">
           blasdfads
         </ColorBox>
-      </div>
-      <div className="mb4">
-        <InfiniteProgressBar color="primary500" bgColor="primary100" />
       </div>
       <div className="mb4">
         <Heading as="h1" color="darkest">Heading</Heading>
@@ -56,12 +52,6 @@ const App = () => (
         </ul>
       </div>
       <div className="mb4">
-        <Card className="pa4 mw5">
-          <Heading as="h5">Card Heading</Heading>
-          <Text as="p">Paragraph</Text>
-        </Card>
-      </div>
-      <div className="mb4">
         <Button btnType="basic">Basic</Button>
         <Button btnType="default">Default</Button>
         <Button btnType="primary">Primary</Button>
@@ -74,7 +64,7 @@ const App = () => (
           submitting={true}
           btnType="primary"
           btnSize="large"
-          spinnerColor="white"
+          renderSpinner={<span>spinner</span>}
         >
           submitting
         </Button>
@@ -86,9 +76,6 @@ const App = () => (
       <div className="mb4">
         <Link href="#">Default Link</Link>
         <Link linktype="muted" href="#">Muted Link</Link>
-      </div>
-      <div className="mb4">
-        <Spinner color="success500" size={30} />
       </div>
       <div className="w-50 mb4">
         <Input invalid={false} value="Valid" />
@@ -117,6 +104,7 @@ const App = () => (
           disabled={true}
           submitting={true}
           invalid={false}
+          renderSpinner={<span>spinner</span>}
           value="Submitting inline"
         />
       </div>
@@ -140,7 +128,7 @@ const App = () => (
       <div>
         <Toggle onChange={(e) => { console.log(e.target.checked); }}/>
       </div>
-    </Container>
+    </div>
   </ThemeProvider>
 );
 
