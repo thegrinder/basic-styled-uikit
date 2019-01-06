@@ -1,4 +1,4 @@
-export const getColor = (theme, color) => (
+export const getColor = color => ({ theme }) => (
   theme.uiKit.colors[color]
 );
 

@@ -3,7 +3,7 @@ import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 import {
   Button, Link, Input, PlainButton, Toggle,
   Select, Textarea, Radio, Checkbox, InlineInput,
-  Text, Heading, ColorBox, theme,
+  Text, Heading, ColorBox, theme, getColor,
 } from '../src/index';
 
 const GlobalStyle = createGlobalStyle`
@@ -18,7 +18,7 @@ const Circle = styled.span`
   height: 10px;
   border-radius: 100%;
   margin: 0 15px;
-  background-color: #fff;
+  background-color: ${getColor('white')};
 `;
 
 const App = () => (
