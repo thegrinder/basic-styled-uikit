@@ -64,13 +64,8 @@ const theme = {
   uiKit: {
     colors,
     typography: {
-      global: {
-        baseFontSize: '16px',
-        baseLineHeight: 1.5,
-      },
-      text: {
-        baseFontScale: [3, 2.5, 2, 1.5, 1.25, 1],
-      },
+      baseFontSize: '16px',
+      baseLineHeight: 1.5,
     },
     //heading theme
     heading: {
@@ -90,6 +85,25 @@ const theme = {
         fontWeight: 'bold',
       },
     }
+    // text theme
+    text: {
+      baseFontScale: [1.25, 1, 0.875, 0.75],
+      colors: {
+        light: colors.gray600,
+        default: colors.gray700,
+        dark: colors.gray800,
+
+        black: colors.black,
+        white: colors.white,
+        primary: colors.primary500,
+        success: colors.success500,
+        warning: colors.warning500,
+        danger: colors.danger500,
+      },
+      common: {
+        fontWeight: 400,
+      },
+    },
     // button theme
     button: {
       btnTypes: {

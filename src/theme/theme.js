@@ -4,14 +4,16 @@ import { rem as remHelper } from '../helpers/utils';
 import button from '../components/Button/buttonTheme';
 import form from '../components/Form/formTheme';
 import heading from '../components/Heading/headingTheme';
+import text from '../components/Text/textTheme';
 
 const theme = {
   uiKit: {
-    colors,
     typography,
+    colors,
     button,
     form,
     heading,
+    text,
   },
 };
 

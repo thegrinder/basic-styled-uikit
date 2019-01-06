@@ -1,11 +1,11 @@
 import colors from '../../theme/colors';
 
-const headingTheme = {
-  baseFontScale: [3, 2.5, 2, 1.5, 1.25, 1],
+const textTheme = {
+  baseFontScale: [1.25, 1, 0.875, 0.75],
   colors: {
-    light: colors.gray700,
-    default: colors.gray800,
-    dark: colors.gray900,
+    light: colors.gray600,
+    default: colors.gray700,
+    dark: colors.gray800,
 
     black: colors.black,
     white: colors.white,
@@ -15,8 +15,8 @@ const headingTheme = {
     danger: colors.danger500,
   },
   common: {
-    fontWeight: 700,
+    fontWeight: 400,
   },
 };
 
-export default headingTheme;
+export default textTheme;

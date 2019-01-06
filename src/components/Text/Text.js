@@ -11,7 +11,7 @@ const propTypes = {
 
 const defaultProps = {
   sizing: 't2',
-  color: 'gray800',
+  color: 'default',
   as: 'span',
   marginBottom: false,
 };

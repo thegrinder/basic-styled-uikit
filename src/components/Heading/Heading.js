@@ -1,12 +1,12 @@
 import React from 'react';
-import { string, node, bool } from 'prop-types';
+import { string, bool } from 'prop-types';
 import StyledHeading from './StyledHeading';
 
 const propTypes = {
   sizing: string,
   color: string,
   marginBottom: bool,
-  as: node.isRequired,
+  as: string.isRequired,
 };
 
 const defaultProps = {
