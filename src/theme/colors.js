@@ -3,6 +3,7 @@ export const getColor = (theme, color) => (
 );
 
 const colors = {
+  inherit: 'inherit',
   transparent: 'transparent',
   white: '#fff',
   gray50: '#fafafa',
