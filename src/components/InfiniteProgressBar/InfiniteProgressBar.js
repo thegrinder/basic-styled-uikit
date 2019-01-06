@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import { string } from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 import { getColor } from '../../theme/colors';
 import { rem } from '../../helpers/utils';
@@ -14,13 +14,8 @@ const decrease = keyframes`
 `;
 
 const propTypes = {
-  color: PropTypes.string,
-  bgcolor: PropTypes.string,
-};
-
-const defaultProps = {
-  color: 'primary500',
-  bgColor: 'primary100',
+  color: string.isRequired,
+  bgColor: string.isRequired,
 };
 
 const InfiniteProgressBar = styled.div`
@@ -46,6 +41,5 @@ const InfiniteProgressBar = styled.div`
 `;
 
 InfiniteProgressBar.propTypes = propTypes;
-InfiniteProgressBar.defaultProps = defaultProps;
 
 export default InfiniteProgressBar;

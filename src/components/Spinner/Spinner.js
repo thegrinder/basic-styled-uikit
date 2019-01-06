@@ -5,12 +5,11 @@ import { getColor } from '../../theme/colors';
 
 const propTypes = {
   sizing: number,
-  color: string,
+  color: string.isRequired,
 };
 
 const defaultProps = {
   sizing: 20,
-  color: 'gray500',
 };
 
 const loading = keyframes`

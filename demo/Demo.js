@@ -32,7 +32,7 @@ const App = () => (
         </ColorBox>
       </div>
       <div className="mb4">
-        <InfiniteProgressBar />
+        <InfiniteProgressBar color="primary500" bgColor="primary100" />
       </div>
       <div className="mb4">
         <Heading as="h1" color="darkest">Heading</Heading>
@@ -70,11 +70,18 @@ const App = () => (
       <div className="mb4">
         <Button btnType="basic" btnSize="small">Small</Button>
         <Button btnType="default" btnSize="default">Default</Button>
-        <Button submitting={true} btnType="primary" btnSize="large">submitting</Button>
+        <Button
+          submitting={true}
+          btnType="primary"
+          btnSize="large"
+          spinnerColor="white"
+        >
+          submitting
+        </Button>
         <Button btnType="danger" left={<Circle />}>Icon Button</Button>
       </div>
       <div className="mb4">
-        <PlainButton>Plain Button</PlainButton>
+        <PlainButton color="gray700" hoverColor="gray900">Plain Button</PlainButton>
       </div>
       <div className="mb4">
         <Link href="#">Default Link</Link>

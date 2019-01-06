@@ -3,13 +3,8 @@ import { string } from 'prop-types';
 import { getColor } from '../../theme/colors';
 
 const propTypes = {
-  color: string,
-  hoverColor: string,
-};
-
-const defaultProps = {
-  color: 'gray700',
-  hoverColor: 'gray900',
+  color: string.isRequired,
+  hoverColor: string.isRequired,
 };
 
 const PlainButton = styled.button`
@@ -37,6 +32,5 @@ const PlainButton = styled.button`
 `;
 
 PlainButton.propTypes = propTypes;
-PlainButton.defaultProps = defaultProps;
 
 export default PlainButton;
