@@ -3,6 +3,7 @@ import typography from './typography';
 import { rem as remHelper } from '../helpers/utils';
 import button from '../components/Button/buttonTheme';
 import form from '../components/Form/formTheme';
+import heading from '../components/Heading/headingTheme';
 
 const theme = {
   uiKit: {
@@ -10,6 +11,7 @@ const theme = {
     typography,
     button,
     form,
+    heading,
   },
 };
 

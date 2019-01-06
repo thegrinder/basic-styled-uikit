@@ -10,7 +10,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  color: 'gray900',
+  color: 'default',
   marginBottom: false,
 };
 

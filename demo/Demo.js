@@ -33,12 +33,12 @@ const App = () => (
         <InfiniteProgressBar />
       </div>
       <div className="mb4">
-        <Heading as="h1">Heading</Heading>
-        <Heading as="h2" marginBottom>Heading with margin</Heading>
+        <Heading as="h1" color="darkest">Heading</Heading>
+        <Heading as="h2" color="darker" marginBottom>Heading with margin</Heading>
         <Heading as="h3">Heading</Heading>
-        <Heading as="h4" marginBottom>Heading with margin</Heading>
-        <Heading as="h5">Heading</Heading>
-        <Heading as="h6">Heading</Heading>
+        <Heading as="h4" marginBottom color="lighter">Heading with margin</Heading>
+        <Heading as="h5" color="lightest">Heading</Heading>
+        <Heading as="h6" color="primary">Heading</Heading>
       </div>
       <div className="mb4">
         <Text as="p" sizing="t1">Large Paragraph</Text>
