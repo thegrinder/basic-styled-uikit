@@ -1,18 +1,16 @@
 import styled from 'styled-components';
 import { string } from 'prop-types';
-import { getColor } from '../../theme/colors';
 import { textSizingStyle } from '../Text/textHelpers';
+import { linkNormalStyle, linkHoverStyle } from './linkHelpers';
 
 const propTypes = {
   sizing: string,
-  color: string,
-  hoverColor: string,
+  linktype: string,
 };
 
 const defaultProps = {
   sizing: 't2',
-  color: 'gray600',
-  hovercolor: 'gray700',
+  linktype: 'default',
 };
 
 const Link = styled.a`
@@ -22,9 +20,9 @@ const Link = styled.a`
   font-family: inherit;
   ${textSizingStyle}
   margin-bottom: 0;
-  color: ${({ theme, color }) => getColor(theme, color)};
+  ${linkNormalStyle}
   &:hover {
-    color: ${({ theme, hovercolor }) => getColor(theme, hovercolor)};
+    ${linkHoverStyle}
     outline: none;
     text-decoration: underline;
   }

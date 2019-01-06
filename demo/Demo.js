@@ -78,6 +78,7 @@ const App = () => (
       </div>
       <div className="mb4">
         <Link href="#">Default Link</Link>
+        <Link linktype="muted" href="#">Muted Link</Link>
       </div>
       <div className="mb4">
         <Spinner color="success500" size={30} />

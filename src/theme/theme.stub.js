@@ -233,6 +233,27 @@ const theme = {
         letterSpacing: '.4px',
       },
     },
+    // link theme
+    link: {
+      linktypes: {
+        default: {
+          normal: {
+            color: colors.primary500,
+          },
+          hover: {
+            color: colors.primary600,
+          },
+        },
+        muted: {
+          normal: {
+            color: colors.gray600,
+          },
+          hover: {
+            color: colors.gray700,
+          },
+        },
+      },
+    },
     // form theme
     form: {
       regular: {
