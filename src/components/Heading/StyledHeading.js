@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { string, bool } from 'prop-types';
+import { getBaseLineHeight } from '../../theme/typography';
 import {
   headingSizingStyle,
   headingColorStyle,
@@ -19,9 +20,7 @@ const StyledHeading = styled.h1`
   ${headingCommonStyle}
   ${headingSizingStyle}
   ${headingColorStyle}
-  ${({ marginBottom }) => !marginBottom && (
-    'margin-bottom: 0;'
-  )}
+  margin-bottom: ${props => (props.marginBottom ? `${getBaseLineHeight(props)}rem` : '0')};
 `;
 
 StyledHeading.propTypes = propTypes;

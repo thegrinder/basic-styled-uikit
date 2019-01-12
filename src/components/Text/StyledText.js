@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { string, bool } from 'prop-types';
+import { getBaseLineHeight } from '../../theme/typography';
 import {
   textSizingStyle,
   textColorStyle,
@@ -19,9 +20,7 @@ const StyledText = styled.span`
   ${textCommonStyle}
   ${textSizingStyle}
   ${textColorStyle}
-  ${({ marginBottom }) => !marginBottom && (
-    'margin-bottom: 0;'
-  )}
+  margin-bottom: ${props => (props.marginBottom ? `${getBaseLineHeight(props)}rem` : '0')};
 `;
 
 StyledText.propTypes = propTypes;
