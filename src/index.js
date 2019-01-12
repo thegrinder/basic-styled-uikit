@@ -1,6 +1,3 @@
-import 'normalize.css/normalize.css';
-import './tachyons/tachyons.scss';
-
 export Heading from './components/Heading/Heading';
 export Button from './components/Button/Button';
 export Link from './components/Link/Link';

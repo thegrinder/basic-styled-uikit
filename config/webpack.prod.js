@@ -1,11 +1,5 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const autoprefixer = require('autoprefixer');
 const PATHS = require('./paths');
 
-const extractSass = new ExtractTextPlugin({
-  filename: 'basic-styled-uikit.css',
-  disable: process.env.NODE_ENV === 'development',
-});
 
 const prodConfig = {
   mode: 'production',
@@ -30,26 +24,8 @@ const prodConfig = {
           /node_modules/,
         ],
       },
-      {
-        test: /\.s?css$/,
-        use: extractSass.extract({
-          use: [
-            { loader: 'css-loader' },
-            {
-              loader: 'postcss-loader',
-              options: {
-                ident: 'postcss',
-                plugins: () => [autoprefixer()],
-              },
-            },
-            { loader: 'sass-loader' },
-          ],
-          fallback: 'style-loader',
-        }),
-      },
     ],
   },
-  plugins: [extractSass],
   externals: [
     'react',
     'react-dom',

@@ -33,14 +33,6 @@ const devConfig = {
         use: 'babel-loader',
         exclude: [/node_modules/],
       },
-      {
-        test: /\.s?css$/,
-        use: [
-          { loader: 'style-loader' },
-          { loader: 'css-loader' },
-          { loader: 'sass-loader' },
-        ],
-      },
     ],
   },
   plugins: [htmlPlugin],

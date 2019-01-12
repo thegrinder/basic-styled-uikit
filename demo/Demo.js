@@ -25,12 +25,12 @@ const App = () => (
   <ThemeProvider theme={theme}>
     <div>
       <GlobalStyle />
-      <div className="pa4">
-        <ColorBox bgColor="washedSuccess" borderColor="success" className="ba pa4">
+      <div>
+        <ColorBox bgColor="washedSuccess" borderColor="success">
           blasdfads
         </ColorBox>
       </div>
-      <div className="mb4">
+      <div>
         <Heading as="h1" color="darkest">Heading</Heading>
         <Heading as="h2" color="darker" marginBottom>Heading with margin</Heading>
         <Heading as="h3">Heading</Heading>
@@ -38,26 +38,26 @@ const App = () => (
         <Heading as="h5" color="lightest">Heading</Heading>
         <Heading as="h6" color="primary">Heading</Heading>
       </div>
-      <div className="mb4">
+      <div>
         <Text as="p" sizing="l" color="dark" marginBottom>Large Paragraph</Text>
         <Text as="p">Medium Paragraph</Text>
         <Text as="p" color="light" sizing="s">Small Paragraph</Text>
         <Text as="p" sizing="xs">Extra small Paragraph</Text>
         <Text >Span</Text>
       </div>
-      <div className="mb4">
+      <div>
         <ul>
           <Text as="li">List Item</Text>
           <Text as="li">List Item</Text>
         </ul>
       </div>
-      <div className="mb4">
+      <div>
         <Button btnType="basic">Basic</Button>
         <Button btnType="default">Default</Button>
         <Button btnType="primary">Primary</Button>
         <Button btnType="danger">Danger</Button>
       </div>
-      <div className="mb4">
+      <div>
         <Button btnType="basic" btnSize="small">Small</Button>
         <Button btnType="default" btnSize="default">Default</Button>
         <Button
@@ -70,20 +70,20 @@ const App = () => (
         </Button>
         <Button btnType="danger" left={<Circle />}>Icon Button</Button>
       </div>
-      <div className="mb4">
+      <div>
         <PlainButton>Plain Button</PlainButton>
       </div>
-      <div className="mb4">
+      <div>
         <Link href="#">Default Link</Link>
         <Link linktype="muted" href="#">Muted Link</Link>
       </div>
-      <div className="w-50 mb4">
+      <div>
         <Input invalid={false} value="Valid" />
       </div>
-      <div className="w-50 mb4">
+      <div>
         <Input invalid={true} value="Invalid" />
       </div>
-      <div className="w-50 mb4">
+      <div>
         <InlineInput
           disabled={false}
           submitting={false}
@@ -91,7 +91,7 @@ const App = () => (
           value="Valid inline"
         />
       </div>
-      <div className="w-50 mb4">
+      <div>
         <InlineInput
           disabled={true}
           submitting={false}
@@ -99,7 +99,7 @@ const App = () => (
           value="Invalid inline"
         />
       </div>
-      <div className="w-50 mb4">
+      <div>
         <InlineInput
           disabled={true}
           submitting={true}
@@ -108,20 +108,20 @@ const App = () => (
           value="Submitting inline"
         />
       </div>
-      <div className="w-50 mb4">
+      <div>
         <Select>
           <option>Option one</option>
           <option>Option two</option>
         </Select>
       </div>
-      <div className="w-50 mb4">
+      <div>
         <Textarea rows={5}/>
       </div>
-      <div className="w-50 mb4">
+      <div>
         <Radio />
         <Radio />
       </div>
-      <div className="w-50 mb4">
+      <div>
         <Checkbox />
         <Checkbox />
       </div>
