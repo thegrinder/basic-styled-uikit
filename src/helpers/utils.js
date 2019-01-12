@@ -18,3 +18,8 @@ export const getStyle = (selector, state) => (props) => {
 };
 
 export const rem = pxValue => props => `${pxValue / getBaseFontSize(props)}rem`;
+
+export const calcLineHeight = (remValue, baseLineHeight) => {
+  const value = Number(remValue.replace('rem', ''));
+  return `${(Math.ceil(value / baseLineHeight) * baseLineHeight) / value}`;
+};

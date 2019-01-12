@@ -1,7 +1,8 @@
 import { css } from 'styled-components';
 import { getStyle } from '../../helpers/utils';
 
-const getHeadingSizing = ({ theme, sizing }) => theme.uiKit.heading.sizings[sizing];
+
+export const getHeadingSizing = ({ theme, sizing }) => theme.uiKit.heading.sizings[sizing];
 export const headingSizingStyle = getStyle(getHeadingSizing);
 
 const getHeadingColor = (theme, color) => theme.uiKit.heading.colors[color];

@@ -1,7 +1,7 @@
 import { css } from 'styled-components';
 import { getStyle } from '../../helpers/utils';
 
-const getTextSizing = ({ theme, sizing }) => theme.uiKit.text.sizings[sizing];
+export const getTextSizing = ({ theme, sizing }) => theme.uiKit.text.sizings[sizing];
 export const textSizingStyle = getStyle(getTextSizing);
 
 const getTextColor = (theme, color) => theme.uiKit.text.colors[color];

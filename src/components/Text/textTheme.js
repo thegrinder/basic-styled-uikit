@@ -9,7 +9,7 @@ const textTheme = {
       fontSize: '1rem',
     },
     s: {
-      fontSize: '.0875rem',
+      fontSize: '.875rem',
     },
     xs: {
       fontSize: '.75rem',
