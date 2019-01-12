@@ -1,19 +1,18 @@
-import { rem } from '../../helpers/utils';
 import colors from '../../theme/colors';
 
 const textTheme = {
   sizings: {
     l: {
-      fontSize: rem(20),
+      fontSize: '1.25rem',
     },
     m: {
-      fontSize: rem(16),
+      fontSize: '1rem',
     },
     s: {
-      fontSize: rem(14),
+      fontSize: '.0875rem',
     },
     xs: {
-      fontSize: rem(12),
+      fontSize: '.75rem',
     },
   },
   colors: {

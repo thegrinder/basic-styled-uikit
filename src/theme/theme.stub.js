@@ -1,5 +1,3 @@
-import { rem } from 'basic-styled-uikit';
-
 const colors = {
   inherit: 'inherit',
   transparent: 'transparent',
@@ -72,22 +70,22 @@ const theme = {
     heading: {
       sizings: {
         h1: {
-          fontSize: rem(48),
+          fontSize: '3rem',
         },
         h2: {
-          fontSize: rem(40),
+          fontSize: '2.5rem',
         },
         h3: {
-          fontSize: rem(32),
+          fontSize: '2rem',
         },
         h4: {
-          fontSize: rem(24),
+          fontSize: '1.5rem',
         },
         h5: {
-          fontSize: rem(20),
+          fontSize: '1.25rem',
         },
         h6: {
-          fontSize: rem(16),
+          fontSize: '1rem',
         },
       },
       colors: {
@@ -109,16 +107,16 @@ const theme = {
     text: {
       sizings: {
         l: {
-          fontSize: rem(20),
+          fontSize: '1.25rem',
         },
         m: {
-          fontSize: rem(16),
+          fontSize: '1rem',
         },
         s: {
-          fontSize: rem(14),
+          fontSize: '.0875rem',
         },
         xs: {
-          fontSize: rem(12),
+          fontSize: '.75rem',
         },
       },
       colors: {
@@ -245,19 +243,19 @@ const theme = {
       },
       btnSizes: {
         small: {
-          padding: `0 ${rem(15)}`,
-          lineHeight: rem(28),
-          fontSize: rem(14),
+          padding: '0 1rem',
+          lineHeight: '1.75rem',
+          fontSize: '.875rem',
         },
         default: {
-          padding: `0 ${rem(30)}`,
-          fontSize: rem(16),
-          lineHeight: rem(38),
+          padding: '0 1.875rem',
+          fontSize: '1rem',
+          lineHeight: '2.375rem',
         },
         large: {
-          padding: `0 ${rem(40)}`,
-          lineHeight: rem(53),
-          fontSize: rem(22),
+          padding: '0 2.5rem',
+          lineHeight: '3.375rem',
+          fontSize: '1.375rem',
         },
       },
       common: {
