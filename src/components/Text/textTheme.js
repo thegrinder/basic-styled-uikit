@@ -1,7 +1,21 @@
+import { rem } from '../../helpers/utils';
 import colors from '../../theme/colors';
 
 const textTheme = {
-  baseFontScale: [1.25, 1, 0.875, 0.75],
+  sizings: {
+    l: {
+      fontSize: rem(20),
+    },
+    m: {
+      fontSize: rem(16),
+    },
+    s: {
+      fontSize: rem(14),
+    },
+    xs: {
+      fontSize: rem(12),
+    },
+  },
   colors: {
     light: colors.gray600,
     default: colors.gray700,

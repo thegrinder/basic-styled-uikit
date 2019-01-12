@@ -1,7 +1,27 @@
+import { rem } from '../../helpers/utils';
 import colors from '../../theme/colors';
 
 const headingTheme = {
-  baseFontScale: [3, 2.5, 2, 1.5, 1.25, 1],
+  sizings: {
+    h1: {
+      fontSize: rem(48),
+    },
+    h2: {
+      fontSize: rem(40),
+    },
+    h3: {
+      fontSize: rem(32),
+    },
+    h4: {
+      fontSize: rem(24),
+    },
+    h5: {
+      fontSize: rem(20),
+    },
+    h6: {
+      fontSize: rem(16),
+    },
+  },
   colors: {
     light: colors.gray700,
     default: colors.gray800,

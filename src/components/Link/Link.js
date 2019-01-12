@@ -9,7 +9,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  sizing: 't2',
+  sizing: 'm',
   linktype: 'default',
 };
 

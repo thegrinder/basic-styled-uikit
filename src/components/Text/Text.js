@@ -10,7 +10,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  sizing: 't2',
+  sizing: 'm',
   color: 'default',
   as: 'span',
   marginBottom: false,

@@ -1,17 +1,8 @@
-import Shevy from 'shevyjs';
 import { css } from 'styled-components';
-import { createStyles, getStyle } from '../../helpers/utils';
+import { getStyle } from '../../helpers/utils';
 
-const getHeadingSizingOptions = theme => ({
-  ...theme.uiKit.typography,
-  baseFontScale: theme.uiKit.heading.baseFontScale,
-});
-
-export const headingSizingStyle = ({ theme, sizing }) => {
-  const shevyOptions = getHeadingSizingOptions(theme);
-  const sizingStyles = new Shevy(shevyOptions)[sizing];
-  return createStyles(sizingStyles);
-};
+const getHeadingSizing = ({ theme, sizing }) => theme.uiKit.heading.sizings[sizing];
+export const headingSizingStyle = getStyle(getHeadingSizing);
 
 const getHeadingColor = (theme, color) => theme.uiKit.heading.colors[color];
 export const headingColorStyle = ({ theme, color }) => (
