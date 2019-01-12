@@ -63,7 +63,7 @@ const theme = {
   uiKit: {
     colors,
     typography: {
-      baseFontSize: '16px',
+      baseFontSize: 16, // in px
       baseLineHeight: 1.5,
     },
     //heading theme

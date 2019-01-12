@@ -1,4 +1,5 @@
 import { css } from 'styled-components';
+import { getBaseFontSize } from '../theme/typography';
 
 const toDashCase = str => str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
 
@@ -16,6 +17,4 @@ export const getStyle = (selector, state) => (props) => {
   return createStyles(selectedStyles);
 };
 
-export const rem = pxValue => `${pxValue / 16}rem`;
-
-export const em = (pxValue, base) => `${pxValue / base}em`;
+export const rem = pxValue => props => `${pxValue / getBaseFontSize(props)}rem`;
