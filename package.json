@@ -17,7 +17,9 @@
     "start": "webpack-dev-server --config config/webpack.dev.js",
     "production": "rm -rf lib && webpack --config config/webpack.prod.js",
     "prepublishOnly": "npm run production",
-    "lint": "eslint --fix src/. config/."
+    "lint": "eslint --fix src/. config/.",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
   },
   "husky": {
     "hooks": {
@@ -42,6 +44,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
     "husky": "^1.3.1",
+    "react-styleguidist": "^8.0.6",
     "styled-components": "^4.1.3",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.14"
