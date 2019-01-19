@@ -1,0 +1,35 @@
+---
+name: Link
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import Link from './Link';
+import { Spacer } from '../../../docz';
+
+
+# Link
+
+<PropsTable of={Link} />
+
+
+### Link types
+
+<Playground>
+  <Link href="#" linktype="default">default link</Link>
+  <Spacer />
+  <Link href="#" linktype="muted">muted link</Link>
+</Playground>
+
+
+### link sizes
+
+<Playground>
+  <Link sizing="l">Large</Link>
+  <Spacer />
+  <Link sizing="m">Medium</Link>
+  <Spacer />
+  <Link sizing="s">Small</Link>
+  <Spacer />
+  <Link sizing="xs">Extra small</Link>
+</Playground>
