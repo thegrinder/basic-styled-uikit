@@ -5,6 +5,7 @@ menu: Components
 
 import { Playground, PropsTable } from 'docz';
 import Toggle from './Toggle';
+import { InputWrapper } from '../../../../docz';
 
 
 # Toggle
@@ -15,19 +16,25 @@ import Toggle from './Toggle';
 ### Toggle
 
 <Playground>
-  <Toggle onChange={() => {}} />
+  <InputWrapper width={70}>
+    <Toggle onChange={() => {}} />
+  </InputWrapper>
 </Playground>
 
 
 ### Disabled Toggle
 
 <Playground>
-  <Toggle disabled={true} onChange={() => {}} />
+  <InputWrapper width={70}>
+    <Toggle disabled={true} onChange={() => {}} />
+  </InputWrapper>
 </Playground>
 
 
 ### Toggle with a custom height
 
 <Playground>
-  <Toggle h={24} onChange={() => {}} />
+  <InputWrapper width={70}>
+    <Toggle h={24} onChange={() => {}} />
+  </InputWrapper>
 </Playground>
