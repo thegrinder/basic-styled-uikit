@@ -16,12 +16,12 @@ const textTheme = {
     },
   },
   colors: {
+    white: colors.white,
     light: colors.gray600,
     default: colors.gray700,
     dark: colors.gray800,
-
     black: colors.black,
-    white: colors.white,
+
     primary: colors.primary500,
     success: colors.success500,
     warning: colors.warning500,

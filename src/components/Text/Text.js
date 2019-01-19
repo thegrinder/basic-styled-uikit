@@ -3,9 +3,13 @@ import { string, bool } from 'prop-types';
 import StyledText from './StyledText';
 
 const propTypes = {
+  /** determines the size of the text; one of: l, m, s, xs */
   sizing: string,
+  /** one of: white, light, default, dark, black, primary, success, warning, danger */
   color: string,
+  /** determines the html tag; one of: p, span */
   as: string,
+  /** if true adds a bottom margin according to vertical rhythm */
   marginBottom: bool,
 };
 
