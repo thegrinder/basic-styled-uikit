@@ -20,7 +20,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  btnSize: 'default',
+  btnSize: 'm',
   btnType: 'default',
   submitting: false,
 };

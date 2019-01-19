@@ -58,8 +58,8 @@ const App = () => (
         <Button btnType="danger">Danger</Button>
       </div>
       <div>
-        <Button btnType="basic" btnSize="small">Small</Button>
-        <Button btnType="default" btnSize="default">Default</Button>
+        <Button btnType="basic" btnSize="s">Small</Button>
+        <Button btnType="default" btnSize="m">Medium</Button>
         <Button
           submitting={true}
           btnType="primary"

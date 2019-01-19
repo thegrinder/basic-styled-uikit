@@ -72,17 +72,17 @@ const buttonTheme = {
     },
   },
   btnSizes: {
-    small: {
+    s: {
       padding: '0 1rem',
       lineHeight: '1.75rem',
       fontSize: '.875rem',
     },
-    default: {
+    m: {
       padding: '0 1.875rem',
       fontSize: '1rem',
       lineHeight: '2.375rem',
     },
-    large: {
+    l: {
       padding: '0 2.5rem',
       lineHeight: '3.375rem',
       fontSize: '1.375rem',
