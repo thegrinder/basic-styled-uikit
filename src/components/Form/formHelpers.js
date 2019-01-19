@@ -18,7 +18,7 @@ export const inputCommonStyle = getStyle(getRegularInputCommonStyle);
 const getMiscInputCommonStyle = ({ theme }) => theme.uiKit.form.misc.common;
 const getMiscInput = ({ theme, invalid }, state) => {
   const { states } = theme.uiKit.form.misc;
-  return invalid
+  return invalid && state === 'normal'
     ? states.invalid
     : states.valid[state];
 };
