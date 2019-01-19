@@ -1,0 +1,84 @@
+---
+name: ColorBox
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import ColorBox from './ColorBox';
+import { Spacer } from '../../../docz';
+
+## ColorBox
+
+<PropsTable of={ColorBox} />
+
+
+### Color box backgrounds
+
+<Playground>
+  <ColorBox bgColor="primary">primary</ColorBox>
+  <Spacer />
+  <ColorBox bgColor="washedPrimary">washedPrimary</ColorBox>
+  <Spacer />
+  <ColorBox bgColor="danger">danger</ColorBox>
+  <Spacer />
+  <ColorBox bgColor="washedDanger">washedDanger</ColorBox>
+  <Spacer />
+  <ColorBox bgColor="success">success</ColorBox>
+  <Spacer />
+  <ColorBox bgColor="washedSuccess">washedSuccess</ColorBox>
+  <Spacer />
+  <ColorBox bgColor="warning">warning</ColorBox>
+</Playground>
+
+
+### Color box grayscale/misc backgrounds
+
+<Playground>
+  <ColorBox bgColor="transparent">transparent</ColorBox>
+  <Spacer />
+  <ColorBox bgColor="inherit">inherit</ColorBox>
+  <Spacer />
+  <ColorBox bgColor="white">white</ColorBox>
+  <Spacer />
+  <ColorBox bgColor="lightest">lightest</ColorBox>
+  <Spacer />
+  <ColorBox bgColor="lighter">lighter</ColorBox>
+  <Spacer />
+  <ColorBox bgColor="light">light</ColorBox>
+  <Spacer />
+  <ColorBox bgColor="normal">normal</ColorBox>
+  <Spacer />
+  <ColorBox bgColor="dark">dark</ColorBox>
+  <Spacer />
+  <ColorBox bgColor="darker">darker</ColorBox>
+  <Spacer />
+  <ColorBox bgColor="darkest">darkest</ColorBox>
+</Playground>
+
+
+### Color box borders
+
+<Playground>
+  <ColorBox className="border" borderColor="primary">primary</ColorBox>
+  <Spacer />
+  <ColorBox className="border" borderColor="danger">danger</ColorBox>
+  <Spacer />
+  <ColorBox className="border" borderColor="success">success</ColorBox>
+  <Spacer />
+  <ColorBox className="border" borderColor="warning">warning</ColorBox>
+</Playground>
+
+
+### Color box grayscale/misc borders
+
+<Playground>
+  <ColorBox className="border" borderColor="transparent">transparent</ColorBox>
+  <Spacer />
+  <ColorBox className="border" borderColor="white">white</ColorBox>
+  <Spacer />
+  <ColorBox className="border" borderColor="light">light</ColorBox>
+  <Spacer />
+  <ColorBox className="border" borderColor="normal">normal</ColorBox>
+  <Spacer />
+  <ColorBox className="border" borderColor="dark">dark</ColorBox>
+</Playground>

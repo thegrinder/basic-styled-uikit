@@ -5,36 +5,45 @@ menu: Components
 
 import { Playground, PropsTable } from 'docz';
 import Button from './Button';
-import Spacer from '../../../docz/Spacer';
+import { Spacer, Spinner, Icon } from '../../../docz';
 
 ## Button
 
 <PropsTable of={Button} />
 
+
 ### Button types
 
 <Playground>
   <Button className="mb">default</Button>
-
-  <div className="spacer" />
-
+  <Spacer />
   <Button btnType="primary">primary</Button>
-
-  <div className="spacer" />
-
+  <Spacer />
   <Button btnType="danger">danger</Button>
 </Playground>
+
 
 ### Button sizes
 
 <Playground>
   <Button btnSize="small">small</Button>
-
-  <div className="spacer" />
-
+  <Spinner />
   <Button>default</Button>
-
-  <div className="spacer" />
-
+  <Spinner />
   <Button btnSize="large">large</Button>
+</Playground>
+
+
+### Button with a spinner
+
+<Playground>
+  <Button submitting={true} renderSpinner={<Spinner />}>submitting</Button>
+</Playground>
+
+### Button with icon
+
+<Playground>
+  <Button left={<Icon />}>left icon</Button>
+  <Spacer />
+  <Button right={<Icon />}>right icon</Button>
 </Playground>

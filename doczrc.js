@@ -3,7 +3,7 @@ export default {
   htmlContext: {
     head: {
       raw: [
-        '<style>div.spacer { height: 16px; }</style>',
+        '<style>.border {border-width: 1px; border-style: solid;}</style>'
       ],
     },
   },

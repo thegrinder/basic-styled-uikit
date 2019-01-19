@@ -25,9 +25,9 @@ const colorBoxTheme = {
   borderColors: {
     transparent: colors.transparent,
     white: colors.white,
-    light: colors.gray50,
-    default: colors.gray100,
-    dark: colors.gray200,
+    light: colors.gray100,
+    normal: colors.gray200,
+    dark: colors.gray300,
     primary: colors.primary100,
     success: colors.success100,
     warning: colors.warning100,
