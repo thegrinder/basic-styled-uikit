@@ -12,7 +12,7 @@ const PlainButton = styled.button`
   display: inline-block;
   position: relative;
   fill: currentcolor;
-  line-height: 0;
+  line-height: 1;
   outline: none;
   transition: .1s ease-in-out;
   transition-property: color;
