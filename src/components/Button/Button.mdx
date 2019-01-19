@@ -27,18 +27,33 @@ import { Spacer, Spinner, Icon } from '../../../docz';
 
 <Playground>
   <Button btnSize="small">small</Button>
-  <Spinner />
+  <Spacer />
   <Button>default</Button>
-  <Spinner />
+  <Spacer />
   <Button btnSize="large">large</Button>
 </Playground>
 
 
-### Button with a spinner
+### Disabled button
 
 <Playground>
-  <Button submitting={true} renderSpinner={<Spinner />}>submitting</Button>
+  <Button btnType="primary" disabled={true}>disabled</Button>
 </Playground>
+
+
+### Disabled Button with a spinner
+
+<Playground>
+  <Button
+    btnType="primary"
+    disabled={true}
+    submitting={true}
+    renderSpinner={<Spinner />}
+  >
+    submitting
+  </Button>
+</Playground>
+
 
 ### Button with icon
 
