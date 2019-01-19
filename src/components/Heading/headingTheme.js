@@ -22,12 +22,12 @@ const headingTheme = {
     },
   },
   colors: {
+    white: colors.white,
     light: colors.gray700,
     default: colors.gray800,
     dark: colors.gray900,
-
     black: colors.black,
-    white: colors.white,
+
     primary: colors.primary500,
     success: colors.success500,
     warning: colors.warning500,
