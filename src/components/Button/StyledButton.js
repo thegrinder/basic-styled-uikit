@@ -20,6 +20,7 @@ const StyledButton = styled.button`
   margin: 0;
   border: none;
   overflow: visible;
+  box-sizing: border-box;
   position: relative;
   display: inline-block;
   vertical-align: middle;

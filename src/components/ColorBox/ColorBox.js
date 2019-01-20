@@ -14,6 +14,7 @@ const propTypes = {
 };
 
 const StyledColorBox = styled.div`
+  box-sizing: border-box;
   ${colorBoxBgStyle}
   ${colorBoxBorderStyle}
 `;
