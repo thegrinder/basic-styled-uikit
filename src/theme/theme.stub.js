@@ -311,7 +311,9 @@ const theme = {
             borderColor: colors.danger500,
           },
         },
-        common: {},
+        common: {
+          fontSize: '1rem',
+        },
       },
       inline: {
         states: {
@@ -343,7 +345,9 @@ const theme = {
             borderColor: colors.danger500,
           },
         },
-        common: {},
+        common: {
+          fontSize: '1rem',
+        },
       },
       // radio and checkbox theme
       misc: {

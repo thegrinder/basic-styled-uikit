@@ -1,0 +1,50 @@
+---
+name: Select
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import Select from './Select';
+import { InputWrapper } from '../../../../docz';
+
+
+
+# Select
+
+<PropsTable of={Select} />
+
+
+### Select
+
+<Playground>
+  <InputWrapper>
+    <Select>
+      <option>option one</option>
+      <option>option two</option>
+    </Select>
+  </InputWrapper>
+</Playground>
+
+
+### Invalid Select
+
+<Playground>
+  <InputWrapper>
+    <Select invalid={true}>
+      <option>option one</option>
+      <option>option two</option>
+    </Select>
+  </InputWrapper>
+</Playground>
+
+
+### Disabled Select
+
+<Playground>
+  <InputWrapper>
+    <Select disabled={true}>
+      <option>option one</option>
+      <option>option two</option>
+    </Select>
+  </InputWrapper>
+</Playground>

@@ -19,7 +19,6 @@ const defaultProps = {
   submitting: false,
   disabled: false,
   invalid: false,
-  renderSpinner: 'gray500',
 };
 
 const InlineInput = ({
