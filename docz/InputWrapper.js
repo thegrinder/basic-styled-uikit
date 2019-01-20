@@ -10,7 +10,7 @@ const defaultProps = {
 };
 
 const InputWrapper = styled.div`
-  max-width: ${({ width }) => width}px;
+  max-width: ${({ maxWidth }) => maxWidth}px;
 `;
 
 InputWrapper.propTypes = propTypes;

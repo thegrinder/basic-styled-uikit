@@ -18,6 +18,7 @@ const StyledInlineInput = styled.input`
   margin: 0;
   -webkit-appearance: none;
   touch-action: manipulation;
+  box-sizing: border-box;
   max-width: 100%;
   width: 100%;
   border-width: 1px;

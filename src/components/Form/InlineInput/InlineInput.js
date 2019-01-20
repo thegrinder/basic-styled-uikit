@@ -5,9 +5,13 @@ import SpinnerWrapper from './SpinnerWrapper';
 import StyledInlineInput from './StyledInlineInput';
 
 const propTypes = {
+  /** submitting flag that shows a component passed to renderSpinner prop */
   submitting: bool,
+  /** disabled flag */
   disabled: bool,
+  /** invalid flag */
   invalid: bool,
+  /** spinner component shown when submitting flag is true */
   renderSpinner: node,
 };
 

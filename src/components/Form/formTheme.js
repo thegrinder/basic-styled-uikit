@@ -27,7 +27,9 @@ const formTheme = {
         borderColor: colors.danger500,
       },
     },
-    common: {},
+    common: {
+      fontSize: '1rem',
+    },
   },
   // inputs for inline editing
   inline: {
@@ -60,7 +62,9 @@ const formTheme = {
         borderColor: colors.danger500,
       },
     },
-    common: {},
+    common: {
+      fontSize: '1rem',
+    },
   },
   // radio and checkbox styles
   misc: {
