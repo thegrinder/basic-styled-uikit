@@ -1,17 +1,15 @@
+import React from 'react';
 import styled from 'styled-components';
 import { bool } from 'prop-types';
 import { miscInputStyles } from '../commonFormStyles';
 import { rem } from '../../../helpers/utils';
 
 const propTypes = {
+  /** invalid flag */
   invalid: bool,
 };
 
-const defaultProps = {
-  invalid: false,
-};
-
-const Checkbox = styled.input.attrs({
+const StyledCheckbox = styled.input.attrs({
   type: 'checkbox',
 })`
   ${miscInputStyles}
@@ -31,6 +29,14 @@ const Checkbox = styled.input.attrs({
     transform: rotate(-50deg);
   }
 `;
+
+StyledCheckbox.propTypes = propTypes;
+
+const defaultProps = {
+  invalid: false,
+};
+
+const Checkbox = props => <StyledCheckbox {...props} />;
 
 Checkbox.propTypes = propTypes;
 Checkbox.defaultProps = defaultProps;

@@ -9,7 +9,7 @@ const propTypes = {
   submitting: bool,
   /** one of: default, primary, danger */
   btnType: string,
-  /** one of: small, default, large */
+  /** one of: s, m, l */
   btnSize: string,
   /** component showed on the left (e.g. icon) */
   left: node,

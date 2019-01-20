@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import { bool } from 'prop-types';
 import { miscInputStyles } from '../commonFormStyles';
@@ -6,11 +7,7 @@ const propTypes = {
   invalid: bool,
 };
 
-const defaultProps = {
-  invalid: false,
-};
-
-const Radio = styled.input.attrs({
+const StyledRadio = styled.input.attrs({
   type: 'radio',
 })`
   ${miscInputStyles}
@@ -30,6 +27,14 @@ const Radio = styled.input.attrs({
     border-radius: 50%;
   }
 `;
+
+StyledRadio.propTypes = propTypes;
+
+const defaultProps = {
+  invalid: false,
+};
+
+const Radio = props => <StyledRadio {...props} />;
 
 Radio.propTypes = propTypes;
 Radio.defaultProps = defaultProps;

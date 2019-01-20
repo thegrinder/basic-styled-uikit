@@ -5,8 +5,11 @@ import ToggleCheckbox from './ToggleCheckbox';
 import ToggleSlider from './ToggleSlider';
 
 const propTypes = {
+  /** height of the Toggle */
   h: number,
+  /** disabled flag */
   disabled: bool,
+  /** onChange handler */
   onChange: func.isRequired,
 };
 
