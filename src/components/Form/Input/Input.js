@@ -1,17 +1,15 @@
+import React from 'react';
 import styled from 'styled-components';
 import { bool } from 'prop-types';
 import { commonInputStyles } from '../commonFormStyles';
 import { rem } from '../../../helpers/utils';
 
 const propTypes = {
+  /** invalid flag */
   invalid: bool,
 };
 
-const defaultProps = {
-  invalid: false,
-};
-
-const Input = styled.input`
+const StyledInput = styled.input`
   ${commonInputStyles}
   vertical-align: middle;
   display: inline-block;
@@ -20,7 +18,16 @@ const Input = styled.input`
   overflow: visible;
 `;
 
+StyledInput.propTypes = propTypes;
+
+const defaultProps = {
+  invalid: false,
+};
+
+const Input = props => <StyledInput {...props} />;
+
 Input.propTypes = propTypes;
 Input.defaultProps = defaultProps;
+
 
 export default Input;
