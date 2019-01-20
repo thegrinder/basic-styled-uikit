@@ -1,6 +1,7 @@
 export default {
   wrapper: '../../docz/Wrapper',
   src: './src/components',
+  codeSandbox: false,
   htmlContext: {
     head: {
       raw: [

@@ -1,7 +1,12 @@
-const PATHS = require('./paths');
+const path = require('path');
 
+const PATHS = {
+  src: path.join(__dirname, 'src'),
+  demo: path.join(__dirname, 'demo'),
+  build: path.join(__dirname, 'dist'),
+};
 
-const prodConfig = {
+const config = {
   mode: 'production',
   entry: [
     PATHS.src,
@@ -28,11 +33,8 @@ const prodConfig = {
   },
   externals: [
     'react',
-    'react-dom',
-    'prop-types',
-    'webpack',
     'styled-components',
   ],
 };
 
-module.exports = prodConfig;
+module.exports = config;
