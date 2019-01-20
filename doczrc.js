@@ -1,6 +1,7 @@
 export default {
   wrapper: '../../docz/Wrapper',
   codeSandbox: false,
+  base: '/basic-styled-uikit/',
   htmlContext: {
     head: {
       raw: [
