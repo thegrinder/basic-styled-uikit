@@ -1,12 +1,12 @@
 {
   "name": "basic-styled-uikit",
   "version": "0.8.0",
-  "description": "A set of basic react UIkit-inspired components built with styled-components",
+  "description": "A set of basic react UI components built with styled-components",
   "keywords": [
     "react",
     "styled-components"
   ],
-  "homepage": "https://github.com/thegrinder/basic-styled-uikit",
+  "homepage": "https://thegrinder.github.io/basic-styled-uikit",
   "repository": {
     "type": "git",
     "url": "https://github.com/thegrinder/basic-styled-uikit.git"
