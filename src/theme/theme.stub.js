@@ -7,6 +7,7 @@ const colors = {
   gray200: '#e9ecef',
   gray300: '#dee2e6',
   gray400: '#ced4da',
+  gray450: '#bec5cc',
   gray500: '#adb5bd',
   gray600: '#868e96',
   gray700: '#495057',
@@ -58,7 +59,6 @@ const colors = {
   danger800: '#c62828',
   danger900: '#b71c1c',
 };
-
 const theme = {
   uiKit: {
     colors,
@@ -66,7 +66,7 @@ const theme = {
       baseFontSize: 16, // in px
       baseLineHeight: 1.5,
     },
-    //heading theme
+    // heading theme
     heading: {
       sizings: {
         h1: {
@@ -102,7 +102,7 @@ const theme = {
       common: {
         fontWeight: 'bold',
       },
-    }
+    },
     // text theme
     text: {
       sizings: {
@@ -192,12 +192,12 @@ const theme = {
         default: {
           normal: {
             color: colors.black,
-            backgroundColor: colors.gray300,
+            backgroundColor: colors.gray400,
             borderColor: colors.transparent,
           },
           hover: {
             color: colors.black,
-            backgroundColor: colors.gray400,
+            backgroundColor: colors.gray450,
             borderColor: colors.transparent,
           },
           active: {
@@ -242,17 +242,17 @@ const theme = {
         },
       },
       btnSizes: {
-        small: {
+        s: {
           padding: '0 1rem',
           lineHeight: '1.75rem',
           fontSize: '.875rem',
         },
-        default: {
+        m: {
           padding: '0 1.875rem',
           fontSize: '1rem',
           lineHeight: '2.375rem',
         },
-        large: {
+        l: {
           padding: '0 2.5rem',
           lineHeight: '3.375rem',
           fontSize: '1.375rem',
@@ -260,7 +260,6 @@ const theme = {
       },
       common: {
         fontWeight: '700',
-        letterSpacing: '.4px',
       },
     },
     // link theme
@@ -286,6 +285,7 @@ const theme = {
     },
     // form theme
     form: {
+      // text input, textarea, and select styles
       regular: {
         states: {
           valid: {
@@ -315,6 +315,7 @@ const theme = {
           fontSize: '1rem',
         },
       },
+      // inputs for inline editing
       inline: {
         states: {
           valid: {
@@ -349,7 +350,7 @@ const theme = {
           fontSize: '1rem',
         },
       },
-      // radio and checkbox theme
+      // radio and checkbox styles
       misc: {
         states: {
           valid: {
@@ -365,6 +366,7 @@ const theme = {
               borderColor: colors.transparent,
               backgroundColor: colors.primary500,
             },
+            // no theme for disabled because
           },
           invalid: {
             borderColor: colors.danger500,
@@ -373,13 +375,15 @@ const theme = {
         },
         common: {},
       },
-      // toggle theme
+      // toggle styles
       toggle: {
-        normal: {
-          backgroundColor: colors.gray400,
-        },
-        checked: {
-          backgroundColor: colors.primary500,
+        states: {
+          normal: {
+            backgroundColor: colors.gray400,
+          },
+          checked: {
+            backgroundColor: colors.primary500,
+          },
         },
       },
     },

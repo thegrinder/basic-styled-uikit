@@ -22,12 +22,12 @@ const buttonTheme = {
     default: {
       normal: {
         color: colors.black,
-        backgroundColor: colors.gray300,
+        backgroundColor: colors.gray400,
         borderColor: colors.transparent,
       },
       hover: {
         color: colors.black,
-        backgroundColor: colors.gray400,
+        backgroundColor: colors.gray450,
         borderColor: colors.transparent,
       },
       active: {
