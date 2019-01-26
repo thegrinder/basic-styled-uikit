@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { string } from 'prop-types';
 import { textSizingStyle } from '../Text/textHelpers';
-import { linkNormalStyle, linkHoverStyle } from './linkHelpers';
+import { linkNormalStyle, linkHoverStyle, linkCommonStyle } from './linkHelpers';
 
 const propTypes = {
   /** one of: s, m, l */
@@ -16,8 +16,9 @@ cursor: pointer;
 touch-action: manipulation;
 text-decoration: none;
 font-family: inherit;
-${textSizingStyle}
 margin-bottom: 0;
+${linkCommonStyle}
+${textSizingStyle}
 ${linkNormalStyle}
 &:hover {
   ${linkHoverStyle}

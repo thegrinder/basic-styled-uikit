@@ -7,3 +7,6 @@ const getLinkTypeStyle = state => getStyle(getLinkType, state);
 
 export const linkNormalStyle = getLinkTypeStyle('normal');
 export const linkHoverStyle = getLinkTypeStyle('hover');
+
+const getLinkCommonStyle = ({ theme }) => theme.uiKit.link.common;
+export const linkCommonStyle = getStyle(getLinkCommonStyle);
