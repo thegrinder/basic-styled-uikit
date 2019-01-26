@@ -29,6 +29,7 @@ const textTheme = {
   },
   common: {
     fontWeight: 400,
+    fontFamily: 'Lato, Arial, Helvetica, sans-serif',
   },
 };
 

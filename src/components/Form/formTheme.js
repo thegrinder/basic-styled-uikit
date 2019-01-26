@@ -29,6 +29,7 @@ const formTheme = {
     },
     common: {
       fontSize: '1rem',
+      fontFamily: 'Lato, Arial, Helvetica, sans-serif',
     },
   },
   // inputs for inline editing
@@ -64,6 +65,7 @@ const formTheme = {
     },
     common: {
       fontSize: '1rem',
+      fontFamily: 'Lato, Arial, Helvetica, sans-serif',
     },
   },
   // radio and checkbox styles

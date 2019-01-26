@@ -101,6 +101,7 @@ const theme = {
       },
       common: {
         fontWeight: 'bold',
+        fontFamily: 'Lato, Arial, Helvetica, sans-serif',
       },
     },
     // text theme
@@ -133,6 +134,7 @@ const theme = {
       },
       common: {
         fontWeight: 400,
+        fontFamily: 'Lato, Arial, Helvetica, sans-serif',
       },
     },
     colorBox: {
@@ -260,6 +262,7 @@ const theme = {
       },
       common: {
         fontWeight: '700',
+        fontFamily: 'Lato, Arial, Helvetica, sans-serif',
       },
     },
     // link theme
@@ -313,6 +316,7 @@ const theme = {
         },
         common: {
           fontSize: '1rem',
+          fontFamily: 'Lato, Arial, Helvetica, sans-serif',
         },
       },
       // inputs for inline editing
@@ -348,6 +352,7 @@ const theme = {
         },
         common: {
           fontSize: '1rem',
+          fontFamily: 'Lato, Arial, Helvetica, sans-serif',
         },
       },
       // radio and checkbox styles
