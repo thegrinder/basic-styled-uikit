@@ -38,8 +38,8 @@ const defaultProps = {
 const Button = ({
   left,
   right,
-  btnType,
-  btnSize,
+  btnType: btntype,
+  btnSize: btnsize,
   submitting,
   renderSpinner,
   children,
@@ -50,8 +50,8 @@ const Button = ({
       as={as}
       left={left}
       right={right}
-      btnSize={btnSize}
-      btnType={btnType}
+      btnsize={btnsize}
+      btntype={btntype}
       {...rest}
     >
       {submitting && (

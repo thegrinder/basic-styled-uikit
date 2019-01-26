@@ -10,8 +10,8 @@ import {
 } from './buttonHelpers';
 
 const propTypes = {
-  btnType: string.isRequired,
-  btnSize: string.isRequired,
+  btntype: string.isRequired,
+  btnsize: string.isRequired,
   left: node,
   right: node,
 };

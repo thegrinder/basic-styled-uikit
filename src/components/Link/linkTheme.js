@@ -1,7 +1,7 @@
 import colors from '../../theme/colors';
 
 const linkTheme = {
-  linktypes: {
+  linkTypes: {
     default: {
       normal: {
         color: colors.primary500,

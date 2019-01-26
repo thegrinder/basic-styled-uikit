@@ -267,7 +267,7 @@ const theme = {
     },
     // link theme
     link: {
-      linktypes: {
+      linkTypes: {
         default: {
           normal: {
             color: colors.primary500,

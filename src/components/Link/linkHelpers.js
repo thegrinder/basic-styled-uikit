@@ -1,7 +1,7 @@
 import { getStyle } from '../../helpers/utils';
 
 const getLinkType = ({ theme, linktype }, state) => (
-  theme.uiKit.link.linktypes[linktype][state]
+  theme.uiKit.link.linkTypes[linktype][state]
 );
 const getLinkTypeStyle = state => getStyle(getLinkType, state);
 
