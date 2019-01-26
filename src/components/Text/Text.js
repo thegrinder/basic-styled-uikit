@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, bool } from 'prop-types';
+import { string, bool, oneOf } from 'prop-types';
 import StyledText from './StyledText';
 
 const propTypes = {
@@ -7,8 +7,8 @@ const propTypes = {
   sizing: string,
   /** one of: white, light, default, dark, black, primary, success, warning, danger */
   color: string,
-  /** determines the html tag; one of: p, span */
-  as: string,
+  /** rendered html tag */
+  as: oneOf(['span', 'p']),
   /** if true adds a bottom margin according to vertical rhythm */
   marginBottom: bool,
 };
@@ -27,13 +27,13 @@ const Text = ({
   as,
   ...rest
 }) => (
-  <StyledText
-    as={as}
-    marginBottom={marginBottom}
-    sizing={sizing}
-    color={color}
-    {...rest}
-  />
+    <StyledText
+      as={as}
+      marginBottom={marginBottom}
+      sizing={sizing}
+      color={color}
+      {...rest}
+    />
 );
 
 Text.propTypes = propTypes;

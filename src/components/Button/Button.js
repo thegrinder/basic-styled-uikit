@@ -4,6 +4,7 @@ import {
   bool,
   string,
   oneOfType,
+  oneOf,
   func,
 } from 'prop-types';
 import ChildrenWrapper from './ChildrenWrapper';
@@ -23,8 +24,8 @@ const propTypes = {
   right: node,
   /** spinner component shown when submitting flag is true */
   renderSpinner: node,
-  /** determines the html tag; can be button, a, or a custom router link component */
-  as: oneOfType([string, func]),
+  /** rendered html tag or custom router link component */
+  as: oneOfType([oneOf(['a', 'button']), func]),
 };
 
 const defaultProps = {
