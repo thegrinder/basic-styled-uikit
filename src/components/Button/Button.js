@@ -1,5 +1,11 @@
 import React from 'react';
-import { node, bool, string } from 'prop-types';
+import {
+  node,
+  bool,
+  string,
+  oneOfType,
+  func,
+} from 'prop-types';
 import ChildrenWrapper from './ChildrenWrapper';
 import StyledButton from './StyledButton';
 import SpinnerWrapper from './SpinnerWrapper';
@@ -17,12 +23,15 @@ const propTypes = {
   right: node,
   /** spinner component shown when submitting flag is true */
   renderSpinner: node,
+  /** determines the html tag; can be button, a, or a custom router link component */
+  as: oneOfType([string, func]),
 };
 
 const defaultProps = {
   btnSize: 'm',
   btnType: 'default',
   submitting: false,
+  as: 'button',
 };
 
 const Button = ({
@@ -33,26 +42,28 @@ const Button = ({
   submitting,
   renderSpinner,
   children,
+  as,
   ...rest
 }) => (
-  <StyledButton
-    left={left}
-    right={right}
-    btnSize={btnSize}
-    btnType={btnType}
-    {...rest}
-  >
-    {submitting && (
-      <SpinnerWrapper>
-        {renderSpinner}
-      </SpinnerWrapper>
-    )}
-    <ChildrenWrapper submitting={submitting}>
-      {left && left}
-      {children}
-      {right && right}
-    </ChildrenWrapper>
-  </StyledButton>
+    <StyledButton
+      as={as}
+      left={left}
+      right={right}
+      btnSize={btnSize}
+      btnType={btnType}
+      {...rest}
+    >
+      {submitting && (
+        <SpinnerWrapper>
+          {renderSpinner}
+        </SpinnerWrapper>
+      )}
+      <ChildrenWrapper submitting={submitting}>
+        {left && left}
+        {children}
+        {right && right}
+      </ChildrenWrapper>
+    </StyledButton>
 );
 
 Button.propTypes = propTypes;
