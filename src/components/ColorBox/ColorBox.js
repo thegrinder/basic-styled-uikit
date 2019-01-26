@@ -19,6 +19,7 @@ const StyledColorBox = styled.div`
   ${colorBoxBorderStyle}
 `;
 
+
 StyledColorBox.propTypes = propTypes;
 
 const ColorBox = props => <StyledColorBox {...props} />;
