@@ -11,6 +11,7 @@ const config = {
   entry: [
     PATHS.src,
   ],
+  devtool: 'source-map',
   output: {
     path: PATHS.build,
     filename: 'index.js',
