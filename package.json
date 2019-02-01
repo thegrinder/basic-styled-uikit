@@ -16,7 +16,8 @@
     "production": "rm -rf lib && webpack",
     "prepublishOnly": "npm run production",
     "docz:dev": "docz dev",
-    "deploy:docz": "yarn docz build && gh-pages -d .docz/dist"
+    "deploy:docz": "yarn docz build && gh-pages -d .docz/dist",
+    "test": "jest"
   },
   "husky": {
     "hooks": {
@@ -44,6 +45,7 @@
     "babel-plugin-styled-components": "^1.10.0",
     "docz": "^0.13.7",
     "docz-theme-default": "^0.13.7",
+    "dom-testing-library": "^3.16.5",
     "eslint": "^5.12.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.15.0",
@@ -51,8 +53,11 @@
     "eslint-plugin-react": "^7.12.4",
     "gh-pages": "^2.0.1",
     "husky": "^1.3.1",
+    "jest": "^24.0.0",
+    "jest-dom": "^3.0.1",
     "lint-staged": "^8.1.0",
     "react": "^16.8.0-alpha.1",
+    "react-testing-library": "^5.4.4",
     "styled-components": "^4.1.3",
     "webpack": "4.28.4",
     "webpack-cli": "^3.2.1",
