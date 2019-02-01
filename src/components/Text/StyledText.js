@@ -4,9 +4,8 @@ import { getBaseLineHeight } from '../../theme/typography';
 import { calcLineHeight } from '../../helpers/utils';
 import {
   getTextSizing,
-  textSizingStyle,
-  textColorStyle,
-  textCommonStyle,
+  getTextColor,
+  getTextCommonStyle,
 } from './textHelpers';
 
 const propTypes = {
@@ -15,19 +14,24 @@ const propTypes = {
   marginBottom: bool.isRequired,
 };
 
-const StyledText = styled.span`
-  display: block;
-  margin: 0;
-  padding: 0;
-  ${textCommonStyle}
-  ${textSizingStyle}
-  ${textColorStyle}
-  line-height: ${props => calcLineHeight(
-    getTextSizing(props).fontSize,
-    getBaseLineHeight(props),
-  )};
-  margin-bottom: ${props => (props.marginBottom ? `${getBaseLineHeight(props)}rem` : '0')};
-`;
+const StyledText = styled.span(({
+  theme,
+  color,
+  sizing,
+  marginBottom,
+}) => ({
+  display: 'block',
+  margin: 0,
+  padding: 0,
+  lineHeight: calcLineHeight(
+    getTextSizing(theme, sizing).fontSize,
+    getBaseLineHeight({ theme }),
+  ),
+  marginBottom: marginBottom ? `${getBaseLineHeight({ theme })}rem` : 0,
+  color: getTextColor(theme, color),
+  ...getTextSizing(theme, sizing),
+  ...getTextCommonStyle(theme),
+}));
 
 StyledText.propTypes = propTypes;
 

@@ -1,13 +1,5 @@
-import { css } from 'styled-components';
-import { getStyle } from '../../helpers/utils';
+export const getTextSizing = (theme, sizing) => theme.uiKit.text.sizings[sizing];
 
-export const getTextSizing = ({ theme, sizing }) => theme.uiKit.text.sizings[sizing];
-export const textSizingStyle = getStyle(getTextSizing);
+export const getTextColor = (theme, color) => theme.uiKit.text.colors[color];
 
-const getTextColor = (theme, color) => theme.uiKit.text.colors[color];
-export const textColorStyle = ({ theme, color }) => (
-  css`color: ${getTextColor(theme, color)};`
-);
-
-const getTextCommonStyle = ({ theme }) => theme.uiKit.text.common;
-export const textCommonStyle = getStyle(getTextCommonStyle);
+export const getTextCommonStyle = theme => theme.uiKit.text.common;
