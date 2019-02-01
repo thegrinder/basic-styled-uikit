@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text /> should render <span> tag by default 1`] = `
+<span
+  class="StyledText-r7l7li-0 bHYFxY"
+  color="default"
+>
+  children
+</span>
+`;
+
+exports[`<Text /> should render correctly with custom props 1`] = `
+<span
+  class="StyledText-r7l7li-0 bsfvJb"
+  color="primary"
+>
+  children
+</span>
+`;
+
+exports[`<Text /> should render correctly with default props 1`] = `
+<span
+  class="StyledText-r7l7li-0 bHYFxY"
+  color="default"
+>
+  children
+</span>
+`;
+
+exports[`<Text /> should render render <p> tag 1`] = `
+<p
+  class="StyledText-r7l7li-0 bHYFxY"
+  color="default"
+>
+  children
+</p>
+`;
