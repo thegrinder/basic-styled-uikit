@@ -6,7 +6,7 @@ import {
   getTextSizing,
   getTextColor,
   getTextCommonStyle,
-} from './textHelpers';
+} from './textTheme';
 
 const propTypes = {
   color: string.isRequired,
