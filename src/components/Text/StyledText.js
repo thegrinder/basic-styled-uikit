@@ -3,7 +3,7 @@ import { string, bool } from 'prop-types';
 import { getBaseLineHeight } from '../../theme/typography';
 import { calcLineHeight } from '../../helpers/utils';
 import {
-  getTextSizing,
+  getTextSizingStyle,
   getTextColor,
   getTextCommonStyle,
 } from './textTheme';
@@ -24,12 +24,12 @@ const StyledText = styled.span(({
   margin: 0,
   padding: 0,
   lineHeight: calcLineHeight(
-    getTextSizing(theme, sizing).fontSize,
+    getTextSizingStyle(theme, sizing).fontSize,
     getBaseLineHeight({ theme }),
   ),
   marginBottom: marginBottom ? `${getBaseLineHeight({ theme })}rem` : 0,
   color: getTextColor(theme, color),
-  ...getTextSizing(theme, sizing),
+  ...getTextSizingStyle(theme, sizing),
   ...getTextCommonStyle(theme),
 }));
 

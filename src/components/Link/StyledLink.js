@@ -5,8 +5,8 @@ import {
   oneOfType,
   func,
 } from 'prop-types';
-import { textSizingStyle } from '../Text/textHelpers';
-import { linkNormalStyle, linkHoverStyle, linkCommonStyle } from './linkHelpers';
+import { getTextSizingStyle } from '../Text/textTheme';
+import { getLinkTypeStyle, getLinkCommonStyle } from './linkTheme';
 
 const propTypes = {
   sizing: string.isRequired,
@@ -14,30 +14,29 @@ const propTypes = {
   as: oneOfType([oneOf(['a', 'button']), func]).isRequired,
 };
 
-const StyledLink = styled.a`
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  overflow: visible;
-  box-sizing: border-box;
-  display: inline-block;
-  vertical-align: middle;
-  outline: none;
-  cursor: pointer;
-  touch-action: manipulation;
-  text-decoration: none;
-  font-family: inherit;
-  margin-bottom: 0;
-  ${linkCommonStyle}
-  ${textSizingStyle}
-  ${linkNormalStyle}
-  &:hover {
-    ${linkHoverStyle}
-    outline: none;
-    text-decoration: underline;
-  }
-`;
+const StyledLink = styled.a(({ linktype, sizing, theme }) => ({
+  margin: 0,
+  padding: 0,
+  backgroundColor: 'transparent',
+  border: 'none',
+  overflow: 'visible',
+  boxSizing: 'border-box',
+  display: 'inline-block',
+  verticalAlign: 'middle',
+  outline: 'none',
+  cursor: 'pointer',
+  touchAction: 'manipulation',
+  textDecoration: 'none',
+  fontFamily: 'inherit',
+  ...getLinkCommonStyle(theme),
+  ...getLinkTypeStyle(theme, linktype, 'normal'),
+  ...getTextSizingStyle(theme, sizing),
+  '&: hover': {
+    ...getLinkTypeStyle(theme, linktype, 'hover'),
+    outline: 'none',
+    textDecoration: 'underline',
+  },
+}));
 
 StyledLink.propTypes = propTypes;
 

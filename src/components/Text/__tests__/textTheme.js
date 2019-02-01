@@ -1,6 +1,6 @@
 import theme from '../../../theme/theme';
 import textTheme, {
-  getTextSizing,
+  getTextSizingStyle,
   getTextColor,
   getTextCommonStyle,
 } from '../textTheme';
@@ -12,10 +12,10 @@ const {
 } = textTheme;
 
 describe('textTheme selectors', () => {
-  describe('getTextSizing', () => {
+  describe('getTextSizingStyle', () => {
     Object.keys(sizings).forEach((sizing) => {
       it('should return the correct size style object', () => {
-        expect(JSON.stringify(getTextSizing(theme, sizing)))
+        expect(JSON.stringify(getTextSizingStyle(theme, sizing)))
           .toEqual(JSON.stringify(sizings[sizing]));
       });
     });

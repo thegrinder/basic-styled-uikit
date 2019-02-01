@@ -20,9 +20,14 @@ const linkTheme = {
     },
   },
   common: {
-    fontWeight: 700,
     fontFamily: 'Lato, Arial, Helvetica, sans-serif',
   },
 };
+
+export const getLinkTypeStyle = (theme, linktype, state) => (
+  theme.uiKit.link.linkTypes[linktype][state]
+);
+
+export const getLinkCommonStyle = theme => theme.uiKit.link.common;
 
 export default linkTheme;
