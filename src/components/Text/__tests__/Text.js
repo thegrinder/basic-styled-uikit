@@ -19,36 +19,32 @@ describe('<Text />', () => {
   afterEach(cleanup);
 
   it('should render correctly with default props', () => {
-    const { getByText } = renderComponent();
-    const component = getByText(children);
-    expect(component).toBeDefined();
-    expect(component).toHaveTextContent(children);
-    expect(component).toMatchSnapshot();
+    const { container: { firstChild } } = renderComponent();
+    expect(firstChild).toBeDefined();
+    expect(firstChild).toHaveTextContent(children);
+    expect(firstChild).toMatchSnapshot();
   });
 
   it('should render correctly with custom props', () => {
-    const { getByText } = renderComponent({
+    const { container: { firstChild } } = renderComponent({
       sizing: 'xs',
       color: 'primary',
       marginBottom: true,
     });
-    const component = getByText(children);
-    expect(component).toBeDefined();
-    expect(component).toHaveTextContent(children);
-    expect(component).toMatchSnapshot();
+    expect(firstChild).toBeDefined();
+    expect(firstChild).toHaveTextContent(children);
+    expect(firstChild).toMatchSnapshot();
   });
 
   it('should render <span> tag by default', () => {
-    const { getByText } = renderComponent();
-    const component = getByText(children);
-    expect(component.tagName).toEqual('SPAN');
-    expect(component).toMatchSnapshot();
+    const { container: { firstChild } } = renderComponent();
+    expect(firstChild.tagName).toEqual('SPAN');
+    expect(firstChild).toMatchSnapshot();
   });
 
   it('should render render <p> tag', () => {
-    const { getByText } = renderComponent({ as: 'p' });
-    const component = getByText(children);
-    expect(component.tagName).toEqual('P');
-    expect(component).toMatchSnapshot();
+    const { container: { firstChild } } = renderComponent({ as: 'p' });
+    expect(firstChild.tagName).toEqual('P');
+    expect(firstChild).toMatchSnapshot();
   });
 });

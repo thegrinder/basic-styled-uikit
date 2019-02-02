@@ -19,35 +19,31 @@ describe('<Link />', () => {
   afterEach(cleanup);
 
   it('should render correctly with default props', () => {
-    const { getByText } = renderComponent();
-    const component = getByText(children);
-    expect(component).toBeDefined();
-    expect(component).toHaveTextContent(children);
-    expect(component).toMatchSnapshot();
+    const { container: { firstChild } } = renderComponent();
+    expect(firstChild).toBeDefined();
+    expect(firstChild).toHaveTextContent(children);
+    expect(firstChild).toMatchSnapshot();
   });
 
   it('should render correctly with custom props', () => {
-    const { getByText } = renderComponent({
+    const { container: { firstChild } } = renderComponent({
       sizing: 'xs',
       linktype: 'muted',
     });
-    const component = getByText(children);
-    expect(component).toBeDefined();
-    expect(component).toHaveTextContent(children);
-    expect(component).toMatchSnapshot();
+    expect(firstChild).toBeDefined();
+    expect(firstChild).toHaveTextContent(children);
+    expect(firstChild).toMatchSnapshot();
   });
 
   it('should render <a> tag by default', () => {
-    const { getByText } = renderComponent();
-    const component = getByText(children);
-    expect(component.tagName).toEqual('A');
-    expect(component).toMatchSnapshot();
+    const { container: { firstChild } } = renderComponent();
+    expect(firstChild.tagName).toEqual('A');
+    expect(firstChild).toMatchSnapshot();
   });
 
   it('should render render <button> tag', () => {
-    const { getByText } = renderComponent({ as: 'button' });
-    const component = getByText(children);
-    expect(component.tagName).toEqual('BUTTON');
-    expect(component).toMatchSnapshot();
+    const { container: { firstChild } } = renderComponent({ as: 'button' });
+    expect(firstChild.tagName).toEqual('BUTTON');
+    expect(firstChild).toMatchSnapshot();
   });
 });

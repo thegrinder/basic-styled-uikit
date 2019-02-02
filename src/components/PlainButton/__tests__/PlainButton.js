@@ -8,20 +8,28 @@ describe('<PlainButton />', () => {
   afterEach(cleanup);
 
   it('should render correctly', () => {
-    const { container } = render(<PlainButton />);
-    expect(container.firstChild).toBeDefined();
-    expect(container.firstChild).toMatchSnapshot();
+    const { container: { firstChild } } = render(
+      <PlainButton />,
+    );
+    expect(firstChild).toBeDefined();
+    expect(firstChild).toMatchSnapshot();
   });
 
   it('should render button tag', () => {
-    const { container } = render(<PlainButton />);
-    expect(container.firstChild.tagName).toEqual('BUTTON');
+    const { container: { firstChild } } = render(
+      <PlainButton />,
+    );
+    expect(firstChild.tagName).toEqual('BUTTON');
   });
 
   it('should render text correctly', () => {
     const text = 'text';
-    const { container } = render(<PlainButton>{text}</PlainButton>);
-    expect(container.firstChild).toHaveTextContent(text);
-    expect(container.firstChild).toMatchSnapshot();
+    const { container: { firstChild } } = render(
+      <PlainButton>
+        {text}
+      </PlainButton>,
+    );
+    expect(firstChild).toHaveTextContent(text);
+    expect(firstChild).toMatchSnapshot();
   });
 });
