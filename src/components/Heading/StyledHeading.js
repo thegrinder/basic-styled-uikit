@@ -3,11 +3,10 @@ import { string, bool } from 'prop-types';
 import { getBaseLineHeight } from '../../theme/typography';
 import { calcLineHeight } from '../../helpers/utils';
 import {
-  getHeadingSizing,
-  headingSizingStyle,
-  headingColorStyle,
-  headingCommonStyle,
-} from './headingHelpers';
+  getHeadingSizingStyle,
+  getHeadingColor,
+  getHeadingCommonStyle,
+} from './headingTheme';
 
 const propTypes = {
   color: string.isRequired,
@@ -15,19 +14,24 @@ const propTypes = {
   marginBottom: bool.isRequired,
 };
 
-const StyledHeading = styled.h1`
-  display: block;
-  margin: 0;
-  padding: 0;
-  ${headingCommonStyle}
-  ${headingSizingStyle}
-  ${headingColorStyle}
-  line-height: ${props => calcLineHeight(
-    getHeadingSizing(props).fontSize,
-    getBaseLineHeight(props),
-  )};
-  margin-bottom: ${props => (props.marginBottom ? `${getBaseLineHeight(props)}rem` : '0')};
-`;
+const StyledHeading = styled.h1(({
+  theme,
+  sizing,
+  color,
+  marginBottom,
+}) => ({
+  display: 'block',
+  margin: 0,
+  padding: 0,
+  lineHeight: calcLineHeight(
+    getHeadingSizingStyle(theme, sizing).fontSize,
+    getBaseLineHeight({ theme }),
+  ),
+  marginBottom: marginBottom ? `${getBaseLineHeight({ theme })}rem` : 0,
+  color: getHeadingColor(theme, color),
+  ...getHeadingSizingStyle(theme, sizing),
+  ...getHeadingCommonStyle(theme),
+}));
 
 StyledHeading.propTypes = propTypes;
 
