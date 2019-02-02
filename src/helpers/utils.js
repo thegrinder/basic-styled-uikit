@@ -17,9 +17,4 @@ export const getStyle = (selector, state) => (props) => {
   return createStyles(selectedStyles);
 };
 
-export const rem = pxValue => props => `${pxValue / getBaseFontSize(props)}rem`;
-
-export const calcLineHeight = (remValue, baseLineHeight) => {
-  const value = Number(remValue.replace('rem', ''));
-  return `${(Math.ceil(value / baseLineHeight) * baseLineHeight) / value}`;
-};
+export const rem = (theme, pxValue) => `${pxValue / getBaseFontSize(theme)}rem`;

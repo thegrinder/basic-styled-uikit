@@ -94,4 +94,12 @@ const buttonTheme = {
   },
 };
 
+export const getBtnTypeStyle = (theme, btntype, state) => (
+  theme.uiKit.button.btnTypes[btntype][state]
+);
+
+export const getBtnSizeStyle = (theme, btnsize) => theme.uiKit.button.btnSizes[btnsize];
+
+export const getBtnCommonStyle = theme => theme.uiKit.button.common;
+
 export default buttonTheme;

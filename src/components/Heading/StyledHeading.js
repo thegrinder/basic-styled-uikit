@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { string, bool } from 'prop-types';
-import { getBaseLineHeight } from '../../theme/typography';
-import { calcLineHeight } from '../../helpers/utils';
+import { getBaseLineHeight, calcLineHeight } from '../../theme/typography';
 import {
   getHeadingSizingStyle,
   getHeadingColor,
@@ -25,9 +24,9 @@ const StyledHeading = styled.h1(({
   padding: 0,
   lineHeight: calcLineHeight(
     getHeadingSizingStyle(theme, sizing).fontSize,
-    getBaseLineHeight({ theme }),
+    getBaseLineHeight(theme),
   ),
-  marginBottom: marginBottom ? `${getBaseLineHeight({ theme })}rem` : 0,
+  marginBottom: marginBottom ? `${getBaseLineHeight(theme)}rem` : 0,
   color: getHeadingColor(theme, color),
   ...getHeadingSizingStyle(theme, sizing),
   ...getHeadingCommonStyle(theme),

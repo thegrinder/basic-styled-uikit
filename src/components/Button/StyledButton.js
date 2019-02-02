@@ -2,12 +2,21 @@ import styled from 'styled-components';
 import { node, string } from 'prop-types';
 import { rem } from '../../helpers/utils';
 import {
-  btnNormalStyle,
-  btnHoverStyle,
-  btnActiveStyle,
-  btnSizeStyle,
-  btnCommonStyle,
-} from './buttonHelpers';
+  getBtnTypeStyle,
+  getBtnSizeStyle,
+  getBtnCommonStyle,
+} from './buttonTheme';
+
+const getPadding = (left, right) => {
+  const padding = {};
+  if (left) {
+    padding.paddingLeft = 0;
+  }
+  if (right) {
+    padding.paddingRight = 0;
+  }
+  return padding;
+};
 
 const propTypes = {
   btntype: string.isRequired,
@@ -16,42 +25,49 @@ const propTypes = {
   right: node,
 };
 
-const StyledButton = styled.button`
-  margin: 0;
-  border: none;
-  overflow: visible;
-  box-sizing: border-box;
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  text-align: center;
-  text-decoration: none;
-  transition: .1s ease-in-out;
-  transition-property: color, background-color, border-color;
-  touch-action: manipulation;
-  cursor: pointer;
-  outline: none;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: ${rem(6)};
-  ${btnCommonStyle}
-  ${btnSizeStyle}
-  ${btnNormalStyle}
-  ${({ left }) => (left ? 'padding-left: 0;' : '')}
-  ${({ right }) => (right ? 'padding-right: 0;' : '')}
-  &:hover,
-  &:focus {
-    ${btnHoverStyle}
-  }
-  &:active {
-    ${btnActiveStyle}
-  }
-  &:disabled {
-    ${btnNormalStyle}
-    opacity: .6;
-    cursor: default;
-  }
-`;
+const StyledButton = styled.button(({
+  theme,
+  btntype,
+  btnsize,
+  left,
+  right,
+}) => ({
+  margin: 0,
+  border: 'none',
+  overflow: 'visible',
+  boxSizing: 'border-box',
+  position: 'relative',
+  display: 'inline-block',
+  verticalAlign: 'middle',
+  textAlign: 'center',
+  textDecoration: 'none',
+  transition: '.1s ease-in-out',
+  transitionProperty: 'color, background-color, border-color',
+  touchAction: 'manipulation',
+  cursor: 'pointer',
+  outline: 'none',
+  borderWidth: '1px',
+  borderStyle: 'solid',
+  borderRadius: rem(theme, 6),
+  ...getBtnCommonStyle(theme),
+  ...getBtnTypeStyle(theme, btntype, 'normal'),
+  ...getBtnSizeStyle(theme, btnsize),
+  ...getPadding(left, right),
+  '&:hover': {
+    ...getBtnTypeStyle(theme, btntype, 'hover'),
+  },
+  '&:focus': {
+    ...getBtnTypeStyle(theme, btntype, 'hover'),
+  },
+  '&:active': {
+    ...getBtnTypeStyle(theme, btntype, 'active'),
+  },
+  '&:disabled': {
+    ...getBtnTypeStyle(theme, btntype, 'normal'),
+    opacity: 0.6,
+    cursor: 'default',
+  },
+}));
 
 StyledButton.propTypes = propTypes;
 
