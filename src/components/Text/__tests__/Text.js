@@ -28,7 +28,7 @@ describe('<Text />', () => {
 
   it('should render correctly with custom props', () => {
     const { getByText } = renderComponent({
-      size: 'xs',
+      sizing: 'xs',
       color: 'primary',
       marginBottom: true,
     });
