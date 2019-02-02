@@ -6,17 +6,21 @@ import {
   getMiscInputStyle,
 } from './formTheme';
 
-export const getSharedInputStyles = (theme, invalid) => ({
-  margin: 0,
+export const baseInputStyles = {
   appearance: 'none',
   touchAction: 'manipulation',
   boxSizing: 'border-box',
-  maxWidth: '100%',
-  width: '100%',
   borderWidth: '1px',
   borderStyle: 'solid',
   transition: '.2s ease-in-out',
   transitionProperty: 'color, background-color, border',
+};
+
+export const getSharedInputStyles = (theme, invalid) => ({
+  ...baseInputStyles,
+  margin: 0,
+  maxWidth: '100%',
+  width: '100%',
   borderRadius: rem(theme, 6),
   ...getRegularInputCommonStyle(theme),
   ...getRegularInputStyle(theme, invalid, 'normal'),
@@ -30,9 +34,7 @@ export const getSharedInputStyles = (theme, invalid) => ({
 });
 
 export const getSharedMiscInputStyles = (theme, invalid) => ({
-  touchAction: 'manipulation',
-  appearance: 'none',
-  boxSizing: 'border-box',
+  ...baseInputStyles,
   overflow: 'hidden',
   padding: 0,
   display: 'inline-block',
@@ -42,10 +44,7 @@ export const getSharedMiscInputStyles = (theme, invalid) => ({
   verticalAlign: 'middle',
   backgroundRepeat: 'no-repeat',
   backgroundPosition: '50% 50%',
-  borderWidth: '1px',
   borderStyle: 'solid',
-  transition: '.2s ease-in-out',
-  transitionProperty: 'background-color, border',
   cursor: 'pointer',
   ...getMiscInputCommonStyle(theme),
   ...getMiscInputStyle(theme, invalid, 'normal'),

@@ -15,18 +15,18 @@ const propTypes = {
 };
 
 const StyledInlineInput = styled.input`
-  margin: 0;
   -webkit-appearance: none;
   touch-action: manipulation;
   box-sizing: border-box;
-  max-width: 100%;
-  width: 100%;
   border-width: 1px;
   border-style: solid;
   transition: .2s ease-in-out;
   transition-property: color, background-color, border;
-  overflow: visible;
 
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+  overflow: visible;
   vertical-align: middle;
   display: inline-block;
   border-radius: ${rem(6)};
