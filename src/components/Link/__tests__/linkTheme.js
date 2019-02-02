@@ -13,7 +13,7 @@ describe('linkTheme selectors', () => {
   describe('getLinkTypeStyle', () => {
     Object.keys(linkTypes).forEach((linkType) => {
       Object.keys(linkType).forEach((state) => {
-        it('should return the correct size style object', () => {
+        it('should return the correct linkType style object', () => {
           expect(JSON.stringify(getLinkTypeStyle(theme, linkType, state)))
             .toEqual(JSON.stringify(linkTypes[linkType][state]));
         });
