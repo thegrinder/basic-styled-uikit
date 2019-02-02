@@ -7,17 +7,6 @@ import {
   getBtnCommonStyle,
 } from './buttonTheme';
 
-const getPadding = (left, right) => {
-  const padding = {};
-  if (left) {
-    padding.paddingLeft = 0;
-  }
-  if (right) {
-    padding.paddingRight = 0;
-  }
-  return padding;
-};
-
 const propTypes = {
   btntype: string.isRequired,
   btnsize: string.isRequired,
@@ -52,7 +41,8 @@ const StyledButton = styled.button(({
   ...getBtnCommonStyle(theme),
   ...getBtnTypeStyle(theme, btntype, 'normal'),
   ...getBtnSizeStyle(theme, btnsize),
-  ...getPadding(left, right),
+  ...(left && { paddingLeft: 0 }),
+  ...(right && { paddingRight: 0 }),
   '&:hover': {
     ...getBtnTypeStyle(theme, btntype, 'hover'),
   },

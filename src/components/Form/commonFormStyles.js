@@ -1,68 +1,63 @@
-import { css } from 'styled-components';
-import {
-  miscNormalStyle,
-  miscActiveStyle,
-  miscCheckedStyle,
-  miscCommonStyle,
-  inputNormalStyle,
-  inputActiveStyle,
-  inputDisabledStyle,
-  inputCommonStyle,
-} from './formHelpers';
 import { rem } from '../../helpers/utils';
+import {
+  getRegularInputCommonStyle,
+  getRegularInputStyle,
+  getMiscInputCommonStyle,
+  getMiscInputStyle,
+} from './formTheme';
 
-export const commonInputStyles = css`
-  margin: 0;
-  -webkit-appearance: none;
-  touch-action: manipulation;
-  box-sizing: border-box;
-  max-width: 100%;
-  width: 100%;
-  border-width: 1px;
-  border-style: solid;
-  transition: .2s ease-in-out;
-  transition-property: color, background-color, border;
-  border-radius: ${rem(6)};
-  ${inputCommonStyle}
-  ${inputNormalStyle}
-  &:focus {
-    outline: none;
-    ${inputActiveStyle}
-  }
-  &:disabled {
-    ${inputDisabledStyle}
-  }
-`;
+export const getSharedInputStyles = (theme, invalid) => ({
+  margin: 0,
+  appearance: 'none',
+  touchAction: 'manipulation',
+  boxSizing: 'border-box',
+  maxWidth: '100%',
+  width: '100%',
+  borderWidth: '1px',
+  borderStyle: 'solid',
+  transition: '.2s ease-in-out',
+  transitionProperty: 'color, background-color, border',
+  borderRadius: rem(theme, 6),
+  ...getRegularInputCommonStyle(theme),
+  ...getRegularInputStyle(theme, invalid, 'normal'),
+  '&:focus': {
+    outline: 'none',
+    ...getRegularInputStyle(theme, invalid, 'active'),
+  },
+  '&:disabled': {
+    ...getRegularInputStyle(theme, invalid, 'disabled'),
+  },
+});
 
-export const miscInputStyles = css`
-  touch-action: manipulation;
-  -webkit-appearance: none;
-  box-sizing: border-box;
-  overflow: hidden;
-  padding: 0;
-  display: inline-block;
-  height: ${rem(24)};
-  width: ${rem(24)};
-  margin-top: ${rem(-4)};
-  vertical-align: middle;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  border-width: 1px;
-  border-style: solid;
-  transition: .2s ease-in-out;
-  transition-property: background-color, border;
-  cursor: pointer;
-  ${miscCommonStyle}
-  ${miscNormalStyle}
-  &:focus {
-    outline: none;
-    ${miscActiveStyle}
-  }
-  &:checked {
-    ${miscCheckedStyle}
-  }
-  &:disabled {
-    cursor: default;
-    opacity: .6;
-  }
-`;
+export const getSharedMiscInputStyles = (theme, invalid) => ({
+  touchAction: 'manipulation',
+  appearance: 'none',
+  boxSizing: 'border-box',
+  overflow: 'hidden',
+  padding: 0,
+  display: 'inline-block',
+  height: rem(theme, 24),
+  width: rem(theme, 24),
+  marginTop: rem(theme, -4),
+  verticalAlign: 'middle',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: '50% 50%',
+  borderWidth: '1px',
+  borderStyle: 'solid',
+  transition: '.2s ease-in-out',
+  transitionProperty: 'background-color, border',
+  cursor: 'pointer',
+  ...getMiscInputCommonStyle(theme),
+  ...getMiscInputStyle(theme, invalid, 'normal'),
+  '&:focus': {
+    outline: 'none',
+    ...getMiscInputStyle(theme, invalid, 'active'),
+  },
+  '&:checked': {
+    ...getMiscInputStyle(theme, invalid, 'checked'),
+  },
+  '&:disabled': {
+    cursor: 'default',
+    opacity: 0.6,
+  },
+});
