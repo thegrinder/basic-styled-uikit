@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { bool } from 'prop-types';
-import { commonInputStyles } from '../commonFormStyles';
+import { getSharedInputStyles } from '../commonFormStyles';
 import { rem } from '../../../helpers/utils';
 
 const propTypes = {
@@ -9,12 +9,12 @@ const propTypes = {
   invalid: bool,
 };
 
-const StyledTextarea = styled.textarea`
-${commonInputStyles}
-padding: ${rem(4)} ${rem(10)};
-vertical-align: top;
-overflow: auto;
-`;
+const StyledTextarea = styled.textarea(({ theme, invalid }) => ({
+  ...getSharedInputStyles(theme, invalid),
+  padding: `${rem(theme, 4)} ${rem(theme, 10)}`,
+  verticalAlign: 'top',
+  overflow: 'auto',
+}));
 
 StyledTextarea.propTypes = propTypes;
 
