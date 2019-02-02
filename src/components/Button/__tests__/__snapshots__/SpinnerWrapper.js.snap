@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SpinnerWrapper /> should render correctly 1`] = `
+<span
+  class="SpinnerWrapper-sc-1ln0y9p-0 csgNUt"
+/>
+`;

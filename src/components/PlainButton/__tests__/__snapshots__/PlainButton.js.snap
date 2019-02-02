@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<PlainButton /> should render correctly 1`] = `
+<button
+  class="PlainButton-e9bw3w-0 kTxkaK"
+/>
+`;
+
 exports[`<PlainButton /> should render text correctly 1`] = `
 <button
   class="PlainButton-e9bw3w-0 kTxkaK"
