@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { string } from 'prop-types';
-import { colorBoxBgStyle, colorBoxBorderStyle } from './colorBoxHelpers';
+import { getBoxBgColor, getBoxBorderColor } from './colorBoxTheme';
 
 const propTypes = {
   /**
@@ -13,11 +13,15 @@ const propTypes = {
   borderColor: string,
 };
 
-const StyledColorBox = styled.div`
-  box-sizing: border-box;
-  ${colorBoxBgStyle}
-  ${colorBoxBorderStyle}
-`;
+const StyledColorBox = styled.div(({ theme, bgColor, borderColor }) => ({
+  boxSizing: 'border-box',
+  ...(getBoxBgColor(theme, bgColor) && {
+    backgroundColor: getBoxBgColor(theme, bgColor),
+  }),
+  ...(getBoxBorderColor(theme, borderColor) && {
+    borderColor: getBoxBorderColor(theme, borderColor),
+  }),
+}));
 
 
 StyledColorBox.propTypes = propTypes;
