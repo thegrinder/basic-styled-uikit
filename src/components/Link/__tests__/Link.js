@@ -28,7 +28,7 @@ describe('<Link />', () => {
 
   it('should render correctly with custom props', () => {
     const { getByText } = renderComponent({
-      size: 'xs',
+      sizing: 'xs',
       linktype: 'muted',
     });
     const component = getByText(children);
