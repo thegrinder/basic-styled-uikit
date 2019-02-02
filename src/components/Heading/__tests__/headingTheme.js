@@ -29,7 +29,7 @@ describe('headingTheme selectors', () => {
   });
 
   describe('getHeadingCommonStyle', () => {
-    it('should return the correct style object', () => {
+    it('should return the correct common style object', () => {
       expect(JSON.stringify(getHeadingCommonStyle(theme)))
         .toEqual(JSON.stringify(common));
     });

@@ -22,7 +22,7 @@ describe('linkTheme selectors', () => {
   });
 
   describe('getLinkCommonStyle', () => {
-    it('should return the correct style object', () => {
+    it('should return the correct common style object', () => {
       expect(JSON.stringify(getLinkCommonStyle(theme)))
         .toEqual(JSON.stringify(common));
     });

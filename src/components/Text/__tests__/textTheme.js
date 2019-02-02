@@ -20,6 +20,7 @@ describe('textTheme selectors', () => {
       });
     });
   });
+
   describe('getTextColor', () => {
     Object.keys(colors).forEach((color) => {
       it('should return the correct color', () => {
@@ -29,7 +30,7 @@ describe('textTheme selectors', () => {
   });
 
   describe('getTextCommonStyle', () => {
-    it('should return the correct style object', () => {
+    it('should return the correct common style object', () => {
       expect(JSON.stringify(getTextCommonStyle(theme)))
         .toEqual(JSON.stringify(common));
     });
