@@ -1,17 +1,11 @@
 import styled from 'styled-components';
-import {
-  string,
-  oneOf,
-  oneOfType,
-  func,
-} from 'prop-types';
+import { string } from 'prop-types';
 import { textSizingStyle } from '../Text/textHelpers';
 import { linkNormalStyle, linkHoverStyle, linkCommonStyle } from './linkHelpers';
 
 const propTypes = {
   sizing: string.isRequired,
   linktype: string.isRequired,
-  as: oneOfType([oneOf(['a', 'button']), func]).isRequired,
 };
 
 const StyledLink = styled.a`
