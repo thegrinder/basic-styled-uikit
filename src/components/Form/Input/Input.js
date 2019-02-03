@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { bool } from 'prop-types';
 import { getSharedInputStyles } from '../commonFormStyles';
-import { rem } from '../../../helpers/utils';
+import { rem } from '../../../theme/typography';
 
 const propTypes = {
   /** invalid flag */

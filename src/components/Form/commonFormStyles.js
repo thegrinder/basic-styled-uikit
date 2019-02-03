@@ -1,4 +1,4 @@
-import { rem } from '../../helpers/utils';
+import { rem } from '../../theme/typography';
 import {
   getRegularInputCommonStyle,
   getRegularInputStyle,
