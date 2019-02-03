@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { bool } from 'prop-types';
-import { commonInputStyles } from '../commonFormStyles';
-import { inputDisabledStyle } from '../formHelpers';
+
+import { getSharedInputStyles } from '../commonFormStyles';
 import { rem } from '../../../helpers/utils';
 
 const propTypes = {
@@ -10,19 +10,15 @@ const propTypes = {
   invalid: bool,
 };
 
-
-const StyledSelect = styled.select`
-${commonInputStyles}
-text-transform: none;
-padding: 0 ${rem(10)};
-vertical-align: middle;
-display: inline-block;
-height: ${rem(40)};
-background-color: #fff;
-&:disabled {
-  ${inputDisabledStyle}
-}
-`;
+const StyledSelect = styled.select(({ theme, invalid }) => ({
+  textTransform: 'none',
+  padding: `0 ${rem(theme, 10)}`,
+  verticalAlign: 'middle',
+  display: 'inline-block',
+  height: rem(theme, 40),
+  backgroundColor: '#fff',
+  ...getSharedInputStyles(theme, invalid),
+}));
 
 StyledSelect.propTypes = propTypes;
 
