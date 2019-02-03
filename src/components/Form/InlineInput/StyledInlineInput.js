@@ -1,12 +1,7 @@
 import { bool } from 'prop-types';
 import styled from 'styled-components';
-import {
-  inlineInputNormalStyle,
-  inlineInputHoverStyle,
-  inlineInputActiveStyle,
-  inlineInputDisabledStyle,
-  inlineInputCommonStyle,
-} from '../formHelpers';
+import { baseInputStyles } from '../commonFormStyles';
+import { getInlineInputCommonStyle, getInlineInputStyle } from '../formTheme';
 import { rem } from '../../../helpers/utils';
 
 const propTypes = {
@@ -14,38 +9,31 @@ const propTypes = {
   submitting: bool.isRequired,
 };
 
-const StyledInlineInput = styled.input`
-  -webkit-appearance: none;
-  touch-action: manipulation;
-  box-sizing: border-box;
-  border-width: 1px;
-  border-style: solid;
-  transition: .2s ease-in-out;
-  transition-property: color, background-color, border;
-
-  margin: 0;
-  max-width: 100%;
-  width: 100%;
-  overflow: visible;
-  vertical-align: middle;
-  display: inline-block;
-  border-radius: ${rem(6)};
-  height: ${rem(40)};
-  padding: 0 ${rem(10)};
-  ${inlineInputCommonStyle}
-  ${({ submitting }) => (submitting ? `padding-right : ${rem(36)};` : '')}
-  ${inlineInputNormalStyle}
-  &:hover {
-    ${inlineInputHoverStyle}
-  }
-  &:focus {
-    outline: none;
-    ${inlineInputActiveStyle}
-  }
-  &:disabled {
-    ${inlineInputDisabledStyle}
-  }
-`;
+const StyledInlineInput = styled.input(({ theme, invalid, submitting }) => ({
+  ...baseInputStyles,
+  margin: 0,
+  maxWidth: '100%',
+  width: '100%',
+  overflow: 'visible',
+  verticalAlign: 'middle',
+  display: 'inline-block',
+  borderRadius: rem(theme, 6),
+  height: rem(theme, 40),
+  padding: `0 ${rem(theme, 10)}`,
+  ...getInlineInputCommonStyle(theme),
+  ...(submitting && { paddingRight: rem(theme, 36) }),
+  ...getInlineInputStyle(theme, invalid, 'normal'),
+  '&:hover': {
+    ...getInlineInputStyle(theme, invalid, 'hover'),
+  },
+  '&:focus': {
+    outline: 'none',
+    ...getInlineInputStyle(theme, invalid, 'active'),
+  },
+  '&:disabled': {
+    ...getInlineInputStyle(theme, invalid, 'disabled'),
+  },
+}));
 
 StyledInlineInput.propTypes = propTypes;
 
