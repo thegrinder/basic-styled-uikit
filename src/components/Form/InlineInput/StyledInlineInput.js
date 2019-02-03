@@ -33,7 +33,7 @@ const StyledInlineInput = styled.input`
   height: ${rem(40)};
   padding: 0 ${rem(10)};
   ${inlineInputCommonStyle}
-  ${({ submitting }) => (submitting ? `padding-right : ${rem(36)};` : '')}
+  ${({ submitting }) => (submitting && `padding-right : ${rem(36)};`)}
   ${inlineInputNormalStyle}
   &:hover {
     ${inlineInputHoverStyle}
