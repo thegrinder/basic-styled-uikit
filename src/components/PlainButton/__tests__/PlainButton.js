@@ -15,7 +15,7 @@ describe('<PlainButton />', () => {
     expect(firstChild).toMatchSnapshot();
   });
 
-  it('should render button tag', () => {
+  it('should render <button> tag', () => {
     const { container: { firstChild } } = render(
       <PlainButton />,
     );

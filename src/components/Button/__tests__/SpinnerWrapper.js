@@ -15,7 +15,7 @@ describe('<SpinnerWrapper />', () => {
     expect(firstChild).toMatchSnapshot();
   });
 
-  it('should render span tag', () => {
+  it('should render <span> tag', () => {
     const { container: { firstChild } } = render(
       <SpinnerWrapper />,
     );

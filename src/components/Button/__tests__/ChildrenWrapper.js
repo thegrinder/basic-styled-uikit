@@ -15,7 +15,7 @@ describe('<ChildrenWrapper />', () => {
     expect(firstChild).toMatchSnapshot();
   });
 
-  it('should render span tag', () => {
+  it('should render <span> tag', () => {
     const { container: { firstChild } } = render(
       <ChildrenWrapper submitting={true} />,
     );

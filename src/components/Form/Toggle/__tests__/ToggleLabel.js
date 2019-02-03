@@ -2,14 +2,14 @@ import React from 'react';
 import { render, cleanup } from 'react-testing-library';
 import 'jest-dom/extend-expect';
 
-import Wrapper from '../Wrapper';
+import ToggleLabel from '../ToggleLabel';
 
 const children = <span>children</span>;
 const renderComponent = () => render(
-  <Wrapper>{children}</Wrapper>,
+  <ToggleLabel>{children}</ToggleLabel>,
 );
 
-describe('<Wrapper />', () => {
+describe('<ToggleLabel />', () => {
   afterEach(cleanup);
 
   it('should render correctly with children', () => {
@@ -20,8 +20,8 @@ describe('<Wrapper />', () => {
     expect(firstChild).toMatchSnapshot();
   });
 
-  it('should render <div> tag', () => {
+  it('should render <label> tag', () => {
     const { container: { firstChild } } = renderComponent();
-    expect(firstChild.tagName).toEqual('DIV');
+    expect(firstChild.tagName).toEqual('LABEL');
   });
 });

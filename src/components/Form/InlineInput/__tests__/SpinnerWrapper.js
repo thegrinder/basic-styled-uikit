@@ -25,7 +25,7 @@ describe('<SpinnerWrapper />', () => {
     expect(firstChild).toMatchSnapshot();
   });
 
-  it('should render div tag', () => {
+  it('should render <div> tag', () => {
     const { container: { firstChild } } = renderComponent();
     expect(firstChild.tagName).toEqual('DIV');
   });
