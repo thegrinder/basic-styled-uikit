@@ -2,7 +2,7 @@
 
 exports[`<Button /> should render <a> tag by default 1`] = `
 <a
-  class="StyledButton-k0ad56-0 jvffYl"
+  class="StyledButton-k0ad56-0 fbYsdw"
 >
   <span
     class="ChildrenWrapper-sc-30uoyc-0 cdOdhF"
@@ -16,7 +16,7 @@ exports[`<Button /> should render <a> tag by default 1`] = `
 
 exports[`<Button /> should render correctly with custom props 1`] = `
 <button
-  class="StyledButton-k0ad56-0 bAHVKE"
+  class="StyledButton-k0ad56-0 eRwYox"
 >
   <span
     class="SpinnerWrapper-sc-1ln0y9p-0 csgNUt"
@@ -43,7 +43,7 @@ exports[`<Button /> should render correctly with custom props 1`] = `
 
 exports[`<Button /> should render correctly with default props 1`] = `
 <button
-  class="StyledButton-k0ad56-0 jvffYl"
+  class="StyledButton-k0ad56-0 fbYsdw"
 >
   <span
     class="ChildrenWrapper-sc-30uoyc-0 cdOdhF"
@@ -57,7 +57,7 @@ exports[`<Button /> should render correctly with default props 1`] = `
 
 exports[`<Button /> should render render <button> tag 1`] = `
 <button
-  class="StyledButton-k0ad56-0 jvffYl"
+  class="StyledButton-k0ad56-0 fbYsdw"
 >
   <span
     class="ChildrenWrapper-sc-30uoyc-0 cdOdhF"
