@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> should render <input> tag 1`] = `
+<input
+  class="Input__StyledInput-rpf9l7-0 fxMdqU"
+/>
+`;
+
+exports[`<Input /> should render correctly with custom props 1`] = `
+<input
+  class="Input__StyledInput-rpf9l7-0 jpOuQP"
+/>
+`;
+
+exports[`<Input /> should render correctly with default props 1`] = `
+<input
+  class="Input__StyledInput-rpf9l7-0 fxMdqU"
+/>
+`;
