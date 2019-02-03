@@ -26,7 +26,9 @@ const StyledHeading = styled.h1`
     getHeadingSizing(props).fontSize,
     getBaseLineHeight(props),
   )};
-  margin-bottom: ${props => (props.marginBottom ? `${getBaseLineHeight(props)}rem` : '0')};
+  margin-bottom: ${props => (props.marginBottom
+    ? `${getBaseLineHeight(props)}rem`
+    : '0')};
 `;
 
 StyledHeading.propTypes = propTypes;

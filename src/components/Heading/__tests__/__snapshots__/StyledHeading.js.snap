@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StyledHeading /> should render correctly with children 1`] = `
+<h1
+  class="StyledHeading-fbinjh-0 dMhqRS"
+  color="primary"
+>
+  children
+</h1>
+`;

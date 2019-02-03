@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Text /> should render <h1> tag 1`] = `
+exports[`<Heading /> should render <h1> tag 1`] = `
 <h1
   class="StyledHeading-fbinjh-0 hzBXbZ"
   color="default"
@@ -9,7 +9,7 @@ exports[`<Text /> should render <h1> tag 1`] = `
 </h1>
 `;
 
-exports[`<Text /> should render <h2> tag 1`] = `
+exports[`<Heading /> should render <h2> tag 1`] = `
 <h2
   class="StyledHeading-fbinjh-0 dWlKlp"
   color="default"
@@ -18,7 +18,7 @@ exports[`<Text /> should render <h2> tag 1`] = `
 </h2>
 `;
 
-exports[`<Text /> should render <h3> tag 1`] = `
+exports[`<Heading /> should render <h3> tag 1`] = `
 <h3
   class="StyledHeading-fbinjh-0 xKNyj"
   color="default"
@@ -27,7 +27,7 @@ exports[`<Text /> should render <h3> tag 1`] = `
 </h3>
 `;
 
-exports[`<Text /> should render <h4> tag 1`] = `
+exports[`<Heading /> should render <h4> tag 1`] = `
 <h4
   class="StyledHeading-fbinjh-0 cAjwaM"
   color="default"
@@ -36,7 +36,7 @@ exports[`<Text /> should render <h4> tag 1`] = `
 </h4>
 `;
 
-exports[`<Text /> should render <h5> tag 1`] = `
+exports[`<Heading /> should render <h5> tag 1`] = `
 <h5
   class="StyledHeading-fbinjh-0 gBLxCR"
   color="default"
@@ -45,7 +45,7 @@ exports[`<Text /> should render <h5> tag 1`] = `
 </h5>
 `;
 
-exports[`<Text /> should render <h6> tag 1`] = `
+exports[`<Heading /> should render <h6> tag 1`] = `
 <h6
   class="StyledHeading-fbinjh-0 cBzjhI"
   color="default"
@@ -54,7 +54,7 @@ exports[`<Text /> should render <h6> tag 1`] = `
 </h6>
 `;
 
-exports[`<Text /> should render correctly with custom props 1`] = `
+exports[`<Heading /> should render correctly with custom props 1`] = `
 <h3
   class="StyledHeading-fbinjh-0 gWTzhq"
   color="primary"
@@ -63,7 +63,7 @@ exports[`<Text /> should render correctly with custom props 1`] = `
 </h3>
 `;
 
-exports[`<Text /> should render correctly with default props 1`] = `
+exports[`<Heading /> should render correctly with default props 1`] = `
 <h1
   class="StyledHeading-fbinjh-0 hzBXbZ"
   color="default"
@@ -72,7 +72,7 @@ exports[`<Text /> should render correctly with default props 1`] = `
 </h1>
 `;
 
-exports[`<Text /> should render should large <h6> heading 1`] = `
+exports[`<Heading /> should render should large <h6> heading 1`] = `
 <h6
   class="StyledHeading-fbinjh-0 hzBXbZ"
   color="default"

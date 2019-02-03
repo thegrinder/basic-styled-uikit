@@ -15,7 +15,7 @@ const renderComponent = (props = {}) => render(
   </ThemeProvider>,
 );
 
-describe('<Text />', () => {
+describe('<Heading />', () => {
   afterEach(cleanup);
 
   it('should render correctly with default props', () => {
