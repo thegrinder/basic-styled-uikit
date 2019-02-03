@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Radio /> should render <select> tag with type radio 1`] = `
+<select
+  class="Select__StyledSelect-hytsyf-0 cMUFqx"
+>
+  <option>
+    option
+  </option>
+</select>
+`;
+
+exports[`<Radio /> should render correctly with custom props 1`] = `
+<select
+  class="Select__StyledSelect-hytsyf-0 cMUFqx"
+>
+  <option>
+    option
+  </option>
+</select>
+`;
+
+exports[`<Radio /> should render correctly with default props and its children 1`] = `
+<select
+  class="Select__StyledSelect-hytsyf-0 cMUFqx"
+>
+  <option>
+    option
+  </option>
+</select>
+`;

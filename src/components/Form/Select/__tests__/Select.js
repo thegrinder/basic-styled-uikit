@@ -4,21 +4,25 @@ import { render, cleanup } from 'react-testing-library';
 import 'jest-dom/extend-expect';
 
 import theme from '../../../../theme/theme';
-import Radio from '../Radio';
+import Select from '../Select';
 
-
-const renderComponent = (props = {}) => render(
+const option = <option>option</option>;
+const renderComponent = () => render(
   <ThemeProvider theme={theme}>
-    <Radio {...props} />
+    <Select>
+      {option}
+    </Select>
   </ThemeProvider>,
 );
 
 describe('<Radio />', () => {
   afterEach(cleanup);
 
-  it('should render correctly with default props', () => {
-    const { container: { firstChild } } = renderComponent();
+  it('should render correctly with default props and its children', () => {
+    const { container: { firstChild }, getByText } = renderComponent();
+    const optionElement = getByText('option');
     expect(firstChild).toBeDefined();
+    expect(firstChild).toContainElement(optionElement);
     expect(firstChild).toMatchSnapshot();
   });
 
@@ -30,10 +34,9 @@ describe('<Radio />', () => {
     expect(firstChild).toMatchSnapshot();
   });
 
-  it('should render <input> tag with type radio', () => {
+  it('should render <select> tag with type radio', () => {
     const { container: { firstChild } } = renderComponent();
-    expect(firstChild.tagName).toEqual('INPUT');
-    expect(firstChild.type).toEqual('radio');
+    expect(firstChild.tagName).toEqual('SELECT');
     expect(firstChild).toMatchSnapshot();
   });
 });

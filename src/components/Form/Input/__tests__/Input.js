@@ -7,7 +7,7 @@ import theme from '../../../../theme/theme';
 import Input from '../Input';
 
 
-const renderComponent = props => render(
+const renderComponent = (props = {}) => render(
   <ThemeProvider theme={theme}>
     <Input {...props} />
   </ThemeProvider>,

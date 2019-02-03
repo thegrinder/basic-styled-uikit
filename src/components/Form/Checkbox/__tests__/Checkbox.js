@@ -7,7 +7,7 @@ import theme from '../../../../theme/theme';
 import Checkbox from '../Checkbox';
 
 
-const renderComponent = props => render(
+const renderComponent = (props = {}) => render(
   <ThemeProvider theme={theme}>
     <Checkbox {...props} />
   </ThemeProvider>,
