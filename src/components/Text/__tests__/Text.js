@@ -9,7 +9,7 @@ import Text from '../Text';
 
 const children = 'children';
 
-const renderComponent = props => render(
+const renderComponent = (props = {}) => render(
   <ThemeProvider theme={theme}>
     <Text {...props}>{children}</Text>
   </ThemeProvider>,

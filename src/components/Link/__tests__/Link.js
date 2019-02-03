@@ -9,7 +9,7 @@ import Link from '../Link';
 
 const children = 'children';
 
-const renderComponent = props => render(
+const renderComponent = (props = {}) => render(
   <ThemeProvider theme={theme}>
     <Link {...props}>{children}</Link>
   </ThemeProvider>,
@@ -18,7 +18,7 @@ const renderComponent = props => render(
 describe('<Link />', () => {
   afterEach(cleanup);
 
-  it('should render correctly with default props', () => {
+  it('should render correctly with default props and its children', () => {
     const { container: { firstChild } } = renderComponent();
     expect(firstChild).toBeDefined();
     expect(firstChild).toHaveTextContent(children);

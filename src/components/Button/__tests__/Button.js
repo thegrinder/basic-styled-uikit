@@ -9,7 +9,7 @@ import Button from '../Button';
 
 const children = <span>children</span>;
 
-const renderComponent = props => render(
+const renderComponent = (props = {}) => render(
   <ThemeProvider theme={theme}>
     <Button {...props}>{children}</Button>
   </ThemeProvider>,
@@ -53,13 +53,13 @@ describe('<Button />', () => {
   });
 
   it('should render <a> tag by default', () => {
-    const { firstChild } = renderComponent({ as: 'a' }).container;
+    const { container: { firstChild } } = renderComponent({ as: 'a' });
     expect(firstChild.tagName).toEqual('A');
     expect(firstChild).toMatchSnapshot();
   });
 
   it('should render render <button> tag', () => {
-    const { firstChild } = renderComponent().container;
+    const { container: { firstChild } } = renderComponent();
     expect(firstChild.tagName).toEqual('BUTTON');
     expect(firstChild).toMatchSnapshot();
   });

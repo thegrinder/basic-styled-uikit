@@ -9,7 +9,7 @@ import ColorBox from '../ColorBox';
 
 const children = 'children';
 
-const renderComponent = props => render(
+const renderComponent = (props = {}) => render(
   <ThemeProvider theme={theme}>
     <ColorBox {...props}>{children}</ColorBox>
   </ThemeProvider>,

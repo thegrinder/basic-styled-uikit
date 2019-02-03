@@ -9,7 +9,7 @@ import Heading from '../Heading';
 
 const children = 'children';
 
-const renderComponent = props => render(
+const renderComponent = (props = {}) => render(
   <ThemeProvider theme={theme}>
     <Heading as="h1" {...props}>{children}</Heading>
   </ThemeProvider>,

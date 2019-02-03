@@ -16,7 +16,7 @@ exports[`<Link /> should render correctly with custom props 1`] = `
 </a>
 `;
 
-exports[`<Link /> should render correctly with default props 1`] = `
+exports[`<Link /> should render correctly with default props and its children 1`] = `
 <a
   class="StyledLink-sc-1s1vukk-0 XxAyZ"
 >
