@@ -20,7 +20,6 @@ const linkTheme = {
     },
   },
   common: {
-    fontWeight: 700,
     fontFamily: 'Lato, Arial, Helvetica, sans-serif',
   },
 };

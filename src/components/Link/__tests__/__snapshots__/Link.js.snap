@@ -2,7 +2,7 @@
 
 exports[`<Link /> should render <a> tag by default 1`] = `
 <a
-  class="StyledLink-sc-1s1vukk-0 bUJZLJ"
+  class="StyledLink-sc-1s1vukk-0 XxAyZ"
 >
   children
 </a>
@@ -10,7 +10,7 @@ exports[`<Link /> should render <a> tag by default 1`] = `
 
 exports[`<Link /> should render correctly with custom props 1`] = `
 <a
-  class="StyledLink-sc-1s1vukk-0 cUpEaK"
+  class="StyledLink-sc-1s1vukk-0 bRDXtr"
 >
   children
 </a>
@@ -18,7 +18,7 @@ exports[`<Link /> should render correctly with custom props 1`] = `
 
 exports[`<Link /> should render correctly with default props 1`] = `
 <a
-  class="StyledLink-sc-1s1vukk-0 bUJZLJ"
+  class="StyledLink-sc-1s1vukk-0 XxAyZ"
 >
   children
 </a>
@@ -26,7 +26,7 @@ exports[`<Link /> should render correctly with default props 1`] = `
 
 exports[`<Link /> should render render <button> tag 1`] = `
 <button
-  class="StyledLink-sc-1s1vukk-0 bUJZLJ"
+  class="StyledLink-sc-1s1vukk-0 XxAyZ"
 >
   children
 </button>
