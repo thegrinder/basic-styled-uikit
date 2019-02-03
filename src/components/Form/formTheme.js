@@ -132,6 +132,6 @@ export const getInlineInputStyle = (theme, invalid, state) => {
     : states.valid[state];
 };
 
-export const getToggleStyle = ({ theme }, state) => theme.uiKit.form.toggle.states[state];
+export const getToggleStyle = (theme, state) => theme.uiKit.form.toggle.states[state];
 
 export default formTheme;

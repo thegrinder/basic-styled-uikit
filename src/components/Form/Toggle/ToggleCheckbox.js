@@ -1,29 +1,28 @@
 import styled from 'styled-components';
 import { number } from 'prop-types';
-import { toggleNormalStyle, toggleCheckedStyle } from '../formHelpers';
+
+import { getToggleStyle } from '../formTheme';
 import { rem } from '../../../helpers/utils';
 
 const propTypes = {
   h: number.isRequired,
 };
 
-const ToggleCheckbox = styled.input.attrs({
-  type: 'checkbox',
-})`
-  display: none;
-  & + span {
-    ${toggleNormalStyle}
-  }
-  &:checked + span {
-    ${toggleCheckedStyle}
-  }
-  & + span:before {
-    left: ${rem(4)};
-  }
-  &:checked + span:before {
-    left: calc(100% - ${({ h }) => rem(h - 4)});
-  }
-`;
+const ToggleCheckbox = styled.input(({ theme, h }) => ({
+  display: 'none',
+  '& + span': {
+    ...getToggleStyle(theme, 'normal'),
+  },
+  '&:checked + span': {
+    ...getToggleStyle(theme, 'checked'),
+  },
+  '& + span:before': {
+    left: rem(theme, 4),
+  },
+  '&:checked + span:before': {
+    left: `calc(100% - ${rem(theme, (h - 4))})`,
+  },
+}));
 
 ToggleCheckbox.propTypes = propTypes;
 

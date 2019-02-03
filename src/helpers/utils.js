@@ -12,9 +12,4 @@ export const createStyles = selectedStyles => (
   }`
 );
 
-export const getStyle = (selector, state) => (props) => {
-  const selectedStyles = state ? selector(props, state) : selector(props);
-  return createStyles(selectedStyles);
-};
-
 export const rem = (theme, pxValue) => `${pxValue / getBaseFontSize(theme)}rem`;

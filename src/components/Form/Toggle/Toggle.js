@@ -24,15 +24,16 @@ const Toggle = ({
   onChange,
   ...rest
 }) => (
-  <ToggleLabel>
-    <ToggleCheckbox
-      h={h}
-      onChange={onChange}
-      disabled={disabled}
-      {...rest}
-    />
-    <ToggleSlider h={h} disabled={disabled}/>
-  </ToggleLabel>
+    <ToggleLabel>
+      <ToggleCheckbox
+        type="checkbox"
+        h={h}
+        onChange={onChange}
+        disabled={disabled}
+        {...rest}
+      />
+      <ToggleSlider h={h} disabled={disabled} />
+    </ToggleLabel>
 );
 
 Toggle.propTypes = propTypes;

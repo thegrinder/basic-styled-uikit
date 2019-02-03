@@ -11,7 +11,7 @@ const ToggleSlider = styled.span`
   position: relative;
   display: inline-block;
   width: 100%;
-  height: ${({ h }) => rem(h)};
+  height: ${({ theme, h }) => rem(theme, h)};
   border-radius: 9999px;
   transition: background-color .2s;
   cursor: ${({ disabled }) => (disabled ? 'default' : 'pointer')};
@@ -23,8 +23,8 @@ const ToggleSlider = styled.span`
     transition: left .2s;
     bottom: 0;
     margin: auto;
-    height: ${({ h }) => rem(h - 8)};
-    width: ${({ h }) => rem(h - 8)};
+    height: ${({ theme, h }) => rem(theme, h - 8)};
+    width: ${({ theme, h }) => rem(theme, h - 8)};
     box-sizing: border-box;
     background-color: #fff;
     border-radius: 100%;
