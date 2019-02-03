@@ -5,13 +5,13 @@ import {
   btnNormalStyle,
   btnHoverStyle,
   btnActiveStyle,
-  btnSizeStyle,
+  btnSizingStyle,
   btnCommonStyle,
 } from './buttonHelpers';
 
 const propTypes = {
   btntype: string.isRequired,
-  btnsize: string.isRequired,
+  sizing: string.isRequired,
   left: node,
   right: node,
 };
@@ -35,7 +35,7 @@ const StyledButton = styled.button`
   border-style: solid;
   border-radius: ${rem(6)};
   ${btnCommonStyle}
-  ${btnSizeStyle}
+  ${btnSizingStyle}
   ${btnNormalStyle}
   ${({ left }) => (left && 'padding-left: 0;')}
   ${({ right }) => (right && 'padding-right: 0;')}

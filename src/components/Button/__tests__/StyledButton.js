@@ -13,7 +13,7 @@ const renderComponent = (props = {}) => render(
   <ThemeProvider theme={theme}>
     <StyledButton
       btntype="danger"
-      btnsize="s"
+      sizing="s"
       {...props}
     >
       {children}

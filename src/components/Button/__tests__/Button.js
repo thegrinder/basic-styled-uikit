@@ -32,7 +32,7 @@ describe('<Button />', () => {
     const spinner = <span data-testid="spinner" />;
     const { container: { firstChild }, getByText, getByTestId } = renderComponent({
       btnType: 'danger',
-      btnSize: 's',
+      sizing: 's',
       left,
       right,
       submitting: true,

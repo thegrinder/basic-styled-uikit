@@ -71,7 +71,7 @@ const buttonTheme = {
       },
     },
   },
-  btnSizes: {
+  sizings: {
     s: {
       padding: '0 1rem',
       lineHeight: '1.75rem',

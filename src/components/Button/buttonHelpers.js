@@ -6,8 +6,8 @@ export const btnNormalStyle = getBtnTypeStyle('normal');
 export const btnHoverStyle = getBtnTypeStyle('hover');
 export const btnActiveStyle = getBtnTypeStyle('active');
 
-const getBtnSize = ({ theme, btnsize }) => theme.uiKit.button.btnSizes[btnsize];
-export const btnSizeStyle = getStyle(getBtnSize);
+const getBtnSizing = ({ theme, sizing }) => theme.uiKit.button.sizings[sizing];
+export const btnSizingStyle = getStyle(getBtnSizing);
 
 const getBtnCommonStyle = ({ theme }) => theme.uiKit.button.common;
 export const btnCommonStyle = getStyle(getBtnCommonStyle);

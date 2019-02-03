@@ -17,7 +17,7 @@ const propTypes = {
   /** one of: default, primary, danger */
   btnType: string,
   /** one of: s, m, l */
-  btnSize: string,
+  sizing: string,
   /** component showed on the left (e.g. icon) */
   left: node,
   /** component showed on the right (e.g. icon) */
@@ -29,17 +29,17 @@ const propTypes = {
 };
 
 const defaultProps = {
-  btnSize: 'm',
+  sizing: 'm',
   btnType: 'default',
   submitting: false,
   as: 'button',
 };
 
 const Button = ({
+  btnType: btntype,
   left,
   right,
-  btnType: btntype,
-  btnSize: btnsize,
+  sizing,
   submitting,
   renderSpinner,
   children,
@@ -50,7 +50,7 @@ const Button = ({
       as={as}
       left={left}
       right={right}
-      btnsize={btnsize}
+      sizing={sizing}
       btntype={btntype}
       {...rest}
     >
