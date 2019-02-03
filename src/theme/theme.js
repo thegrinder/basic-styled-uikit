@@ -1,6 +1,5 @@
-import colors, { getColor as getColorSelector } from './colors';
+import colors from './colors';
 import typography from './typography';
-import { rem as remHelper } from '../helpers/utils';
 import button from '../components/Button/buttonTheme';
 import form from '../components/Form/formTheme';
 import heading from '../components/Heading/headingTheme';
@@ -20,8 +19,5 @@ const theme = {
     link,
   },
 };
-
-export const getColor = getColorSelector;
-export const rem = remHelper;
 
 export default theme;

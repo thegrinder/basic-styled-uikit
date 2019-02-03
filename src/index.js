@@ -12,4 +12,5 @@ export PlainButton from './components/PlainButton/PlainButton';
 export Text from './components/Text/Text';
 export ColorBox from './components/ColorBox/ColorBox';
 
-export theme, { getColor } from './theme/theme';
+export { getColor } from './theme/colors';
+export { rem } from './helpers/utils';

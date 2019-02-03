@@ -1,11 +1,5 @@
 const path = require('path');
 
-const PATHS = {
-  src: path.join(__dirname, 'src'),
-  demo: path.join(__dirname, 'demo'),
-  build: path.join(__dirname, 'dist'),
-};
-
 const reactExternal = {
   root: 'React',
   commonjs2: 'react',
@@ -22,13 +16,14 @@ const styledComponentsExternal = {
 
 const config = {
   mode: 'production',
-  entry: [
-    PATHS.src,
-  ],
+  entry: {
+    index: './src/index.js',
+    theme: './src/theme/theme.js',
+  },
   devtool: 'source-map',
   output: {
-    path: PATHS.build,
-    filename: 'index.js',
+    path: path.join(__dirname, 'dist'),
+    filename: '[name].js',
     publicPath: '/',
     library: 'basicStyledUiKit',
     libraryTarget: 'umd',
@@ -39,10 +34,7 @@ const config = {
       {
         test: /\.(js)$/,
         use: 'babel-loader',
-        exclude: [
-          PATHS.demo,
-          /node_modules/,
-        ],
+        exclude: /node_modules/,
       },
     ],
   },
