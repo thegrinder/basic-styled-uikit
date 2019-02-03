@@ -37,8 +37,8 @@ const StyledButton = styled.button`
   ${btnCommonStyle}
   ${btnSizeStyle}
   ${btnNormalStyle}
-  ${({ left }) => (left ? 'padding-left: 0;' : '')}
-  ${({ right }) => (right ? 'padding-right: 0;' : '')}
+  ${({ left }) => (left && 'padding-left: 0;')}
+  ${({ right }) => (right && 'padding-right: 0;')}
   &:hover,
   &:focus {
     ${btnHoverStyle}

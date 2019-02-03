@@ -41,7 +41,7 @@ exports[`<Button /> should render correctly with custom props 1`] = `
 </button>
 `;
 
-exports[`<Button /> should render correctly with default props 1`] = `
+exports[`<Button /> should render correctly with default props and children 1`] = `
 <button
   class="StyledButton-k0ad56-0 fbYsdw"
 >
