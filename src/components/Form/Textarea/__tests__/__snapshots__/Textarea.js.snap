@@ -2,18 +2,18 @@
 
 exports[`<Textarea /> should render <textarea> tag 1`] = `
 <textarea
-  class="Textarea__StyledTextarea-zyqcnp-0 jiRGJn"
+  class="StyledTextarea-sc-1v2djou-0 kvexUj"
 />
 `;
 
 exports[`<Textarea /> should render correctly with custom props 1`] = `
 <textarea
-  class="Textarea__StyledTextarea-zyqcnp-0 brWSFq"
+  class="StyledTextarea-sc-1v2djou-0 eaXngr"
 />
 `;
 
 exports[`<Textarea /> should render correctly with default props 1`] = `
 <textarea
-  class="Textarea__StyledTextarea-zyqcnp-0 jiRGJn"
+  class="StyledTextarea-sc-1v2djou-0 kvexUj"
 />
 `;
