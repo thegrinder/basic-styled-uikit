@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Radio /> should render <select> tag with type radio 1`] = `
+exports[`<Select /> should render <select> tag 1`] = `
 <select
-  class="Select__StyledSelect-hytsyf-0 cMUFqx"
+  class="StyledSelect-sc-1r3g39b-0 bsZxhe"
 >
   <option>
     option
@@ -10,9 +10,9 @@ exports[`<Radio /> should render <select> tag with type radio 1`] = `
 </select>
 `;
 
-exports[`<Radio /> should render correctly with custom props 1`] = `
+exports[`<Select /> should render correctly with custom props 1`] = `
 <select
-  class="Select__StyledSelect-hytsyf-0 cMUFqx"
+  class="StyledSelect-sc-1r3g39b-0 bhYyZz"
 >
   <option>
     option
@@ -20,9 +20,9 @@ exports[`<Radio /> should render correctly with custom props 1`] = `
 </select>
 `;
 
-exports[`<Radio /> should render correctly with default props and its children 1`] = `
+exports[`<Select /> should render correctly with default props and its children 1`] = `
 <select
-  class="Select__StyledSelect-hytsyf-0 cMUFqx"
+  class="StyledSelect-sc-1r3g39b-0 bsZxhe"
 >
   <option>
     option

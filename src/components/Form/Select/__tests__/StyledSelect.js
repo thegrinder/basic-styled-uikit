@@ -4,32 +4,19 @@ import { render, cleanup } from 'react-testing-library';
 import 'jest-dom/extend-expect';
 
 import theme from '../../../../theme/theme';
-import Select from '../Select';
+import StyledSelect from '../StyledSelect';
 
-const option = <option>option</option>;
-const renderComponent = (props = {}) => render(
+const renderComponent = () => render(
   <ThemeProvider theme={theme}>
-    <Select {...props}>
-      {option}
-    </Select>
+    <StyledSelect invalid={false} />
   </ThemeProvider>,
 );
 
-describe('<Select />', () => {
+describe('<StyledSelect />', () => {
   afterEach(cleanup);
 
   it('should render correctly with default props and its children', () => {
-    const { container: { firstChild }, getByText } = renderComponent();
-    const optionElement = getByText('option');
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toContainElement(optionElement);
-    expect(firstChild).toMatchSnapshot();
-  });
-
-  it('should render correctly with custom props', () => {
-    const { container: { firstChild } } = renderComponent({
-      invalid: true,
-    });
+    const { container: { firstChild } } = renderComponent();
     expect(firstChild).toBeDefined();
     expect(firstChild).toMatchSnapshot();
   });
