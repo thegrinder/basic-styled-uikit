@@ -23,16 +23,17 @@ const StyledHeading = styled.h1`
     color,
     sizing,
     marginBottom,
-  }) => css`
-    ${getHeadingCommonStyle(theme)}
-    ${getHeadingSizingStyle(theme, sizing)}
-    color: ${getHeadingColor(theme, color)};
-    line-height: ${calcLineHeight(
-    getHeadingSizingStyle(theme, sizing).fontSize,
-    getBaseLineHeight(theme),
-  )};
-    margin-bottom: ${marginBottom ? `${getBaseLineHeight(theme)}rem` : '0'};
-  `}
+  }) => {
+    const baseLineHeight = getBaseLineHeight(theme);
+    const sizingStyle = getHeadingSizingStyle(theme, sizing);
+    return css`
+      ${getHeadingCommonStyle(theme, sizing)}
+      color: ${getHeadingColor(theme, color)};
+      line-height: ${calcLineHeight(sizingStyle.fontSize, baseLineHeight)};
+      margin-bottom: ${marginBottom ? `${baseLineHeight}rem` : '0'};
+      ${sizingStyle}
+    `;
+  }}
 `;
 
 StyledHeading.propTypes = propTypes;
