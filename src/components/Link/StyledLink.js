@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { string } from 'prop-types';
-import { textSizingStyle } from '../Text/textHelpers';
-import { linkNormalStyle, linkHoverStyle, linkCommonStyle } from './linkHelpers';
+import { getTextSizingStyle } from '../Text/textHelpers';
+import { getLinkTypeStyle, getLinkCommonStyle } from './linkHelpers';
 
 const propTypes = {
   sizing: string.isRequired,
@@ -23,14 +23,18 @@ const StyledLink = styled.a`
   text-decoration: none;
   font-family: inherit;
   margin-bottom: 0;
-  ${linkCommonStyle}
-  ${textSizingStyle}
-  ${linkNormalStyle}
   &:hover {
-    ${linkHoverStyle}
     outline: none;
     text-decoration: underline;
   }
+  ${({ theme, sizing, linktype }) => css`
+    ${getLinkCommonStyle(theme)}
+    ${getTextSizingStyle(theme, sizing)}
+    ${getLinkTypeStyle(theme, linktype, 'normal')}
+    &:hover {
+      ${getLinkTypeStyle(theme, linktype, 'hover')}
+    }
+  `}
 `;
 
 StyledLink.propTypes = propTypes;

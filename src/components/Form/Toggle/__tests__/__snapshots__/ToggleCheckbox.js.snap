@@ -2,14 +2,14 @@
 
 exports[`<ToggleCheckbox /> should render <input> tag with type checkbox 1`] = `
 <input
-  class="ToggleCheckbox-sc-1nmpw1g-0 xTgPR"
+  class="ToggleCheckbox-sc-1nmpw1g-0 liRhln"
   type="checkbox"
 />
 `;
 
 exports[`<ToggleCheckbox /> should render correctly with default props 1`] = `
 <input
-  class="ToggleCheckbox-sc-1nmpw1g-0 xTgPR"
+  class="ToggleCheckbox-sc-1nmpw1g-0 liRhln"
   type="checkbox"
 />
 `;

@@ -1,12 +1,7 @@
 import { bool } from 'prop-types';
-import styled from 'styled-components';
-import {
-  inlineInputNormalStyle,
-  inlineInputHoverStyle,
-  inlineInputActiveStyle,
-  inlineInputDisabledStyle,
-  inlineInputCommonStyle,
-} from '../formHelpers';
+import styled, { css } from 'styled-components';
+
+import { getInlineInputCommonStyle, getInlineInputStyle } from '../formHelpers';
 import { rem } from '../../../helpers/utils';
 
 const propTypes = {
@@ -32,19 +27,24 @@ const StyledInlineInput = styled.input`
   border-radius: ${rem(6)};
   height: ${rem(40)};
   padding: 0 ${rem(10)};
-  ${inlineInputCommonStyle}
-  ${({ submitting }) => (submitting && `padding-right : ${rem(36)};`)}
-  ${inlineInputNormalStyle}
-  &:hover {
-    ${inlineInputHoverStyle}
-  }
   &:focus {
     outline: none;
-    ${inlineInputActiveStyle}
   }
-  &:disabled {
-    ${inlineInputDisabledStyle}
-  }
+  ${({ theme, invalid, submitting }) => css`
+    ${getInlineInputCommonStyle(theme)}
+    ${getInlineInputStyle(theme, invalid, 'normal')}
+    ${submitting && `padding-right : ${rem(36)};`}
+    &:hover {
+      ${getInlineInputStyle(theme, invalid, 'hover')}
+    }
+    &:focus {
+      outline: none;
+      ${getInlineInputStyle(theme, invalid, 'active')}
+    }
+    &:disabled {
+      ${getInlineInputStyle(theme, invalid, 'disabled')}
+    }
+  `}
 `;
 
 StyledInlineInput.propTypes = propTypes;

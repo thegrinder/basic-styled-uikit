@@ -2,7 +2,7 @@
 
 exports[`<StyledLink /> should render <a> tag 1`] = `
 <a
-  class="StyledLink-sc-1s1vukk-0 gtwYFX"
+  class="StyledLink-sc-1s1vukk-0 exELVa"
 >
   children
 </a>
@@ -10,7 +10,7 @@ exports[`<StyledLink /> should render <a> tag 1`] = `
 
 exports[`<StyledLink /> should render correctly with children 1`] = `
 <a
-  class="StyledLink-sc-1s1vukk-0 gtwYFX"
+  class="StyledLink-sc-1s1vukk-0 exELVa"
 >
   children
 </a>

@@ -2,18 +2,18 @@
 
 exports[`<Input /> should render <input> tag 1`] = `
 <input
-  class="StyledInput-ok3pz6-0 hDWSkF"
+  class="StyledInput-ok3pz6-0 jWsUyV"
 />
 `;
 
 exports[`<Input /> should render correctly with custom props 1`] = `
 <input
-  class="StyledInput-ok3pz6-0 jTpZbQ"
+  class="StyledInput-ok3pz6-0 kZKvHb"
 />
 `;
 
 exports[`<Input /> should render correctly with default props 1`] = `
 <input
-  class="StyledInput-ok3pz6-0 hDWSkF"
+  class="StyledInput-ok3pz6-0 jWsUyV"
 />
 `;

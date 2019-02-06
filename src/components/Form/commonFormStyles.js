@@ -1,13 +1,9 @@
 import { css } from 'styled-components';
 import {
-  miscNormalStyle,
-  miscActiveStyle,
-  miscCheckedStyle,
-  miscCommonStyle,
-  inputNormalStyle,
-  inputActiveStyle,
-  inputDisabledStyle,
-  inputCommonStyle,
+  getRegularInputCommonStyle,
+  getRegularInputStyle,
+  getMiscInputCommonStyle,
+  getMiscInputStyle,
 } from './formHelpers';
 import { rem } from '../../helpers/utils';
 
@@ -23,15 +19,19 @@ export const commonInputStyles = css`
   transition: .2s ease-in-out;
   transition-property: color, background-color, border;
   border-radius: ${rem(6)};
-  ${inputCommonStyle}
-  ${inputNormalStyle}
   &:focus {
     outline: none;
-    ${inputActiveStyle}
   }
-  &:disabled {
-    ${inputDisabledStyle}
-  }
+  ${({ theme, invalid }) => css`
+    ${getRegularInputCommonStyle(theme)}
+    ${getRegularInputStyle(theme, invalid, 'normal')}
+    &:focus {
+      ${getRegularInputStyle(theme, invalid, 'active')}
+    }
+    &:disabled {
+      ${getRegularInputStyle(theme, invalid, 'disabled')}
+    }
+  `}
 `;
 
 export const miscInputStyles = css`
@@ -52,17 +52,21 @@ export const miscInputStyles = css`
   transition: .2s ease-in-out;
   transition-property: background-color, border;
   cursor: pointer;
-  ${miscCommonStyle}
-  ${miscNormalStyle}
   &:focus {
     outline: none;
-    ${miscActiveStyle}
-  }
-  &:checked {
-    ${miscCheckedStyle}
   }
   &:disabled {
     cursor: default;
     opacity: .6;
   }
+  ${({ theme, invalid }) => css`
+    ${getMiscInputCommonStyle(theme)}
+    ${getMiscInputStyle(theme, invalid, 'normal')}
+    &:focus {
+      ${getMiscInputStyle(theme, invalid, 'active')}
+    }
+    &:checked {
+      ${getMiscInputStyle(theme, invalid, 'checked')}
+    }
+  `}
 `;

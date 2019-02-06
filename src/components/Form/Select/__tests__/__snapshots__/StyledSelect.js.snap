@@ -2,12 +2,12 @@
 
 exports[`<StyledSelect /> should render <select> tag 1`] = `
 <select
-  class="StyledSelect-sc-1r3g39b-0 bsZxhe"
+  class="StyledSelect-sc-1r3g39b-0 ccDVvn"
 />
 `;
 
 exports[`<StyledSelect /> should render correctly with default props and its children 1`] = `
 <select
-  class="StyledSelect-sc-1r3g39b-0 bsZxhe"
+  class="StyledSelect-sc-1r3g39b-0 ccDVvn"
 />
 `;

@@ -1,12 +1,11 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { string, bool } from 'prop-types';
 import { getBaseLineHeight } from '../../theme/typography';
 import { calcLineHeight } from '../../helpers/utils';
 import {
-  getHeadingSizing,
-  headingSizingStyle,
-  headingColorStyle,
-  headingCommonStyle,
+  getHeadingSizingStyle,
+  getHeadingColor,
+  getHeadingCommonStyle,
 } from './headingHelpers';
 
 const propTypes = {
@@ -19,16 +18,21 @@ const StyledHeading = styled.h1`
   display: block;
   margin: 0;
   padding: 0;
-  ${headingCommonStyle}
-  ${headingSizingStyle}
-  ${headingColorStyle}
-  line-height: ${props => calcLineHeight(
-    getHeadingSizing(props).fontSize,
-    getBaseLineHeight(props),
+  ${({
+    theme,
+    color,
+    sizing,
+    marginBottom,
+  }) => css`
+    ${getHeadingCommonStyle(theme)}
+    ${getHeadingSizingStyle(theme, sizing)}
+    color: ${getHeadingColor(theme, color)};
+    line-height: ${calcLineHeight(
+    getHeadingSizingStyle(theme, sizing).fontSize,
+    getBaseLineHeight(theme),
   )};
-  margin-bottom: ${props => (props.marginBottom
-    ? `${getBaseLineHeight(props)}rem`
-    : '0')};
+    margin-bottom: ${marginBottom ? `${getBaseLineHeight(theme)}rem` : '0'};
+  `}
 `;
 
 StyledHeading.propTypes = propTypes;

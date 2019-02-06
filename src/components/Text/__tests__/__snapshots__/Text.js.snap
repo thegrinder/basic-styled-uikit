@@ -2,7 +2,7 @@
 
 exports[`<Text /> should render <span> tag by default 1`] = `
 <span
-  class="StyledText-r7l7li-0 bHYFxY"
+  class="StyledText-r7l7li-0 bjOVaZ"
   color="default"
 >
   children
@@ -11,7 +11,7 @@ exports[`<Text /> should render <span> tag by default 1`] = `
 
 exports[`<Text /> should render correctly with custom props 1`] = `
 <span
-  class="StyledText-r7l7li-0 cCETgl"
+  class="StyledText-r7l7li-0 dPqmJV"
   color="primary"
 >
   children
@@ -20,7 +20,7 @@ exports[`<Text /> should render correctly with custom props 1`] = `
 
 exports[`<Text /> should render correctly with default props 1`] = `
 <span
-  class="StyledText-r7l7li-0 bHYFxY"
+  class="StyledText-r7l7li-0 bjOVaZ"
   color="default"
 >
   children
@@ -29,7 +29,7 @@ exports[`<Text /> should render correctly with default props 1`] = `
 
 exports[`<Text /> should render render <p> tag 1`] = `
 <p
-  class="StyledText-r7l7li-0 bHYFxY"
+  class="StyledText-r7l7li-0 bjOVaZ"
   color="default"
 >
   children

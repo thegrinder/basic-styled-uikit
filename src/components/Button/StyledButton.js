@@ -1,12 +1,10 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { node, string } from 'prop-types';
 import { rem } from '../../helpers/utils';
 import {
-  btnNormalStyle,
-  btnHoverStyle,
-  btnActiveStyle,
-  btnSizingStyle,
-  btnCommonStyle,
+  getBtnTypeStyle,
+  getBtnSizingStyle,
+  getBtnCommonStyle,
 } from './buttonHelpers';
 
 const propTypes = {
@@ -34,23 +32,32 @@ const StyledButton = styled.button`
   border-width: 1px;
   border-style: solid;
   border-radius: ${rem(6)};
-  ${btnCommonStyle}
-  ${btnSizingStyle}
-  ${btnNormalStyle}
-  ${({ left }) => (left && 'padding-left: 0;')}
-  ${({ right }) => (right && 'padding-right: 0;')}
-  &:hover,
-  &:focus {
-    ${btnHoverStyle}
-  }
-  &:active {
-    ${btnActiveStyle}
-  }
   &:disabled {
-    ${btnNormalStyle}
     opacity: .6;
     cursor: default;
   }
+  ${({
+    theme,
+    btntype,
+    sizing,
+    left,
+    right,
+  }) => css`
+    ${getBtnCommonStyle(theme)}
+    ${getBtnSizingStyle(theme, sizing)}
+    ${getBtnTypeStyle(theme, btntype, 'normal')}
+    ${left && 'padding-left: 0;'}
+    ${right && 'padding-right: 0;'}
+    &:hover,
+    &:focus {
+      ${getBtnTypeStyle(theme, btntype, 'hover')}
+    }
+    &:active {
+      ${getBtnTypeStyle(theme, btntype, 'active')}
+    }
+    &:disabled {
+      ${getBtnTypeStyle(theme, btntype, 'normal')}
+  `}
 `;
 
 StyledButton.propTypes = propTypes;

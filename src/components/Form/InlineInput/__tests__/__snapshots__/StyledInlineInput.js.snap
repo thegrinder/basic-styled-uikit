@@ -2,12 +2,12 @@
 
 exports[`<InlineInput /> should render <input> tag 1`] = `
 <input
-  class="StyledInlineInput-sc-5g60q6-0 eiRLjf"
+  class="StyledInlineInput-sc-5g60q6-0 gHFYNX"
 />
 `;
 
 exports[`<InlineInput /> should render correctly 1`] = `
 <input
-  class="StyledInlineInput-sc-5g60q6-0 eiRLjf"
+  class="StyledInlineInput-sc-5g60q6-0 gHFYNX"
 />
 `;

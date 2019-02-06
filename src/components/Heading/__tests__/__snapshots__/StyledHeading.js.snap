@@ -2,7 +2,7 @@
 
 exports[`<StyledHeading /> should render correctly with children 1`] = `
 <h1
-  class="StyledHeading-fbinjh-0 dMhqRS"
+  class="StyledHeading-fbinjh-0 WudhL"
   color="primary"
 >
   children
