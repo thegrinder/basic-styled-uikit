@@ -14,4 +14,4 @@ export ColorBox from './components/ColorBox/ColorBox';
 export ResetCss from './components/ResetCss/ResetCss';
 
 export { getColor } from './theme/colors';
-export { rem } from './helpers/utils';
+export { rem } from './theme/typography';

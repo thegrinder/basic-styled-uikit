@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
 import { string, bool } from 'prop-types';
-import { getBaseLineHeight } from '../../theme/typography';
-import { calcLineHeight } from '../../helpers/utils';
+import { getBaseLineHeight, calcLineHeight } from '../../theme/typography';
 import {
   getHeadingSizingStyle,
   getHeadingColor,

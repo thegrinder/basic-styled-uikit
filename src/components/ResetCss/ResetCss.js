@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { getBaseFontSize } from '../../theme/typography';
-import { rem } from '../../helpers/utils';
+import { getBaseFontSize, rem } from '../../theme/typography';
 
 const ResetCss = createGlobalStyle`
   html {

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { rem } from '../../../helpers/utils';
+import { rem } from '../../../theme/typography';
 
 const SpinnerWrapper = styled.div`
   position: absolute;
