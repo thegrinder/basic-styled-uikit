@@ -13,8 +13,6 @@ const propTypes = {
 
 const StyledText = styled.span`
   display: block;
-  margin: 0;
-  padding: 0;
   ${({
     theme,
     color,

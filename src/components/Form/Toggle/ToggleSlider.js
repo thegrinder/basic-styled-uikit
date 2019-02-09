@@ -25,7 +25,6 @@ const ToggleSlider = styled.span`
     margin: auto;
     height: ${({ h }) => rem(h - 8)};
     width: ${({ h }) => rem(h - 8)};
-    box-sizing: border-box;
     background-color: #fff;
     border-radius: 100%;
   }

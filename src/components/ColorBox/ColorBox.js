@@ -14,7 +14,6 @@ const propTypes = {
 };
 
 const StyledColorBox = styled.div`
-  box-sizing: border-box;
   ${({ theme, bgColor, borderColor }) => css`
     ${bgColor && `background-color: ${getBoxBgColor(theme, bgColor)};`}
     ${borderColor && `border-color: ${getBoxBorderColor(theme, borderColor)};`}

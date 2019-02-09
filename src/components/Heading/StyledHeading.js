@@ -16,8 +16,6 @@ const propTypes = {
 
 const StyledHeading = styled.h1`
   display: block;
-  margin: 0;
-  padding: 0;
   ${({
     theme,
     color,

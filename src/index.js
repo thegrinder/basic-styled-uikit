@@ -11,6 +11,7 @@ export Toggle from './components/Form/Toggle/Toggle';
 export PlainButton from './components/PlainButton/PlainButton';
 export Text from './components/Text/Text';
 export ColorBox from './components/ColorBox/ColorBox';
+export ResetCss from './components/ResetCss/ResetCss';
 
 export { getColor } from './theme/colors';
 export { rem } from './helpers/utils';

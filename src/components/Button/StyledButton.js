@@ -15,10 +15,8 @@ const propTypes = {
 };
 
 const StyledButton = styled.button`
-  margin: 0;
   border: none;
   overflow: visible;
-  box-sizing: border-box;
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -26,7 +24,6 @@ const StyledButton = styled.button`
   text-decoration: none;
   transition: .1s ease-in-out;
   transition-property: color, background-color, border-color;
-  touch-action: manipulation;
   cursor: pointer;
   outline: none;
   border-width: 1px;

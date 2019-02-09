@@ -9,17 +9,13 @@ const propTypes = {
 };
 
 const StyledLink = styled.a`
-  margin: 0;
-  padding: 0;
   background-color: transparent;
   border: none;
   overflow: visible;
-  box-sizing: border-box;
   display: inline-block;
   vertical-align: middle;
   outline: none;
   cursor: pointer;
-  touch-action: manipulation;
   text-decoration: none;
   font-family: inherit;
   margin-bottom: 0;

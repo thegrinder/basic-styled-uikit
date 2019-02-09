@@ -2,7 +2,7 @@
 
 exports[`<ColorBox /> should render <div> tag 1`] = `
 <div
-  class="ColorBox__StyledColorBox-sc-105jy39-0 bIqqNv"
+  class="ColorBox__StyledColorBox-sc-105jy39-0 hkVjsN"
 >
   children
 </div>
@@ -10,7 +10,7 @@ exports[`<ColorBox /> should render <div> tag 1`] = `
 
 exports[`<ColorBox /> should render correctly with custom props 1`] = `
 <div
-  class="ColorBox__StyledColorBox-sc-105jy39-0 cboptp"
+  class="ColorBox__StyledColorBox-sc-105jy39-0 dVRLFD"
 >
   children
 </div>
@@ -18,7 +18,7 @@ exports[`<ColorBox /> should render correctly with custom props 1`] = `
 
 exports[`<ColorBox /> should render correctly with default props and children 1`] = `
 <div
-  class="ColorBox__StyledColorBox-sc-105jy39-0 bIqqNv"
+  class="ColorBox__StyledColorBox-sc-105jy39-0 hkVjsN"
 >
   children
 </div>

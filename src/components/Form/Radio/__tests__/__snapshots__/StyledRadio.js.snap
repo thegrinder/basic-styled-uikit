@@ -2,14 +2,14 @@
 
 exports[`<StyledRadio /> should render <input> tag with type radio 1`] = `
 <input
-  class="StyledRadio-sc-1q7ubkv-0 Jjndb"
+  class="StyledRadio-sc-1q7ubkv-0 bWfyFq"
   type="radio"
 />
 `;
 
 exports[`<StyledRadio /> should render correctly 1`] = `
 <input
-  class="StyledRadio-sc-1q7ubkv-0 Jjndb"
+  class="StyledRadio-sc-1q7ubkv-0 bWfyFq"
   type="radio"
 />
 `;
