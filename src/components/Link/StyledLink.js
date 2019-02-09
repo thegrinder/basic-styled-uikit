@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { string } from 'prop-types';
-import { getTextSizingStyle } from '../Text/textHelpers';
-import { getLinkTypeStyle, getLinkCommonStyle } from './linkHelpers';
+import { getTextSizingStyle } from '../Text/textSelectors';
+import { getLinkTypeStyle, getLinkCommonStyle } from './linkSelectors';
 
 const propTypes = {
   sizing: string.isRequired,
