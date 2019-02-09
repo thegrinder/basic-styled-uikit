@@ -6,7 +6,7 @@ import {
   getHeadingSizingStyle,
   getHeadingColor,
   getHeadingCommonStyle,
-} from './headingHelpers';
+} from './headingSelectors';
 
 const propTypes = {
   color: string.isRequired,

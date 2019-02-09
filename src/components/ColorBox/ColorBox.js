@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { string } from 'prop-types';
-import { getBoxBgColor, getBoxBorderColor } from './colorBoxHelpers';
+import { getBoxBgColor, getBoxBorderColor } from './colorBoxSelectors';
 
 const propTypes = {
   /**

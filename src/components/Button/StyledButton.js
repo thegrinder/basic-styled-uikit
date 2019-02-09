@@ -5,7 +5,7 @@ import {
   getBtnTypeStyle,
   getBtnSizingStyle,
   getBtnCommonStyle,
-} from './buttonHelpers';
+} from './buttonSelectors';
 
 const propTypes = {
   btntype: string.isRequired,
