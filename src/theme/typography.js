@@ -1,6 +1,8 @@
-export const getBaseFontSize = theme => theme.uiKit.typography.baseFontSize;
+import { getTypography } from './themeSelectors';
 
-export const getBaseLineHeight = theme => theme.uiKit.typography.baseLineHeight;
+export const getBaseFontSize = theme => getTypography(theme).baseFontSize;
+
+export const getBaseLineHeight = theme => getTypography(theme).baseLineHeight;
 
 export const rem = pxValue => ({ theme }) => `${pxValue / getBaseFontSize(theme)}rem`;
 

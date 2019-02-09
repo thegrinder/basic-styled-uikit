@@ -1,7 +1,9 @@
+import { getButton } from '../../theme/themeSelectors';
+
 export const getBtnTypeStyle = (theme, btntype, state) => (
-  theme.uiKit.button.btnTypes[btntype][state]
+  getButton(theme).btnTypes[btntype][state]
 );
 
-export const getBtnSizingStyle = (theme, sizing) => theme.uiKit.button.sizings[sizing];
+export const getBtnSizingStyle = (theme, sizing) => getButton(theme).sizings[sizing];
 
-export const getBtnCommonStyle = theme => theme.uiKit.button.common;
+export const getBtnCommonStyle = theme => getButton(theme).common;

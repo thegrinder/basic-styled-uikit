@@ -1,6 +1,6 @@
-export const getColor = color => ({ theme }) => (
-  theme.uiKit.colors[color]
-);
+import { getColors } from './themeSelectors';
+
+export const getColor = color => ({ theme }) => getColors(theme)[color];
 
 const colors = {
   inherit: 'inherit',

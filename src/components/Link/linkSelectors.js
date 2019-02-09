@@ -1,5 +1,7 @@
+import { getLink } from '../../theme/themeSelectors';
+
 export const getLinkTypeStyle = (theme, linktype, state) => (
-  theme.uiKit.link.linkTypes[linktype][state]
+  getLink(theme).linkTypes[linktype][state]
 );
 
-export const getLinkCommonStyle = theme => theme.uiKit.link.common;
+export const getLinkCommonStyle = theme => getLink(theme).common;

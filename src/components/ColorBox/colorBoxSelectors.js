@@ -1,7 +1,9 @@
+import { getColorBox } from '../../theme/themeSelectors';
+
 export const getBoxBgColor = (theme, bgColor) => (
-  theme.uiKit.colorBox.bgColors[bgColor]
+  getColorBox(theme).bgColors[bgColor]
 );
 
 export const getBoxBorderColor = (theme, borderColor) => (
-  theme.uiKit.colorBox.borderColors[borderColor]
+  getColorBox(theme).borderColors[borderColor]
 );

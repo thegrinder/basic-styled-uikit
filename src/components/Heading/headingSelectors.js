@@ -1,7 +1,7 @@
-export const getHeadingSizingStyle = (theme, sizing) => (
-  theme.uiKit.heading.sizings[sizing]
-);
+import { getHeading } from '../../theme/themeSelectors';
 
-export const getHeadingColor = (theme, color) => theme.uiKit.heading.colors[color];
+export const getHeadingSizingStyle = (theme, sizing) => getHeading(theme).sizings[sizing];
 
-export const getHeadingCommonStyle = theme => theme.uiKit.heading.common;
+export const getHeadingColor = (theme, color) => getHeading(theme).colors[color];
+
+export const getHeadingCommonStyle = theme => getHeading(theme).common;

@@ -1,7 +1,7 @@
-export const getTextSizingStyle = (theme, sizing) => (
-  theme.uiKit.text.sizings[sizing]
-);
+import { getText } from '../../theme/themeSelectors';
 
-export const getTextColor = (theme, color) => theme.uiKit.text.colors[color];
+export const getTextSizingStyle = (theme, sizing) => getText(theme).sizings[sizing];
 
-export const getTextCommonStyle = theme => theme.uiKit.text.common;
+export const getTextColor = (theme, color) => getText(theme).colors[color];
+
+export const getTextCommonStyle = theme => getText(theme).common;
