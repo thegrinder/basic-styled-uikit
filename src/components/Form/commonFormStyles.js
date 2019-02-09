@@ -4,7 +4,7 @@ import {
   getRegularInputStyle,
   getMiscInputCommonStyle,
   getMiscInputStyle,
-} from './formHelpers';
+} from './formSelectors';
 import { rem } from '../../helpers/utils';
 
 export const commonInputStyles = css`

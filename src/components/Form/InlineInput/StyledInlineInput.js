@@ -1,7 +1,7 @@
 import { bool } from 'prop-types';
 import styled, { css } from 'styled-components';
 
-import { getInlineInputCommonStyle, getInlineInputStyle } from '../formHelpers';
+import { getInlineInputCommonStyle, getInlineInputStyle } from '../formSelectors';
 import { rem } from '../../../helpers/utils';
 
 const propTypes = {

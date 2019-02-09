@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { number } from 'prop-types';
-import { getToggleStyle } from '../formHelpers';
+import { getToggleStyle } from '../formSelectors';
 import { rem } from '../../../helpers/utils';
 
 const propTypes = {
