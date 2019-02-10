@@ -16,8 +16,7 @@ describe('headingTheme selectors', () => {
   describe('getHeadingSizingStyle', () => {
     Object.keys(sizings).forEach((sizing) => {
       it('should return the correct size style object', () => {
-        expect(JSON.stringify(getHeadingSizingStyle(theme, sizing)))
-          .toEqual(JSON.stringify(sizings[sizing]));
+        expect(getHeadingSizingStyle(theme, sizing)).toEqual(sizings[sizing]);
       });
     });
   });
@@ -31,8 +30,7 @@ describe('headingTheme selectors', () => {
 
   describe('getHeadingCommonStyle', () => {
     it('should return the correct common style object', () => {
-      expect(JSON.stringify(getHeadingCommonStyle(theme)))
-        .toEqual(JSON.stringify(common));
+      expect(getHeadingCommonStyle(theme)).toEqual(common);
     });
   });
 });

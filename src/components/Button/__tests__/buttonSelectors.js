@@ -17,8 +17,7 @@ describe('buttonTheme selectors', () => {
     Object.keys(btnTypes).forEach((btnType) => {
       Object.keys(btnType).forEach((state) => {
         it('should return the correct btnType style object', () => {
-          expect(JSON.stringify(getBtnTypeStyle(theme, btnType, state)))
-            .toEqual(JSON.stringify(btnTypes[btnType][state]));
+          expect(getBtnTypeStyle(theme, btnType, state)).toEqual(btnTypes[btnType][state]);
         });
       });
     });
@@ -27,16 +26,15 @@ describe('buttonTheme selectors', () => {
   describe('getBtnSizingStyle', () => {
     Object.keys(sizings).forEach((sizing) => {
       it('should return the correct sizing style object', () => {
-        expect(JSON.stringify(getBtnSizingStyle(theme, sizing)))
-          .toEqual(JSON.stringify(sizings[sizing]));
+        expect(getBtnSizingStyle(theme, sizing))
+          .toEqual(sizings[sizing]);
       });
     });
   });
 
   describe('getBtnCommonStyle', () => {
     it('should return the correct common style object', () => {
-      expect(JSON.stringify(getBtnCommonStyle(theme)))
-        .toEqual(JSON.stringify(common));
+      expect(getBtnCommonStyle(theme)).toEqual(common);
     });
   });
 });

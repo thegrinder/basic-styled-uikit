@@ -12,8 +12,7 @@ describe('linkTheme selectors', () => {
     Object.keys(linkTypes).forEach((linkType) => {
       Object.keys(linkType).forEach((state) => {
         it('should return the correct linkType style object', () => {
-          expect(JSON.stringify(getLinkTypeStyle(theme, linkType, state)))
-            .toEqual(JSON.stringify(linkTypes[linkType][state]));
+          expect(getLinkTypeStyle(theme, linkType, state)).toEqual(linkTypes[linkType][state]);
         });
       });
     });
@@ -21,8 +20,7 @@ describe('linkTheme selectors', () => {
 
   describe('getLinkCommonStyle', () => {
     it('should return the correct common style object', () => {
-      expect(JSON.stringify(getLinkCommonStyle(theme)))
-        .toEqual(JSON.stringify(common));
+      expect(getLinkCommonStyle(theme)).toEqual(common);
     });
   });
 });

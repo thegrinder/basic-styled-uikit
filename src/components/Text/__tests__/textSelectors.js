@@ -16,8 +16,7 @@ describe('textTheme selectors', () => {
   describe('getTextSizingStyle', () => {
     Object.keys(sizings).forEach((sizing) => {
       it('should return the correct size style object', () => {
-        expect(JSON.stringify(getTextSizingStyle(theme, sizing)))
-          .toEqual(JSON.stringify(sizings[sizing]));
+        expect(getTextSizingStyle(theme, sizing)).toEqual(sizings[sizing]);
       });
     });
   });
@@ -32,8 +31,7 @@ describe('textTheme selectors', () => {
 
   describe('getTextCommonStyle', () => {
     it('should return the correct common style object', () => {
-      expect(JSON.stringify(getTextCommonStyle(theme)))
-        .toEqual(JSON.stringify(common));
+      expect(getTextCommonStyle(theme)).toEqual(common);
     });
   });
 });
