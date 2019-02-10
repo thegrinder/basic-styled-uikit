@@ -10,11 +10,15 @@ const {
 describe('linkTheme selectors', () => {
   describe('getLinkTypeStyle', () => {
     Object.keys(linkTypes).forEach((linkType) => {
-      Object.keys(linkType).forEach((state) => {
+      Object.keys(linkTypes[linkType]).forEach((state) => {
         it('should return the correct linkType style object', () => {
           expect(getLinkTypeStyle(theme, linkType, state)).toEqual(linkTypes[linkType][state]);
         });
       });
+    });
+
+    it('should return empty object if linkType is invalid', () => {
+      expect(getLinkTypeStyle(theme, 'invalidLinkType', 'normal')).toEqual({});
     });
   });
 

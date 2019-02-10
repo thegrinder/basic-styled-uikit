@@ -19,7 +19,12 @@ describe('headingTheme selectors', () => {
         expect(getHeadingSizingStyle(theme, sizing)).toEqual(sizings[sizing]);
       });
     });
+
+    it('should return empty object if sizing is invalid', () => {
+      expect(getHeadingSizingStyle(theme, 'invalidSizing')).toEqual({});
+    });
   });
+
   describe('getHeadingColor', () => {
     Object.keys(colors).forEach((color) => {
       it('should return the correct color', () => {

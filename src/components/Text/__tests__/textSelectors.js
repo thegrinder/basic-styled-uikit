@@ -19,6 +19,10 @@ describe('textTheme selectors', () => {
         expect(getTextSizingStyle(theme, sizing)).toEqual(sizings[sizing]);
       });
     });
+
+    it('should return empty object if sizing is invalid', () => {
+      expect(getTextSizingStyle(theme, 'invalidSizing')).toEqual({});
+    });
   });
 
   describe('getTextColor', () => {
