@@ -15,20 +15,27 @@ const {
 describe('buttonTheme selectors', () => {
   describe('getBtnTypeStyle', () => {
     Object.keys(btnTypes).forEach((btnType) => {
-      Object.keys(btnType).forEach((state) => {
+      Object.keys(btnTypes[btnType]).forEach((state) => {
         it('should return the correct btnType style object', () => {
           expect(getBtnTypeStyle(theme, btnType, state)).toEqual(btnTypes[btnType][state]);
         });
       });
+    });
+
+    it('should return empty object if btnType is invalid', () => {
+      expect(getBtnTypeStyle(theme, 'invalidBtnType', 'normal')).toEqual({});
     });
   });
 
   describe('getBtnSizingStyle', () => {
     Object.keys(sizings).forEach((sizing) => {
       it('should return the correct sizing style object', () => {
-        expect(getBtnSizingStyle(theme, sizing))
-          .toEqual(sizings[sizing]);
+        expect(getBtnSizingStyle(theme, sizing)).toEqual(sizings[sizing]);
       });
+    });
+
+    it('should return empty object if sizing is invalid', () => {
+      expect(getBtnSizingStyle(theme, 'invalidSizing')).toEqual({});
     });
   });
 
