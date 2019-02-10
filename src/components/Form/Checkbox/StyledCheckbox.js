@@ -18,7 +18,7 @@ const StyledCheckbox = styled.input.attrs({
     position: absolute;
     border-bottom: 2px solid #fff;
     border-left: 2px solid #fff;
-    top: 20%;
+    top: 25%;
     left: 0;
     right: 0;
     margin: auto;

@@ -2,14 +2,14 @@
 
 exports[`<StyledCheckbox /> should render <input> tag with type checkbox 1`] = `
 <input
-  class="StyledCheckbox-sc-1u8r4za-0 eoIRfC"
+  class="StyledCheckbox-sc-1u8r4za-0 dILBxW"
   type="checkbox"
 />
 `;
 
 exports[`<StyledCheckbox /> should render correctly 1`] = `
 <input
-  class="StyledCheckbox-sc-1u8r4za-0 eoIRfC"
+  class="StyledCheckbox-sc-1u8r4za-0 dILBxW"
   type="checkbox"
 />
 `;
