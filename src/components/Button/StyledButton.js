@@ -54,6 +54,7 @@ const StyledButton = styled.button`
     }
     &:disabled {
       ${getBtnTypeStyle(theme, btntype, 'normal')}
+    }
   `}
 `;
 
