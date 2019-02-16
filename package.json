@@ -1,6 +1,6 @@
 {
   "name": "basic-styled-uikit",
-  "version": "0.0.0-development",
+  "version": "1.1.2",
   "description": "A set of basic react UI components built with styled-components",
   "keywords": [
     "react",
