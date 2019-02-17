@@ -1,0 +1,34 @@
+---
+name: Checkbox
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import Checkbox from './Checkbox';
+
+
+# Checkbox
+
+<PropsTable of={Checkbox} />
+
+
+### Checkbox
+
+<Playground>
+  <Checkbox />
+</Playground>
+
+
+### Invalid Checkbox
+
+<Playground>
+  <Checkbox invalid={true} />
+</Playground>
+
+
+### Disabled Checkbox
+
+<Playground>
+  <Checkbox disabled={true} />
+  <Checkbox checked={true} disabled={true} />
+</Playground>

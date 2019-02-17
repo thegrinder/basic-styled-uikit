@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`linkTheme should be defined 1`] = `
+Object {
+  "common": Object {
+    "fontFamily": "Lato, Arial, Helvetica, sans-serif",
+  },
+  "linkTypes": Object {
+    "default": Object {
+      "hover": Object {
+        "color": "#1e88e5",
+      },
+      "normal": Object {
+        "color": "#2196f3",
+      },
+    },
+    "muted": Object {
+      "hover": Object {
+        "color": "#495057",
+      },
+      "normal": Object {
+        "color": "#868e96",
+      },
+    },
+  },
+}
+`;

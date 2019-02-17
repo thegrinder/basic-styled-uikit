@@ -1,0 +1,70 @@
+---
+name: Button
+menu: Components
+---
+
+import { Playground, PropsTable } from 'docz';
+import Button from './Button';
+import { Spacer, Spinner, Icon } from '../../../docz';
+
+# Button
+
+<PropsTable of={Button} />
+
+
+### Button types
+
+<Playground>
+  <Button className="mb">default</Button>
+  <Spacer />
+  <Button btnType="primary">primary</Button>
+  <Spacer />
+  <Button btnType="danger">danger</Button>
+</Playground>
+
+
+### Button sizes
+
+<Playground>
+  <Button sizing="s">small</Button>
+  <Spacer />
+  <Button sizing="m">medium</Button>
+  <Spacer />
+  <Button sizing="l">large</Button>
+</Playground>
+
+
+### Disabled button
+
+<Playground>
+  <Button disabled={true}>disabled</Button>
+</Playground>
+
+
+### Disabled Button with a spinner
+
+<Playground>
+  <Button
+    disabled={true}
+    submitting={true}
+    renderSpinner={<Spinner />}
+  >
+    submitting
+  </Button>
+</Playground>
+
+
+### Button with icon
+
+<Playground>
+  <Button left={<Icon />}>left icon</Button>
+  <Spacer />
+  <Button right={<Icon />}>right icon</Button>
+</Playground>
+
+
+### Button as Link
+
+<Playground>
+  <Button as="a">Link</Button>
+</Playground>

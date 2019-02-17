@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`textTheme should be defined 1`] = `
+Object {
+  "colors": Object {
+    "black": "#161616",
+    "danger": "#f44336",
+    "dark": "#343a40",
+    "default": "#495057",
+    "light": "#868e96",
+    "primary": "#2196f3",
+    "success": "#4caf50",
+    "warning": "#ffeb3b",
+    "white": "#fff",
+  },
+  "common": Object {
+    "fontFamily": "Lato, Arial, Helvetica, sans-serif",
+    "fontWeight": 400,
+  },
+  "sizings": Object {
+    "l": Object {
+      "fontSize": "1.25rem",
+    },
+    "m": Object {
+      "fontSize": "1rem",
+    },
+    "s": Object {
+      "fontSize": ".875rem",
+    },
+    "xs": Object {
+      "fontSize": ".75rem",
+    },
+  },
+}
+`;
