@@ -17,7 +17,7 @@
     "production": "rm -rf lib && webpack",
     "prepublishOnly": "npm run production",
     "docz:dev": "docz dev",
-    "deploy:docz": "yarn docz build && gh-pages -d .docz/dist",
+    "deploy:docz": "docz build && gh-pages -d .docz/dist",
     "test": "jest",
     "semantic-release": "semantic-release"
   },
