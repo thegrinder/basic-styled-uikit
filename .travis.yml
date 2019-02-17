@@ -11,13 +11,15 @@ jobs:
         provider: script
         skip_cleanup: true
         script:
-          - npx semantic-release
+          - npm run semantic-release
     - stage: docs
+      script:
+        - npm run docz:build
       deploy:
         provider: pages
         skip-cleanup: true
         github-token: $GH_TOKEN  # Set in the settings page of your repository, as a secure variable
         keep-history: true
-        script: npx deploy:docz
+        local-dir: .docz/dist
         on:
           branch: master
