@@ -1,0 +1,38 @@
+---
+name: Installation
+route: '/installation'
+---
+
+# Installation
+
+### npm
+
+Basic-styled-uikit is [available on npm](https://www.npmjs.com/package/basic-styled-uikit) and it can be installed using npm or yarn.
+
+```
+# Using npm
+npm install basic-styled-uikit --save-dev
+
+# Using Yarn
+yarn add basic-styled-uikit --dev
+```
+
+### setup
+
+Basic-styled-uikit uses styled-components under the hood and that's why you have to wrap your application with its `<ThemeProvider>`
+in order to use it. We also provide you with a theme so you can get going right away.
+
+```js
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import theme from 'basic-styled-uikit/theme';
+
+// root component
+const App = () => (
+  <ThemeProvider theme={theme}>
+    {/* rest of your top level components */}
+  </ThemeProvider>
+);
+
+export default App;
+```
