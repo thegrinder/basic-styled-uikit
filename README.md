@@ -4,6 +4,8 @@
 
 ### basic-styled-uikit
 
-A set of basic react UIkit components built with styled-components.
-
 https://thegrinder.github.io/basic-styled-uikit
+
+Basic-styled-uikit is a react UI components library built with styled-components. There are plenty of great UI libraries out there that offer
+complete set of components, from simple buttons to more complex ones such as dropdowns or datepickers. Basic-styled-uikit is minimal on purpose.
+It provides only basic (usually just one html tag) components and an easy way to add/customize their variations by using the theme.
