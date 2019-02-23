@@ -1,19 +1,12 @@
-import theme from '../theme';
-import typography, {
+import theme from '../../theme';
+import {
   getBaseFontSize,
   getBaseLineHeight,
   rem,
   calcLineHeight,
-} from '../typography';
+} from '../typographySelectors';
 
-describe('typography', () => {
-  describe('theme', () => {
-    it('should be defined', () => {
-      expect(typography).toBeDefined();
-      expect(typography).toMatchSnapshot();
-    });
-  });
-
+describe('typographySelectors', () => {
   describe('getBaseFontSize', () => {
     it('should return the correct base font size', () => {
       expect(getBaseFontSize(theme)).toEqual(

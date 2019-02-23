@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { number, bool } from 'prop-types';
-import { rem } from '../../../theme/typography';
+import { rem } from '../../../theme/typography/typographySelectors';
 
 const propTypes = {
   h: number.isRequired,

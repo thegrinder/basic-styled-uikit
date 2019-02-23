@@ -2,7 +2,7 @@ import { bool } from 'prop-types';
 import styled, { css } from 'styled-components';
 
 import { getInlineInputCommonStyle, getInlineInputStyle } from '../formSelectors';
-import { rem } from '../../../theme/typography';
+import { rem } from '../../../theme/typography/typographySelectors';
 
 const propTypes = {
   invalid: bool.isRequired,

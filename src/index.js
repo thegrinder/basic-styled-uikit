@@ -13,5 +13,5 @@ export Text from './components/Text/Text';
 export ColorBox from './components/ColorBox/ColorBox';
 export ResetCss from './components/ResetCss/ResetCss';
 
-export { getColor } from './theme/colors';
-export { rem } from './theme/typography';
+export { getColor } from './theme/colors/colorsSelectors';
+export { rem } from './theme/typography/typographySelectors';

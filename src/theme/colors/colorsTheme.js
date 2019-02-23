@@ -1,7 +1,3 @@
-import { getColors } from './themeSelectors';
-
-export const getColor = color => ({ theme }) => getColors(theme)[color];
-
 const colors = {
   inherit: 'inherit',
   transparent: 'transparent',

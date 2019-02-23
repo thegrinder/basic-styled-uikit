@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`colors should be defined 1`] = `
+exports[`colorsTheme should be defined 1`] = `
 Object {
   "black": "#161616",
   "danger100": "#ffcdd2",

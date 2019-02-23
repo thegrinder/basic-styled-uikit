@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { node, string } from 'prop-types';
-import { rem } from '../../theme/typography';
+import { rem } from '../../theme/typography/typographySelectors';
 import {
   getBtnTypeStyle,
   getBtnSizingStyle,

@@ -1,4 +1,4 @@
-import colors from '../../theme/colors';
+import colors from '../../theme/colors/colorsTheme';
 
 const formTheme = {
   // text input, textarea, and select styles

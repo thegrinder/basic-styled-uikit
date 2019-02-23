@@ -1,4 +1,4 @@
-import { getTypography } from './themeSelectors';
+import { getTypography } from '../themeSelectors';
 
 export const getBaseFontSize = theme => getTypography(theme).baseFontSize;
 
@@ -10,11 +10,3 @@ export const calcLineHeight = (remValue, baseLineHeight) => {
   const value = Number(remValue.replace('rem', ''));
   return `${(Math.ceil(value / baseLineHeight) * baseLineHeight) / value}`;
 };
-
-
-const typography = {
-  baseFontSize: 16,
-  baseLineHeight: 1.5,
-};
-
-export default typography;

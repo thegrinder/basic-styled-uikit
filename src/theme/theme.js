@@ -1,5 +1,5 @@
-import colors from './colors';
-import typography from './typography';
+import colors from './colors/colorsTheme';
+import typography from './typography/typographyTheme';
 import button from '../components/Button/buttonTheme';
 import form from '../components/Form/formTheme';
 import heading from '../components/Heading/headingTheme';
