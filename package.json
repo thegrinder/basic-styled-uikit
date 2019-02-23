@@ -12,6 +12,9 @@
     "url": "https://github.com/thegrinder/basic-styled-uikit.git"
   },
   "main": "./dist/index.js",
+  "bin": {
+    "basic-styled-uikit": "./src/cli.js"
+  },
   "scripts": {
     "commit": "git-cz",
     "production": "rm -rf lib && webpack",
