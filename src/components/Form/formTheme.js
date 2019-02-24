@@ -1,7 +1,7 @@
 import colors from '../../theme/colors';
 
 const formTheme = {
-  // text input, textarea, and select styles
+  // text input, textarea, and select
   regular: {
     states: {
       valid: {
@@ -32,7 +32,7 @@ const formTheme = {
       fontFamily: 'Lato, Arial, Helvetica, sans-serif',
     },
   },
-  // inputs for inline editing
+  // inline input
   inline: {
     states: {
       valid: {
@@ -68,7 +68,7 @@ const formTheme = {
       fontFamily: 'Lato, Arial, Helvetica, sans-serif',
     },
   },
-  // radio and checkbox styles
+  // radio and checkbox
   misc: {
     states: {
       valid: {
@@ -94,7 +94,7 @@ const formTheme = {
     },
     common: {},
   },
-  // toggle styles
+  // toggle
   toggle: {
     states: {
       normal: {
