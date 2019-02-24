@@ -32,6 +32,5 @@ describe('<InlineInput />', () => {
     const spinnerElement = getByTestId('spinner');
     expect(firstChild).toBeDefined();
     expect(firstChild).toContainElement(spinnerElement);
-    expect(firstChild).toMatchSnapshot();
   });
 });
