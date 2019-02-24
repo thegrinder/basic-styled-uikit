@@ -19,12 +19,10 @@ describe('<InlineInput />', () => {
   it('should render correctly', () => {
     const { container: { firstChild } } = renderComponent();
     expect(firstChild).toBeDefined();
-    expect(firstChild).toMatchSnapshot();
   });
 
   it('should render <input> tag', () => {
     const { container: { firstChild } } = renderComponent();
     expect(firstChild.tagName).toEqual('INPUT');
-    expect(firstChild).toMatchSnapshot();
   });
 });
