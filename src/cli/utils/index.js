@@ -1,4 +1,8 @@
-const { readFile: fsReadFile, writeFile: fsWriteFile } = require('fs');
+const {
+  readFile: fsReadFile,
+  writeFile: fsWriteFile,
+  mkdir: fsMkdir,
+} = require('fs');
 
 const readFile = path => new Promise((resolve, reject) => (
   fsReadFile(path, 'utf-8', (err, data) => (err
@@ -14,7 +18,15 @@ const writeFile = (path, content) => new Promise((resolve, reject) => (
   ))
 ));
 
+const mkdir = path => new Promise((resolve, reject) => (
+  fsMkdir(path, err => (err
+    ? reject(err)
+    : resolve()
+  ))
+));
+
 module.exports = {
   readFile,
   writeFile,
+  mkdir,
 };
