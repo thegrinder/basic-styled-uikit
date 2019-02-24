@@ -7,11 +7,11 @@ jobs:
   include:
     - stage: release
       node_js: lts/*
+      script:
+        - npm run coveralls
       deploy:
         provider: script
         skip_cleanup: true
-        script:
-          - npm run coveralls
           - npm run semantic-release
     - stage: docs
       script:

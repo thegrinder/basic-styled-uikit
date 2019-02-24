@@ -19,9 +19,9 @@
     "docz:build": "docz build",
     "docz:dev": "docz dev",
     "docz:deploy": "docz build && gh-pages -d .docz/dist",
-    "test": "jest --coverage",
+    "test": "jest",
     "semantic-release": "semantic-release",
-    "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls"
+    "coveralls": "jest && cat ./coverage/lcov.info | coveralls"
   },
   "config": {
     "commitizen": {
@@ -30,7 +30,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test && lint-staged"
+      "pre-commit": "npm run test && lint-staged"
     }
   },
   "lint-staged": {
@@ -38,6 +38,10 @@
       "eslint --fix",
       "git add"
     ]
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   },
   "author": "Pawel Szczepkowski",
   "license": "MIT",
