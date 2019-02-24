@@ -19,8 +19,9 @@
     "docz:build": "docz build",
     "docz:dev": "docz dev",
     "docz:deploy": "docz build && gh-pages -d .docz/dist",
-    "test": "jest",
-    "semantic-release": "semantic-release"
+    "test": "jest --coverage",
+    "semantic-release": "semantic-release",
+    "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls"
   },
   "config": {
     "commitizen": {
@@ -53,6 +54,7 @@
     "babel-loader": "^8.0.5",
     "babel-plugin-styled-components": "^1.10.0",
     "commitizen": "^3.0.7",
+    "coveralls": "^3.0.3",
     "cz-conventional-changelog": "^2.1.0",
     "docz": "^0.13.7",
     "docz-theme-default": "^0.13.7",

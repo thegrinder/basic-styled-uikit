@@ -11,6 +11,7 @@ jobs:
         provider: script
         skip_cleanup: true
         script:
+          - npm run coveralls
           - npm run semantic-release
     - stage: docs
       script:
