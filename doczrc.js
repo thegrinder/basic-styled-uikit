@@ -2,6 +2,13 @@ export default {
   wrapper: '../../docz/Wrapper',
   codeSandbox: false,
   base: '/basic-styled-uikit/',
+  modifyBabelRc: config => ({
+    ...config,
+    plugins: [
+      ...config.plugins,
+      '@babel/plugin-proposal-export-default-from',
+    ],
+  }),
   htmlContext: {
     head: {
       links: [
