@@ -5,7 +5,7 @@ exports[`<Button /> should render <a> tag by default 1`] = `
   class="StyledButton-k0ad56-0 hzwlwW"
 >
   <span
-    class="ChildrenWrapper-sc-30uoyc-0 cdOdhF"
+    class="ChildrenWrapper-sc-30uoyc-0 kQmOOE"
   >
     <span>
       children
@@ -26,7 +26,7 @@ exports[`<Button /> should render correctly with custom props 1`] = `
     />
   </span>
   <span
-    class="ChildrenWrapper-sc-30uoyc-0 kEyivn"
+    class="ChildrenWrapper-sc-30uoyc-0 ldKcDK"
   >
     <span>
       left
@@ -46,7 +46,7 @@ exports[`<Button /> should render correctly with default props and children 1`] 
   class="StyledButton-k0ad56-0 hzwlwW"
 >
   <span
-    class="ChildrenWrapper-sc-30uoyc-0 cdOdhF"
+    class="ChildrenWrapper-sc-30uoyc-0 kQmOOE"
   >
     <span>
       children
@@ -60,7 +60,7 @@ exports[`<Button /> should render render <button> tag 1`] = `
   class="StyledButton-k0ad56-0 hzwlwW"
 >
   <span
-    class="ChildrenWrapper-sc-30uoyc-0 cdOdhF"
+    class="ChildrenWrapper-sc-30uoyc-0 kQmOOE"
   >
     <span>
       children

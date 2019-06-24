@@ -6,6 +6,9 @@ const propTypes = {
 };
 
 const ChildrenWrapper = styled.span`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   opacity: ${({ submitting }) => (submitting ? '0' : '1')};
 `;
 

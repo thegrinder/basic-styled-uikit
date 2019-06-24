@@ -2,7 +2,7 @@
 
 exports[`<ChildrenWrapper /> should render content correctly 1`] = `
 <span
-  class="ChildrenWrapper-sc-30uoyc-0 kEyivn"
+  class="ChildrenWrapper-sc-30uoyc-0 ldKcDK"
 >
   content
 </span>
@@ -10,6 +10,6 @@ exports[`<ChildrenWrapper /> should render content correctly 1`] = `
 
 exports[`<ChildrenWrapper /> should render correctly 1`] = `
 <span
-  class="ChildrenWrapper-sc-30uoyc-0 kEyivn"
+  class="ChildrenWrapper-sc-30uoyc-0 ldKcDK"
 />
 `;
