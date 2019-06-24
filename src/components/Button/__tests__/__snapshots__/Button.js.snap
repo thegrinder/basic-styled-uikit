@@ -2,13 +2,17 @@
 
 exports[`<Button /> should render <a> tag by default 1`] = `
 <a
-  class="StyledButton-k0ad56-0 hzwlwW"
+  class="StyledButton-k0ad56-0 dZQwmX"
 >
   <span
-    class="ChildrenWrapper-sc-30uoyc-0 kQmOOE"
+    class="ContentWrapper-juvto2-0 kMRFXB"
   >
-    <span>
-      children
+    <span
+      class="ChildrenWrapper-sc-30uoyc-0 kRFFMw"
+    >
+      <span>
+        children
+      </span>
     </span>
   </span>
 </a>
@@ -16,7 +20,7 @@ exports[`<Button /> should render <a> tag by default 1`] = `
 
 exports[`<Button /> should render correctly with custom props 1`] = `
 <button
-  class="StyledButton-k0ad56-0 fCmfHT"
+  class="StyledButton-k0ad56-0 iquivx"
 >
   <span
     class="SpinnerWrapper-sc-1ln0y9p-0 csgNUt"
@@ -26,16 +30,24 @@ exports[`<Button /> should render correctly with custom props 1`] = `
     />
   </span>
   <span
-    class="ChildrenWrapper-sc-30uoyc-0 ldKcDK"
+    class="ContentWrapper-juvto2-0 haOASu"
   >
     <span>
-      left
+      <span>
+        left
+      </span>
+    </span>
+    <span
+      class="ChildrenWrapper-sc-30uoyc-0 kRFFMw"
+    >
+      <span>
+        children
+      </span>
     </span>
     <span>
-      children
-    </span>
-    <span>
-      right
+      <span>
+        right
+      </span>
     </span>
   </span>
 </button>
@@ -43,13 +55,17 @@ exports[`<Button /> should render correctly with custom props 1`] = `
 
 exports[`<Button /> should render correctly with default props and children 1`] = `
 <button
-  class="StyledButton-k0ad56-0 hzwlwW"
+  class="StyledButton-k0ad56-0 dZQwmX"
 >
   <span
-    class="ChildrenWrapper-sc-30uoyc-0 kQmOOE"
+    class="ContentWrapper-juvto2-0 kMRFXB"
   >
-    <span>
-      children
+    <span
+      class="ChildrenWrapper-sc-30uoyc-0 kRFFMw"
+    >
+      <span>
+        children
+      </span>
     </span>
   </span>
 </button>
@@ -57,13 +73,17 @@ exports[`<Button /> should render correctly with default props and children 1`] 
 
 exports[`<Button /> should render render <button> tag 1`] = `
 <button
-  class="StyledButton-k0ad56-0 hzwlwW"
+  class="StyledButton-k0ad56-0 dZQwmX"
 >
   <span
-    class="ChildrenWrapper-sc-30uoyc-0 kQmOOE"
+    class="ContentWrapper-juvto2-0 kMRFXB"
   >
-    <span>
-      children
+    <span
+      class="ChildrenWrapper-sc-30uoyc-0 kRFFMw"
+    >
+      <span>
+        children
+      </span>
     </span>
   </span>
 </button>

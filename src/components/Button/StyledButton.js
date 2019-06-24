@@ -20,7 +20,6 @@ const StyledButton = styled.button`
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  text-align: center;
   text-decoration: none;
   transition: .1s ease-in-out;
   transition-property: color, background-color, border-color;

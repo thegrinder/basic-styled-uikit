@@ -7,9 +7,10 @@ import {
   oneOf,
   func,
 } from 'prop-types';
-import ChildrenWrapper from './ChildrenWrapper';
+import ContentWrapper from './ContentWrapper';
 import StyledButton from './StyledButton';
 import SpinnerWrapper from './SpinnerWrapper';
+import ChildrenWrapper from './ChildrenWrapper';
 
 const propTypes = {
   /** submitting flag that shows a component passed to renderSpinner prop */
@@ -59,11 +60,11 @@ const Button = ({
           {renderSpinner}
         </SpinnerWrapper>
       )}
-      <ChildrenWrapper submitting={submitting}>
-        {left && left}
-        {children}
-        {right && right}
-      </ChildrenWrapper>
+      <ContentWrapper submitting={submitting}>
+        {left && <span>{left}</span>}
+        {children && <ChildrenWrapper>{children}</ChildrenWrapper>}
+        {right && <span>{right}</span>}
+      </ContentWrapper>
     </StyledButton>
 );
 

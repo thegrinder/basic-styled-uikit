@@ -9,7 +9,7 @@ describe('<ChildrenWrapper />', () => {
 
   it('should render correctly', () => {
     const { container: { firstChild } } = render(
-      <ChildrenWrapper submitting={true} />,
+      <ChildrenWrapper />,
     );
     expect(firstChild).toBeDefined();
     expect(firstChild).toMatchSnapshot();
@@ -17,19 +17,8 @@ describe('<ChildrenWrapper />', () => {
 
   it('should render <span> tag', () => {
     const { container: { firstChild } } = render(
-      <ChildrenWrapper submitting={true} />,
+      <ChildrenWrapper />,
     );
     expect(firstChild.tagName).toEqual('SPAN');
-  });
-
-  it('should render content correctly', () => {
-    const content = 'content';
-    const { container: { firstChild } } = render(
-      <ChildrenWrapper submitting={true}>
-        {content}
-      </ChildrenWrapper>,
-    );
-    expect(firstChild).toHaveTextContent(content);
-    expect(firstChild).toMatchSnapshot();
   });
 });
