@@ -33,11 +33,8 @@ describe('<StyledButton />', () => {
   });
 
   it('should render correctly with custom props', () => {
-    const left = <span>left</span>;
-    const right = <span>right</span>;
     const { container: { firstChild }, getByText } = renderComponent({
-      left,
-      right,
+      sizing: 'm',
     });
     const childrenElement = getByText('children');
     expect(firstChild).toBeDefined();

@@ -27,26 +27,18 @@ describe('<Button />', () => {
   });
 
   it('should render correctly with custom props', () => {
-    const left = <span>left</span>;
-    const right = <span>right</span>;
     const spinner = <span data-testid="spinner" />;
     const { container: { firstChild }, getByText, getByTestId } = renderComponent({
       btnType: 'danger',
       sizing: 's',
-      left,
-      right,
       submitting: true,
       renderSpinner: spinner,
     });
 
-    const leftElement = getByText('left');
-    const rightElement = getByText('right');
     const spinnerElement = getByTestId('spinner');
     const childrenElement = getByText('children');
 
     expect(firstChild).toBeDefined();
-    expect(firstChild).toContainElement(leftElement);
-    expect(firstChild).toContainElement(rightElement);
     expect(firstChild).toContainElement(spinnerElement);
     expect(firstChild).toContainElement(childrenElement);
     expect(firstChild).toMatchSnapshot();

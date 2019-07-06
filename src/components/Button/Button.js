@@ -10,7 +10,6 @@ import {
 import ContentWrapper from './ContentWrapper';
 import StyledButton from './StyledButton';
 import SpinnerWrapper from './SpinnerWrapper';
-import ChildrenWrapper from './ChildrenWrapper';
 
 const propTypes = {
   /** submitting flag that shows a component passed to renderSpinner prop */
@@ -19,10 +18,6 @@ const propTypes = {
   btnType: string,
   /** one of: s, m, l */
   sizing: string,
-  /** component showed on the left (e.g. icon) */
-  left: node,
-  /** component showed on the right (e.g. icon) */
-  right: node,
   /** spinner component shown when submitting flag is true */
   renderSpinner: node,
   /** rendered html tag or custom router link component */
@@ -38,8 +33,6 @@ const defaultProps = {
 
 const Button = ({
   btnType: btntype,
-  left,
-  right,
   sizing,
   submitting,
   renderSpinner,
@@ -49,8 +42,6 @@ const Button = ({
 }) => (
     <StyledButton
       as={as}
-      left={left}
-      right={right}
       sizing={sizing}
       btntype={btntype}
       {...rest}
@@ -61,9 +52,7 @@ const Button = ({
         </SpinnerWrapper>
       )}
       <ContentWrapper submitting={submitting}>
-        {left && <span>{left}</span>}
-        {children && <ChildrenWrapper>{children}</ChildrenWrapper>}
-        {right && <span>{right}</span>}
+        {children}
       </ContentWrapper>
     </StyledButton>
 );

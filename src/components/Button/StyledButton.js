@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { node, string } from 'prop-types';
+import { string } from 'prop-types';
 import { rem } from '../../theme/typography';
 import {
   getBtnTypeStyle,
@@ -10,8 +10,6 @@ import {
 const propTypes = {
   btntype: string.isRequired,
   sizing: string.isRequired,
-  left: node,
-  right: node,
 };
 
 const StyledButton = styled.button`
@@ -36,14 +34,10 @@ const StyledButton = styled.button`
     theme,
     btntype,
     sizing,
-    left,
-    right,
   }) => css`
     ${getBtnCommonStyle(theme)}
     ${getBtnSizingStyle(theme, sizing)}
     ${getBtnTypeStyle(theme, btntype, 'normal')}
-    ${left && 'padding-left: 0;'}
-    ${right && 'padding-right: 0;'}
     &:hover,
     &:focus {
       ${getBtnTypeStyle(theme, btntype, 'hover')}
