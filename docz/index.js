@@ -1,4 +1,4 @@
-export Spacer from './Spacer';
-export Icon from './Icon';
-export Spinner from './Spinner';
-export InputWrapper from './InputWrapper';
+export { default as Spacer } from './Spacer';
+export { default as Icon } from './Icon';
+export { default as Spinner } from './Spinner';
+export { default as InputWrapper } from './InputWrapper';
