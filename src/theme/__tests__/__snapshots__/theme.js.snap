@@ -5,23 +5,6 @@ Object {
   "uiKit": Object {
     "button": Object {
       "btnTypes": Object {
-        "basic": Object {
-          "active": Object {
-            "backgroundColor": "transparent",
-            "borderColor": "#adb5bd",
-            "color": "#212529",
-          },
-          "hover": Object {
-            "backgroundColor": "transparent",
-            "borderColor": "#ced4da",
-            "color": "#212529",
-          },
-          "normal": Object {
-            "backgroundColor": "transparent",
-            "borderColor": "#dee2e6",
-            "color": "#212529",
-          },
-        },
         "danger": Object {
           "active": Object {
             "backgroundColor": "#d32f2f",

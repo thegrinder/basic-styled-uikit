@@ -2,23 +2,6 @@ import colors from '../../theme/colors';
 
 const buttonTheme = {
   btnTypes: {
-    basic: {
-      normal: {
-        color: colors.gray900,
-        backgroundColor: colors.transparent,
-        borderColor: colors.gray300,
-      },
-      hover: {
-        color: colors.gray900,
-        backgroundColor: colors.transparent,
-        borderColor: colors.gray400,
-      },
-      active: {
-        color: colors.gray900,
-        backgroundColor: colors.transparent,
-        borderColor: colors.gray500,
-      },
-    },
     default: {
       normal: {
         color: colors.black,
