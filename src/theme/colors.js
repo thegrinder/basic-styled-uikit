@@ -11,7 +11,6 @@ const colors = {
   neutral200: '#e9ecef',
   neutral300: '#dee2e6',
   neutral400: '#ced4da',
-  neutral450: '#bec5cc',
   neutral500: '#adb5bd',
   neutral600: '#868e96',
   neutral700: '#495057',

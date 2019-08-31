@@ -85,16 +85,9 @@ Object {
         "washedWarning": "#fffde7",
         "white": "#fff",
       },
-      "borderColors": Object {
-        "danger": undefined,
-        "dark": "#dee2e6",
-        "light": "#f8f9fa",
-        "normal": "#e9ecef",
-        "primary": undefined,
-        "success": undefined,
-        "transparent": "transparent",
-        "warning": undefined,
-        "white": "#fff",
+      "elevations": Object {
+        "1": "0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)",
+        "2": "0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12)",
       },
     },
     "colors": Object {
@@ -107,7 +100,6 @@ Object {
       "neutral200": "#e9ecef",
       "neutral300": "#dee2e6",
       "neutral400": "#ced4da",
-      "neutral450": "#bec5cc",
       "neutral50": "#fafafa",
       "neutral500": "#adb5bd",
       "neutral600": "#868e96",

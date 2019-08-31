@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { string } from 'prop-types';
-import { getBoxBgColor, getBoxBorderColor } from './colorBoxSelectors';
+import { string, number } from 'prop-types';
+import { getBoxBgColor, getBoxElevation } from './colorBoxSelectors';
 
 const propTypes = {
   /**
@@ -9,14 +9,14 @@ const propTypes = {
    * washedPrimary, primary, washedSuccess, success, washedDanger, danger, washedWarning, warning
    * */
   bgColor: string,
-  /** one of: transparent, white, light, normal, dark, primary, success, warning, danger */
-  borderColor: string,
+  /** one of: 1, 2 */
+  elevation: number,
 };
 
 const StyledColorBox = styled.div`
-  ${({ theme, bgColor, borderColor }) => css`
+  ${({ theme, bgColor, elevation }) => css`
     ${bgColor && `background-color: ${getBoxBgColor(theme, bgColor)};`}
-    ${borderColor && `border-color: ${getBoxBorderColor(theme, borderColor)};`}
+    ${elevation && `box-shadow: ${getBoxElevation(theme, elevation)};`}
   `}
 `;
 

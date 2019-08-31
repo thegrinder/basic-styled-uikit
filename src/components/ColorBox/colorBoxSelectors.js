@@ -4,6 +4,6 @@ export const getBoxBgColor = (theme, bgColor) => (
   getColorBox(theme).bgColors[bgColor]
 );
 
-export const getBoxBorderColor = (theme, borderColor) => (
-  getColorBox(theme).borderColors[borderColor]
+export const getBoxElevation = (theme, elevation) => (
+  getColorBox(theme).elevations[elevation]
 );

@@ -1,9 +1,9 @@
 
 import theme from '../../../theme/theme';
 import colorBoxTheme from '../colorBoxTheme';
-import { getBoxBgColor, getBoxBorderColor } from '../colorBoxSelectors';
+import { getBoxBgColor, getBoxElevation } from '../colorBoxSelectors';
 
-const { bgColors, borderColors } = colorBoxTheme;
+const { bgColors, elevations } = colorBoxTheme;
 
 describe('colorBoxTheme selectors', () => {
   describe('getBoxBgColor', () => {
@@ -14,11 +14,11 @@ describe('colorBoxTheme selectors', () => {
     });
   });
 
-  describe('getBoxBgColor', () => {
-    Object.keys(borderColors).forEach((borderColor) => {
+  describe('getBoxElevation', () => {
+    Object.keys(elevations).forEach((elevation) => {
       it('should return the correct background color', () => {
-        expect(getBoxBorderColor(theme, borderColor))
-          .toEqual(borderColors[borderColor]);
+        expect(getBoxElevation(theme, elevation))
+          .toEqual(elevations[elevation]);
       });
     });
   });

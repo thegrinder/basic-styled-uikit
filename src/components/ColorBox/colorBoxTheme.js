@@ -22,16 +22,9 @@ const colorBoxTheme = {
     washedWarning: colors.warning50,
     warning: colors.warning500,
   },
-  borderColors: {
-    transparent: colors.transparent,
-    white: colors.neutral0,
-    light: colors.neutral100,
-    normal: colors.neutral200,
-    dark: colors.neutral300,
-    primary: colors.primary100,
-    success: colors.success100,
-    warning: colors.warning100,
-    danger: colors.danger100,
+  elevations: {
+    1: '0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)',
+    2: '0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12)',
   },
 };
 
