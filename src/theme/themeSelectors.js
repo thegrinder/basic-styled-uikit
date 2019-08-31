@@ -1,4 +1,15 @@
-const createSelector = category => theme => theme.uiKit[category];
+const createSelector = category => (theme) => {
+  if (!theme) {
+    throw new Error('You need to provide a theme object');
+  }
+  if (!theme.uiKit) {
+    throw new Error('Your theme has to be under uiKit key');
+  }
+  if (!theme.uiKit[category]) {
+    throw new Error(`Your theme is missing ${category} key`);
+  }
+  return theme.uiKit[category];
+};
 
 export const getTypography = createSelector('typography');
 export const getColors = createSelector('colors');

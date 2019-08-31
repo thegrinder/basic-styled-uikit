@@ -11,49 +11,24 @@ import {
 } from '../themeSelectors';
 
 describe('themeSelectors', () => {
-  describe('getTypography', () => {
-    expect(getTypography(theme)).toEqual(theme.uiKit.typography);
-  });
-
-  describe('getColors', () => {
-    it('should get theme colors', () => {
-      expect(getColors(theme)).toEqual(theme.uiKit.colors);
-    });
-  });
-
-  describe('getButton', () => {
-    it('should get button theme', () => {
-      expect(getButton(theme)).toEqual(theme.uiKit.button);
-    });
-  });
-
-  describe('getForm', () => {
-    it('should get form theme', () => {
-      expect(getForm(theme)).toEqual(theme.uiKit.form);
-    });
-  });
-
-  describe('getHeading', () => {
-    it('should get heading theme', () => {
-      expect(getHeading(theme)).toEqual(theme.uiKit.heading);
-    });
-  });
-
-  describe('getText', () => {
-    it('should get text theme', () => {
-      expect(getText(theme)).toEqual(theme.uiKit.text);
-    });
-  });
-
-  describe('getColorBox', () => {
-    it('should get color box theme', () => {
-      expect(getColorBox(theme)).toEqual(theme.uiKit.colorBox);
-    });
-  });
-
-  describe('getLink', () => {
-    it('should get link theme', () => {
-      expect(getLink(theme)).toEqual(theme.uiKit.link);
-    });
+  describe('errors', () => {
+    it.each([
+      [getTypography, 'typography'],
+      [getColors, 'colors'],
+      [getButton, 'button'],
+      [getForm, 'form'],
+      [getHeading, 'heading'],
+      [getText, 'text'],
+      [getColorBox, 'colorBox'],
+      [getLink, 'link'],
+    ])(
+      '%s should handle success and failure',
+      (selector, namespace) => {
+        expect(selector(theme)).toEqual(theme.uiKit[namespace]);
+        expect(() => selector()).toThrowError('You need to provide a theme object');
+        expect(() => selector({})).toThrowError('Your theme has to be under uiKit key');
+        expect(() => selector({ uiKit: {} })).toThrowError(`Your theme is missing ${namespace} key`);
+      },
+    );
   });
 });
