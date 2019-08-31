@@ -17,7 +17,7 @@ const propTypes = {
 const StyledColorBox = styled.div`
   ${({ theme, bgColor, elevation }) => css`
     ${bgColor && `background-color: ${getBoxBgColor(theme, bgColor)};`}
-    ${elevation && `box-shadow: ${getBoxElevation(theme, elevation)};`}
+    ${elevation && getBoxElevation(theme, elevation)}}
   `}
 `;
 

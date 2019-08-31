@@ -56,7 +56,7 @@ exports[`<Heading /> should render <h6> tag 1`] = `
 
 exports[`<Heading /> should render correctly with custom props 1`] = `
 <h3
-  class="StyledHeading-fbinjh-0 edJvfz"
+  class="StyledHeading-fbinjh-0 bEjsBB"
   color="primary"
 >
   children
