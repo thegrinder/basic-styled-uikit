@@ -3,7 +3,7 @@
 exports[`textTheme should be defined 1`] = `
 Object {
   "colors": Object {
-    "black": "#161616",
+    "black": undefined,
     "danger": "#f44336",
     "dark": "#343a40",
     "default": "#495057",

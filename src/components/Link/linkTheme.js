@@ -13,10 +13,10 @@ const linkTheme = {
     },
     muted: {
       normal: {
-        color: colors.gray600,
+        color: colors.neutral600,
       },
       hover: {
-        color: darken(0.1, colors.gray600),
+        color: darken(0.1, colors.neutral600),
       },
     },
   },

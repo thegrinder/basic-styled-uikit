@@ -16,10 +16,10 @@ const textTheme = {
     },
   },
   colors: {
-    white: colors.white,
-    light: colors.gray600,
-    default: colors.gray700,
-    dark: colors.gray800,
+    white: colors.neutral0,
+    light: colors.neutral600,
+    default: colors.neutral700,
+    dark: colors.neutral800,
     black: colors.black,
 
     primary: colors.primary500,

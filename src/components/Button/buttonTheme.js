@@ -5,19 +5,19 @@ const buttonTheme = {
   btnTypes: {
     default: {
       normal: {
-        color: colors.white,
-        backgroundColor: colors.gray600,
+        color: colors.neutral0,
+        backgroundColor: colors.neutral600,
       },
       hover: {
-        backgroundColor: darken(0.1, colors.gray600),
+        backgroundColor: darken(0.1, colors.neutral600),
       },
       active: {
-        backgroundColor: darken(0.15, colors.gray600),
+        backgroundColor: darken(0.15, colors.neutral600),
       },
     },
     primary: {
       normal: {
-        color: colors.white,
+        color: colors.neutral0,
         backgroundColor: colors.primary500,
       },
       hover: {
@@ -29,7 +29,7 @@ const buttonTheme = {
     },
     danger: {
       normal: {
-        color: colors.white,
+        color: colors.neutral0,
         backgroundColor: colors.danger500,
       },
       hover: {

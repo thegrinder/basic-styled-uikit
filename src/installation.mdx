@@ -54,17 +54,17 @@ const colors = {
   inherit: 'inherit',
   transparent: 'transparent',
   white: '#fff',
-  gray50: '#fafafa',
-  gray100: '#f8f9fa',
-  gray200: '#e9ecef',
-  gray300: '#dee2e6',
-  gray400: '#ced4da',
-  gray450: '#bec5cc',
-  gray500: '#adb5bd',
-  gray600: '#868e96',
-  gray700: '#495057',
-  gray800: '#343a40',
-  gray900: '#212529',
+  neutral50: '#fafafa',
+  neutral100: '#f8f9fa',
+  neutral200: '#e9ecef',
+  neutral300: '#dee2e6',
+  neutral400: '#ced4da',
+  neutral450: '#bec5cc',
+  neutral500: '#adb5bd',
+  neutral600: '#868e96',
+  neutral700: '#495057',
+  neutral800: '#343a40',
+  neutral900: '#212529',
   black: '#161616',
 
   primary50: '#e3f2fd',
@@ -129,68 +129,68 @@ const button = {
   btnTypes: {
     basic: {
       normal: {
-        color: colors.gray900,
+        color: colors.neutral900,
         backgroundColor: colors.transparent,
-        borderColor: colors.gray300,
+        borderColor: colors.neutral300,
       },
       hover: {
-        color: colors.gray900,
+        color: colors.neutral900,
         backgroundColor: colors.transparent,
-        borderColor: colors.gray400,
+        borderColor: colors.neutral400,
       },
       active: {
-        color: colors.gray900,
+        color: colors.neutral900,
         backgroundColor: colors.transparent,
-        borderColor: colors.gray500,
+        borderColor: colors.neutral500,
       },
     },
     default: {
       normal: {
         color: colors.black,
-        backgroundColor: colors.gray400,
+        backgroundColor: colors.neutral400,
         borderColor: colors.transparent,
       },
       hover: {
         color: colors.black,
-        backgroundColor: colors.gray450,
+        backgroundColor: colors.neutral450,
         borderColor: colors.transparent,
       },
       active: {
         color: colors.black,
-        backgroundColor: colors.gray500,
+        backgroundColor: colors.neutral500,
         borderColor: colors.transparent,
       },
     },
     primary: {
       normal: {
-        color: colors.white,
+        color: colors.neutral0,
         backgroundColor: colors.primary500,
         borderColor: colors.transparent,
       },
       hover: {
-        color: colors.white,
+        color: colors.neutral0,
         backgroundColor: colors.primary600,
         borderColor: colors.transparent,
       },
       active: {
-        color: colors.white,
+        color: colors.neutral0,
         backgroundColor: colors.primary700,
         borderColor: colors.transparent,
       },
     },
     danger: {
       normal: {
-        color: colors.white,
+        color: colors.neutral0,
         backgroundColor: colors.danger500,
         borderColor: colors.transparent,
       },
       hover: {
-        color: colors.white,
+        color: colors.neutral0,
         backgroundColor: colors.danger600,
         borderColor: colors.transparent,
       },
       active: {
-        color: colors.white,
+        color: colors.neutral0,
         backgroundColor: colors.danger700,
         borderColor: colors.transparent,
       },
@@ -229,23 +229,23 @@ const form = {
     states: {
       valid: {
         normal: {
-          backgroundColor: colors.white,
-          borderColor: colors.gray300,
-          color: colors.gray700,
+          backgroundColor: colors.neutral0,
+          borderColor: colors.neutral300,
+          color: colors.neutral700,
         },
         active: {
-          backgroundColor: colors.white,
+          backgroundColor: colors.neutral0,
           borderColor: colors.primary500,
-          color: colors.gray700,
+          color: colors.neutral700,
         },
         disabled: {
-          backgroundColor: colors.gray100,
-          borderColor: colors.gray300,
-          color: colors.gray600,
+          backgroundColor: colors.neutral100,
+          borderColor: colors.neutral300,
+          color: colors.neutral600,
         },
       },
       invalid: {
-        backgroundColor: colors.white,
+        backgroundColor: colors.neutral0,
         color: colors.danger500,
         borderColor: colors.danger500,
       },
@@ -262,22 +262,22 @@ const form = {
         normal: {
           backgroundColor: colors.transparent,
           borderColor: colors.transparent,
-          color: colors.gray700,
+          color: colors.neutral700,
         },
         hover: {
           backgroundColor: colors.transparent,
-          borderColor: colors.gray300,
-          color: colors.gray700,
+          borderColor: colors.neutral300,
+          color: colors.neutral700,
         },
         active: {
           backgroundColor: colors.transparent,
           borderColor: colors.primary500,
-          color: colors.gray700,
+          color: colors.neutral700,
         },
         disabled: {
-          backgroundColor: colors.gray100,
-          borderColor: colors.gray300,
-          color: colors.gray600,
+          backgroundColor: colors.neutral100,
+          borderColor: colors.neutral300,
+          color: colors.neutral600,
         },
       },
       invalid: {
@@ -296,7 +296,7 @@ const form = {
     states: {
       valid: {
         normal: {
-          borderColor: colors.gray300,
+          borderColor: colors.neutral300,
           backgroundColor: colors.transparent,
         },
         active: {
@@ -319,7 +319,7 @@ const form = {
   toggle: {
     states: {
       normal: {
-        backgroundColor: colors.gray400,
+        backgroundColor: colors.neutral400,
       },
       checked: {
         backgroundColor: colors.primary500,
@@ -354,10 +354,10 @@ const heading = {
     },
   },
   colors: {
-    white: colors.white,
-    light: colors.gray700,
-    default: colors.gray800,
-    dark: colors.gray900,
+    white: colors.neutral0,
+    light: colors.neutral700,
+    default: colors.neutral800,
+    dark: colors.neutral900,
     black: colors.black,
 
     primary: colors.primary500,
@@ -391,10 +391,10 @@ const text = {
     },
   },
   colors: {
-    white: colors.white,
-    light: colors.gray600,
-    default: colors.gray700,
-    dark: colors.gray800,
+    white: colors.neutral0,
+    light: colors.neutral600,
+    default: colors.neutral700,
+    dark: colors.neutral800,
     black: colors.black,
 
     primary: colors.primary500,
@@ -416,14 +416,14 @@ const colorBox = {
   bgColors: {
     transparent: colors.transparent,
     inherit: colors.inherit,
-    white: colors.white,
-    lightest: colors.gray50,
-    lighter: colors.gray100,
-    light: colors.gray200,
-    normal: colors.gray300,
-    dark: colors.gray400,
-    darker: colors.gray500,
-    darkest: colors.gray600,
+    white: colors.neutral0,
+    lightest: colors.neutral50,
+    lighter: colors.neutral100,
+    light: colors.neutral200,
+    normal: colors.neutral300,
+    dark: colors.neutral400,
+    darker: colors.neutral500,
+    darkest: colors.neutral600,
 
     washedPrimary: colors.primary50,
     primary: colors.primary500,
@@ -436,10 +436,10 @@ const colorBox = {
   },
   borderColors: {
     transparent: colors.transparent,
-    white: colors.white,
-    light: colors.gray100,
-    normal: colors.gray200,
-    dark: colors.gray300,
+    white: colors.neutral0,
+    light: colors.neutral100,
+    normal: colors.neutral200,
+    dark: colors.neutral300,
     primary: colors.primary100,
     success: colors.success100,
     warning: colors.warning100,
@@ -463,10 +463,10 @@ const link = {
     },
     muted: {
       normal: {
-        color: colors.gray600,
+        color: colors.neutral600,
       },
       hover: {
-        color: colors.gray700,
+        color: colors.neutral700,
       },
     },
   },

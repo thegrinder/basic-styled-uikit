@@ -23,14 +23,14 @@ Object {
     "white": "#fff",
   },
   "borderColors": Object {
-    "danger": "#ffcdd2",
+    "danger": undefined,
     "dark": "#dee2e6",
     "light": "#f8f9fa",
     "normal": "#e9ecef",
-    "primary": "#bbdefb",
-    "success": "#c8e6c9",
+    "primary": undefined,
+    "success": undefined,
     "transparent": "transparent",
-    "warning": "#fff9c4",
+    "warning": undefined,
     "white": "#fff",
   },
 }

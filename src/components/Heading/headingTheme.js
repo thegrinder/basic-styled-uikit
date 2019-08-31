@@ -22,10 +22,10 @@ const headingTheme = {
     },
   },
   colors: {
-    white: colors.white,
-    light: colors.gray700,
-    default: colors.gray800,
-    dark: colors.gray900,
+    white: colors.neutral0,
+    light: colors.neutral700,
+    default: colors.neutral800,
+    dark: colors.neutral900,
     black: colors.black,
 
     primary: colors.primary500,

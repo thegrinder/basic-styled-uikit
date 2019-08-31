@@ -6,23 +6,23 @@ const formTheme = {
     states: {
       valid: {
         normal: {
-          backgroundColor: colors.white,
-          borderColor: colors.gray300,
-          color: colors.gray700,
+          backgroundColor: colors.neutral0,
+          borderColor: colors.neutral300,
+          color: colors.neutral700,
         },
         active: {
-          backgroundColor: colors.white,
+          backgroundColor: colors.neutral0,
           borderColor: colors.primary500,
-          color: colors.gray700,
+          color: colors.neutral700,
         },
         disabled: {
-          backgroundColor: colors.gray100,
-          borderColor: colors.gray300,
-          color: colors.gray600,
+          backgroundColor: colors.neutral100,
+          borderColor: colors.neutral300,
+          color: colors.neutral600,
         },
       },
       invalid: {
-        backgroundColor: colors.white,
+        backgroundColor: colors.neutral0,
         color: colors.danger500,
         borderColor: colors.danger500,
       },
@@ -39,22 +39,22 @@ const formTheme = {
         normal: {
           backgroundColor: colors.transparent,
           borderColor: colors.transparent,
-          color: colors.gray700,
+          color: colors.neutral700,
         },
         hover: {
           backgroundColor: colors.transparent,
-          borderColor: colors.gray300,
-          color: colors.gray700,
+          borderColor: colors.neutral300,
+          color: colors.neutral700,
         },
         active: {
           backgroundColor: colors.transparent,
           borderColor: colors.primary500,
-          color: colors.gray700,
+          color: colors.neutral700,
         },
         disabled: {
-          backgroundColor: colors.gray100,
-          borderColor: colors.gray300,
-          color: colors.gray600,
+          backgroundColor: colors.neutral100,
+          borderColor: colors.neutral300,
+          color: colors.neutral600,
         },
       },
       invalid: {
@@ -73,7 +73,7 @@ const formTheme = {
     states: {
       valid: {
         normal: {
-          borderColor: colors.gray300,
+          borderColor: colors.neutral300,
           backgroundColor: colors.transparent,
         },
         active: {
@@ -98,7 +98,7 @@ const formTheme = {
   toggle: {
     states: {
       normal: {
-        backgroundColor: colors.gray400,
+        backgroundColor: colors.neutral400,
       },
       checked: {
         backgroundColor: colors.primary500,

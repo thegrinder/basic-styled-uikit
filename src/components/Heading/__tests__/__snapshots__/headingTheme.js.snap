@@ -3,7 +3,7 @@
 exports[`headingTheme should be defined 1`] = `
 Object {
   "colors": Object {
-    "black": "#161616",
+    "black": undefined,
     "danger": "#f44336",
     "dark": "#212529",
     "default": "#343a40",
