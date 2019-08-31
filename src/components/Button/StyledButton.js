@@ -25,6 +25,7 @@ const StyledButton = styled.button`
   outline: none;
   border-width: 1px;
   border-style: solid;
+  border-color: transparent;
   border-radius: ${rem(6)};
   &:disabled {
     opacity: .6;

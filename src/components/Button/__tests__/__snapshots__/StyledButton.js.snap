@@ -2,7 +2,7 @@
 
 exports[`<StyledButton /> should render <button> tag by default 1`] = `
 <button
-  class="StyledButton-k0ad56-0 fbIzHI"
+  class="StyledButton-k0ad56-0 kgANWa"
 >
   <span>
     children
@@ -12,7 +12,7 @@ exports[`<StyledButton /> should render <button> tag by default 1`] = `
 
 exports[`<StyledButton /> should render correctly with custom props 1`] = `
 <button
-  class="StyledButton-k0ad56-0 jwgXI"
+  class="StyledButton-k0ad56-0 jEklKx"
 >
   <span>
     children
@@ -22,7 +22,7 @@ exports[`<StyledButton /> should render correctly with custom props 1`] = `
 
 exports[`<StyledButton /> should render correctly with default props and children 1`] = `
 <button
-  class="StyledButton-k0ad56-0 fbIzHI"
+  class="StyledButton-k0ad56-0 kgANWa"
 >
   <span>
     children

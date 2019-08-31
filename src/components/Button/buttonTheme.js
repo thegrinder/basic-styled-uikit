@@ -1,56 +1,42 @@
+import { darken } from 'polished';
 import colors from '../../theme/colors';
 
 const buttonTheme = {
   btnTypes: {
     default: {
       normal: {
-        color: colors.black,
-        backgroundColor: colors.gray400,
-        borderColor: colors.transparent,
+        color: colors.white,
+        backgroundColor: colors.gray600,
       },
       hover: {
-        color: colors.black,
-        backgroundColor: colors.gray450,
-        borderColor: colors.transparent,
+        backgroundColor: darken(0.1, colors.gray600),
       },
       active: {
-        color: colors.black,
-        backgroundColor: colors.gray500,
-        borderColor: colors.transparent,
+        backgroundColor: darken(0.15, colors.gray600),
       },
     },
     primary: {
       normal: {
         color: colors.white,
         backgroundColor: colors.primary500,
-        borderColor: colors.transparent,
       },
       hover: {
-        color: colors.white,
-        backgroundColor: colors.primary600,
-        borderColor: colors.transparent,
+        backgroundColor: darken(0.1, colors.primary500),
       },
       active: {
-        color: colors.white,
-        backgroundColor: colors.primary700,
-        borderColor: colors.transparent,
+        backgroundColor: darken(0.15, colors.primary500),
       },
     },
     danger: {
       normal: {
         color: colors.white,
         backgroundColor: colors.danger500,
-        borderColor: colors.transparent,
       },
       hover: {
-        color: colors.white,
-        backgroundColor: colors.danger600,
-        borderColor: colors.transparent,
+        backgroundColor: darken(0.1, colors.danger500),
       },
       active: {
-        color: colors.white,
-        backgroundColor: colors.danger700,
-        borderColor: colors.transparent,
+        backgroundColor: darken(0.15, colors.danger500),
       },
     },
   },

@@ -5,52 +5,37 @@ Object {
   "btnTypes": Object {
     "danger": Object {
       "active": Object {
-        "backgroundColor": "#d32f2f",
-        "borderColor": "transparent",
-        "color": "#fff",
+        "backgroundColor": "#d2190b",
       },
       "hover": Object {
-        "backgroundColor": "#e53935",
-        "borderColor": "transparent",
-        "color": "#fff",
+        "backgroundColor": "#ea1c0d",
       },
       "normal": Object {
         "backgroundColor": "#f44336",
-        "borderColor": "transparent",
         "color": "#fff",
       },
     },
     "default": Object {
       "active": Object {
-        "backgroundColor": "#adb5bd",
-        "borderColor": "transparent",
-        "color": "#161616",
+        "backgroundColor": "#60686f",
       },
       "hover": Object {
-        "backgroundColor": "#bec5cc",
-        "borderColor": "transparent",
-        "color": "#161616",
+        "backgroundColor": "#6c757d",
       },
       "normal": Object {
-        "backgroundColor": "#ced4da",
-        "borderColor": "transparent",
-        "color": "#161616",
+        "backgroundColor": "#868e96",
+        "color": "#fff",
       },
     },
     "primary": Object {
       "active": Object {
-        "backgroundColor": "#1976d2",
-        "borderColor": "transparent",
-        "color": "#fff",
+        "backgroundColor": "#0a6ebd",
       },
       "hover": Object {
-        "backgroundColor": "#1e88e5",
-        "borderColor": "transparent",
-        "color": "#fff",
+        "backgroundColor": "#0c7cd5",
       },
       "normal": Object {
         "backgroundColor": "#2196f3",
-        "borderColor": "transparent",
         "color": "#fff",
       },
     },
