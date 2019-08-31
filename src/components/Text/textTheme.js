@@ -15,18 +15,7 @@ const textTheme = {
       fontSize: '.75rem',
     },
   },
-  colors: {
-    white: colors.neutral0,
-    light: colors.neutral600,
-    default: colors.neutral700,
-    dark: colors.neutral800,
-    black: colors.black,
-
-    primary: colors.primary500,
-    success: colors.success500,
-    warning: colors.warning500,
-    danger: colors.danger500,
-  },
+  colors,
   common: {
     fontWeight: 400,
     fontFamily: 'Lato, Arial, Helvetica, sans-serif',

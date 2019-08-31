@@ -5,7 +5,11 @@ import StyledText from './StyledText';
 const propTypes = {
   /** determines the size of the text; one of: l, m, s, xs */
   sizing: string,
-  /** one of: white, light, default, dark, black, primary, success, warning, danger */
+  /**
+   * one of: neutral0, neutral50, neutral100, neutral200, neutral300, neutral400,
+   * neutral500, neutral600, neutral700, neutral800, neutral900, neutral1000,
+   * primary500, success500, danger500, warning500
+   * */
   color: string,
   /** rendered html tag */
   as: oneOf(['span', 'p']),
