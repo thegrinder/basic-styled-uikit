@@ -37,7 +37,11 @@ import { Spacer, Spinner, Icon } from '../../../docz';
 ### Disabled button
 
 <Playground>
-  <Button disabled={true}>disabled</Button>
+  <Button className="mb" disabled={true}>default</Button>
+  <Spacer />
+  <Button btnType="primary" disabled={true}>primary</Button>
+  <Spacer />
+  <Button btnType="danger" disabled={true}>danger</Button>
 </Playground>
 
 
