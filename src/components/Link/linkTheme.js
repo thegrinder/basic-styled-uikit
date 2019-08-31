@@ -1,3 +1,4 @@
+import { darken } from 'polished';
 import colors from '../../theme/colors';
 
 const linkTheme = {
@@ -7,7 +8,7 @@ const linkTheme = {
         color: colors.primary500,
       },
       hover: {
-        color: colors.primary600,
+        color: darken(0.1, colors.primary500),
       },
     },
     muted: {
@@ -15,7 +16,7 @@ const linkTheme = {
         color: colors.gray600,
       },
       hover: {
-        color: colors.gray700,
+        color: darken(0.1, colors.gray600),
       },
     },
   },
