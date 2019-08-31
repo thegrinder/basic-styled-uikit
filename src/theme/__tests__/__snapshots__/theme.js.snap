@@ -110,13 +110,11 @@ Object {
         },
         "states": Object {
           "invalid": Object {
-            "backgroundColor": undefined,
             "borderColor": "#f44336",
             "color": "#f44336",
           },
           "valid": Object {
             "active": Object {
-              "backgroundColor": undefined,
               "borderColor": "#2196f3",
               "color": "#495057",
             },
@@ -126,13 +124,10 @@ Object {
               "color": "#868e96",
             },
             "hover": Object {
-              "backgroundColor": undefined,
               "borderColor": "#dee2e6",
               "color": "#495057",
             },
             "normal": Object {
-              "backgroundColor": undefined,
-              "borderColor": undefined,
               "color": "#495057",
             },
           },
@@ -142,12 +137,10 @@ Object {
         "common": Object {},
         "states": Object {
           "invalid": Object {
-            "backgroundColor": undefined,
             "borderColor": "#f44336",
           },
           "valid": Object {
             "active": Object {
-              "backgroundColor": undefined,
               "borderColor": "#2196f3",
             },
             "checked": Object {
@@ -155,7 +148,6 @@ Object {
               "borderColor": undefined,
             },
             "normal": Object {
-              "backgroundColor": undefined,
               "borderColor": "#dee2e6",
             },
           },
@@ -168,13 +160,11 @@ Object {
         },
         "states": Object {
           "invalid": Object {
-            "backgroundColor": "#fff",
             "borderColor": "#f44336",
             "color": "#f44336",
           },
           "valid": Object {
             "active": Object {
-              "backgroundColor": "#fff",
               "borderColor": "#2196f3",
               "color": "#495057",
             },
@@ -184,7 +174,6 @@ Object {
               "color": "#868e96",
             },
             "normal": Object {
-              "backgroundColor": "#fff",
               "borderColor": "#dee2e6",
               "color": "#495057",
             },

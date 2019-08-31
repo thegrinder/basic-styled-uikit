@@ -6,23 +6,20 @@ const formTheme = {
     states: {
       valid: {
         normal: {
-          backgroundColor: colors.neutral0,
           borderColor: colors.neutral300,
           color: colors.neutral700,
         },
         active: {
-          backgroundColor: colors.neutral0,
           borderColor: colors.primary500,
           color: colors.neutral700,
         },
         disabled: {
-          backgroundColor: colors.neutral100,
           borderColor: colors.neutral300,
           color: colors.neutral600,
+          backgroundColor: colors.neutral100,
         },
       },
       invalid: {
-        backgroundColor: colors.neutral0,
         color: colors.danger500,
         borderColor: colors.danger500,
       },
@@ -37,28 +34,23 @@ const formTheme = {
     states: {
       valid: {
         normal: {
-          backgroundColor: colors.transparent,
-          borderColor: colors.transparent,
           color: colors.neutral700,
         },
         hover: {
-          backgroundColor: colors.transparent,
           borderColor: colors.neutral300,
           color: colors.neutral700,
         },
         active: {
-          backgroundColor: colors.transparent,
           borderColor: colors.primary500,
           color: colors.neutral700,
         },
         disabled: {
-          backgroundColor: colors.neutral100,
           borderColor: colors.neutral300,
           color: colors.neutral600,
+          backgroundColor: colors.neutral100,
         },
       },
       invalid: {
-        backgroundColor: colors.transparent,
         color: colors.danger500,
         borderColor: colors.danger500,
       },
@@ -74,11 +66,9 @@ const formTheme = {
       valid: {
         normal: {
           borderColor: colors.neutral300,
-          backgroundColor: colors.transparent,
         },
         active: {
           borderColor: colors.primary500,
-          backgroundColor: colors.transparent,
         },
         checked: {
           borderColor: colors.transparent,
@@ -89,7 +79,6 @@ const formTheme = {
       },
       invalid: {
         borderColor: colors.danger500,
-        backgroundColor: colors.transparent,
       },
     },
     common: {},

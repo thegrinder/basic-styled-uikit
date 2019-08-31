@@ -13,6 +13,8 @@ export const commonInputStyles = css`
   width: 100%;
   border-width: 1px;
   border-style: solid;
+  border-color: transparent;
+  background-color: transparent;
   transition: .2s ease-in-out;
   transition-property: color, background-color, border;
   border-radius: ${rem(6)};
@@ -39,6 +41,7 @@ export const miscInputStyles = css`
   width: ${rem(24)};
   margin-top: ${rem(-4)};
   vertical-align: middle;
+  background-color: transparent;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   border-width: 1px;

@@ -15,6 +15,8 @@ const StyledInlineInput = styled.input`
   width: 100%;
   border-width: 1px;
   border-style: solid;
+  border-color: transparent;
+  background-color: transparent;
   transition: .2s ease-in-out;
   transition-property: color, background-color, border;
   overflow: visible;
