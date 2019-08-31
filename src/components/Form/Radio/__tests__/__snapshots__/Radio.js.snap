@@ -2,21 +2,21 @@
 
 exports[`<Radio /> should render <input> tag with type radio 1`] = `
 <input
-  class="StyledRadio-sc-1q7ubkv-0 bWfyFq"
+  class="StyledRadio-sc-1q7ubkv-0 bLCHgq"
   type="radio"
 />
 `;
 
 exports[`<Radio /> should render correctly with custom props 1`] = `
 <input
-  class="StyledRadio-sc-1q7ubkv-0 lcVkSD"
+  class="StyledRadio-sc-1q7ubkv-0 ihHYvJ"
   type="radio"
 />
 `;
 
 exports[`<Radio /> should render correctly with default props 1`] = `
 <input
-  class="StyledRadio-sc-1q7ubkv-0 bWfyFq"
+  class="StyledRadio-sc-1q7ubkv-0 bLCHgq"
   type="radio"
 />
 `;

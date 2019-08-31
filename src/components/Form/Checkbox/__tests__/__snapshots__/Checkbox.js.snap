@@ -2,21 +2,21 @@
 
 exports[`<Checkbox /> should render <input> tag with type checkbox 1`] = `
 <input
-  class="StyledCheckbox-sc-1u8r4za-0 dILBxW"
+  class="StyledCheckbox-sc-1u8r4za-0 hARdbY"
   type="checkbox"
 />
 `;
 
 exports[`<Checkbox /> should render correctly with custom props 1`] = `
 <input
-  class="StyledCheckbox-sc-1u8r4za-0 jdmTDq"
+  class="StyledCheckbox-sc-1u8r4za-0 eCtXtU"
   type="checkbox"
 />
 `;
 
 exports[`<Checkbox /> should render correctly with default props 1`] = `
 <input
-  class="StyledCheckbox-sc-1u8r4za-0 dILBxW"
+  class="StyledCheckbox-sc-1u8r4za-0 hARdbY"
   type="checkbox"
 />
 `;

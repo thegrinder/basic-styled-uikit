@@ -2,8 +2,6 @@ import colors from '../../theme/colors';
 
 const colorBoxTheme = {
   bgColors: {
-    transparent: colors.transparent,
-    inherit: colors.inherit,
     white: colors.neutral0,
     lightest: colors.neutral50,
     lighter: colors.neutral100,
@@ -13,13 +11,9 @@ const colorBoxTheme = {
     darker: colors.neutral500,
     darkest: colors.neutral600,
 
-    washedPrimary: colors.primary50,
     primary: colors.primary500,
-    washedSuccess: colors.success50,
     success: colors.success500,
-    washedDanger: colors.danger50,
     danger: colors.danger500,
-    washedWarning: colors.warning50,
     warning: colors.warning500,
   },
   elevations: {

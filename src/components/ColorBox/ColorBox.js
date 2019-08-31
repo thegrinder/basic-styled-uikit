@@ -5,8 +5,8 @@ import { getBoxBgColor, getBoxElevation } from './colorBoxSelectors';
 
 const propTypes = {
   /**
-   * one of: transparent, inherit, white, lightest, lighter, light, normal, dark, darker, darkest,
-   * washedPrimary, primary, washedSuccess, success, washedDanger, danger, washedWarning, warning
+   * one of: white, lightest, lighter, light, normal, dark, darker, darkest,
+   * primary, success, danger, warning
    * */
   bgColor: string,
   /** one of: 1, 2 */

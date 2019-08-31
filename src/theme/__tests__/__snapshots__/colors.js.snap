@@ -2,9 +2,7 @@
 
 exports[`colors should be defined 1`] = `
 Object {
-  "danger50": "#ffebee",
   "danger500": "#f44336",
-  "inherit": "inherit",
   "neutral0": "#fff",
   "neutral100": "#f8f9fa",
   "neutral1000": "#161616",
@@ -17,12 +15,8 @@ Object {
   "neutral700": "#495057",
   "neutral800": "#343a40",
   "neutral900": "#212529",
-  "primary50": "#e3f2fd",
   "primary500": "#2196f3",
-  "success50": "#e8f5e9",
   "success500": "#4caf50",
-  "transparent": "transparent",
-  "warning50": "#fffde7",
   "warning500": "#ffeb3b",
 }
 `;

@@ -70,19 +70,13 @@ Object {
         "dark": "#ced4da",
         "darker": "#adb5bd",
         "darkest": "#868e96",
-        "inherit": "inherit",
         "light": "#e9ecef",
         "lighter": "#f8f9fa",
         "lightest": "#fafafa",
         "normal": "#dee2e6",
         "primary": "#2196f3",
         "success": "#4caf50",
-        "transparent": "transparent",
         "warning": "#ffeb3b",
-        "washedDanger": "#ffebee",
-        "washedPrimary": "#e3f2fd",
-        "washedSuccess": "#e8f5e9",
-        "washedWarning": "#fffde7",
         "white": "#fff",
       },
       "elevations": Object {
@@ -91,9 +85,7 @@ Object {
       },
     },
     "colors": Object {
-      "danger50": "#ffebee",
       "danger500": "#f44336",
-      "inherit": "inherit",
       "neutral0": "#fff",
       "neutral100": "#f8f9fa",
       "neutral1000": "#161616",
@@ -106,12 +98,8 @@ Object {
       "neutral700": "#495057",
       "neutral800": "#343a40",
       "neutral900": "#212529",
-      "primary50": "#e3f2fd",
       "primary500": "#2196f3",
-      "success50": "#e8f5e9",
       "success500": "#4caf50",
-      "transparent": "transparent",
-      "warning50": "#fffde7",
       "warning500": "#ffeb3b",
     },
     "form": Object {
@@ -122,13 +110,13 @@ Object {
         },
         "states": Object {
           "invalid": Object {
-            "backgroundColor": "transparent",
+            "backgroundColor": undefined,
             "borderColor": "#f44336",
             "color": "#f44336",
           },
           "valid": Object {
             "active": Object {
-              "backgroundColor": "transparent",
+              "backgroundColor": undefined,
               "borderColor": "#2196f3",
               "color": "#495057",
             },
@@ -138,13 +126,13 @@ Object {
               "color": "#868e96",
             },
             "hover": Object {
-              "backgroundColor": "transparent",
+              "backgroundColor": undefined,
               "borderColor": "#dee2e6",
               "color": "#495057",
             },
             "normal": Object {
-              "backgroundColor": "transparent",
-              "borderColor": "transparent",
+              "backgroundColor": undefined,
+              "borderColor": undefined,
               "color": "#495057",
             },
           },
@@ -154,20 +142,20 @@ Object {
         "common": Object {},
         "states": Object {
           "invalid": Object {
-            "backgroundColor": "transparent",
+            "backgroundColor": undefined,
             "borderColor": "#f44336",
           },
           "valid": Object {
             "active": Object {
-              "backgroundColor": "transparent",
+              "backgroundColor": undefined,
               "borderColor": "#2196f3",
             },
             "checked": Object {
               "backgroundColor": "#2196f3",
-              "borderColor": "transparent",
+              "borderColor": undefined,
             },
             "normal": Object {
-              "backgroundColor": "transparent",
+              "backgroundColor": undefined,
               "borderColor": "#dee2e6",
             },
           },
