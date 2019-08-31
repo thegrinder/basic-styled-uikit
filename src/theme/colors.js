@@ -4,7 +4,6 @@ export const getColor = color => ({ theme }) => getColors(theme)[color];
 
 const colors = {
   neutral0: '#fff',
-  neutral50: '#fafafa',
   neutral100: '#f8f9fa',
   neutral200: '#e9ecef',
   neutral300: '#dee2e6',

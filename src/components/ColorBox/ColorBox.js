@@ -5,7 +5,7 @@ import { getBoxBgColor, getBoxElevation } from './colorBoxSelectors';
 
 const propTypes = {
   /**
-   * one of: neutral0, neutral50, neutral100, neutral200, neutral300, neutral400,
+   * one of: neutral0, neutral100, neutral200, neutral300, neutral400,
    * neutral500, neutral600, neutral700, neutral800, neutral900, neutral1000,
    * primary500, success500, danger500, warning500
    * */
