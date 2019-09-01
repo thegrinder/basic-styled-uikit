@@ -15,6 +15,11 @@ Object {
     "fontFamily": "Lato, Arial, Helvetica, sans-serif",
     "fontWeight": 700,
   },
+  "opacities": Object {
+    "high": 1,
+    "low": 0.6,
+    "normal": 0.8,
+  },
   "sizings": Object {
     "h1": Object {
       "fontSize": "3rem",

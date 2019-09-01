@@ -4,10 +4,12 @@ import {
   getTextSizingStyle,
   getTextColor,
   getTextCommonStyle,
+  getTextOpacity,
 } from '../textSelectors';
 
 const {
   sizings,
+  opacities,
   colors,
   common,
 } = textTheme;
@@ -22,6 +24,14 @@ describe('textTheme selectors', () => {
 
     it('should return empty object if sizing is invalid', () => {
       expect(getTextSizingStyle(theme, 'invalidSizing')).toEqual({});
+    });
+  });
+
+  describe('getTextOpacity', () => {
+    Object.keys(opacities).forEach((emphasis) => {
+      it('should return the correct opacity', () => {
+        expect(getTextOpacity(theme, emphasis)).toEqual(opacities[emphasis]);
+      });
     });
   });
 

@@ -15,6 +15,7 @@ const renderComponent = (props = {}) => render(
       sizing="h1"
       color="primary"
       marginBottom={true}
+      emphasis="high"
       {...props}
     >
       {children}

@@ -15,6 +15,7 @@ const renderComponent = () => render(
       color="primary"
       sizing="s"
       marginBottom={false}
+      emphasis="high"
     >
       {children}
     </StyledText>

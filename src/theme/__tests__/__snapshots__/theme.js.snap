@@ -205,6 +205,11 @@ Object {
         "fontFamily": "Lato, Arial, Helvetica, sans-serif",
         "fontWeight": 700,
       },
+      "opacities": Object {
+        "high": 1,
+        "low": 0.6,
+        "normal": 0.8,
+      },
       "sizings": Object {
         "h1": Object {
           "fontSize": "3rem",
@@ -252,9 +257,7 @@ Object {
     "text": Object {
       "colors": Object {
         "danger": "#f44336",
-        "neutral1000": "#161616",
-        "neutral600": "#868e96",
-        "neutral800": "#343a40",
+        "neutral": "#161616",
         "primary": "#2196f3",
         "success": "#4caf50",
         "warning": "#ffeb3b",
@@ -262,6 +265,11 @@ Object {
       "common": Object {
         "fontFamily": "Lato, Arial, Helvetica, sans-serif",
         "fontWeight": 400,
+      },
+      "opacities": Object {
+        "high": 1,
+        "low": 0.6,
+        "normal": 0.8,
       },
       "sizings": Object {
         "l": Object {

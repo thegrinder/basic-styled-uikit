@@ -5,12 +5,14 @@ import {
   getHeadingSizingStyle,
   getHeadingColor,
   getHeadingCommonStyle,
+  getHeadingOpacity,
 } from './headingSelectors';
 
 const propTypes = {
   color: string.isRequired,
   sizing: string.isRequired,
   marginBottom: bool.isRequired,
+  emphasis: string.isRequired,
 };
 
 const StyledHeading = styled.h1`
@@ -20,6 +22,7 @@ const StyledHeading = styled.h1`
     color,
     sizing,
     marginBottom,
+    emphasis,
   }) => {
     const baseLineHeight = getBaseLineHeight(theme);
     const sizingStyle = getHeadingSizingStyle(theme, sizing);
@@ -28,6 +31,7 @@ const StyledHeading = styled.h1`
       color: ${getHeadingColor(theme, color)};
       line-height: ${calcLineHeight(sizingStyle.fontSize, baseLineHeight)};
       margin-bottom: ${marginBottom ? `${baseLineHeight}rem` : '0'};
+      opacity: ${getHeadingOpacity(theme, emphasis)};
       ${sizingStyle}
     `;
   }}

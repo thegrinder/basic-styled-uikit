@@ -5,12 +5,10 @@ import StyledText from './StyledText';
 const propTypes = {
   /** determines the size of the text; one of: l, m, s, xs */
   sizing: string,
-  /**
-   * one of: neutral0, neutral100, neutral200, neutral300, neutral400,
-   * neutral500, neutral600, neutral700, neutral800, neutral900, neutral1000,
-   * primary500, success500, danger500, warning500
-   * */
+  /** one of: neutral, primary, success, danger, warning */
   color: string,
+  /** one of: high, normal, low */
+  emphasis: string,
   /** rendered html tag */
   as: oneOf(['span', 'p']),
   /** if true adds a bottom margin according to vertical rhythm */
@@ -22,12 +20,14 @@ const defaultProps = {
   color: 'default',
   as: 'span',
   marginBottom: false,
+  emphasis: 'high',
 };
 
 const Text = ({
   sizing,
   color,
   marginBottom,
+  emphasis,
   as,
   ...rest
 }) => (
@@ -36,6 +36,7 @@ const Text = ({
       marginBottom={marginBottom}
       sizing={sizing}
       color={color}
+      emphasis={emphasis}
       {...rest}
     />
 );

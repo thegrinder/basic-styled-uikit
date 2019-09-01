@@ -4,11 +4,13 @@ import {
   getHeadingSizingStyle,
   getHeadingColor,
   getHeadingCommonStyle,
+  getHeadingOpacity,
 } from '../headingSelectors';
 
 const {
   sizings,
   colors,
+  opacities,
   common,
 } = headingTheme;
 
@@ -29,6 +31,14 @@ describe('headingTheme selectors', () => {
     Object.keys(colors).forEach((color) => {
       it('should return the correct color', () => {
         expect(getHeadingColor(theme, color)).toEqual(colors[color]);
+      });
+    });
+  });
+
+  describe('getHeadingOpacity', () => {
+    Object.keys(opacities).forEach((emphasis) => {
+      it('should return the correct opacity', () => {
+        expect(getHeadingOpacity(theme, emphasis)).toEqual(opacities[emphasis]);
       });
     });
   });

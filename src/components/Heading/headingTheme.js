@@ -41,6 +41,11 @@ const headingTheme = {
       fontSize: '1rem',
     },
   },
+  opacities: {
+    high: 1,
+    normal: 0.8,
+    low: 0.6,
+  },
   colors: lightThemeHeadingColors,
   common: {
     fontWeight: 700,

@@ -1,9 +1,7 @@
 import colors from '../../theme/colors';
 
 const lightThemeTextColors = {
-  neutral1000: colors.neutral1000,
-  neutral800: colors.neutral800,
-  neutral600: colors.neutral600,
+  neutral: colors.neutral1000,
   primary: colors.primary500,
   success: colors.success500,
   warning: colors.warning500,
@@ -11,9 +9,7 @@ const lightThemeTextColors = {
 };
 
 // const darkThemeTextColors = {
-//   neutral1000: colors.neutral0,
-//   neutral800: colors.neutral500,
-//   neutral600: colors.neutral600,
+//   neutral: colors.neutral0,
 //   primary: colors.primary200,
 //   success: colors.success200,
 //   warning: colors.warning200,
@@ -34,6 +30,11 @@ const textTheme = {
     xs: {
       fontSize: '.75rem',
     },
+  },
+  opacities: {
+    high: 1,
+    normal: 0.8,
+    low: 0.6,
   },
   colors: lightThemeTextColors,
   common: {

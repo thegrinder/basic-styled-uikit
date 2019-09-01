@@ -2,7 +2,7 @@
 
 exports[`<Heading /> should render <h1> tag 1`] = `
 <h1
-  class="StyledHeading-fbinjh-0 jxzUxG"
+  class="StyledHeading-fbinjh-0 fSrojU"
   color="default"
 >
   children
@@ -11,7 +11,7 @@ exports[`<Heading /> should render <h1> tag 1`] = `
 
 exports[`<Heading /> should render <h2> tag 1`] = `
 <h2
-  class="StyledHeading-fbinjh-0 hHcNLs"
+  class="StyledHeading-fbinjh-0 csERFs"
   color="default"
 >
   children
@@ -20,7 +20,7 @@ exports[`<Heading /> should render <h2> tag 1`] = `
 
 exports[`<Heading /> should render <h3> tag 1`] = `
 <h3
-  class="StyledHeading-fbinjh-0 eOqyG"
+  class="StyledHeading-fbinjh-0 eznFus"
   color="default"
 >
   children
@@ -29,7 +29,7 @@ exports[`<Heading /> should render <h3> tag 1`] = `
 
 exports[`<Heading /> should render <h4> tag 1`] = `
 <h4
-  class="StyledHeading-fbinjh-0 fCjATb"
+  class="StyledHeading-fbinjh-0 hGqhyU"
   color="default"
 >
   children
@@ -38,7 +38,7 @@ exports[`<Heading /> should render <h4> tag 1`] = `
 
 exports[`<Heading /> should render <h5> tag 1`] = `
 <h5
-  class="StyledHeading-fbinjh-0 geOWkI"
+  class="StyledHeading-fbinjh-0 icpoXR"
   color="default"
 >
   children
@@ -47,7 +47,7 @@ exports[`<Heading /> should render <h5> tag 1`] = `
 
 exports[`<Heading /> should render <h6> tag 1`] = `
 <h6
-  class="StyledHeading-fbinjh-0 hYyVBW"
+  class="StyledHeading-fbinjh-0 dYyVrY"
   color="default"
 >
   children
@@ -56,7 +56,7 @@ exports[`<Heading /> should render <h6> tag 1`] = `
 
 exports[`<Heading /> should render correctly with custom props 1`] = `
 <h3
-  class="StyledHeading-fbinjh-0 bEjsBB"
+  class="StyledHeading-fbinjh-0 iuCitB"
   color="primary"
 >
   children
@@ -65,7 +65,7 @@ exports[`<Heading /> should render correctly with custom props 1`] = `
 
 exports[`<Heading /> should render correctly with default props 1`] = `
 <h1
-  class="StyledHeading-fbinjh-0 jxzUxG"
+  class="StyledHeading-fbinjh-0 fSrojU"
   color="default"
 >
   children
@@ -74,7 +74,7 @@ exports[`<Heading /> should render correctly with default props 1`] = `
 
 exports[`<Heading /> should render should large <h6> heading 1`] = `
 <h6
-  class="StyledHeading-fbinjh-0 jxzUxG"
+  class="StyledHeading-fbinjh-0 fSrojU"
   color="default"
 >
   children
