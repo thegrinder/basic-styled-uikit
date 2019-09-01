@@ -16,7 +16,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  color: 'default',
+  color: 'neutral',
   marginBottom: false,
   emphasis: 'high',
 };

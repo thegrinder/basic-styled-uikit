@@ -13,6 +13,20 @@ Object {
     "fontFamily": "Lato, Arial, Helvetica, sans-serif",
     "fontWeight": 400,
   },
+  "onBackground": Object {
+    "danger": Object {
+      "neutral": "#fff",
+    },
+    "primary": Object {
+      "neutral": "#fff",
+    },
+    "success": Object {
+      "neutral": "#fff",
+    },
+    "warning": Object {
+      "neutral": "#fff",
+    },
+  },
   "opacities": Object {
     "high": 1,
     "low": 0.6,

@@ -1,13 +1,5 @@
 import colors from '../../theme/colors';
 
-const lightThemeTextColors = {
-  neutral: colors.neutral1000,
-  primary: colors.primary500,
-  success: colors.success500,
-  warning: colors.warning500,
-  danger: colors.danger500,
-};
-
 // const darkThemeTextColors = {
 //   neutral: colors.neutral0,
 //   primary: colors.primary200,
@@ -36,7 +28,27 @@ const textTheme = {
     normal: 0.8,
     low: 0.6,
   },
-  colors: lightThemeTextColors,
+  colors: {
+    neutral: colors.neutral1000,
+    primary: colors.primary500,
+    success: colors.success500,
+    warning: colors.warning500,
+    danger: colors.danger500,
+  },
+  onBackground: {
+    primary: {
+      neutral: colors.neutral0,
+    },
+    success: {
+      neutral: colors.neutral0,
+    },
+    warning: {
+      neutral: colors.neutral0,
+    },
+    danger: {
+      neutral: colors.neutral0,
+    },
+  },
   common: {
     fontWeight: 400,
     fontFamily: 'Lato, Arial, Helvetica, sans-serif',

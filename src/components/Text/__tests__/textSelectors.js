@@ -1,8 +1,10 @@
 import theme from '../../../theme/theme';
+import colorPalette from '../../../theme/colors';
 import textTheme from '../textTheme';
 import {
   getTextSizingStyle,
   getTextColor,
+  getTextColorOnBg,
   getTextCommonStyle,
   getTextOpacity,
 } from '../textSelectors';
@@ -12,6 +14,7 @@ const {
   opacities,
   colors,
   common,
+  onBackground,
 } = textTheme;
 
 describe('textTheme selectors', () => {
@@ -39,6 +42,20 @@ describe('textTheme selectors', () => {
     Object.keys(colors).forEach((color) => {
       it('should return the correct color', () => {
         expect(getTextColor(theme, color)).toEqual(colors[color]);
+      });
+    });
+  });
+
+  describe('getTextColorOnBg', () => {
+    it('should default to the main text color theme if no corresponding background found', () => {
+      expect(getTextColorOnBg(theme, 'noop', 'primary')).toEqual(colors.primary);
+    });
+
+    Object.keys(onBackground).forEach((bgColor) => {
+      Object.keys(onBackground[bgColor]).forEach((color) => {
+        it('should return the correct color', () => {
+          expect(getTextColorOnBg(theme, bgColor, color)).toEqual(colorPalette.neutral0);
+        });
       });
     });
   });

@@ -7,6 +7,7 @@ import {
   getTextColor,
   getTextCommonStyle,
   getTextOpacity,
+  getTextColorOnBg,
 } from './textSelectors';
 
 const propTypes = {
@@ -14,6 +15,8 @@ const propTypes = {
   sizing: string.isRequired,
   marginBottom: bool.isRequired,
   emphasis: string.isRequired,
+  ignoreBg: bool.isRequired,
+  bgColor: string,
 };
 
 const StyledText = styled.span`
@@ -24,12 +27,14 @@ const StyledText = styled.span`
     sizing,
     marginBottom,
     emphasis,
+    ignoreBg,
+    bgColor,
   }) => {
     const baseLineHeight = getBaseLineHeight(theme);
     const sizingStyle = getTextSizingStyle(theme, sizing);
     return css`
       ${getTextCommonStyle(theme)}
-      color: ${getTextColor(theme, color)};
+      color: ${ignoreBg ? getTextColor(theme, color) : getTextColorOnBg(theme, bgColor, color)};
       line-height: ${calcLineHeight(sizingStyle.fontSize, baseLineHeight)};
       margin-bottom: ${marginBottom ? `${getBaseLineHeight(theme)}rem` : '0'};
       opacity: ${getTextOpacity(theme, emphasis)};

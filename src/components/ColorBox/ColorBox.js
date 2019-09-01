@@ -2,6 +2,7 @@ import React from 'react';
 import { string, number } from 'prop-types';
 
 import StyledColorBox from './StyledColorBox';
+import { ColorBoxContext } from './context';
 
 const propTypes = {
   /** one of: neutral, primary, success, danger, warning */
@@ -10,7 +11,11 @@ const propTypes = {
   elevation: number,
 };
 
-const ColorBox = props => <StyledColorBox {...props} />;
+const ColorBox = props => (
+  <ColorBoxContext.Provider value={props.bgColor}>
+    <StyledColorBox {...props} />
+  </ColorBoxContext.Provider>
+);
 
 ColorBox.propTypes = propTypes;
 
