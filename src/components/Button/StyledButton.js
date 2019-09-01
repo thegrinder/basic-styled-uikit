@@ -19,7 +19,7 @@ const StyledButton = styled.button`
   display: inline-block;
   vertical-align: middle;
   text-decoration: none;
-  transition: .1s ease-in-out;
+  transition: 0.1s ease-in-out;
   transition-property: color, background-color, border-color;
   cursor: pointer;
   outline: none;
@@ -28,14 +28,10 @@ const StyledButton = styled.button`
   border-color: transparent;
   border-radius: ${rem(6)};
   &:disabled {
-    opacity: .6;
+    opacity: 0.6;
     cursor: default;
   }
-  ${({
-    theme,
-    btntype,
-    sizing,
-  }) => css`
+  ${({ theme, btntype, sizing }) => css`
     ${getBtnCommonStyle(theme)}
     ${getBtnSizingStyle(theme, sizing)}
     ${getBtnTypeStyle(theme, btntype, 'normal')}

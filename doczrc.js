@@ -5,11 +5,12 @@ export default {
   htmlContext: {
     head: {
       links: [
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato:400,700' },
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css?family=Lato:400,700',
+        },
       ],
-      raw: [
-        '<style>.border {border-width: 1px; border-style: solid;}</style>',
-      ],
+      raw: ['<style>.border {border-width: 1px; border-style: solid;}</style>'],
     },
   },
 };

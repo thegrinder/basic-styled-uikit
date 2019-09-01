@@ -21,22 +21,15 @@ const defaultProps = {
   emphasis: 'high',
 };
 
-const Heading = ({
-  sizing,
-  color,
-  emphasis,
-  marginBottom,
-  as,
-  ...rest
-}) => (
-    <StyledHeading
-      as={as}
-      sizing={sizing || as}
-      marginBottom={marginBottom}
-      color={color}
-      emphasis={emphasis}
-      {...rest}
-    />
+const Heading = ({ sizing, color, emphasis, marginBottom, as, ...rest }) => (
+  <StyledHeading
+    as={as}
+    sizing={sizing || as}
+    marginBottom={marginBottom}
+    color={color}
+    emphasis={emphasis}
+    {...rest}
+  />
 );
 
 Heading.propTypes = propTypes;

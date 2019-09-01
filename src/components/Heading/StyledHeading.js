@@ -17,13 +17,7 @@ const propTypes = {
 
 const StyledHeading = styled.h1`
   display: block;
-  ${({
-    theme,
-    color,
-    sizing,
-    marginBottom,
-    emphasis,
-  }) => {
+  ${({ theme, color, sizing, marginBottom, emphasis }) => {
     const baseLineHeight = getBaseLineHeight(theme);
     const sizingStyle = getHeadingSizingStyle(theme, sizing);
     return css`

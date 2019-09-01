@@ -13,14 +13,14 @@ const ToggleSlider = styled.span`
   width: 100%;
   height: ${({ h }) => rem(h)};
   border-radius: 9999px;
-  transition: background-color .2s;
+  transition: background-color 0.2s;
   cursor: ${({ disabled }) => (disabled ? 'default' : 'pointer')};
   opacity: ${({ disabled }) => (disabled ? 0.6 : 1)};
   &:before {
     content: '';
     position: absolute;
     top: 0;
-    transition: left .2s;
+    transition: left 0.2s;
     bottom: 0;
     margin: auto;
     height: ${({ h }) => rem(h - 8)};

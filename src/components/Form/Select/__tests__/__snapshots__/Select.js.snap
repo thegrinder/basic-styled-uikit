@@ -2,7 +2,7 @@
 
 exports[`<Select /> should render <select> tag 1`] = `
 <select
-  class="StyledSelect-sc-1r3g39b-0 cAxjiE"
+  class="StyledSelect-sc-1r3g39b-0 hKmhYf"
 >
   <option>
     option
@@ -12,7 +12,7 @@ exports[`<Select /> should render <select> tag 1`] = `
 
 exports[`<Select /> should render correctly with custom props 1`] = `
 <select
-  class="StyledSelect-sc-1r3g39b-0 ghFzdI"
+  class="StyledSelect-sc-1r3g39b-0 hkpkfQ"
 >
   <option>
     option
@@ -22,7 +22,7 @@ exports[`<Select /> should render correctly with custom props 1`] = `
 
 exports[`<Select /> should render correctly with default props and its children 1`] = `
 <select
-  class="StyledSelect-sc-1r3g39b-0 cAxjiE"
+  class="StyledSelect-sc-1r3g39b-0 hKmhYf"
 >
   <option>
     option

@@ -11,9 +11,9 @@ const propTypes = {
   elevation: number,
 };
 
-const ColorBox = props => (
-  <ColorBoxContext.Provider value={props.bgColor}>
-    <StyledColorBox {...props} />
+const ColorBox = ({ bgColor, ...rest }) => (
+  <ColorBoxContext.Provider value={bgColor}>
+    <StyledColorBox {...rest} />
   </ColorBoxContext.Provider>
 );
 

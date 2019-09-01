@@ -5,18 +5,23 @@
     "browser": true,
     "jest": true
   },
-  "extends": "airbnb-base",
-  "plugins": [
-    "react"
-  ],
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["react", "prettier"],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     }
   },
   "rules": {
-    "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error",
-    "import/no-useless-path-segments": "off"
+    "react/jsx-filename-extension": "off",
+    "react/require-default-props": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "tabWidth": 2,
+        "singleQuote": true,
+        "trailingComma": "es5",
+      },
+    ],
   }
 }

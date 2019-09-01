@@ -9,17 +9,11 @@ import {
   getTextOpacity,
 } from '../textSelectors';
 
-const {
-  sizings,
-  opacities,
-  colors,
-  common,
-  onBackground,
-} = textTheme;
+const { sizings, opacities, colors, common, onBackground } = textTheme;
 
 describe('textTheme selectors', () => {
   describe('getTextSizingStyle', () => {
-    Object.keys(sizings).forEach((sizing) => {
+    Object.keys(sizings).forEach(sizing => {
       it('should return the correct size style object', () => {
         expect(getTextSizingStyle(theme, sizing)).toEqual(sizings[sizing]);
       });
@@ -31,7 +25,7 @@ describe('textTheme selectors', () => {
   });
 
   describe('getTextOpacity', () => {
-    Object.keys(opacities).forEach((emphasis) => {
+    Object.keys(opacities).forEach(emphasis => {
       it('should return the correct opacity', () => {
         expect(getTextOpacity(theme, emphasis)).toEqual(opacities[emphasis]);
       });
@@ -39,7 +33,7 @@ describe('textTheme selectors', () => {
   });
 
   describe('getTextColor', () => {
-    Object.keys(colors).forEach((color) => {
+    Object.keys(colors).forEach(color => {
       it('should return the correct color', () => {
         expect(getTextColor(theme, color)).toEqual(colors[color]);
       });
@@ -48,13 +42,17 @@ describe('textTheme selectors', () => {
 
   describe('getTextColorOnBg', () => {
     it('should default to the main text color theme if no corresponding background found', () => {
-      expect(getTextColorOnBg(theme, 'noop', 'primary')).toEqual(colors.primary);
+      expect(getTextColorOnBg(theme, 'noop', 'primary')).toEqual(
+        colors.primary
+      );
     });
 
-    Object.keys(onBackground).forEach((bgColor) => {
-      Object.keys(onBackground[bgColor]).forEach((color) => {
+    Object.keys(onBackground).forEach(bgColor => {
+      Object.keys(onBackground[bgColor]).forEach(color => {
         it('should return the correct color', () => {
-          expect(getTextColorOnBg(theme, bgColor, color)).toEqual(colorPalette.neutral0);
+          expect(getTextColorOnBg(theme, bgColor, color)).toEqual(
+            colorPalette.neutral0
+          );
         });
       });
     });

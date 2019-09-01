@@ -1,4 +1,4 @@
-const createSelector = category => (theme) => {
+const createSelector = category => theme => {
   if (!theme) {
     throw new Error('You need to provide a theme object');
   }

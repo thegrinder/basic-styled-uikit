@@ -2,12 +2,12 @@
 
 exports[`<Input /> should render <input> tag 1`] = `
 <input
-  class="StyledInput-ok3pz6-0 jhXNpt"
+  class="StyledInput-ok3pz6-0 cgiAVu"
 />
 `;
 
 exports[`<Input /> should render correctly 1`] = `
 <input
-  class="StyledInput-ok3pz6-0 jhXNpt"
+  class="StyledInput-ok3pz6-0 cgiAVu"
 />
 `;

@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  node,
-  bool,
-  string,
-  oneOfType,
-  oneOf,
-  func,
-} from 'prop-types';
+import { node, bool, string, oneOfType, oneOf, func } from 'prop-types';
 import ContentWrapper from './ContentWrapper';
 import StyledButton from './StyledButton';
 import SpinnerWrapper from './SpinnerWrapper';
@@ -22,6 +15,7 @@ const propTypes = {
   renderSpinner: node,
   /** rendered html tag or custom router link component */
   as: oneOfType([oneOf(['a', 'button']), func]),
+  children: node,
 };
 
 const defaultProps = {
@@ -40,21 +34,10 @@ const Button = ({
   as,
   ...rest
 }) => (
-    <StyledButton
-      as={as}
-      sizing={sizing}
-      btntype={btntype}
-      {...rest}
-    >
-      {submitting && (
-        <SpinnerWrapper>
-          {renderSpinner}
-        </SpinnerWrapper>
-      )}
-      <ContentWrapper submitting={submitting}>
-        {children}
-      </ContentWrapper>
-    </StyledButton>
+  <StyledButton as={as} sizing={sizing} btntype={btntype} {...rest}>
+    {submitting && <SpinnerWrapper>{renderSpinner}</SpinnerWrapper>}
+    <ContentWrapper submitting={submitting}>{children}</ContentWrapper>
+  </StyledButton>
 );
 
 Button.propTypes = propTypes;

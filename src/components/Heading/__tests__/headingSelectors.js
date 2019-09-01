@@ -7,16 +7,11 @@ import {
   getHeadingOpacity,
 } from '../headingSelectors';
 
-const {
-  sizings,
-  colors,
-  opacities,
-  common,
-} = headingTheme;
+const { sizings, colors, opacities, common } = headingTheme;
 
 describe('headingTheme selectors', () => {
   describe('getHeadingSizingStyle', () => {
-    Object.keys(sizings).forEach((sizing) => {
+    Object.keys(sizings).forEach(sizing => {
       it('should return the correct size style object', () => {
         expect(getHeadingSizingStyle(theme, sizing)).toEqual(sizings[sizing]);
       });
@@ -28,7 +23,7 @@ describe('headingTheme selectors', () => {
   });
 
   describe('getHeadingColor', () => {
-    Object.keys(colors).forEach((color) => {
+    Object.keys(colors).forEach(color => {
       it('should return the correct color', () => {
         expect(getHeadingColor(theme, color)).toEqual(colors[color]);
       });
@@ -36,7 +31,7 @@ describe('headingTheme selectors', () => {
   });
 
   describe('getHeadingOpacity', () => {
-    Object.keys(opacities).forEach((emphasis) => {
+    Object.keys(opacities).forEach(emphasis => {
       it('should return the correct opacity', () => {
         expect(getHeadingOpacity(theme, emphasis)).toEqual(opacities[emphasis]);
       });

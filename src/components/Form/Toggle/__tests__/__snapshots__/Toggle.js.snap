@@ -10,7 +10,7 @@ exports[`<Toggle /> should render correctly with custom props 1`] = `
     type="checkbox"
   />
   <span
-    class="ToggleSlider-sc-1lsczbh-0 culcUE"
+    class="ToggleSlider-sc-1lsczbh-0 eoOvon"
     disabled=""
   />
 </label>
@@ -25,7 +25,7 @@ exports[`<Toggle /> should render correctly with default props 1`] = `
     type="checkbox"
   />
   <span
-    class="ToggleSlider-sc-1lsczbh-0 eZyibu"
+    class="ToggleSlider-sc-1lsczbh-0 eTViuM"
   />
 </label>
 `;

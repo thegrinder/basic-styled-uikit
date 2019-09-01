@@ -10,7 +10,7 @@ const propTypes = {
   color: string,
   /** one of: high, normal, low */
   emphasis: string,
-  /** determines whether we ignore the colors defined for the background */
+  /** determines whether colors defined for the background are ignored */
   ignoreBg: bool,
   /** rendered html tag */
   as: oneOf(['span', 'p']),
@@ -35,21 +35,18 @@ const Text = ({
   emphasis,
   as,
   ...rest
-}) => {
-  const bgColor = useColorBoxContext();
-  return (
-    <StyledText
-      as={as}
-      marginBottom={marginBottom}
-      sizing={sizing}
-      color={color}
-      emphasis={emphasis}
-      ignoreBg={ignoreBg}
-      bgColor={bgColor}
-      {...rest}
-    />
-  );
-};
+}) => (
+  <StyledText
+    as={as}
+    marginBottom={marginBottom}
+    sizing={sizing}
+    color={color}
+    emphasis={emphasis}
+    ignoreBg={ignoreBg}
+    bgColor={useColorBoxContext()}
+    {...rest}
+  />
+);
 
 Text.propTypes = propTypes;
 Text.defaultProps = defaultProps;
