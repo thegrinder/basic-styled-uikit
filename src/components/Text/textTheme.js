@@ -49,10 +49,6 @@ const textTheme = {
       neutral: colors.neutral0,
     },
   },
-  common: {
-    fontWeight: 400,
-    fontFamily: 'Lato, Arial, Helvetica, sans-serif',
-  },
 };
 
 export default textTheme;

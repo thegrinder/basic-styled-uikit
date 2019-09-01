@@ -7,7 +7,7 @@ import StyledText from '../StyledText';
 
 const children = 'children';
 
-const renderComponent = () =>
+const renderComponent = (props = {}) =>
   render(
     <ThemeProvider theme={theme}>
       <StyledText
@@ -15,6 +15,7 @@ const renderComponent = () =>
         sizing="s"
         marginBottom={false}
         emphasis="high"
+        {...props}
       >
         {children}
       </StyledText>

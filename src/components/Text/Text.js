@@ -11,7 +11,7 @@ const propTypes = {
   /** one of: high, normal, low */
   emphasis: string,
   /** determines whether colors defined for the background are ignored */
-  ignoreBg: bool,
+  ignoreBackground: bool,
   /** rendered html tag */
   as: oneOf(['span', 'p']),
   /** if true adds a bottom margin according to vertical rhythm */
@@ -21,7 +21,7 @@ const propTypes = {
 const defaultProps = {
   sizing: 'm',
   color: 'neutral',
-  ignoreBg: false,
+  ignoreBackground: false,
   as: 'span',
   marginBottom: false,
   emphasis: 'high',
@@ -30,7 +30,7 @@ const defaultProps = {
 const Text = ({
   sizing,
   color,
-  ignoreBg,
+  ignoreBackground,
   marginBottom,
   emphasis,
   as,
@@ -42,7 +42,7 @@ const Text = ({
     sizing={sizing}
     color={color}
     emphasis={emphasis}
-    ignoreBg={ignoreBg}
+    ignoreBackground={ignoreBackground}
     bgColor={useColorBoxContext()}
     {...rest}
   />

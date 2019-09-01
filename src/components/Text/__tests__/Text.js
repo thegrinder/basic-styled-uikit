@@ -33,6 +33,7 @@ describe('<Text />', () => {
       sizing: 'xs',
       color: 'primary',
       marginBottom: true,
+      ignoreBackground: true,
     });
     expect(firstChild).toBeDefined();
     expect(firstChild).toHaveTextContent(children);

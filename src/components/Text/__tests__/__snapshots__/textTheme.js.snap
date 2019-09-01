@@ -9,10 +9,6 @@ Object {
     "success": "#4caf50",
     "warning": "#ffeb3b",
   },
-  "common": Object {
-    "fontFamily": "Lato, Arial, Helvetica, sans-serif",
-    "fontWeight": 400,
-  },
   "onBackground": Object {
     "danger": Object {
       "neutral": "#fff",

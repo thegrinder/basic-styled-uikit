@@ -15,19 +15,27 @@ const propTypes = {
   sizing: string.isRequired,
   marginBottom: bool.isRequired,
   emphasis: string.isRequired,
-  ignoreBg: bool,
+  ignoreBackground: bool.isRequired,
   bgColor: string,
 };
 
 const StyledText = styled.span`
   display: block;
-  ${({ theme, color, sizing, marginBottom, emphasis, ignoreBg, bgColor }) => {
+  ${({
+    theme,
+    color,
+    sizing,
+    marginBottom,
+    emphasis,
+    ignoreBackground,
+    bgColor,
+  }) => {
     const baseLineHeight = getBaseLineHeight(theme);
     const sizingStyle = getTextSizingStyle(theme, sizing);
     return css`
       ${getTextCommonStyle(theme)}
       color: ${
-        ignoreBg
+        ignoreBackground
           ? getTextColor(theme, color)
           : getTextColorOnBg(theme, bgColor, color)
       };

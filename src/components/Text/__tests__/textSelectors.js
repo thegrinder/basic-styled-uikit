@@ -13,48 +13,60 @@ const { sizings, opacities, colors, common, onBackground } = textTheme;
 
 describe('textTheme selectors', () => {
   describe('getTextSizingStyle', () => {
-    Object.keys(sizings).forEach(sizing => {
-      it('should return the correct size style object', () => {
+    it.each(Object.keys(sizings))(
+      'should return the correct size style object for %s size',
+      sizing => {
         expect(getTextSizingStyle(theme, sizing)).toEqual(sizings[sizing]);
-      });
-    });
+      }
+    );
 
-    it('should return empty object if sizing is invalid', () => {
-      expect(getTextSizingStyle(theme, 'invalidSizing')).toEqual({});
+    it('should throw if size is not defined in the theme', () => {
+      expect(() => getTextSizingStyle(theme, 'invalidSizing')).toThrow();
     });
   });
 
   describe('getTextOpacity', () => {
-    Object.keys(opacities).forEach(emphasis => {
-      it('should return the correct opacity', () => {
+    it.each(Object.keys(opacities))(
+      'should return the correct opacity for %s emphasis',
+      emphasis => {
         expect(getTextOpacity(theme, emphasis)).toEqual(opacities[emphasis]);
-      });
+      }
+    );
+
+    it('should throw if emphasis is not defined in the theme', () => {
+      expect(() => getTextOpacity(theme, 'invalidEmphasis')).toThrow();
     });
   });
 
   describe('getTextColor', () => {
-    Object.keys(colors).forEach(color => {
-      it('should return the correct color', () => {
+    it.each(Object.keys(colors))(
+      'should return the correct color for %s',
+      color => {
         expect(getTextColor(theme, color)).toEqual(colors[color]);
-      });
+      }
+    );
+
+    it('should throw if color is not defined in the theme', () => {
+      expect(() => getTextColor(theme, 'invalidColor')).toThrow();
     });
   });
 
   describe('getTextColorOnBg', () => {
-    it('should default to the main text color theme if no corresponding background found', () => {
+    it('should default to the main text color theme if no corresponding background is found', () => {
       expect(getTextColorOnBg(theme, 'noop', 'primary')).toEqual(
         colors.primary
       );
     });
 
     Object.keys(onBackground).forEach(bgColor => {
-      Object.keys(onBackground[bgColor]).forEach(color => {
-        it('should return the correct color', () => {
+      it.each(Object.keys(onBackground[bgColor]))(
+        `should return the correct code for %s color for ${bgColor} background`,
+        color => {
           expect(getTextColorOnBg(theme, bgColor, color)).toEqual(
             colorPalette.neutral0
           );
-        });
-      });
+        }
+      );
     });
   });
 
