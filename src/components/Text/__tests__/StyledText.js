@@ -15,6 +15,7 @@ const renderComponent = (props = {}) =>
         sizing="s"
         marginBottom={false}
         emphasis="high"
+        ignoreBackground={false}
         {...props}
       >
         {children}

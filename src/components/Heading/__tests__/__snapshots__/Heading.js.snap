@@ -11,7 +11,7 @@ exports[`<Heading /> should render correctly with custom props 1`] = `
 
 exports[`<Heading /> should render correctly with default props 1`] = `
 <h1
-  class="StyledHeading-fbinjh-0 fSrojU"
+  class="StyledHeading-fbinjh-0 jjppnR"
   color="neutral"
 >
   children

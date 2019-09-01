@@ -4,9 +4,7 @@ exports[`headingTheme should be defined 1`] = `
 Object {
   "colors": Object {
     "danger": "#f44336",
-    "neutral1000": "#161616",
-    "neutral600": "#868e96",
-    "neutral800": "#343a40",
+    "neutral": "#161616",
     "primary": "#2196f3",
     "success": "#4caf50",
     "warning": "#ffeb3b",
@@ -14,6 +12,20 @@ Object {
   "common": Object {
     "fontFamily": "Lato, Arial, Helvetica, sans-serif",
     "fontWeight": 700,
+  },
+  "onBackground": Object {
+    "danger": Object {
+      "neutral": "#fff",
+    },
+    "primary": Object {
+      "neutral": "#fff",
+    },
+    "success": Object {
+      "neutral": "#fff",
+    },
+    "warning": Object {
+      "neutral": "#fff",
+    },
   },
   "opacities": Object {
     "high": 1,

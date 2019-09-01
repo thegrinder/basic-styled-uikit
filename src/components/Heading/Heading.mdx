@@ -29,13 +29,35 @@ import ColorBox from '../ColorBox/ColorBox';
 ### Heading colors
 
 <Playground>
-  <Heading as="h3" color="primary">primary</Heading>
-  <Heading as="h3" color="danger">danger</Heading>
-  <Heading as="h3" color="success">success</Heading>
-  <Heading as="h3" color="warning">warning</Heading>
-  <Heading as="h3" color="neutral" emphasis="high">neutral emphasis high</Heading>
-  <Heading as="h3" color="neutral" emphasis="normal">neutral emphasis normal</Heading>
-  <Heading as="h3" color="neutral" emphasis="low">neutral emphasis low</Heading>
+  <Heading as="h4" color="primary">primary</Heading>
+  <Heading as="h4" color="danger">danger</Heading>
+  <Heading as="h4" color="success">success</Heading>
+  <Heading as="h4" color="warning">warning</Heading>
+  <Heading as="h4" color="neutral" emphasis="high">neutral emphasis high</Heading>
+  <Heading as="h4" color="neutral" emphasis="normal">neutral emphasis normal</Heading>
+  <Heading as="h4" color="neutral" emphasis="low">neutral emphasis low</Heading>
+</Playground>
+
+### Heading colors on different backgrounds
+
+<Playground>
+  <ColorBox bgColor="primary">
+    <Heading as="h4">neutral on primary background</Heading>
+  </ColorBox>
+  <ColorBox bgColor="success">
+    <Heading as="h4">neutral on success background</Heading>
+  </ColorBox>
+  <ColorBox bgColor="danger">
+    <Heading as="h4">neutral on danger background</Heading>
+  </ColorBox>
+  <ColorBox bgColor="warning">
+    <Heading as="h4">neutral on warning background</Heading>
+  </ColorBox>
+  <ColorBox bgColor="warning">
+    <Heading as="h4" ignoreBackground={true}>
+      background ignored - default black heading
+    </Heading>
+  </ColorBox>
 </Playground>
 
 ### Heading with a bottom margin
