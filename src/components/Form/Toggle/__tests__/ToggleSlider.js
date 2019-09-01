@@ -28,6 +28,5 @@ describe('<ToggleSlider />', () => {
       container: { firstChild },
     } = renderComponent();
     expect(firstChild.tagName).toEqual('SPAN');
-    expect(firstChild).toMatchSnapshot();
   });
 });

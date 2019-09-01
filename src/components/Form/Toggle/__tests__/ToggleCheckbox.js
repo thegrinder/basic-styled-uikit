@@ -29,6 +29,5 @@ describe('<ToggleCheckbox />', () => {
     } = renderComponent();
     expect(firstChild.tagName).toEqual('INPUT');
     expect(firstChild.type).toEqual('checkbox');
-    expect(firstChild).toMatchSnapshot();
   });
 });

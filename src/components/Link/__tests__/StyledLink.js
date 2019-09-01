@@ -33,6 +33,5 @@ describe('<StyledLink />', () => {
       container: { firstChild },
     } = renderComponent();
     expect(firstChild.tagName).toEqual('A');
-    expect(firstChild).toMatchSnapshot();
   });
 });

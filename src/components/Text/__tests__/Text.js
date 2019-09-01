@@ -44,7 +44,6 @@ describe('<Text />', () => {
       container: { firstChild },
     } = renderComponent();
     expect(firstChild.tagName).toEqual('SPAN');
-    expect(firstChild).toMatchSnapshot();
   });
 
   it('should render render <p> tag', () => {
@@ -52,6 +51,5 @@ describe('<Text />', () => {
       container: { firstChild },
     } = renderComponent({ as: 'p' });
     expect(firstChild.tagName).toEqual('P');
-    expect(firstChild).toMatchSnapshot();
   });
 });

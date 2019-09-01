@@ -28,6 +28,5 @@ describe('<Textarea />', () => {
       container: { firstChild },
     } = renderComponent();
     expect(firstChild.tagName).toEqual('TEXTAREA');
-    expect(firstChild).toMatchSnapshot();
   });
 });

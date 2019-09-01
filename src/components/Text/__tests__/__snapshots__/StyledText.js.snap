@@ -1,14 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<StyledText /> should render <span> tag 1`] = `
-<span
-  class="StyledText-r7l7li-0 fHyscM"
-  color="primary"
->
-  children
-</span>
-`;
-
 exports[`<StyledText /> should render correctly with children 1`] = `
 <span
   class="StyledText-r7l7li-0 fHyscM"

@@ -1,12 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Radio /> should render <input> tag with type radio 1`] = `
-<input
-  class="StyledRadio-sc-1q7ubkv-0 iAEpwQ"
-  type="radio"
-/>
-`;
-
 exports[`<Radio /> should render correctly with custom props 1`] = `
 <input
   class="StyledRadio-sc-1q7ubkv-0 jtnqYk"

@@ -1,15 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Select /> should render <select> tag 1`] = `
-<select
-  class="StyledSelect-sc-1r3g39b-0 hKmhYf"
->
-  <option>
-    option
-  </option>
-</select>
-`;
-
 exports[`<Select /> should render correctly with custom props 1`] = `
 <select
   class="StyledSelect-sc-1r3g39b-0 hkpkfQ"

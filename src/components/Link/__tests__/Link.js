@@ -43,7 +43,6 @@ describe('<Link />', () => {
       container: { firstChild },
     } = renderComponent();
     expect(firstChild.tagName).toEqual('A');
-    expect(firstChild).toMatchSnapshot();
   });
 
   it('should render render <button> tag', () => {

@@ -1,11 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Textarea /> should render <textarea> tag 1`] = `
-<textarea
-  class="StyledTextarea-sc-1v2djou-0 bgOQWs"
-/>
-`;
-
 exports[`<Textarea /> should render correctly 1`] = `
 <textarea
   class="StyledTextarea-sc-1v2djou-0 bgOQWs"

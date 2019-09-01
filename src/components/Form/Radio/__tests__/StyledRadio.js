@@ -29,6 +29,5 @@ describe('<StyledRadio />', () => {
     } = renderComponent();
     expect(firstChild.tagName).toEqual('INPUT');
     expect(firstChild.type).toEqual('radio');
-    expect(firstChild).toMatchSnapshot();
   });
 });

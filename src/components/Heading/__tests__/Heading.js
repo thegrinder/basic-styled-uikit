@@ -49,7 +49,6 @@ describe('<Heading />', () => {
         as: sizing,
       });
       expect(firstChild.tagName).toEqual(sizing.toUpperCase());
-      expect(firstChild).toMatchSnapshot();
     });
   });
 
@@ -61,6 +60,5 @@ describe('<Heading />', () => {
       as: 'h6',
     });
     expect(firstChild.tagName).toEqual('H6');
-    expect(firstChild).toMatchSnapshot();
   });
 });

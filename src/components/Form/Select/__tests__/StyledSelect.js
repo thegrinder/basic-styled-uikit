@@ -28,6 +28,5 @@ describe('<StyledSelect />', () => {
       container: { firstChild },
     } = renderComponent();
     expect(firstChild.tagName).toEqual('SELECT');
-    expect(firstChild).toMatchSnapshot();
   });
 });

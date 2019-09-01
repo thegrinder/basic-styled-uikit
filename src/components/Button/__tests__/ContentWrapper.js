@@ -27,6 +27,5 @@ describe('<ContentWrapper />', () => {
       container: { firstChild },
     } = render(<ContentWrapper submitting>{content}</ContentWrapper>);
     expect(firstChild).toHaveTextContent(content);
-    expect(firstChild).toMatchSnapshot();
   });
 });

@@ -43,6 +43,5 @@ describe('<ColorBox />', () => {
       container: { firstChild },
     } = renderComponent();
     expect(firstChild.tagName).toEqual('DIV');
-    expect(firstChild).toMatchSnapshot();
   });
 });

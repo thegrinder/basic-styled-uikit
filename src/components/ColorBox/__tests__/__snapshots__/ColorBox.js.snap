@@ -1,13 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ColorBox /> should render <div> tag 1`] = `
-<div
-  class="StyledColorBox-sc-1ihbgka-0 hmqRpq"
->
-  children
-</div>
-`;
-
 exports[`<ColorBox /> should render correctly with custom props 1`] = `
 <div
   class="StyledColorBox-sc-1ihbgka-0 hmqRpq"

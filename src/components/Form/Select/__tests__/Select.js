@@ -42,6 +42,5 @@ describe('<Select />', () => {
       container: { firstChild },
     } = renderComponent();
     expect(firstChild.tagName).toEqual('SELECT');
-    expect(firstChild).toMatchSnapshot();
   });
 });

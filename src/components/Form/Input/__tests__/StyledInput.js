@@ -28,6 +28,5 @@ describe('<Input />', () => {
       container: { firstChild },
     } = renderComponent();
     expect(firstChild.tagName).toEqual('INPUT');
-    expect(firstChild).toMatchSnapshot();
   });
 });

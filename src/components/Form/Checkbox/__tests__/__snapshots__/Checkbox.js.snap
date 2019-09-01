@@ -1,12 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Checkbox /> should render <input> tag with type checkbox 1`] = `
-<input
-  class="StyledCheckbox-sc-1u8r4za-0 krFcey"
-  type="checkbox"
-/>
-`;
-
 exports[`<Checkbox /> should render correctly with custom props 1`] = `
 <input
   class="StyledCheckbox-sc-1u8r4za-0 kKsbco"

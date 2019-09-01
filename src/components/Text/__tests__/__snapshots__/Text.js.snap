@@ -1,14 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Text /> should render <span> tag by default 1`] = `
-<span
-  class="StyledText-r7l7li-0 jexrhk"
-  color="neutral"
->
-  children
-</span>
-`;
-
 exports[`<Text /> should render correctly with custom props 1`] = `
 <span
   class="StyledText-r7l7li-0 fQYllB"
@@ -25,13 +16,4 @@ exports[`<Text /> should render correctly with default props 1`] = `
 >
   children
 </span>
-`;
-
-exports[`<Text /> should render render <p> tag 1`] = `
-<p
-  class="StyledText-r7l7li-0 jexrhk"
-  color="neutral"
->
-  children
-</p>
 `;

@@ -48,6 +48,5 @@ describe('<StyledButton />', () => {
       container: { firstChild },
     } = renderComponent();
     expect(firstChild.tagName).toEqual('BUTTON');
-    expect(firstChild).toMatchSnapshot();
   });
 });

@@ -55,7 +55,6 @@ describe('<Button />', () => {
       container: { firstChild },
     } = renderComponent({ as: 'a' });
     expect(firstChild.tagName).toEqual('A');
-    expect(firstChild).toMatchSnapshot();
   });
 
   it('should render render <button> tag', () => {
@@ -63,6 +62,5 @@ describe('<Button />', () => {
       container: { firstChild },
     } = renderComponent();
     expect(firstChild.tagName).toEqual('BUTTON');
-    expect(firstChild).toMatchSnapshot();
   });
 });

@@ -1,59 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Heading /> should render <h1> tag 1`] = `
-<h1
-  class="StyledHeading-fbinjh-0 fSrojU"
-  color="neutral"
->
-  children
-</h1>
-`;
-
-exports[`<Heading /> should render <h2> tag 1`] = `
-<h2
-  class="StyledHeading-fbinjh-0 csERFs"
-  color="neutral"
->
-  children
-</h2>
-`;
-
-exports[`<Heading /> should render <h3> tag 1`] = `
-<h3
-  class="StyledHeading-fbinjh-0 eznFus"
-  color="neutral"
->
-  children
-</h3>
-`;
-
-exports[`<Heading /> should render <h4> tag 1`] = `
-<h4
-  class="StyledHeading-fbinjh-0 hGqhyU"
-  color="neutral"
->
-  children
-</h4>
-`;
-
-exports[`<Heading /> should render <h5> tag 1`] = `
-<h5
-  class="StyledHeading-fbinjh-0 icpoXR"
-  color="neutral"
->
-  children
-</h5>
-`;
-
-exports[`<Heading /> should render <h6> tag 1`] = `
-<h6
-  class="StyledHeading-fbinjh-0 dYyVrY"
-  color="neutral"
->
-  children
-</h6>
-`;
-
 exports[`<Heading /> should render correctly with custom props 1`] = `
 <h3
   class="StyledHeading-fbinjh-0 iuCitB"
@@ -70,13 +16,4 @@ exports[`<Heading /> should render correctly with default props 1`] = `
 >
   children
 </h1>
-`;
-
-exports[`<Heading /> should render should large <h6> heading 1`] = `
-<h6
-  class="StyledHeading-fbinjh-0 fSrojU"
-  color="neutral"
->
-  children
-</h6>
 `;

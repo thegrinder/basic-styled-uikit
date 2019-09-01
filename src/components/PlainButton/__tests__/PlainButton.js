@@ -27,6 +27,5 @@ describe('<PlainButton />', () => {
       container: { firstChild },
     } = render(<PlainButton>{text}</PlainButton>);
     expect(firstChild).toHaveTextContent(text);
-    expect(firstChild).toMatchSnapshot();
   });
 });

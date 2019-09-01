@@ -1,15 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<StyledButton /> should render <button> tag by default 1`] = `
-<button
-  class="StyledButton-k0ad56-0 bvXgcZ"
->
-  <span>
-    children
-  </span>
-</button>
-`;
-
 exports[`<StyledButton /> should render correctly with custom props 1`] = `
 <button
   class="StyledButton-k0ad56-0 hOfIoC"
