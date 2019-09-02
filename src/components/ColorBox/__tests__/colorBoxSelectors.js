@@ -3,21 +3,22 @@ import colorBoxTheme from '../colorBoxTheme';
 import { getBoxBgColor, getBoxElevation } from '../colorBoxSelectors';
 
 const { bgColors, elevations } = colorBoxTheme;
+const { mode } = theme.uiKit;
 
 describe('colorBoxTheme selectors', () => {
   describe('getBoxBgColor', () => {
-    Object.keys(bgColors).forEach(bgColor => {
+    Object.keys(bgColors[mode]).forEach(bgColor => {
       it('should return the correct background color', () => {
-        expect(getBoxBgColor(theme, bgColor)).toEqual(bgColors[bgColor]);
+        expect(getBoxBgColor(theme, bgColor)).toEqual(bgColors[mode][bgColor]);
       });
     });
   });
 
   describe('getBoxElevation', () => {
-    Object.keys(elevations).forEach(elevation => {
+    Object.keys(elevations[mode]).forEach(elevation => {
       it('should return the correct background color', () => {
         expect(getBoxElevation(theme, elevation)).toEqual(
-          elevations[elevation]
+          elevations[mode][elevation]
         );
       });
     });

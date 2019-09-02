@@ -3,18 +3,37 @@
 exports[`colorBox should be defined 1`] = `
 Object {
   "bgColors": Object {
-    "danger": "#f44336",
-    "neutral": "#fff",
-    "primary": "#2196f3",
-    "success": "#4caf50",
-    "warning": "#ffeb3b",
+    "dark": Object {
+      "danger": "#ef9a9a",
+      "neutral": "#161616",
+      "primary": "#90caf9",
+      "success": "#a5d6a7",
+      "warning": "#fff59d",
+    },
+    "light": Object {
+      "danger": "#f44336",
+      "neutral": "#fff",
+      "primary": "#2196f3",
+      "success": "#4caf50",
+      "warning": "#ffeb3b",
+    },
   },
   "elevations": Object {
-    "1": Object {
-      "boxShadow": "0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)",
+    "dark": Object {
+      "1": Object {
+        "backgroundColor": "#1b1b1b",
+      },
+      "2": Object {
+        "backgroundColor": "#202020",
+      },
     },
-    "2": Object {
-      "boxShadow": "0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12)",
+    "light": Object {
+      "1": Object {
+        "boxShadow": "0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)",
+      },
+      "2": Object {
+        "boxShadow": "0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12)",
+      },
     },
   },
 }
