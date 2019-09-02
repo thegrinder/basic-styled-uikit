@@ -19,3 +19,4 @@ export const getHeading = createSelector('heading');
 export const getText = createSelector('text');
 export const getColorBox = createSelector('colorBox');
 export const getLink = createSelector('link');
+export const getMode = createSelector('mode');

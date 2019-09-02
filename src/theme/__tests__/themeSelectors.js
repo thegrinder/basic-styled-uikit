@@ -8,6 +8,7 @@ import {
   getText,
   getColorBox,
   getLink,
+  getMode,
 } from '../themeSelectors';
 
 describe('themeSelectors', () => {
@@ -21,6 +22,7 @@ describe('themeSelectors', () => {
       [getText, 'text'],
       [getColorBox, 'colorBox'],
       [getLink, 'link'],
+      [getMode, 'mode'],
     ])('%s should handle success and failure', (selector, namespace) => {
       expect(selector(theme)).toEqual(theme.uiKit[namespace]);
       expect(() => selector()).toThrowError(

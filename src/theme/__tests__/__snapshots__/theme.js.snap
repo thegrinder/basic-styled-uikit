@@ -266,26 +266,52 @@ Object {
         },
       },
     },
+    "mode": "light",
     "text": Object {
       "colors": Object {
-        "danger": "#f44336",
-        "neutral": "#161616",
-        "primary": "#2196f3",
-        "success": "#4caf50",
-        "warning": "#ffeb3b",
+        "dark": Object {
+          "danger": "#ef9a9a",
+          "neutral": "#fff",
+          "primary": "#90caf9",
+          "success": "#a5d6a7",
+          "warning": "#fff59d",
+        },
+        "light": Object {
+          "danger": "#f44336",
+          "neutral": "#161616",
+          "primary": "#2196f3",
+          "success": "#4caf50",
+          "warning": "#ffeb3b",
+        },
       },
       "onBackground": Object {
-        "danger": Object {
-          "neutral": "#fff",
+        "dark": Object {
+          "danger": Object {
+            "neutral": "#161616",
+          },
+          "primary": Object {
+            "neutral": "#161616",
+          },
+          "success": Object {
+            "neutral": "#161616",
+          },
+          "warning": Object {
+            "neutral": "#161616",
+          },
         },
-        "primary": Object {
-          "neutral": "#fff",
-        },
-        "success": Object {
-          "neutral": "#fff",
-        },
-        "warning": Object {
-          "neutral": "#fff",
+        "light": Object {
+          "danger": Object {
+            "neutral": "#fff",
+          },
+          "primary": Object {
+            "neutral": "#fff",
+          },
+          "success": Object {
+            "neutral": "#fff",
+          },
+          "warning": Object {
+            "neutral": "#fff",
+          },
         },
       },
       "opacities": Object {

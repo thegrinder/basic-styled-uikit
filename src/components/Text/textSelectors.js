@@ -1,4 +1,4 @@
-import { getText } from '../../theme/themeSelectors';
+import { getText, getMode } from '../../theme/themeSelectors';
 
 export const getTextSizingStyle = (theme, sizing) => {
   const sizingStyle = getText(theme).sizings[sizing];
@@ -9,7 +9,8 @@ export const getTextSizingStyle = (theme, sizing) => {
 };
 
 export const getTextColor = (theme, color) => {
-  const textColor = getText(theme).colors[color];
+  const mode = getMode(theme);
+  const textColor = getText(theme).colors[mode][color];
   if (!textColor) {
     throw new Error(`There is no ${textColor} color in the <Text /> theme`);
   }
@@ -17,7 +18,8 @@ export const getTextColor = (theme, color) => {
 };
 
 export const getTextColorOnBg = (theme, bgColor, color) => {
-  const bgColors = getText(theme).onBackground[bgColor];
+  const mode = getMode(theme);
+  const bgColors = getText(theme).onBackground[mode][bgColor];
   if (bgColors && bgColors[color]) {
     return bgColors[color];
   }

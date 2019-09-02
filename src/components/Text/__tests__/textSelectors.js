@@ -10,6 +10,7 @@ import {
 } from '../textSelectors';
 
 const { sizings, opacities, colors, common, onBackground } = textTheme;
+const { mode } = theme.uiKit;
 
 describe('textTheme selectors', () => {
   describe('getTextSizingStyle', () => {
@@ -39,10 +40,10 @@ describe('textTheme selectors', () => {
   });
 
   describe('getTextColor', () => {
-    it.each(Object.keys(colors))(
+    it.each(Object.keys(colors[mode]))(
       'should return the correct color for %s',
       color => {
-        expect(getTextColor(theme, color)).toEqual(colors[color]);
+        expect(getTextColor(theme, color)).toEqual(colors[mode][color]);
       }
     );
 
@@ -54,12 +55,12 @@ describe('textTheme selectors', () => {
   describe('getTextColorOnBg', () => {
     it('should default to the main text color theme if no corresponding background is found', () => {
       expect(getTextColorOnBg(theme, 'noop', 'primary')).toEqual(
-        colors.primary
+        colors[mode].primary
       );
     });
 
-    Object.keys(onBackground).forEach(bgColor => {
-      it.each(Object.keys(onBackground[bgColor]))(
+    Object.keys(onBackground[mode]).forEach(bgColor => {
+      it.each(Object.keys(onBackground[mode][bgColor]))(
         `should return the correct code for %s color for ${bgColor} background`,
         color => {
           expect(getTextColorOnBg(theme, bgColor, color)).toEqual(

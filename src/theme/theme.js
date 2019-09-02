@@ -9,6 +9,7 @@ import link from '../components/Link/linkTheme';
 
 const theme = {
   uiKit: {
+    mode: 'light',
     typography,
     colors,
     button,
