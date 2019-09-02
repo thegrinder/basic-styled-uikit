@@ -1,13 +1,5 @@
 import colors from '../../theme/colors';
 
-// const darkThemeHeadingColors = {
-//   neutral: colors.neutral0,
-//   primary: colors.primary200,
-//   success: colors.success200,
-//   warning: colors.warning200,
-//   danger: colors.danger200,
-// };
-
 const headingTheme = {
   sizings: {
     h1: {
@@ -30,24 +22,49 @@ const headingTheme = {
     },
   },
   colors: {
-    neutral: colors.neutral1000,
-    primary: colors.primary500,
-    success: colors.success500,
-    warning: colors.warning500,
-    danger: colors.danger500,
+    light: {
+      neutral: colors.neutral1000,
+      primary: colors.primary500,
+      success: colors.success500,
+      warning: colors.warning500,
+      danger: colors.danger500,
+    },
+    dark: {
+      neutral: colors.neutral0,
+      primary: colors.primary200,
+      success: colors.success200,
+      warning: colors.warning200,
+      danger: colors.danger200,
+    },
   },
   onBackground: {
-    primary: {
-      neutral: colors.neutral0,
+    light: {
+      primary: {
+        neutral: colors.neutral0,
+      },
+      success: {
+        neutral: colors.neutral0,
+      },
+      warning: {
+        neutral: colors.neutral0,
+      },
+      danger: {
+        neutral: colors.neutral0,
+      },
     },
-    success: {
-      neutral: colors.neutral0,
-    },
-    warning: {
-      neutral: colors.neutral0,
-    },
-    danger: {
-      neutral: colors.neutral0,
+    dark: {
+      primary: {
+        neutral: colors.neutral1000,
+      },
+      success: {
+        neutral: colors.neutral1000,
+      },
+      warning: {
+        neutral: colors.neutral1000,
+      },
+      danger: {
+        neutral: colors.neutral1000,
+      },
     },
   },
   opacities: {

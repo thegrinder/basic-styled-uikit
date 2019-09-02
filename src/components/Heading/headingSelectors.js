@@ -1,4 +1,4 @@
-import { getHeading } from '../../theme/themeSelectors';
+import { getHeading, getMode } from '../../theme/themeSelectors';
 
 export const getHeadingSizingStyle = (theme, sizing) => {
   const sizingStyle = getHeading(theme).sizings[sizing];
@@ -9,7 +9,8 @@ export const getHeadingSizingStyle = (theme, sizing) => {
 };
 
 export const getHeadingColor = (theme, color) => {
-  const headingColor = getHeading(theme).colors[color];
+  const mode = getMode(theme);
+  const headingColor = getHeading(theme).colors[mode][color];
   if (!headingColor) {
     throw new Error(
       `There is no ${headingColor} color in the <Heading /> theme`
@@ -19,7 +20,8 @@ export const getHeadingColor = (theme, color) => {
 };
 
 export const getHeadingColorOnBg = (theme, bgColor, color) => {
-  const bgColors = getHeading(theme).onBackground[bgColor];
+  const mode = getMode(theme);
+  const bgColors = getHeading(theme).onBackground[mode][bgColor];
   if (bgColors && bgColors[color]) {
     return bgColors[color];
   }

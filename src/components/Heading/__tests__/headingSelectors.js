@@ -10,6 +10,7 @@ import {
 } from '../headingSelectors';
 
 const { sizings, opacities, colors, common, onBackground } = headingTheme;
+const { mode } = theme.uiKit;
 
 describe('headingTheme selectors', () => {
   describe('getHeadingSizingStyle', () => {
@@ -39,10 +40,10 @@ describe('headingTheme selectors', () => {
   });
 
   describe('getHeadingColor', () => {
-    it.each(Object.keys(colors))(
+    it.each(Object.keys(colors[mode]))(
       'should return the correct color for %s',
       color => {
-        expect(getHeadingColor(theme, color)).toEqual(colors[color]);
+        expect(getHeadingColor(theme, color)).toEqual(colors[mode][color]);
       }
     );
 
@@ -54,12 +55,12 @@ describe('headingTheme selectors', () => {
   describe('getHeadingColorOnBg', () => {
     it('should default to the main heading color theme if no corresponding background is found', () => {
       expect(getHeadingColorOnBg(theme, 'noop', 'primary')).toEqual(
-        colors.primary
+        colors[mode].primary
       );
     });
 
-    Object.keys(onBackground).forEach(bgColor => {
-      it.each(Object.keys(onBackground[bgColor]))(
+    Object.keys(onBackground[mode]).forEach(bgColor => {
+      it.each(Object.keys(onBackground[mode][bgColor]))(
         `should return the correct code for %s color for ${bgColor} background`,
         color => {
           expect(getHeadingColorOnBg(theme, bgColor, color)).toEqual(
