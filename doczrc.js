@@ -2,6 +2,9 @@ export default {
   wrapper: '../../docz/Wrapper',
   codeSandbox: false,
   base: '/basic-styled-uikit/',
+  // themeConfig: {
+  //   mode: 'dark',
+  // },
   htmlContext: {
     head: {
       links: [
@@ -10,7 +13,6 @@ export default {
           href: 'https://fonts.googleapis.com/css?family=Lato:400,700',
         },
       ],
-      raw: ['<style>.border {border-width: 1px; border-style: solid;}</style>'],
     },
   },
 };
