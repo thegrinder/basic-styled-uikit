@@ -7,20 +7,30 @@ const { mode } = theme.uiKit;
 
 describe('colorBoxTheme selectors', () => {
   describe('getBoxBgColor', () => {
-    Object.keys(bgColors[mode]).forEach(bgColor => {
-      it('should return the correct background color', () => {
+    it.each(Object.keys(bgColors[mode]))(
+      'should return the correct background color for %s',
+      bgColor => {
         expect(getBoxBgColor(theme, bgColor)).toEqual(bgColors[mode][bgColor]);
-      });
+      }
+    );
+
+    it('should throw if background color is not defined in the theme', () => {
+      expect(() => getBoxBgColor(theme, 'invalidBgColor')).toThrow();
     });
   });
 
   describe('getBoxElevation', () => {
-    Object.keys(elevations[mode]).forEach(elevation => {
-      it('should return the correct background color', () => {
+    it.each(Object.keys(elevations[mode]))(
+      'should return the correct elevation for % value',
+      elevation => {
         expect(getBoxElevation(theme, elevation)).toEqual(
           elevations[mode][elevation]
         );
-      });
+      }
+    );
+
+    it('should throw if elevation is not defined in the theme', () => {
+      expect(() => getBoxElevation(theme, 'invalidElevation')).toThrow();
     });
   });
 });
