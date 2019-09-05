@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { render, cleanup } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import theme from '../../../theme/theme';
 import StyledHeading from '../StyledHeading';
@@ -24,8 +24,6 @@ const renderComponent = (props = {}) =>
   );
 
 describe('<StyledHeading />', () => {
-  afterEach(cleanup);
-
   it('should render correctly with children', () => {
     const {
       container: { firstChild },

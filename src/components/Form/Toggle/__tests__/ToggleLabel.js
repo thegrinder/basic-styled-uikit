@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import ToggleLabel from '../ToggleLabel';
 
@@ -7,8 +7,6 @@ const children = <span>children</span>;
 const renderComponent = () => render(<ToggleLabel>{children}</ToggleLabel>);
 
 describe('<ToggleLabel />', () => {
-  afterEach(cleanup);
-
   it('should render correctly with children', () => {
     const {
       container: { firstChild },

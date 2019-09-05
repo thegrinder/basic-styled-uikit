@@ -1,11 +1,9 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import SpinnerWrapper from '../SpinnerWrapper';
 
 describe('<SpinnerWrapper />', () => {
-  afterEach(cleanup);
-
   it('should render correctly', () => {
     const {
       container: { firstChild },

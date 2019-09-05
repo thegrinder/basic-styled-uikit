@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { render, cleanup } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import theme from '../../../theme/theme';
 import ColorBox from '../ColorBox';
@@ -15,8 +15,6 @@ const renderComponent = (props = {}) =>
   );
 
 describe('<ColorBox />', () => {
-  afterEach(cleanup);
-
   it('should render correctly with default props and children', () => {
     const {
       container: { firstChild },

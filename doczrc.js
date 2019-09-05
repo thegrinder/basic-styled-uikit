@@ -2,9 +2,9 @@ export default {
   wrapper: '../../docz/Wrapper',
   codeSandbox: false,
   base: '/basic-styled-uikit/',
-  // themeConfig: {
-  //   mode: 'dark',
-  // },
+  themeConfig: {
+    mode: 'dark',
+  },
   htmlContext: {
     head: {
       links: [

@@ -1,11 +1,9 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import ContentWrapper from '../ContentWrapper';
 
 describe('<ContentWrapper />', () => {
-  afterEach(cleanup);
-
   it('should render correctly', () => {
     const {
       container: { firstChild },

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { render, cleanup } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import theme from '../../../theme/theme';
 import StyledLink from '../StyledLink';
@@ -17,8 +17,6 @@ const renderComponent = () =>
   );
 
 describe('<StyledLink />', () => {
-  afterEach(cleanup);
-
   it('should render correctly with children', () => {
     const {
       container: { firstChild },

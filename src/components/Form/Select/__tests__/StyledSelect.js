@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { render, cleanup } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import theme from '../../../../theme/theme';
 import StyledSelect from '../StyledSelect';
@@ -13,8 +13,6 @@ const renderComponent = () =>
   );
 
 describe('<StyledSelect />', () => {
-  afterEach(cleanup);
-
   it('should render correctly with default props and its children', () => {
     const {
       container: { firstChild },
