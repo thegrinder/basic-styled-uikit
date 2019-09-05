@@ -3,7 +3,7 @@ export default {
   codeSandbox: false,
   base: '/basic-styled-uikit/',
   themeConfig: {
-    mode: 'dark',
+    mode: 'light',
   },
   htmlContext: {
     head: {

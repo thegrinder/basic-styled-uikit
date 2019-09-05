@@ -21,7 +21,7 @@ const colors = {
   success600: '#43A047',
   warning400: '#FFEE58',
   warning600: '#FDD835',
-  danger400: '#FF7043',
+  danger400: '#FF8A65',
   danger600: '#F4511E',
 };
 

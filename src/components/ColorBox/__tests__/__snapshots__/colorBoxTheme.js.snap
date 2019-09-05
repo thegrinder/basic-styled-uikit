@@ -4,7 +4,7 @@ exports[`colorBox should be defined 1`] = `
 Object {
   "bgColors": Object {
     "dark": Object {
-      "danger": "#FF7043",
+      "danger": "#FF8A65",
       "neutral": "#161616",
       "primary": "#42A5F5",
       "success": "#66BB6A",

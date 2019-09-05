@@ -6,39 +6,81 @@ Object {
     "button": Object {
       "btnTypes": Object {
         "danger": Object {
-          "active": Object {
-            "backgroundColor": "#bc3409",
+          "dark": Object {
+            "active": Object {
+              "backgroundColor": "#ff774b",
+            },
+            "hover": Object {
+              "backgroundColor": "#ff9d7f",
+            },
+            "normal": Object {
+              "backgroundColor": "#FF8A65",
+              "color": "#161616",
+            },
           },
-          "hover": Object {
-            "backgroundColor": "#d53b0a",
-          },
-          "normal": Object {
-            "backgroundColor": "#F4511E",
-            "color": "#fff",
+          "light": Object {
+            "active": Object {
+              "backgroundColor": "#ed410c",
+            },
+            "hover": Object {
+              "backgroundColor": "#f56436",
+            },
+            "normal": Object {
+              "backgroundColor": "#F4511E",
+              "color": "#fff",
+            },
           },
         },
         "default": Object {
-          "active": Object {
-            "backgroundColor": "#60686f",
+          "dark": Object {
+            "active": Object {
+              "backgroundColor": "#bfc7cf",
+            },
+            "hover": Object {
+              "backgroundColor": "#dde1e5",
+            },
+            "normal": Object {
+              "backgroundColor": "#ced4da",
+              "color": "#161616",
+            },
           },
-          "hover": Object {
-            "backgroundColor": "#6c757d",
-          },
-          "normal": Object {
-            "backgroundColor": "#868e96",
-            "color": "#fff",
+          "light": Object {
+            "active": Object {
+              "backgroundColor": "#78818a",
+            },
+            "hover": Object {
+              "backgroundColor": "#949ba2",
+            },
+            "normal": Object {
+              "backgroundColor": "#868e96",
+              "color": "#fff",
+            },
           },
         },
         "primary": Object {
-          "active": Object {
-            "backgroundColor": "#1360a4",
+          "dark": Object {
+            "active": Object {
+              "backgroundColor": "#2a99f4",
+            },
+            "hover": Object {
+              "backgroundColor": "#5ab1f6",
+            },
+            "normal": Object {
+              "backgroundColor": "#42A5F5",
+              "color": "#161616",
+            },
           },
-          "hover": Object {
-            "backgroundColor": "#166dba",
-          },
-          "normal": Object {
-            "backgroundColor": "#1E88E5",
-            "color": "#fff",
+          "light": Object {
+            "active": Object {
+              "backgroundColor": "#187bd1",
+            },
+            "hover": Object {
+              "backgroundColor": "#3594e8",
+            },
+            "normal": Object {
+              "backgroundColor": "#1E88E5",
+              "color": "#fff",
+            },
           },
         },
       },
@@ -67,7 +109,7 @@ Object {
     "colorBox": Object {
       "bgColors": Object {
         "dark": Object {
-          "danger": "#FF7043",
+          "danger": "#FF8A65",
           "neutral": "#161616",
           "primary": "#42A5F5",
           "success": "#66BB6A",
@@ -101,7 +143,7 @@ Object {
       },
     },
     "colors": Object {
-      "danger400": "#FF7043",
+      "danger400": "#FF8A65",
       "danger600": "#F4511E",
       "neutral0": "#fff",
       "neutral100": "#f8f9fa",
@@ -213,7 +255,7 @@ Object {
     "heading": Object {
       "colors": Object {
         "dark": Object {
-          "danger": "#FF7043",
+          "danger": "#FF8A65",
           "neutral": "#fff",
           "primary": "#42A5F5",
           "success": "#66BB6A",
@@ -257,7 +299,7 @@ Object {
             "neutral": "#fff",
           },
           "warning": Object {
-            "neutral": "#fff",
+            "neutral": "#161616",
           },
         },
       },
@@ -334,7 +376,7 @@ Object {
     "text": Object {
       "colors": Object {
         "dark": Object {
-          "danger": "#FF7043",
+          "danger": "#FF8A65",
           "neutral": "#fff",
           "primary": "#42A5F5",
           "success": "#66BB6A",
@@ -374,7 +416,7 @@ Object {
             "neutral": "#fff",
           },
           "warning": Object {
-            "neutral": "#fff",
+            "neutral": "#161616",
           },
         },
       },

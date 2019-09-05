@@ -2,7 +2,7 @@
 
 exports[`colors should be defined 1`] = `
 Object {
-  "danger400": "#FF7043",
+  "danger400": "#FF8A65",
   "danger600": "#F4511E",
   "neutral0": "#fff",
   "neutral100": "#f8f9fa",

@@ -7,21 +7,24 @@ import {
 } from '../buttonSelectors';
 
 const { btnTypes, sizings, common } = buttonTheme;
+const { mode } = theme.uiKit;
 
 describe('buttonTheme selectors', () => {
   describe('getBtnTypeStyle', () => {
     Object.keys(btnTypes).forEach(btnType => {
-      Object.keys(btnTypes[btnType]).forEach(state => {
-        it('should return the correct btnType style object', () => {
+      Object.keys(btnTypes[btnType][mode]).forEach(state => {
+        it(`should return the correct style object for ${btnType} button type and ${state} state`, () => {
           expect(getBtnTypeStyle(theme, btnType, state)).toEqual(
-            btnTypes[btnType][state]
+            btnTypes[btnType][mode][state]
           );
         });
       });
     });
 
-    it('should return empty object if btnType is invalid', () => {
-      expect(getBtnTypeStyle(theme, 'invalidBtnType', 'normal')).toEqual({});
+    it('should throw if button type is not defined in the theme', () => {
+      expect(() =>
+        getBtnTypeStyle(theme, 'invalidBtnType', 'normal')
+      ).toThrow();
     });
   });
 
