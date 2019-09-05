@@ -3,8 +3,8 @@ import colors from '../../theme/colors';
 
 const linkTheme = {
   linkTypes: {
-    light: {
-      default: {
+    default: {
+      light: {
         normal: {
           color: colors.primary500,
         },
@@ -12,17 +12,7 @@ const linkTheme = {
           color: darken(0.1, colors.primary500),
         },
       },
-      muted: {
-        normal: {
-          color: colors.neutral600,
-        },
-        hover: {
-          color: darken(0.1, colors.neutral600),
-        },
-      },
-    },
-    dark: {
-      default: {
+      dark: {
         normal: {
           color: colors.primary300,
         },
@@ -30,7 +20,17 @@ const linkTheme = {
           color: lighten(0.1, colors.primary300),
         },
       },
-      muted: {
+    },
+    muted: {
+      light: {
+        normal: {
+          color: colors.neutral600,
+        },
+        hover: {
+          color: darken(0.1, colors.neutral600),
+        },
+      },
+      dark: {
         normal: {
           color: colors.neutral400,
         },

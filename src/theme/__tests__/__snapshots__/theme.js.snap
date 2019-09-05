@@ -292,8 +292,8 @@ Object {
         "fontFamily": "Lato, Arial, Helvetica, sans-serif",
       },
       "linkTypes": Object {
-        "dark": Object {
-          "default": Object {
+        "default": Object {
+          "dark": Object {
             "hover": Object {
               "color": "#94ccf9",
             },
@@ -301,17 +301,7 @@ Object {
               "color": "#64b5f6",
             },
           },
-          "muted": Object {
-            "hover": Object {
-              "color": "#ebeef0",
-            },
-            "normal": Object {
-              "color": "#ced4da",
-            },
-          },
-        },
-        "light": Object {
-          "default": Object {
+          "light": Object {
             "hover": Object {
               "color": "#0c7cd5",
             },
@@ -319,7 +309,17 @@ Object {
               "color": "#2196f3",
             },
           },
-          "muted": Object {
+        },
+        "muted": Object {
+          "dark": Object {
+            "hover": Object {
+              "color": "#ebeef0",
+            },
+            "normal": Object {
+              "color": "#ced4da",
+            },
+          },
+          "light": Object {
             "hover": Object {
               "color": "#6c757d",
             },

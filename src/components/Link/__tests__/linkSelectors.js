@@ -7,11 +7,11 @@ const { mode } = theme.uiKit;
 
 describe('linkTheme selectors', () => {
   describe('getLinkTypeStyle', () => {
-    Object.keys(linkTypes[mode]).forEach(linkType => {
-      Object.keys(linkTypes[mode][linkType]).forEach(state => {
+    Object.keys(linkTypes).forEach(linkType => {
+      Object.keys(linkTypes[linkType][mode]).forEach(state => {
         it(`should return the correct style object for ${linkType} link type and ${state} state`, () => {
           expect(getLinkTypeStyle(theme, linkType, state)).toEqual(
-            linkTypes[mode][linkType][state]
+            linkTypes[linkType][mode][state]
           );
         });
       });

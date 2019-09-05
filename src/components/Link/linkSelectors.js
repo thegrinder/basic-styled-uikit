@@ -2,7 +2,7 @@ import { getLink, getMode } from '../../theme/themeSelectors';
 
 export const getLinkTypeStyle = (theme, linktype, state) => {
   const mode = getMode(theme);
-  const typeStyle = getLink(theme).linkTypes[mode][linktype];
+  const typeStyle = getLink(theme).linkTypes[linktype][mode];
   if (!typeStyle) {
     throw new Error(`There is no ${linktype} link type in the <Link /> theme`);
   }
