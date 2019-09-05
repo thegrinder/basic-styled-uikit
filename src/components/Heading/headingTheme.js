@@ -31,10 +31,10 @@ const headingTheme = {
     },
     dark: {
       neutral: colors.neutral0,
-      primary: colors.primary200,
-      success: colors.success200,
-      warning: colors.warning200,
-      danger: colors.danger200,
+      primary: colors.primary300,
+      success: colors.success300,
+      warning: colors.warning300,
+      danger: colors.danger300,
     },
   },
   onBackground: {

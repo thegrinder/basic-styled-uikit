@@ -9,10 +9,10 @@ Object {
     "dark": Object {
       "default": Object {
         "hover": Object {
-          "color": "#c0e1fc",
+          "color": "#94ccf9",
         },
         "normal": Object {
-          "color": "#90caf9",
+          "color": "#64b5f6",
         },
       },
       "muted": Object {

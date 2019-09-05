@@ -15,13 +15,13 @@ const colors = {
   neutral900: '#212529',
   neutral1000: '#161616',
 
-  primary200: '#90caf9',
+  primary300: '#64b5f6',
   primary500: '#2196f3',
-  success200: '#a5d6a7',
+  success300: '#81c784',
   success500: '#4caf50',
-  warning200: '#fff59d',
+  warning300: '#fff176',
   warning500: '#ffeb3b',
-  danger200: '#ef9a9a',
+  danger300: '#e57373',
   danger500: '#f44336',
 };
 

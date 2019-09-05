@@ -24,10 +24,10 @@ const linkTheme = {
     dark: {
       default: {
         normal: {
-          color: colors.primary200,
+          color: colors.primary300,
         },
         hover: {
-          color: lighten(0.1, colors.primary200),
+          color: lighten(0.1, colors.primary300),
         },
       },
       muted: {

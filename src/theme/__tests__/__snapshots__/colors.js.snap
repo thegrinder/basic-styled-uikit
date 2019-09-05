@@ -2,7 +2,7 @@
 
 exports[`colors should be defined 1`] = `
 Object {
-  "danger200": "#ef9a9a",
+  "danger300": "#e57373",
   "danger500": "#f44336",
   "neutral0": "#fff",
   "neutral100": "#f8f9fa",
@@ -15,11 +15,11 @@ Object {
   "neutral700": "#495057",
   "neutral800": "#343a40",
   "neutral900": "#212529",
-  "primary200": "#90caf9",
+  "primary300": "#64b5f6",
   "primary500": "#2196f3",
-  "success200": "#a5d6a7",
+  "success300": "#81c784",
   "success500": "#4caf50",
-  "warning200": "#fff59d",
+  "warning300": "#fff176",
   "warning500": "#ffeb3b",
 }
 `;

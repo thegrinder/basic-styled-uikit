@@ -67,11 +67,11 @@ Object {
     "colorBox": Object {
       "bgColors": Object {
         "dark": Object {
-          "danger": "#ef9a9a",
+          "danger": "#e57373",
           "neutral": "#161616",
-          "primary": "#90caf9",
-          "success": "#a5d6a7",
-          "warning": "#fff59d",
+          "primary": "#64b5f6",
+          "success": "#81c784",
+          "warning": "#fff176",
         },
         "light": Object {
           "danger": "#f44336",
@@ -101,7 +101,7 @@ Object {
       },
     },
     "colors": Object {
-      "danger200": "#ef9a9a",
+      "danger300": "#e57373",
       "danger500": "#f44336",
       "neutral0": "#fff",
       "neutral100": "#f8f9fa",
@@ -114,11 +114,11 @@ Object {
       "neutral700": "#495057",
       "neutral800": "#343a40",
       "neutral900": "#212529",
-      "primary200": "#90caf9",
+      "primary300": "#64b5f6",
       "primary500": "#2196f3",
-      "success200": "#a5d6a7",
+      "success300": "#81c784",
       "success500": "#4caf50",
-      "warning200": "#fff59d",
+      "warning300": "#fff176",
       "warning500": "#ffeb3b",
     },
     "form": Object {
@@ -213,11 +213,11 @@ Object {
     "heading": Object {
       "colors": Object {
         "dark": Object {
-          "danger": "#ef9a9a",
+          "danger": "#e57373",
           "neutral": "#fff",
-          "primary": "#90caf9",
-          "success": "#a5d6a7",
-          "warning": "#fff59d",
+          "primary": "#64b5f6",
+          "success": "#81c784",
+          "warning": "#fff176",
         },
         "light": Object {
           "danger": "#f44336",
@@ -295,10 +295,10 @@ Object {
         "dark": Object {
           "default": Object {
             "hover": Object {
-              "color": "#c0e1fc",
+              "color": "#94ccf9",
             },
             "normal": Object {
-              "color": "#90caf9",
+              "color": "#64b5f6",
             },
           },
           "muted": Object {
@@ -334,11 +334,11 @@ Object {
     "text": Object {
       "colors": Object {
         "dark": Object {
-          "danger": "#ef9a9a",
+          "danger": "#e57373",
           "neutral": "#fff",
-          "primary": "#90caf9",
-          "success": "#a5d6a7",
-          "warning": "#fff59d",
+          "primary": "#64b5f6",
+          "success": "#81c784",
+          "warning": "#fff176",
         },
         "light": Object {
           "danger": "#f44336",
