@@ -60,14 +60,13 @@ describe('textTheme selectors', () => {
     });
 
     Object.keys(onBackground[mode]).forEach(bgColor => {
-      it.each(Object.keys(onBackground[mode][bgColor]))(
-        `should return the correct code for %s color for ${bgColor} background`,
-        color => {
+      Object.keys(onBackground[mode][bgColor]).forEach(color => {
+        it(`should return the correct code for ${color} color for ${bgColor} background`, () => {
           expect(getTextColorOnBg(theme, bgColor, color)).toEqual(
             colorPalette.neutral0
           );
-        }
-      );
+        });
+      });
     });
   });
 

@@ -32,7 +32,7 @@ import { Spacer } from '../../../docz';
     <Text>warning</Text>
   </ColorBox>
   <Spacer />
-  <ColorBox bgColor="neutral0">
+  <ColorBox bgColor="neutral">
     <Text>neutral0</Text>
   </ColorBox>
 </Playground>
@@ -41,11 +41,13 @@ import { Spacer } from '../../../docz';
 ### ColorBox elevation
 
 <Playground>
-  <ColorBox elevation={1}>
-    <Text>one</Text>
-  </ColorBox>
-  <Spacer />
-  <ColorBox elevation={2}>
-    <Text>two</Text>
+  <ColorBox bgColor="neutral" style={{ padding: '20px' }}>
+    <ColorBox elevation={1}>
+      <Text>one</Text>
+    </ColorBox>
+    <Spacer />
+    <ColorBox elevation={2}>
+      <Text>two</Text>
+    </ColorBox>
   </ColorBox>
 </Playground>

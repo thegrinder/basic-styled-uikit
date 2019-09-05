@@ -21,10 +21,10 @@ Object {
   "elevations": Object {
     "dark": Object {
       "1": Object {
-        "backgroundColor": "#1b1b1b",
+        "backgroundColor": "#1e1e1e",
       },
       "2": Object {
-        "backgroundColor": "#202020",
+        "backgroundColor": "#252525",
       },
     },
     "light": Object {

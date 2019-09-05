@@ -31,10 +31,10 @@ const lightColorBoxTheme = {
     },
     dark: {
       1: {
-        backgroundColor: lighten(0.02, colors.neutral1000),
+        backgroundColor: lighten(0.03, colors.neutral1000),
       },
       2: {
-        backgroundColor: lighten(0.04, colors.neutral1000),
+        backgroundColor: lighten(0.06, colors.neutral1000),
       },
     },
   },

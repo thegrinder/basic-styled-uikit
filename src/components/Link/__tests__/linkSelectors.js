@@ -3,21 +3,28 @@ import linkTheme from '../linkTheme';
 import { getLinkTypeStyle, getLinkCommonStyle } from '../linkSelectors';
 
 const { linkTypes, common } = linkTheme;
+const { mode } = theme.uiKit;
 
 describe('linkTheme selectors', () => {
   describe('getLinkTypeStyle', () => {
-    Object.keys(linkTypes).forEach(linkType => {
-      Object.keys(linkTypes[linkType]).forEach(state => {
-        it('should return the correct linkType style object', () => {
+    Object.keys(linkTypes[mode]).forEach(linkType => {
+      Object.keys(linkTypes[mode][linkType]).forEach(state => {
+        it(`should return the correct style object for ${linkType} link type and ${state} state`, () => {
           expect(getLinkTypeStyle(theme, linkType, state)).toEqual(
-            linkTypes[linkType][state]
+            linkTypes[mode][linkType][state]
           );
         });
       });
     });
 
-    it('should return empty object if linkType is invalid', () => {
-      expect(getLinkTypeStyle(theme, 'invalidLinkType', 'normal')).toEqual({});
+    it('should throw if link type is not defined in the theme', () => {
+      expect(() =>
+        getLinkTypeStyle(theme, 'invalidLinkType', 'normal')
+      ).toThrow();
+    });
+
+    it('should throw if link state is not defined in the theme', () => {
+      expect(() => getLinkTypeStyle(theme, 'muted', 'invalidState')).toThrow();
     });
   });
 
