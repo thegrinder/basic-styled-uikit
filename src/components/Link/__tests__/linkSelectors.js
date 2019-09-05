@@ -22,10 +22,6 @@ describe('linkTheme selectors', () => {
         getLinkTypeStyle(theme, 'invalidLinkType', 'normal')
       ).toThrow();
     });
-
-    it('should throw if link state is not defined in the theme', () => {
-      expect(() => getLinkTypeStyle(theme, 'muted', 'invalidState')).toThrow();
-    });
   });
 
   describe('getLinkCommonStyle', () => {

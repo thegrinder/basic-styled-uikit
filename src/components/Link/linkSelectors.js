@@ -6,11 +6,6 @@ export const getLinkTypeStyle = (theme, linktype, state) => {
   if (!typeStyle) {
     throw new Error(`There is no ${linktype} link type in the <Link /> theme`);
   }
-  if (!typeStyle[state]) {
-    throw new Error(
-      `There is no ${state} state for ${linktype} link type in <Link /> theme`
-    );
-  }
   return typeStyle[state];
 };
 
