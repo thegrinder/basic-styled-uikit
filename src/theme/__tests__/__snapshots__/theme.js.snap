@@ -7,13 +7,13 @@ Object {
       "btnTypes": Object {
         "danger": Object {
           "active": Object {
-            "backgroundColor": "#d2190b",
+            "backgroundColor": "#bc3409",
           },
           "hover": Object {
-            "backgroundColor": "#ea1c0d",
+            "backgroundColor": "#d53b0a",
           },
           "normal": Object {
-            "backgroundColor": "#f44336",
+            "backgroundColor": "#F4511E",
             "color": "#fff",
           },
         },
@@ -31,13 +31,13 @@ Object {
         },
         "primary": Object {
           "active": Object {
-            "backgroundColor": "#0a6ebd",
+            "backgroundColor": "#1360a4",
           },
           "hover": Object {
-            "backgroundColor": "#0c7cd5",
+            "backgroundColor": "#166dba",
           },
           "normal": Object {
-            "backgroundColor": "#2196f3",
+            "backgroundColor": "#1E88E5",
             "color": "#fff",
           },
         },
@@ -67,18 +67,18 @@ Object {
     "colorBox": Object {
       "bgColors": Object {
         "dark": Object {
-          "danger": "#e57373",
+          "danger": "#FF7043",
           "neutral": "#161616",
-          "primary": "#64b5f6",
-          "success": "#81c784",
-          "warning": "#fff176",
+          "primary": "#42A5F5",
+          "success": "#66BB6A",
+          "warning": "#FFEE58",
         },
         "light": Object {
-          "danger": "#f44336",
+          "danger": "#F4511E",
           "neutral": "#fff",
-          "primary": "#2196f3",
-          "success": "#4caf50",
-          "warning": "#ffeb3b",
+          "primary": "#1E88E5",
+          "success": "#43A047",
+          "warning": "#FDD835",
         },
       },
       "elevations": Object {
@@ -101,8 +101,8 @@ Object {
       },
     },
     "colors": Object {
-      "danger300": "#e57373",
-      "danger500": "#f44336",
+      "danger400": "#FF7043",
+      "danger600": "#F4511E",
       "neutral0": "#fff",
       "neutral100": "#f8f9fa",
       "neutral1000": "#161616",
@@ -114,12 +114,12 @@ Object {
       "neutral700": "#495057",
       "neutral800": "#343a40",
       "neutral900": "#212529",
-      "primary300": "#64b5f6",
-      "primary500": "#2196f3",
-      "success300": "#81c784",
-      "success500": "#4caf50",
-      "warning300": "#fff176",
-      "warning500": "#ffeb3b",
+      "primary400": "#42A5F5",
+      "primary600": "#1E88E5",
+      "success400": "#66BB6A",
+      "success600": "#43A047",
+      "warning400": "#FFEE58",
+      "warning600": "#FDD835",
     },
     "form": Object {
       "inline": Object {
@@ -129,12 +129,12 @@ Object {
         },
         "states": Object {
           "invalid": Object {
-            "borderColor": "#f44336",
-            "color": "#f44336",
+            "borderColor": "#F4511E",
+            "color": "#F4511E",
           },
           "valid": Object {
             "active": Object {
-              "borderColor": "#2196f3",
+              "borderColor": "#1E88E5",
               "color": "#495057",
             },
             "disabled": Object {
@@ -156,14 +156,14 @@ Object {
         "common": Object {},
         "states": Object {
           "invalid": Object {
-            "borderColor": "#f44336",
+            "borderColor": "#F4511E",
           },
           "valid": Object {
             "active": Object {
-              "borderColor": "#2196f3",
+              "borderColor": "#1E88E5",
             },
             "checked": Object {
-              "backgroundColor": "#2196f3",
+              "backgroundColor": "#1E88E5",
               "borderColor": undefined,
             },
             "normal": Object {
@@ -179,12 +179,12 @@ Object {
         },
         "states": Object {
           "invalid": Object {
-            "borderColor": "#f44336",
-            "color": "#f44336",
+            "borderColor": "#F4511E",
+            "color": "#F4511E",
           },
           "valid": Object {
             "active": Object {
-              "borderColor": "#2196f3",
+              "borderColor": "#1E88E5",
               "color": "#495057",
             },
             "disabled": Object {
@@ -202,7 +202,7 @@ Object {
       "toggle": Object {
         "states": Object {
           "checked": Object {
-            "backgroundColor": "#2196f3",
+            "backgroundColor": "#1E88E5",
           },
           "normal": Object {
             "backgroundColor": "#ced4da",
@@ -213,18 +213,18 @@ Object {
     "heading": Object {
       "colors": Object {
         "dark": Object {
-          "danger": "#e57373",
+          "danger": "#FF7043",
           "neutral": "#fff",
-          "primary": "#64b5f6",
-          "success": "#81c784",
-          "warning": "#fff176",
+          "primary": "#42A5F5",
+          "success": "#66BB6A",
+          "warning": "#FFEE58",
         },
         "light": Object {
-          "danger": "#f44336",
+          "danger": "#F4511E",
           "neutral": "#161616",
-          "primary": "#2196f3",
-          "success": "#4caf50",
-          "warning": "#ffeb3b",
+          "primary": "#1E88E5",
+          "success": "#43A047",
+          "warning": "#FDD835",
         },
       },
       "common": Object {
@@ -295,18 +295,18 @@ Object {
         "default": Object {
           "dark": Object {
             "hover": Object {
-              "color": "#94ccf9",
+              "color": "#72bcf8",
             },
             "normal": Object {
-              "color": "#64b5f6",
+              "color": "#42A5F5",
             },
           },
           "light": Object {
             "hover": Object {
-              "color": "#0c7cd5",
+              "color": "#166dba",
             },
             "normal": Object {
-              "color": "#2196f3",
+              "color": "#1E88E5",
             },
           },
         },
@@ -334,18 +334,18 @@ Object {
     "text": Object {
       "colors": Object {
         "dark": Object {
-          "danger": "#e57373",
+          "danger": "#FF7043",
           "neutral": "#fff",
-          "primary": "#64b5f6",
-          "success": "#81c784",
-          "warning": "#fff176",
+          "primary": "#42A5F5",
+          "success": "#66BB6A",
+          "warning": "#FFEE58",
         },
         "light": Object {
-          "danger": "#f44336",
+          "danger": "#F4511E",
           "neutral": "#161616",
-          "primary": "#2196f3",
-          "success": "#4caf50",
-          "warning": "#ffeb3b",
+          "primary": "#1E88E5",
+          "success": "#43A047",
+          "warning": "#FDD835",
         },
       },
       "onBackground": Object {

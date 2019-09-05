@@ -6,18 +6,18 @@ const linkTheme = {
     default: {
       light: {
         normal: {
-          color: colors.primary500,
+          color: colors.primary600,
         },
         hover: {
-          color: darken(0.1, colors.primary500),
+          color: darken(0.1, colors.primary600),
         },
       },
       dark: {
         normal: {
-          color: colors.primary300,
+          color: colors.primary400,
         },
         hover: {
-          color: lighten(0.1, colors.primary300),
+          color: lighten(0.1, colors.primary400),
         },
       },
     },

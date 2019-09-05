@@ -23,17 +23,17 @@ const textTheme = {
   colors: {
     light: {
       neutral: colors.neutral1000,
-      primary: colors.primary500,
-      success: colors.success500,
-      warning: colors.warning500,
-      danger: colors.danger500,
+      primary: colors.primary600,
+      success: colors.success600,
+      warning: colors.warning600,
+      danger: colors.danger600,
     },
     dark: {
       neutral: colors.neutral0,
-      primary: colors.primary300,
-      success: colors.success300,
-      warning: colors.warning300,
-      danger: colors.danger300,
+      primary: colors.primary400,
+      success: colors.success400,
+      warning: colors.warning400,
+      danger: colors.danger400,
     },
   },
   onBackground: {

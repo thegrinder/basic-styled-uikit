@@ -4,18 +4,18 @@ exports[`textTheme should be defined 1`] = `
 Object {
   "colors": Object {
     "dark": Object {
-      "danger": "#e57373",
+      "danger": "#FF7043",
       "neutral": "#fff",
-      "primary": "#64b5f6",
-      "success": "#81c784",
-      "warning": "#fff176",
+      "primary": "#42A5F5",
+      "success": "#66BB6A",
+      "warning": "#FFEE58",
     },
     "light": Object {
-      "danger": "#f44336",
+      "danger": "#F4511E",
       "neutral": "#161616",
-      "primary": "#2196f3",
-      "success": "#4caf50",
-      "warning": "#ffeb3b",
+      "primary": "#1E88E5",
+      "success": "#43A047",
+      "warning": "#FDD835",
     },
   },
   "onBackground": Object {

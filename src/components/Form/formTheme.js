@@ -10,7 +10,7 @@ const formTheme = {
           color: colors.neutral700,
         },
         active: {
-          borderColor: colors.primary500,
+          borderColor: colors.primary600,
           color: colors.neutral700,
         },
         disabled: {
@@ -20,8 +20,8 @@ const formTheme = {
         },
       },
       invalid: {
-        color: colors.danger500,
-        borderColor: colors.danger500,
+        color: colors.danger600,
+        borderColor: colors.danger600,
       },
     },
     common: {
@@ -41,7 +41,7 @@ const formTheme = {
           color: colors.neutral700,
         },
         active: {
-          borderColor: colors.primary500,
+          borderColor: colors.primary600,
           color: colors.neutral700,
         },
         disabled: {
@@ -51,8 +51,8 @@ const formTheme = {
         },
       },
       invalid: {
-        color: colors.danger500,
-        borderColor: colors.danger500,
+        color: colors.danger600,
+        borderColor: colors.danger600,
       },
     },
     common: {
@@ -68,17 +68,17 @@ const formTheme = {
           borderColor: colors.neutral300,
         },
         active: {
-          borderColor: colors.primary500,
+          borderColor: colors.primary600,
         },
         checked: {
           borderColor: colors.transparent,
-          backgroundColor: colors.primary500,
+          backgroundColor: colors.primary600,
         },
         // no theme for disabled because it's not simple
         // enough to handle all the cases (e.g disabled checked)
       },
       invalid: {
-        borderColor: colors.danger500,
+        borderColor: colors.danger600,
       },
     },
     common: {},
@@ -90,7 +90,7 @@ const formTheme = {
         backgroundColor: colors.neutral400,
       },
       checked: {
-        backgroundColor: colors.primary500,
+        backgroundColor: colors.primary600,
       },
     },
   },

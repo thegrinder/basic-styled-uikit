@@ -9,12 +9,12 @@ Object {
     },
     "states": Object {
       "invalid": Object {
-        "borderColor": "#f44336",
-        "color": "#f44336",
+        "borderColor": "#F4511E",
+        "color": "#F4511E",
       },
       "valid": Object {
         "active": Object {
-          "borderColor": "#2196f3",
+          "borderColor": "#1E88E5",
           "color": "#495057",
         },
         "disabled": Object {
@@ -36,14 +36,14 @@ Object {
     "common": Object {},
     "states": Object {
       "invalid": Object {
-        "borderColor": "#f44336",
+        "borderColor": "#F4511E",
       },
       "valid": Object {
         "active": Object {
-          "borderColor": "#2196f3",
+          "borderColor": "#1E88E5",
         },
         "checked": Object {
-          "backgroundColor": "#2196f3",
+          "backgroundColor": "#1E88E5",
           "borderColor": undefined,
         },
         "normal": Object {
@@ -59,12 +59,12 @@ Object {
     },
     "states": Object {
       "invalid": Object {
-        "borderColor": "#f44336",
-        "color": "#f44336",
+        "borderColor": "#F4511E",
+        "color": "#F4511E",
       },
       "valid": Object {
         "active": Object {
-          "borderColor": "#2196f3",
+          "borderColor": "#1E88E5",
           "color": "#495057",
         },
         "disabled": Object {
@@ -82,7 +82,7 @@ Object {
   "toggle": Object {
     "states": Object {
       "checked": Object {
-        "backgroundColor": "#2196f3",
+        "backgroundColor": "#1E88E5",
       },
       "normal": Object {
         "backgroundColor": "#ced4da",

@@ -5,13 +5,13 @@ Object {
   "btnTypes": Object {
     "danger": Object {
       "active": Object {
-        "backgroundColor": "#d2190b",
+        "backgroundColor": "#bc3409",
       },
       "hover": Object {
-        "backgroundColor": "#ea1c0d",
+        "backgroundColor": "#d53b0a",
       },
       "normal": Object {
-        "backgroundColor": "#f44336",
+        "backgroundColor": "#F4511E",
         "color": "#fff",
       },
     },
@@ -29,13 +29,13 @@ Object {
     },
     "primary": Object {
       "active": Object {
-        "backgroundColor": "#0a6ebd",
+        "backgroundColor": "#1360a4",
       },
       "hover": Object {
-        "backgroundColor": "#0c7cd5",
+        "backgroundColor": "#166dba",
       },
       "normal": Object {
-        "backgroundColor": "#2196f3",
+        "backgroundColor": "#1E88E5",
         "color": "#fff",
       },
     },

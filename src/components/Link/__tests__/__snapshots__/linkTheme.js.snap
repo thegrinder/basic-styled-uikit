@@ -9,18 +9,18 @@ Object {
     "default": Object {
       "dark": Object {
         "hover": Object {
-          "color": "#94ccf9",
+          "color": "#72bcf8",
         },
         "normal": Object {
-          "color": "#64b5f6",
+          "color": "#42A5F5",
         },
       },
       "light": Object {
         "hover": Object {
-          "color": "#0c7cd5",
+          "color": "#166dba",
         },
         "normal": Object {
-          "color": "#2196f3",
+          "color": "#1E88E5",
         },
       },
     },

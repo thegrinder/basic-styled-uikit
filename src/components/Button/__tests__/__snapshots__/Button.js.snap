@@ -2,7 +2,7 @@
 
 exports[`<Button /> should render correctly with custom props 1`] = `
 <button
-  class="StyledButton-k0ad56-0 bvXgcZ"
+  class="StyledButton-k0ad56-0 hhenRr"
 >
   <span
     class="SpinnerWrapper-sc-1ln0y9p-0 csgNUt"

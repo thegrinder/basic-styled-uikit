@@ -10,6 +10,6 @@ describe('colors', () => {
 
 describe('getColor', () => {
   it('should return the right color', () => {
-    expect(getColor('primary500')({ theme })).toEqual(colors.primary500);
+    expect(getColor('primary600')({ theme })).toEqual(colors.primary600);
   });
 });

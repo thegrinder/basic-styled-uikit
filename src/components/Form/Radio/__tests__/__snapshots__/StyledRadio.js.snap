@@ -2,7 +2,7 @@
 
 exports[`<StyledRadio /> should render correctly 1`] = `
 <input
-  class="StyledRadio-sc-1q7ubkv-0 iAEpwQ"
+  class="StyledRadio-sc-1q7ubkv-0 gYrLKn"
   type="radio"
 />
 `;

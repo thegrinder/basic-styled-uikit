@@ -2,12 +2,12 @@
 
 exports[`<Input /> should render correctly with custom props 1`] = `
 <input
-  class="StyledInput-ok3pz6-0 dwDBZ"
+  class="StyledInput-ok3pz6-0 gZTOyO"
 />
 `;
 
 exports[`<Input /> should render correctly with default props 1`] = `
 <input
-  class="StyledInput-ok3pz6-0 cgiAVu"
+  class="StyledInput-ok3pz6-0 jUHSeH"
 />
 `;

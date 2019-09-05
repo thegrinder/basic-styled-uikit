@@ -18,25 +18,25 @@ const buttonTheme = {
     primary: {
       normal: {
         color: colors.neutral0,
-        backgroundColor: colors.primary500,
+        backgroundColor: colors.primary600,
       },
       hover: {
-        backgroundColor: darken(0.1, colors.primary500),
+        backgroundColor: darken(0.1, colors.primary600),
       },
       active: {
-        backgroundColor: darken(0.15, colors.primary500),
+        backgroundColor: darken(0.15, colors.primary600),
       },
     },
     danger: {
       normal: {
         color: colors.neutral0,
-        backgroundColor: colors.danger500,
+        backgroundColor: colors.danger600,
       },
       hover: {
-        backgroundColor: darken(0.1, colors.danger500),
+        backgroundColor: darken(0.1, colors.danger600),
       },
       active: {
-        backgroundColor: darken(0.15, colors.danger500),
+        backgroundColor: darken(0.15, colors.danger600),
       },
     },
   },

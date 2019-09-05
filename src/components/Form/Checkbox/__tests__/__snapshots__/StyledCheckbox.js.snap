@@ -2,7 +2,7 @@
 
 exports[`<StyledCheckbox /> should render correctly 1`] = `
 <input
-  class="StyledCheckbox-sc-1u8r4za-0 krFcey"
+  class="StyledCheckbox-sc-1u8r4za-0 efeRgV"
   type="checkbox"
 />
 `;

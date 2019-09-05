@@ -15,14 +15,14 @@ const colors = {
   neutral900: '#212529',
   neutral1000: '#161616',
 
-  primary300: '#64b5f6',
-  primary500: '#2196f3',
-  success300: '#81c784',
-  success500: '#4caf50',
-  warning300: '#fff176',
-  warning500: '#ffeb3b',
-  danger300: '#e57373',
-  danger500: '#f44336',
+  primary400: '#42A5F5',
+  primary600: '#1E88E5',
+  success400: '#66BB6A',
+  success600: '#43A047',
+  warning400: '#FFEE58',
+  warning600: '#FDD835',
+  danger400: '#FF7043',
+  danger600: '#F4511E',
 };
 
 export default colors;

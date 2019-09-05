@@ -2,7 +2,7 @@
 
 exports[`<ColorBox /> should render correctly with custom props 1`] = `
 <div
-  class="StyledColorBox-sc-1ihbgka-0 jxpoGf"
+  class="StyledColorBox-sc-1ihbgka-0 hXTemG"
 >
   children
 </div>
