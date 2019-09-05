@@ -63,7 +63,9 @@ describe('textTheme selectors', () => {
       Object.keys(onBackground[mode][bgColor]).forEach(color => {
         it(`should return the correct code for ${color} color for ${bgColor} background`, () => {
           expect(getTextColorOnBg(theme, bgColor, color)).toEqual(
-            colorPalette.neutral0
+            bgColor === 'warning'
+              ? colorPalette.neutral1000
+              : colorPalette.neutral0
           );
         });
       });

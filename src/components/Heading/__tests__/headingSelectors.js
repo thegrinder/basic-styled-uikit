@@ -64,7 +64,9 @@ describe('headingTheme selectors', () => {
         `should return the correct code for %s color for ${bgColor} background`,
         color => {
           expect(getHeadingColorOnBg(theme, bgColor, color)).toEqual(
-            colorPalette.neutral0
+            bgColor === 'warning'
+              ? colorPalette.neutral1000
+              : colorPalette.neutral0
           );
         }
       );

@@ -46,7 +46,7 @@ const headingTheme = {
         neutral: colors.neutral0,
       },
       warning: {
-        neutral: colors.neutral0,
+        neutral: colors.neutral1000,
       },
       danger: {
         neutral: colors.neutral0,

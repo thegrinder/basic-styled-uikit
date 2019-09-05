@@ -4,7 +4,7 @@ exports[`headingTheme should be defined 1`] = `
 Object {
   "colors": Object {
     "dark": Object {
-      "danger": "#FF7043",
+      "danger": "#FF8A65",
       "neutral": "#fff",
       "primary": "#42A5F5",
       "success": "#66BB6A",
@@ -48,7 +48,7 @@ Object {
         "neutral": "#fff",
       },
       "warning": Object {
-        "neutral": "#fff",
+        "neutral": "#161616",
       },
     },
   },
