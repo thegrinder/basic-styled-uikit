@@ -8,6 +8,6 @@ exports[`<Input /> should render correctly with custom props 1`] = `
 
 exports[`<Input /> should render correctly with default props 1`] = `
 <input
-  class="StyledInput-ok3pz6-0 jUHSeH"
+  class="StyledInput-ok3pz6-0 isomuM"
 />
 `;

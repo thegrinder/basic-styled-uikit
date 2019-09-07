@@ -1,9 +1,11 @@
-import { getForm } from '../../theme/themeSelectors';
+import { getForm, getMode } from '../../theme/themeSelectors';
 
 export const getRegularInputCommonStyle = theme =>
   getForm(theme).regular.common;
+
 export const getRegularInputStyle = (theme, invalid, state) => {
-  const { states } = getForm(theme).regular;
+  const mode = getMode(theme);
+  const { states } = getForm(theme).regular[mode];
   return invalid ? states.invalid : states.valid[state];
 };
 

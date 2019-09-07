@@ -1,27 +1,49 @@
+import { transparentize } from 'polished';
 import colors from '../../theme/colors';
 
 const formTheme = {
   // text input, textarea, and select
   regular: {
-    states: {
-      valid: {
-        normal: {
-          borderColor: colors.neutral300,
-          color: colors.neutral700,
+    light: {
+      states: {
+        valid: {
+          normal: {
+            borderColor: colors.neutral400,
+            color: colors.neutral700,
+          },
+          active: {
+            borderColor: colors.primary600,
+          },
+          disabled: {
+            color: colors.neutral600,
+            backgroundColor: colors.neutral100,
+          },
         },
-        active: {
-          borderColor: colors.primary600,
-          color: colors.neutral700,
-        },
-        disabled: {
-          borderColor: colors.neutral300,
-          color: colors.neutral600,
-          backgroundColor: colors.neutral100,
+        invalid: {
+          color: colors.danger600,
+          borderColor: colors.danger600,
         },
       },
-      invalid: {
-        color: colors.danger600,
-        borderColor: colors.danger600,
+    },
+    dark: {
+      states: {
+        valid: {
+          normal: {
+            borderColor: colors.neutral400,
+            color: colors.neutral0,
+          },
+          active: {
+            borderColor: colors.primary400,
+          },
+          disabled: {
+            borderColor: transparentize(0.8, colors.neutral400),
+            color: transparentize(0.8, colors.neutral0),
+          },
+        },
+        invalid: {
+          color: colors.danger400,
+          borderColor: colors.danger400,
+        },
       },
     },
     common: {

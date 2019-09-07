@@ -11,19 +11,22 @@ import {
 } from '../formSelectors';
 
 const { regular, inline, misc, toggle } = formTheme;
+const { mode } = theme.uiKit;
 
 describe('formTheme selectors', () => {
   describe('getRegularInputStyle', () => {
-    Object.keys(regular.states.valid).forEach(state => {
-      it('should return the correct style object for different valid states', () => {
+    Object.keys(regular[mode].states.valid).forEach(state => {
+      it(`should return the correct style object for regular input in ${state} state`, () => {
         expect(getRegularInputStyle(theme, false, state)).toEqual(
-          regular.states.valid[state]
+          regular[mode].states.valid[state]
         );
       });
     });
 
-    it('should return the correct style object for invalid state', () => {
-      expect(getRegularInputStyle(theme, true)).toEqual(regular.states.invalid);
+    it('should return the correct style object for regular input in invalid state', () => {
+      expect(getRegularInputStyle(theme, true)).toEqual(
+        regular[mode].states.invalid
+      );
     });
   });
 

@@ -219,24 +219,45 @@ Object {
           "fontFamily": "Lato, Arial, Helvetica, sans-serif",
           "fontSize": "1rem",
         },
-        "states": Object {
-          "invalid": Object {
-            "borderColor": "#F4511E",
-            "color": "#F4511E",
+        "dark": Object {
+          "states": Object {
+            "invalid": Object {
+              "borderColor": "#FF8A65",
+              "color": "#FF8A65",
+            },
+            "valid": Object {
+              "active": Object {
+                "borderColor": "#42A5F5",
+              },
+              "disabled": Object {
+                "borderColor": "rgba(206,212,218,0.2)",
+                "color": "rgba(255,255,255,0.2)",
+              },
+              "normal": Object {
+                "borderColor": "#ced4da",
+                "color": "#fff",
+              },
+            },
           },
-          "valid": Object {
-            "active": Object {
-              "borderColor": "#1E88E5",
-              "color": "#495057",
+        },
+        "light": Object {
+          "states": Object {
+            "invalid": Object {
+              "borderColor": "#F4511E",
+              "color": "#F4511E",
             },
-            "disabled": Object {
-              "backgroundColor": "#f8f9fa",
-              "borderColor": "#dee2e6",
-              "color": "#868e96",
-            },
-            "normal": Object {
-              "borderColor": "#dee2e6",
-              "color": "#495057",
+            "valid": Object {
+              "active": Object {
+                "borderColor": "#1E88E5",
+              },
+              "disabled": Object {
+                "backgroundColor": "#f8f9fa",
+                "color": "#868e96",
+              },
+              "normal": Object {
+                "borderColor": "#ced4da",
+                "color": "#495057",
+              },
             },
           },
         },
