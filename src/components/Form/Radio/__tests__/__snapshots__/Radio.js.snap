@@ -2,14 +2,14 @@
 
 exports[`<Radio /> should render correctly with custom props 1`] = `
 <input
-  class="StyledRadio-sc-1q7ubkv-0 cBFSdl"
+  class="StyledRadio-sc-1q7ubkv-0 ddYDMo"
   type="radio"
 />
 `;
 
 exports[`<Radio /> should render correctly with default props 1`] = `
 <input
-  class="StyledRadio-sc-1q7ubkv-0 gYrLKn"
+  class="StyledRadio-sc-1q7ubkv-0 cSOcvj"
   type="radio"
 />
 `;

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { bool } from 'prop-types';
 import { miscInputStyles } from '../commonFormStyles';
+import { rem } from '../../../theme/typography';
 
 const propTypes = {
   invalid: bool.isRequired,
@@ -20,10 +21,14 @@ const StyledRadio = styled.input.attrs({
     left: 0;
     right: 0;
     margin: auto;
-    background-color: #fff;
-    width: 25%;
-    height: 25%;
+    width: ${rem(6)};
+    height: ${rem(6)};
     border-radius: 50%;
+  }
+  &:checked {
+    &:before {
+      background-color: #fff;
+    }
   }
 `;
 
