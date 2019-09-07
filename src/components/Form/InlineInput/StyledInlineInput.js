@@ -32,6 +32,9 @@ const StyledInlineInput = styled.input`
   &:focus {
     outline: none;
   }
+  &::placeholder {
+    color: inherit;
+  }
   ${({ theme, invalid, submitting }) => css`
     ${getInlineInputCommonStyle(theme)}
     ${getInlineInputStyle(theme, invalid, 'normal')}

@@ -37,21 +37,23 @@ describe('formTheme selectors', () => {
   });
 
   describe('getInlineInputStyle', () => {
-    Object.keys(inline.states.valid).forEach(state => {
-      it('should return the correct style object for different valid states', () => {
+    Object.keys(inline[mode].states.valid).forEach(state => {
+      it(`should return the correct style object for inline input ${state} state`, () => {
         expect(getInlineInputStyle(theme, false, state)).toEqual(
-          inline.states.valid[state]
+          inline[mode].states.valid[state]
         );
       });
     });
 
-    it('should return the correct style object for invalid state', () => {
-      expect(getInlineInputStyle(theme, true)).toEqual(inline.states.invalid);
+    it('should return the correct style object for inline input in invalid state', () => {
+      expect(getInlineInputStyle(theme, true)).toEqual(
+        inline[mode].states.invalid
+      );
     });
   });
 
   describe('getInlineInputCommonStyle', () => {
-    it('should return the correct common style object', () => {
+    it('should return the correct common style object for inline input', () => {
       expect(getInlineInputCommonStyle(theme)).toEqual(inline.common);
     });
   });

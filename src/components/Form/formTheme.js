@@ -53,28 +53,53 @@ const formTheme = {
   },
   // inline input
   inline: {
-    states: {
-      valid: {
-        normal: {
-          color: colors.neutral700,
+    light: {
+      states: {
+        valid: {
+          normal: {
+            color: colors.neutral700,
+          },
+          hover: {
+            borderColor: colors.neutral300,
+            color: colors.neutral700,
+          },
+          active: {
+            borderColor: colors.primary600,
+            color: colors.neutral700,
+          },
+          disabled: {
+            borderColor: colors.neutral300,
+            color: colors.neutral600,
+            backgroundColor: colors.neutral100,
+          },
         },
-        hover: {
-          borderColor: colors.neutral300,
-          color: colors.neutral700,
-        },
-        active: {
-          borderColor: colors.primary600,
-          color: colors.neutral700,
-        },
-        disabled: {
-          borderColor: colors.neutral300,
-          color: colors.neutral600,
-          backgroundColor: colors.neutral100,
+        invalid: {
+          color: colors.danger600,
+          borderColor: colors.danger600,
         },
       },
-      invalid: {
-        color: colors.danger600,
-        borderColor: colors.danger600,
+    },
+    dark: {
+      states: {
+        valid: {
+          normal: {
+            color: colors.neutral0,
+          },
+          hover: {
+            borderColor: colors.neutral300,
+          },
+          active: {
+            borderColor: colors.primary600,
+          },
+          disabled: {
+            borderColor: transparentize(0.8, colors.neutral400),
+            color: transparentize(0.8, colors.neutral0),
+          },
+        },
+        invalid: {
+          color: colors.danger600,
+          borderColor: colors.danger600,
+        },
       },
     },
     common: {

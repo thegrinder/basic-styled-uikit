@@ -169,27 +169,52 @@ Object {
           "fontFamily": "Lato, Arial, Helvetica, sans-serif",
           "fontSize": "1rem",
         },
-        "states": Object {
-          "invalid": Object {
-            "borderColor": "#F4511E",
-            "color": "#F4511E",
+        "dark": Object {
+          "states": Object {
+            "invalid": Object {
+              "borderColor": "#F4511E",
+              "color": "#F4511E",
+            },
+            "valid": Object {
+              "active": Object {
+                "borderColor": "#1E88E5",
+              },
+              "disabled": Object {
+                "borderColor": "rgba(206,212,218,0.2)",
+                "color": "rgba(255,255,255,0.2)",
+              },
+              "hover": Object {
+                "borderColor": "#dee2e6",
+              },
+              "normal": Object {
+                "color": "#fff",
+              },
+            },
           },
-          "valid": Object {
-            "active": Object {
-              "borderColor": "#1E88E5",
-              "color": "#495057",
+        },
+        "light": Object {
+          "states": Object {
+            "invalid": Object {
+              "borderColor": "#F4511E",
+              "color": "#F4511E",
             },
-            "disabled": Object {
-              "backgroundColor": "#f8f9fa",
-              "borderColor": "#dee2e6",
-              "color": "#868e96",
-            },
-            "hover": Object {
-              "borderColor": "#dee2e6",
-              "color": "#495057",
-            },
-            "normal": Object {
-              "color": "#495057",
+            "valid": Object {
+              "active": Object {
+                "borderColor": "#1E88E5",
+                "color": "#495057",
+              },
+              "disabled": Object {
+                "backgroundColor": "#f8f9fa",
+                "borderColor": "#dee2e6",
+                "color": "#868e96",
+              },
+              "hover": Object {
+                "borderColor": "#dee2e6",
+                "color": "#495057",
+              },
+              "normal": Object {
+                "color": "#495057",
+              },
             },
           },
         },

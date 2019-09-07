@@ -21,6 +21,9 @@ export const commonInputStyles = css`
   &:focus {
     outline: none;
   }
+  &::placeholder {
+    color: inherit;
+  }
   ${({ theme, invalid }) => css`
     ${getRegularInputCommonStyle(theme)}
     ${getRegularInputStyle(theme, invalid, 'normal')}
