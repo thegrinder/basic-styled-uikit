@@ -5,6 +5,7 @@ menu: Components
 
 import { Playground, Props } from 'docz';
 import Select from './Select';
+import ColorBox from '../../ColorBox/ColorBox';
 import { InputWrapper } from '../../../../docz';
 
 
@@ -19,8 +20,8 @@ import { InputWrapper } from '../../../../docz';
 <Playground>
   <InputWrapper>
     <Select>
-      <option>option one</option>
-      <option>option two</option>
+      <ColorBox bgColor="neutral" as="option">option one</ColorBox>
+      <ColorBox bgColor="neutral" as="option">option two</ColorBox>
     </Select>
   </InputWrapper>
 </Playground>
@@ -31,8 +32,8 @@ import { InputWrapper } from '../../../../docz';
 <Playground>
   <InputWrapper>
     <Select invalid={true}>
-      <option>option one</option>
-      <option>option two</option>
+      <ColorBox bgColor="neutral" as="option">option one</ColorBox>
+      <ColorBox bgColor="neutral" as="option">option two</ColorBox>
     </Select>
   </InputWrapper>
 </Playground>
@@ -43,8 +44,8 @@ import { InputWrapper } from '../../../../docz';
 <Playground>
   <InputWrapper>
     <Select disabled={true}>
-      <option>option one</option>
-      <option>option two</option>
+      <ColorBox bgColor="neutral" as="option">option one</ColorBox>
+      <ColorBox bgColor="neutral" as="option">option two</ColorBox>
     </Select>
   </InputWrapper>
 </Playground>

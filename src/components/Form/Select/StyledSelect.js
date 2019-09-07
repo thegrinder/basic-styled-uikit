@@ -14,7 +14,6 @@ const StyledSelect = styled.select`
   vertical-align: middle;
   display: inline-block;
   height: ${rem(40)};
-  background-color: #fff;
 `;
 
 StyledSelect.propTypes = propTypes;
