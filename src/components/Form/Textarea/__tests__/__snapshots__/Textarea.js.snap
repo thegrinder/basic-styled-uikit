@@ -8,6 +8,6 @@ exports[`<Textarea /> should render correctly with custom props 1`] = `
 
 exports[`<Textarea /> should render correctly with default props 1`] = `
 <textarea
-  class="StyledTextarea-sc-1v2djou-0 whAUN"
+  class="StyledTextarea-sc-1v2djou-0 ieFSte"
 />
 `;

@@ -9,7 +9,7 @@ const formTheme = {
         valid: {
           normal: {
             borderColor: colors.neutral400,
-            color: colors.neutral700,
+            color: colors.neutral1000,
           },
           active: {
             borderColor: colors.primary600,
@@ -57,15 +57,15 @@ const formTheme = {
       states: {
         valid: {
           normal: {
-            color: colors.neutral700,
+            color: colors.neutral1000,
           },
           hover: {
             borderColor: colors.neutral400,
-            color: colors.neutral700,
+            color: colors.neutral1000,
           },
           active: {
             borderColor: colors.primary600,
-            color: colors.neutral700,
+            color: colors.neutral1000,
           },
           disabled: {
             borderColor: colors.neutral400,

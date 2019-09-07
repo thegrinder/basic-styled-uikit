@@ -148,14 +148,8 @@ Object {
       "neutral0": "#fff",
       "neutral100": "#f8f9fa",
       "neutral1000": "#161616",
-      "neutral200": "#e9ecef",
-      "neutral300": "#dee2e6",
       "neutral400": "#ced4da",
-      "neutral500": "#adb5bd",
       "neutral600": "#868e96",
-      "neutral700": "#495057",
-      "neutral800": "#343a40",
-      "neutral900": "#212529",
       "primary400": "#42A5F5",
       "primary600": "#1E88E5",
       "success400": "#66BB6A",
@@ -201,7 +195,7 @@ Object {
             "valid": Object {
               "active": Object {
                 "borderColor": "#1E88E5",
-                "color": "#495057",
+                "color": "#161616",
               },
               "disabled": Object {
                 "backgroundColor": "#f8f9fa",
@@ -210,10 +204,10 @@ Object {
               },
               "hover": Object {
                 "borderColor": "#ced4da",
-                "color": "#495057",
+                "color": "#161616",
               },
               "normal": Object {
-                "color": "#495057",
+                "color": "#161616",
               },
             },
           },
@@ -304,7 +298,7 @@ Object {
               },
               "normal": Object {
                 "borderColor": "#ced4da",
-                "color": "#495057",
+                "color": "#161616",
               },
             },
           },

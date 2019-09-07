@@ -39,7 +39,7 @@ Object {
         "valid": Object {
           "active": Object {
             "borderColor": "#1E88E5",
-            "color": "#495057",
+            "color": "#161616",
           },
           "disabled": Object {
             "backgroundColor": "#f8f9fa",
@@ -48,10 +48,10 @@ Object {
           },
           "hover": Object {
             "borderColor": "#ced4da",
-            "color": "#495057",
+            "color": "#161616",
           },
           "normal": Object {
-            "color": "#495057",
+            "color": "#161616",
           },
         },
       },
@@ -142,7 +142,7 @@ Object {
           },
           "normal": Object {
             "borderColor": "#ced4da",
-            "color": "#495057",
+            "color": "#161616",
           },
         },
       },
