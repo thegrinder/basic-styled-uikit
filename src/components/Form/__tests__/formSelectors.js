@@ -59,17 +59,17 @@ describe('formTheme selectors', () => {
   });
 
   describe('getMiscInputStyle', () => {
-    Object.keys(misc.states.valid).forEach(state => {
-      it('should return the correct style object for different valid states', () => {
+    Object.keys(misc[mode].states.valid).forEach(state => {
+      it(`should return the correct style object for misc input in ${state} state`, () => {
         expect(getMiscInputStyle(theme, false, state)).toEqual(
-          misc.states.valid[state]
+          misc[mode].states.valid[state]
         );
       });
     });
 
-    it('should return the correct style object for invalid state', () => {
+    it('should return the correct style object for misc input in invalid state', () => {
       expect(getMiscInputStyle(theme, true, 'normal')).toEqual(
-        misc.states.invalid
+        misc[mode].states.invalid
       );
     });
   });
@@ -81,9 +81,11 @@ describe('formTheme selectors', () => {
   });
 
   describe('getToggleStyle', () => {
-    Object.keys(toggle.states).forEach(state => {
+    Object.keys(toggle[mode].states).forEach(state => {
       it('should return the correct style object for different states', () => {
-        expect(getToggleStyle(theme, state)).toEqual(toggle.states[state]);
+        expect(getToggleStyle(theme, state)).toEqual(
+          toggle[mode].states[state]
+        );
       });
     });
   });

@@ -11,7 +11,8 @@ export const getRegularInputStyle = (theme, invalid, state) => {
 
 export const getMiscInputCommonStyle = theme => getForm(theme).misc.common;
 export const getMiscInputStyle = (theme, invalid, state) => {
-  const { states } = getForm(theme).misc;
+  const mode = getMode(theme);
+  const { states } = getForm(theme).misc[mode];
   return invalid && state === 'normal' ? states.invalid : states.valid[state];
 };
 
@@ -22,5 +23,7 @@ export const getInlineInputStyle = (theme, invalid, state) => {
   return invalid ? states.invalid : states.valid[state];
 };
 
-export const getToggleStyle = (theme, state) =>
-  getForm(theme).toggle.states[state];
+export const getToggleStyle = (theme, state) => {
+  const mode = getMode(theme);
+  return getForm(theme).toggle[mode].states[state];
+};

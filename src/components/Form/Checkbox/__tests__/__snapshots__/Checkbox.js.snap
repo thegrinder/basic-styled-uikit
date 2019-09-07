@@ -2,14 +2,14 @@
 
 exports[`<Checkbox /> should render correctly with custom props 1`] = `
 <input
-  class="StyledCheckbox-sc-1u8r4za-0 gCVLxh"
+  class="StyledCheckbox-sc-1u8r4za-0 exbWBt"
   type="checkbox"
 />
 `;
 
 exports[`<Checkbox /> should render correctly with default props 1`] = `
 <input
-  class="StyledCheckbox-sc-1u8r4za-0 efeRgV"
+  class="StyledCheckbox-sc-1u8r4za-0 hxdGzt"
   type="checkbox"
 />
 `;

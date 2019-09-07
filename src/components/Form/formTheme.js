@@ -60,7 +60,7 @@ const formTheme = {
             color: colors.neutral700,
           },
           hover: {
-            borderColor: colors.neutral300,
+            borderColor: colors.neutral400,
             color: colors.neutral700,
           },
           active: {
@@ -68,7 +68,7 @@ const formTheme = {
             color: colors.neutral700,
           },
           disabled: {
-            borderColor: colors.neutral300,
+            borderColor: colors.neutral400,
             color: colors.neutral600,
             backgroundColor: colors.neutral100,
           },
@@ -86,7 +86,7 @@ const formTheme = {
             color: colors.neutral0,
           },
           hover: {
-            borderColor: colors.neutral300,
+            borderColor: colors.neutral400,
           },
           active: {
             borderColor: colors.primary600,
@@ -109,35 +109,69 @@ const formTheme = {
   },
   // radio and checkbox
   misc: {
-    states: {
-      valid: {
-        normal: {
-          borderColor: colors.neutral300,
+    light: {
+      states: {
+        valid: {
+          normal: {
+            borderColor: colors.neutral400,
+          },
+          active: {
+            borderColor: colors.primary600,
+          },
+          checked: {
+            borderColor: colors.primary600,
+            backgroundColor: colors.primary600,
+          },
         },
-        active: {
-          borderColor: colors.primary600,
+        invalid: {
+          borderColor: colors.danger600,
         },
-        checked: {
-          borderColor: colors.transparent,
-          backgroundColor: colors.primary600,
-        },
-        // no theme for disabled because it's not simple
-        // enough to handle all the cases (e.g disabled checked)
-      },
-      invalid: {
-        borderColor: colors.danger600,
       },
     },
-    common: {},
+    dark: {
+      states: {
+        valid: {
+          normal: {
+            borderColor: colors.neutral400,
+          },
+          active: {
+            borderColor: colors.primary400,
+          },
+          checked: {
+            borderColor: colors.primary400,
+            backgroundColor: colors.primary400,
+          },
+        },
+        invalid: {
+          borderColor: colors.danger400,
+        },
+      },
+    },
+    common: {
+      // to change the size of checkbox and radio input you can increase/decrease the font size
+      fontSize: '1rem',
+    },
   },
   // toggle
   toggle: {
-    states: {
-      normal: {
-        backgroundColor: colors.neutral400,
+    light: {
+      states: {
+        normal: {
+          backgroundColor: colors.neutral400,
+        },
+        checked: {
+          backgroundColor: colors.primary600,
+        },
       },
-      checked: {
-        backgroundColor: colors.primary600,
+    },
+    dark: {
+      states: {
+        normal: {
+          backgroundColor: colors.neutral600,
+        },
+        checked: {
+          backgroundColor: colors.primary400,
+        },
       },
     },
   },

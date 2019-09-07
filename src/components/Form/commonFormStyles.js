@@ -40,9 +40,10 @@ export const miscInputStyles = css`
   -webkit-appearance: none;
   overflow: hidden;
   display: inline-block;
-  height: ${rem(24)};
-  width: ${rem(24)};
-  margin-top: ${rem(-4)};
+  font-size: ${rem(16)};
+  height: 1.5em;
+  width: 1.5em;
+  margin-top: -0.4em;
   vertical-align: middle;
   background-color: transparent;
   background-repeat: no-repeat;
