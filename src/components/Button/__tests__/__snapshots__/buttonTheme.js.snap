@@ -6,13 +6,13 @@ Object {
     "danger": Object {
       "dark": Object {
         "active": Object {
-          "backgroundColor": "#ff774b",
+          "backgroundColor": "#c95368",
         },
         "hover": Object {
-          "backgroundColor": "#ff9d7f",
+          "backgroundColor": "#d5798a",
         },
         "normal": Object {
-          "backgroundColor": "#FF8A65",
+          "backgroundColor": "#CF6679",
           "color": "#161616",
         },
       },

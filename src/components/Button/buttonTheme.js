@@ -1,83 +1,82 @@
 import { darken, lighten } from 'polished';
-import colors from '../../theme/colors';
 
 const buttonTheme = {
   btnTypes: {
     default: {
       light: {
         normal: {
-          color: colors.neutral0,
-          backgroundColor: colors.neutral600,
+          color: '#fff',
+          backgroundColor: '#868e96',
         },
         hover: {
-          backgroundColor: lighten(0.05, colors.neutral600),
+          backgroundColor: lighten(0.05, '#868e96'),
         },
         active: {
-          backgroundColor: darken(0.05, colors.neutral600),
+          backgroundColor: darken(0.05, '#868e96'),
         },
       },
       dark: {
         normal: {
-          color: colors.neutral1000,
-          backgroundColor: colors.neutral400,
+          color: '#161616',
+          backgroundColor: '#ced4da',
         },
         hover: {
-          backgroundColor: lighten(0.05, colors.neutral400),
+          backgroundColor: lighten(0.05, '#ced4da'),
         },
         active: {
-          backgroundColor: darken(0.05, colors.neutral400),
+          backgroundColor: darken(0.05, '#ced4da'),
         },
       },
     },
     primary: {
       light: {
         normal: {
-          color: colors.neutral0,
-          backgroundColor: colors.primary600,
+          color: '#fff',
+          backgroundColor: '#1E88E5',
         },
         hover: {
-          backgroundColor: lighten(0.05, colors.primary600),
+          backgroundColor: lighten(0.05, '#1E88E5'),
         },
         active: {
-          backgroundColor: darken(0.05, colors.primary600),
+          backgroundColor: darken(0.05, '#1E88E5'),
         },
       },
       dark: {
         normal: {
-          color: colors.neutral1000,
-          backgroundColor: colors.primary400,
+          color: '#161616',
+          backgroundColor: '#42A5F5',
         },
         hover: {
-          backgroundColor: lighten(0.05, colors.primary400),
+          backgroundColor: lighten(0.05, '#42A5F5'),
         },
         active: {
-          backgroundColor: darken(0.05, colors.primary400),
+          backgroundColor: darken(0.05, '#42A5F5'),
         },
       },
     },
     danger: {
       light: {
         normal: {
-          color: colors.neutral0,
-          backgroundColor: colors.danger600,
+          color: '#fff',
+          backgroundColor: '#F4511E',
         },
         hover: {
-          backgroundColor: lighten(0.05, colors.danger600),
+          backgroundColor: lighten(0.05, '#F4511E'),
         },
         active: {
-          backgroundColor: darken(0.05, colors.danger600),
+          backgroundColor: darken(0.05, '#F4511E'),
         },
       },
       dark: {
         normal: {
-          color: colors.neutral1000,
-          backgroundColor: colors.danger400,
+          color: '#161616',
+          backgroundColor: '#CF6679',
         },
         hover: {
-          backgroundColor: lighten(0.05, colors.danger400),
+          backgroundColor: lighten(0.05, '#CF6679'),
         },
         active: {
-          backgroundColor: darken(0.05, colors.danger400),
+          backgroundColor: darken(0.05, '#CF6679'),
         },
       },
     },

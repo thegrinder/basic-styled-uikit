@@ -14,6 +14,7 @@ const propTypes = {
 
 const StyledInlineInput = styled.input`
   -webkit-appearance: none;
+  box-sizing: border-box;
   max-width: 100%;
   width: 100%;
   border-width: 1px;

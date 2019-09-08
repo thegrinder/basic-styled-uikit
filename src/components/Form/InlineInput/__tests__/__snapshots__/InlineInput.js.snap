@@ -5,7 +5,7 @@ exports[`<InlineInput /> should render correctly with default props 1`] = `
   class="Wrapper-sc-1e6m9j8-0 gUPYuR"
 >
   <input
-    class="StyledInlineInput-sc-5g60q6-0 VHBJq"
+    class="StyledInlineInput-sc-5g60q6-0 YXTKn"
   />
 </div>
 `;

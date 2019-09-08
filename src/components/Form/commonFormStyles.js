@@ -39,6 +39,7 @@ export const commonInputStyles = css`
 export const miscInputStyles = css`
   -webkit-appearance: none;
   overflow: hidden;
+  box-szing: border-box;
   display: inline-block;
   font-size: ${rem(16)};
   height: 1.5em;
