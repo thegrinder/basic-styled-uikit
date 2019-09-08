@@ -18,27 +18,15 @@ const renderComponent = (props = {}) =>
 
 describe('<StyledButton />', () => {
   it('should render correctly with default props and children', () => {
-    const {
-      container: { firstChild },
-      getByText,
-    } = renderComponent();
-    const childrenElement = getByText('children');
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toContainElement(childrenElement);
-    expect(firstChild).toMatchSnapshot();
+    const { getByText } = renderComponent();
+    expect(getByText('children')).toBeTruthy();
   });
 
   it('should render correctly with custom props', () => {
-    const {
-      container: { firstChild },
-      getByText,
-    } = renderComponent({
+    const { getByText } = renderComponent({
       sizing: 'm',
     });
-    const childrenElement = getByText('children');
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toContainElement(childrenElement);
-    expect(firstChild).toMatchSnapshot();
+    expect(getByText('children')).toBeTruthy();
   });
 
   it('should render <button> tag by default', () => {

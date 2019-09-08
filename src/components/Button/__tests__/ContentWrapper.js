@@ -3,13 +3,14 @@ import { render } from '@testing-library/react';
 
 import ContentWrapper from '../ContentWrapper';
 
+const testId = 'content-wrapper';
+
 describe('<ContentWrapper />', () => {
   it('should render correctly', () => {
-    const {
-      container: { firstChild },
-    } = render(<ContentWrapper submitting />);
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toMatchSnapshot();
+    const { getByTestId } = render(
+      <ContentWrapper data-testid={testId} submitting />
+    );
+    expect(getByTestId(testId)).toBeDefined();
   });
 
   it('should render <span> tag', () => {
@@ -21,9 +22,9 @@ describe('<ContentWrapper />', () => {
 
   it('should render content correctly', () => {
     const content = 'content';
-    const {
-      container: { firstChild },
-    } = render(<ContentWrapper submitting>{content}</ContentWrapper>);
-    expect(firstChild).toHaveTextContent(content);
+    const { getByText } = render(
+      <ContentWrapper submitting>{content}</ContentWrapper>
+    );
+    expect(getByText(content)).toBeTruthy();
   });
 });

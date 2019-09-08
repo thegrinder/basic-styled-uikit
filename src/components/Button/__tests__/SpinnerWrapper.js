@@ -3,19 +3,18 @@ import { render } from '@testing-library/react';
 
 import SpinnerWrapper from '../SpinnerWrapper';
 
+const testId = 'spinner-wrapper';
+
+const renderComponent = () => render(<SpinnerWrapper data-testid={testId} />);
+
 describe('<SpinnerWrapper />', () => {
   it('should render correctly', () => {
-    const {
-      container: { firstChild },
-    } = render(<SpinnerWrapper />);
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toMatchSnapshot();
+    const { getByTestId } = renderComponent();
+    expect(getByTestId(testId)).toBeDefined();
   });
 
   it('should render <span> tag', () => {
-    const {
-      container: { firstChild },
-    } = render(<SpinnerWrapper />);
-    expect(firstChild.tagName).toEqual('SPAN');
+    const { getByTestId } = renderComponent();
+    expect(getByTestId(testId).tagName).toEqual('SPAN');
   });
 });

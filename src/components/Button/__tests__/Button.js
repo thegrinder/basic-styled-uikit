@@ -16,36 +16,20 @@ const renderComponent = (props = {}) =>
 
 describe('<Button />', () => {
   it('should render correctly with default props and children', () => {
-    const {
-      container: { firstChild },
-      getByText,
-    } = renderComponent();
-    const childrenElement = getByText('children');
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toContainElement(childrenElement);
-    expect(firstChild).toMatchSnapshot();
+    const { queryByText } = renderComponent();
+    expect(queryByText('children')).toBeTruthy();
   });
 
   it('should render correctly with custom props', () => {
     const spinner = <span data-testid="spinner" />;
-    const {
-      container: { firstChild },
-      getByText,
-      getByTestId,
-    } = renderComponent({
+    const { getByText, getByTestId } = renderComponent({
       btnType: 'danger',
       sizing: 's',
       submitting: true,
       renderSpinner: spinner,
     });
-
-    const spinnerElement = getByTestId('spinner');
-    const childrenElement = getByText('children');
-
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toContainElement(spinnerElement);
-    expect(firstChild).toContainElement(childrenElement);
-    expect(firstChild).toMatchSnapshot();
+    expect(getByTestId('spinner')).toBeTruthy();
+    expect(getByText('children')).toBeTruthy();
   });
 
   it('should render <a> tag by default', () => {
