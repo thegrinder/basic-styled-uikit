@@ -1,5 +1,9 @@
-export { TypographyProvider, Text } from './components/Typography';
-export { default as Heading } from './components/Heading/Heading';
+export {
+  TypographyProvider,
+  Text,
+  Heading,
+  rem,
+} from './components/Typography';
 export { default as Button } from './components/Button/Button';
 export { default as Link } from './components/Link/Link';
 export { default as Input } from './components/Form/Input/Input';
@@ -16,4 +20,3 @@ export { default as ColorBox } from './components/ColorBox/ColorBox';
 export { default as ResetCss } from './components/ResetCss/ResetCss';
 
 export { getColor } from './theme/colors';
-export { rem } from './theme/typography';

@@ -1,6 +1,5 @@
-import theme from '../../../theme/theme';
-import colorPalette from '../../../theme/colors';
-import headingTheme from '../headingTheme';
+import colorPalette from '../../../../theme/colors';
+import { typographyBaseTheme } from '../../typographyTheme';
 import {
   getHeadingSizingStyle,
   getHeadingColor,
@@ -9,8 +8,14 @@ import {
   getHeadingOpacity,
 } from '../headingSelectors';
 
-const { sizings, opacities, colors, common, onBackground } = headingTheme;
-const { mode } = theme;
+const theme = { typography: typographyBaseTheme };
+const {
+  opacities,
+  colors,
+  common,
+  onBackground,
+  heading: { sizings },
+} = typographyBaseTheme;
 
 describe('headingTheme selectors', () => {
   describe('getHeadingSizingStyle', () => {
@@ -40,10 +45,10 @@ describe('headingTheme selectors', () => {
   });
 
   describe('getHeadingColor', () => {
-    it.each(Object.keys(colors[mode]))(
+    it.each(Object.keys(colors))(
       'should return the correct color for %s',
       color => {
-        expect(getHeadingColor(theme, color)).toEqual(colors[mode][color]);
+        expect(getHeadingColor(theme, color)).toEqual(colors[color]);
       }
     );
 
@@ -55,12 +60,12 @@ describe('headingTheme selectors', () => {
   describe('getHeadingColorOnBg', () => {
     it('should default to the main heading color theme if no corresponding background is found', () => {
       expect(getHeadingColorOnBg(theme, 'noop', 'primary')).toEqual(
-        colors[mode].primary
+        colors.primary
       );
     });
 
-    Object.keys(onBackground[mode]).forEach(bgColor => {
-      it.each(Object.keys(onBackground[mode][bgColor]))(
+    Object.keys(onBackground).forEach(bgColor => {
+      it.each(Object.keys(onBackground[bgColor]))(
         `should return the correct code for %s color for ${bgColor} background`,
         color => {
           expect(getHeadingColorOnBg(theme, bgColor, color)).toEqual(

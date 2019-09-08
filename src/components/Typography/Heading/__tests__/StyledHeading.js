@@ -1,26 +1,27 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
 import { render } from '@testing-library/react';
-
-import theme from '../../../theme/theme';
+import { ModeProvider } from '../../../Mode';
+import TypographyProvider from '../../TypographyProvider';
 import StyledHeading from '../StyledHeading';
 
 const children = 'children';
 
 const renderComponent = (props = {}) =>
   render(
-    <ThemeProvider theme={theme}>
-      <StyledHeading
-        sizing="h1"
-        color="primary"
-        marginBottom
-        emphasis="high"
-        ignoreBackground={false}
-        {...props}
-      >
-        {children}
-      </StyledHeading>
-    </ThemeProvider>
+    <ModeProvider>
+      <TypographyProvider>
+        <StyledHeading
+          sizing="h1"
+          color="primary"
+          marginBottom
+          emphasis="high"
+          ignoreBackground={false}
+          {...props}
+        >
+          {children}
+        </StyledHeading>
+      </TypographyProvider>
+    </ModeProvider>
   );
 
 describe('<StyledHeading />', () => {
