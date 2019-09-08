@@ -1,11 +1,10 @@
 import { bool } from 'prop-types';
 import styled, { css } from 'styled-components';
-
 import {
   getInlineInputCommonStyle,
   getInlineInputStyle,
 } from '../formSelectors';
-import { rem } from '../../../theme/typography';
+import { rem } from '../../Typography';
 
 const propTypes = {
   invalid: bool.isRequired,

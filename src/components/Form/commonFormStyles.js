@@ -5,7 +5,7 @@ import {
   getMiscInputCommonStyle,
   getMiscInputStyle,
 } from './formSelectors';
-import { rem } from '../../theme/typography';
+import { rem } from '../Typography';
 
 export const commonInputStyles = css`
   -webkit-appearance: none;
