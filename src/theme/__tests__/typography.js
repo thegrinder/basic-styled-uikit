@@ -16,17 +16,13 @@ describe('typography', () => {
 
   describe('getBaseFontSize', () => {
     it('should return the correct base font size', () => {
-      expect(getBaseFontSize(theme)).toEqual(
-        theme.uiKit.typography.baseFontSize
-      );
+      expect(getBaseFontSize(theme)).toEqual(theme.typography.baseFontSize);
     });
   });
 
   describe('getBaseLineHeight', () => {
     it('should return the correct base line height', () => {
-      expect(getBaseLineHeight(theme)).toEqual(
-        theme.uiKit.typography.baseLineHeight
-      );
+      expect(getBaseLineHeight(theme)).toEqual(theme.typography.baseLineHeight);
     });
   });
 
@@ -37,12 +33,10 @@ describe('typography', () => {
 
     it('should return the correct size in rem units with a custom theme', () => {
       const customTheme = {
-        uiKit: {
-          ...theme.uiKit,
-          typography: {
-            ...theme.uiKit.typography,
-            baseFontSize: 8,
-          },
+        ...theme,
+        typography: {
+          ...theme.typography,
+          baseFontSize: 8,
         },
       };
       expect(rem(16)({ theme: customTheme })).toEqual('2rem');

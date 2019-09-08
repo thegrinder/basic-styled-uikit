@@ -10,7 +10,7 @@ import {
 } from '../headingSelectors';
 
 const { sizings, opacities, colors, common, onBackground } = headingTheme;
-const { mode } = theme.uiKit;
+const { mode } = theme;
 
 describe('headingTheme selectors', () => {
   describe('getHeadingSizingStyle', () => {

@@ -1,4 +1,3 @@
-import theme from '../../../theme/theme';
 import buttonTheme from '../buttonTheme';
 import {
   getBtnTypeStyle,
@@ -6,8 +5,12 @@ import {
   getBtnCommonStyle,
 } from '../buttonSelectors';
 
+const mode = 'light';
+const theme = {
+  mode,
+  button: buttonTheme,
+};
 const { btnTypes, sizings, common } = buttonTheme;
-const { mode } = theme.uiKit;
 
 describe('buttonTheme selectors', () => {
   describe('getBtnTypeStyle', () => {

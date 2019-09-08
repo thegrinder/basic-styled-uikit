@@ -10,7 +10,7 @@ import {
 } from '../textSelectors';
 
 const { sizings, opacities, colors, common, onBackground } = textTheme;
-const { mode } = theme.uiKit;
+const { mode } = theme;
 
 describe('textTheme selectors', () => {
   describe('getTextSizingStyle', () => {

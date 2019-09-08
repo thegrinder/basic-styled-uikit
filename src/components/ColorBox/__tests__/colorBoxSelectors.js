@@ -3,7 +3,7 @@ import colorBoxTheme from '../colorBoxTheme';
 import { getBoxBgColor, getBoxElevation } from '../colorBoxSelectors';
 
 const { bgColors, elevations } = colorBoxTheme;
-const { mode } = theme.uiKit;
+const { mode } = theme;
 
 describe('colorBoxTheme selectors', () => {
   describe('getBoxBgColor', () => {

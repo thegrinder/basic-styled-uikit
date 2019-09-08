@@ -1,8 +1,8 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
 import { render } from '@testing-library/react';
-
+import { ThemeProvider } from 'styled-components';
 import theme from '../../../theme/theme';
+import ButtonProvider from '../ButtonProvider';
 import Button from '../Button';
 
 const children = <span>children</span>;
@@ -10,7 +10,9 @@ const children = <span>children</span>;
 const renderComponent = (props = {}) =>
   render(
     <ThemeProvider theme={theme}>
-      <Button {...props}>{children}</Button>
+      <ButtonProvider>
+        <Button {...props}>{children}</Button>
+      </ButtonProvider>
     </ThemeProvider>
   );
 

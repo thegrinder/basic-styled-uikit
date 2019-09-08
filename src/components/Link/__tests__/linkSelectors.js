@@ -3,7 +3,7 @@ import linkTheme from '../linkTheme';
 import { getLinkTypeStyle, getLinkCommonStyle } from '../linkSelectors';
 
 const { linkTypes, common } = linkTheme;
-const { mode } = theme.uiKit;
+const { mode } = theme;
 
 describe('linkTheme selectors', () => {
   describe('getLinkTypeStyle', () => {

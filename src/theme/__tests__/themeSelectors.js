@@ -1,4 +1,5 @@
-import theme from '../theme';
+import globalTheme from '../theme';
+import buttonTheme from '../../components/Button/buttonTheme';
 import {
   getTypography,
   getColors,
@@ -10,6 +11,11 @@ import {
   getLink,
   getMode,
 } from '../themeSelectors';
+
+const theme = {
+  ...globalTheme,
+  button: buttonTheme,
+};
 
 describe('themeSelectors', () => {
   describe('errors', () => {
@@ -24,14 +30,11 @@ describe('themeSelectors', () => {
       [getLink, 'link'],
       [getMode, 'mode'],
     ])('%s should handle success and failure', (selector, namespace) => {
-      expect(selector(theme)).toEqual(theme.uiKit[namespace]);
+      expect(selector(theme)).toEqual(theme[namespace]);
       expect(() => selector()).toThrowError(
         'You need to provide a theme object'
       );
       expect(() => selector({})).toThrowError(
-        'Your theme has to be under uiKit key'
-      );
-      expect(() => selector({ uiKit: {} })).toThrowError(
         `Your theme is missing ${namespace} key`
       );
     });

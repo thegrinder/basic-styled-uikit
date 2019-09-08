@@ -1,6 +1,7 @@
 import React from 'react';
 import { node } from 'prop-types';
 import { ThemeProvider } from 'styled-components';
+import ButtonProvider from '../src/components/Button/ButtonProvider';
 import theme from '../src/theme/theme';
 
 const propTypes = {
@@ -9,7 +10,9 @@ const propTypes = {
 
 const Wrapper = ({ children }) => (
   <ThemeProvider theme={theme}>
-    <div>{children}</div>
+    <ButtonProvider>
+      <div>{children}</div>
+    </ButtonProvider>
   </ThemeProvider>
 );
 

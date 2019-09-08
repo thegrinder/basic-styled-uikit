@@ -11,7 +11,7 @@ import {
 } from '../formSelectors';
 
 const { regular, inline, misc, toggle } = formTheme;
-const { mode } = theme.uiKit;
+const { mode } = theme;
 
 describe('formTheme selectors', () => {
   describe('getRegularInputStyle', () => {
