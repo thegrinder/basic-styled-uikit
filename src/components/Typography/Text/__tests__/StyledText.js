@@ -26,18 +26,12 @@ const renderComponent = (props = {}) =>
 
 describe('<StyledText />', () => {
   it('should render correctly with children', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent();
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toHaveTextContent(children);
-    expect(firstChild).toMatchSnapshot();
+    const { queryByText } = renderComponent();
+    expect(queryByText(children)).toBeTruthy();
   });
 
   it('should render <span> tag', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent();
-    expect(firstChild.tagName).toEqual('SPAN');
+    const { queryByText } = renderComponent();
+    expect(queryByText(children).tagName).toEqual('SPAN');
   });
 });

@@ -17,39 +17,27 @@ const renderComponent = (props = {}) =>
 
 describe('<Text />', () => {
   it('should render correctly with default props', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent();
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toHaveTextContent(children);
-    expect(firstChild).toMatchSnapshot();
+    const { queryByText } = renderComponent();
+    expect(queryByText(children)).toBeTruthy();
   });
 
   it('should render correctly with custom props', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent({
+    const { queryByText } = renderComponent({
       sizing: 'xs',
       color: 'primary',
       marginBottom: true,
       ignoreBackground: true,
     });
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toHaveTextContent(children);
-    expect(firstChild).toMatchSnapshot();
+    expect(queryByText(children)).toBeTruthy();
   });
 
   it('should render <span> tag by default', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent();
-    expect(firstChild.tagName).toEqual('SPAN');
+    const { queryByText } = renderComponent();
+    expect(queryByText(children).tagName).toEqual('SPAN');
   });
 
   it('should render render <p> tag', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent({ as: 'p' });
-    expect(firstChild.tagName).toEqual('P');
+    const { queryByText } = renderComponent({ as: 'p' });
+    expect(queryByText(children).tagName).toEqual('P');
   });
 });

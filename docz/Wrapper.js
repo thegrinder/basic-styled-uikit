@@ -15,7 +15,7 @@ const Wrapper = ({ children }) => (
     <ThemeProvider theme={theme}>
       <TypographyProvider>
         <ButtonProvider>
-          <div>{children}</div>
+          <>{children}</>
         </ButtonProvider>
       </TypographyProvider>
     </ThemeProvider>
