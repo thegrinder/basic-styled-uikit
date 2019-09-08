@@ -3,7 +3,6 @@ import { buttonBaseTheme } from '../../components/Button/buttonTheme';
 import {
   getTypography,
   getColors,
-  getButton,
   getForm,
   getColorBox,
   getLink,
@@ -20,7 +19,6 @@ describe('themeSelectors', () => {
     it.each([
       [getTypography, 'typography'],
       [getColors, 'colors'],
-      [getButton, 'button'],
       [getForm, 'form'],
       [getColorBox, 'colorBox'],
       [getLink, 'link'],

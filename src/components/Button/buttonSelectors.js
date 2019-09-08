@@ -1,4 +1,6 @@
-import { getButton } from '../../theme/themeSelectors';
+import { createSelector } from '../../helpers';
+
+export const getButton = createSelector('button');
 
 export const getBtnTypeStyle = (theme, btntype, state) => {
   const typeStyle = getButton(theme).btnTypes[btntype];

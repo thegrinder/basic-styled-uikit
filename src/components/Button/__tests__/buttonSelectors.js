@@ -1,5 +1,6 @@
 import { buttonBaseTheme } from '../buttonTheme';
 import {
+  getButton,
   getBtnTypeStyle,
   getBtnSizingStyle,
   getBtnCommonStyle,
@@ -11,6 +12,20 @@ const theme = {
 const { btnTypes, sizings, common } = buttonBaseTheme;
 
 describe('buttonTheme selectors', () => {
+  describe('getButton', () => {
+    it('should return button theme', () => {
+      expect(getButton(theme)).toEqual(buttonBaseTheme);
+    });
+
+    it('should throw if no theme found', () => {
+      expect(() => getButton()).toThrow();
+    });
+
+    it('should throw if no button namespace found', () => {
+      expect(() => getButton({})).toThrow();
+    });
+  });
+
   describe('getBtnTypeStyle', () => {
     Object.keys(btnTypes).forEach(btnType => {
       Object.keys(btnTypes[btnType]).forEach(state => {
