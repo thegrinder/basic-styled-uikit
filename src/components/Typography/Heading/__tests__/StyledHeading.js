@@ -26,11 +26,7 @@ const renderComponent = (props = {}) =>
 
 describe('<StyledHeading />', () => {
   it('should render correctly with children', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent();
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toHaveTextContent(children);
-    expect(firstChild).toMatchSnapshot();
+    const { queryByText } = renderComponent();
+    expect(queryByText(children)).toBeTruthy();
   });
 });
