@@ -4,7 +4,7 @@ export {
   Heading,
   rem,
 } from './components/Typography';
-export { default as Button } from './components/Button/Button';
+export { ButtonProvider, Button, PlainButton } from './components/Button';
 export { default as Link } from './components/Link/Link';
 export { default as Input } from './components/Form/Input/Input';
 export {
@@ -15,7 +15,6 @@ export { default as Textarea } from './components/Form/Textarea/Textarea';
 export { default as Radio } from './components/Form/Radio/Radio';
 export { default as Checkbox } from './components/Form/Checkbox/Checkbox';
 export { default as Toggle } from './components/Form/Toggle/Toggle';
-export { default as PlainButton } from './components/PlainButton/PlainButton';
 export { default as ColorBox } from './components/ColorBox/ColorBox';
 export { default as ResetCss } from './components/ResetCss/ResetCss';
 
