@@ -1,6 +1,5 @@
-import theme from '../../../theme/theme';
-import colorPalette from '../../../theme/colors';
-import textTheme from '../textTheme';
+import colorPalette from '../../../../theme/colors';
+import { typographyBaseTheme } from '../../typographyTheme';
 import {
   getTextSizingStyle,
   getTextColor,
@@ -9,8 +8,14 @@ import {
   getTextOpacity,
 } from '../textSelectors';
 
-const { sizings, opacities, colors, common, onBackground } = textTheme;
-const { mode } = theme;
+const theme = { typography: typographyBaseTheme };
+const {
+  opacities,
+  colors,
+  common,
+  onBackground,
+  text: { sizings },
+} = typographyBaseTheme;
 
 describe('textTheme selectors', () => {
   describe('getTextSizingStyle', () => {
@@ -40,10 +45,10 @@ describe('textTheme selectors', () => {
   });
 
   describe('getTextColor', () => {
-    it.each(Object.keys(colors[mode]))(
+    it.each(Object.keys(colors))(
       'should return the correct color for %s',
       color => {
-        expect(getTextColor(theme, color)).toEqual(colors[mode][color]);
+        expect(getTextColor(theme, color)).toEqual(colors[color]);
       }
     );
 
@@ -55,12 +60,12 @@ describe('textTheme selectors', () => {
   describe('getTextColorOnBg', () => {
     it('should default to the main text color theme if no corresponding background is found', () => {
       expect(getTextColorOnBg(theme, 'noop', 'primary')).toEqual(
-        colors[mode].primary
+        colors.primary
       );
     });
 
-    Object.keys(onBackground[mode]).forEach(bgColor => {
-      Object.keys(onBackground[mode][bgColor]).forEach(color => {
+    Object.keys(onBackground).forEach(bgColor => {
+      Object.keys(onBackground[bgColor]).forEach(color => {
         it(`should return the correct code for ${color} color for ${bgColor} background`, () => {
           expect(getTextColorOnBg(theme, bgColor, color)).toEqual(
             bgColor === 'warning'

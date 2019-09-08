@@ -2,7 +2,7 @@
 
 exports[`<Text /> should render correctly with custom props 1`] = `
 <span
-  class="StyledText-r7l7li-0 fkddDS"
+  class="StyledText-c4xq8q-0 dhJwFL"
   color="primary"
 >
   children
@@ -11,7 +11,7 @@ exports[`<Text /> should render correctly with custom props 1`] = `
 
 exports[`<Text /> should render correctly with default props 1`] = `
 <span
-  class="StyledText-r7l7li-0 gWNUtN"
+  class="StyledText-c4xq8q-0 lNzUf"
   color="neutral"
 >
   children

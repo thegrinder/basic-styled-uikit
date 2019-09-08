@@ -1,7 +1,7 @@
 import React from 'react';
 import { string, bool, oneOf } from 'prop-types';
 import StyledText from './StyledText';
-import { useColorBoxContext } from '../ColorBox/context';
+import { useColorBoxContext } from '../../ColorBox/context';
 
 const propTypes = {
   /** determines the size of the text; one of: l, m, s, xs */

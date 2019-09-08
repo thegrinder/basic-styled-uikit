@@ -1,16 +1,18 @@
-import theme from '../theme';
-import typography, {
+import { typographyBaseTheme } from '../typographyTheme';
+import {
   getBaseFontSize,
   getBaseLineHeight,
   rem,
   calcLineHeight,
-} from '../typography';
+} from '../typographySelectors';
+
+const theme = { typography: typographyBaseTheme };
 
 describe('typography', () => {
   describe('theme', () => {
     it('should be defined', () => {
-      expect(typography).toBeDefined();
-      expect(typography).toMatchSnapshot();
+      expect(typographyBaseTheme).toBeDefined();
+      expect(typographyBaseTheme).toMatchSnapshot();
     });
   });
 

@@ -1,7 +1,8 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { render } from '@testing-library/react';
-
+import { ModeProvider } from '../../Mode';
+import { TypographyProvider } from '../../Typography';
 import theme from '../../../theme/theme';
 import StyledLink from '../StyledLink';
 
@@ -9,11 +10,15 @@ const children = 'children';
 
 const renderComponent = () =>
   render(
-    <ThemeProvider theme={theme}>
-      <StyledLink sizing="m" linktype="muted">
-        {children}
-      </StyledLink>
-    </ThemeProvider>
+    <ModeProvider>
+      <ThemeProvider theme={theme}>
+        <TypographyProvider>
+          <StyledLink sizing="m" linktype="muted">
+            {children}
+          </StyledLink>
+        </TypographyProvider>
+      </ThemeProvider>
+    </ModeProvider>
   );
 
 describe('<StyledLink />', () => {

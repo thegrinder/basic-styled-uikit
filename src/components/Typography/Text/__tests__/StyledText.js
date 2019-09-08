@@ -1,26 +1,27 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
 import { render } from '@testing-library/react';
-
-import theme from '../../../theme/theme';
+import { ModeProvider } from '../../../Mode';
+import TypographyProvider from '../../TypographyProvider';
 import StyledText from '../StyledText';
 
 const children = 'children';
 
 const renderComponent = (props = {}) =>
   render(
-    <ThemeProvider theme={theme}>
-      <StyledText
-        color="primary"
-        sizing="s"
-        marginBottom={false}
-        emphasis="high"
-        ignoreBackground={false}
-        {...props}
-      >
-        {children}
-      </StyledText>
-    </ThemeProvider>
+    <ModeProvider>
+      <TypographyProvider>
+        <StyledText
+          color="primary"
+          sizing="s"
+          marginBottom={false}
+          emphasis="high"
+          ignoreBackground={false}
+          {...props}
+        >
+          {children}
+        </StyledText>
+      </TypographyProvider>
+    </ModeProvider>
   );
 
 describe('<StyledText />', () => {

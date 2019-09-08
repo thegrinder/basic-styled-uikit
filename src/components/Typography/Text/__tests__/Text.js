@@ -1,17 +1,18 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
 import { render } from '@testing-library/react';
-
-import theme from '../../../theme/theme';
+import { ModeProvider } from '../../../Mode';
+import TypographyProvider from '../../TypographyProvider';
 import Text from '../Text';
 
 const children = 'children';
 
 const renderComponent = (props = {}) =>
   render(
-    <ThemeProvider theme={theme}>
-      <Text {...props}>{children}</Text>
-    </ThemeProvider>
+    <ModeProvider>
+      <TypographyProvider>
+        <Text {...props}>{children}</Text>
+      </TypographyProvider>
+    </ModeProvider>
   );
 
 describe('<Text />', () => {

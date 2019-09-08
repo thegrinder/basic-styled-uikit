@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`typography theme should be defined 1`] = `
+Object {
+  "baseFontSize": 16,
+  "baseLineHeight": 1.5,
+  "colors": Object {
+    "danger": "#F4511E",
+    "neutral": "#161616",
+    "primary": "#1E88E5",
+    "success": "#43A047",
+    "warning": "#FDD835",
+  },
+  "heading": Object {
+    "sizings": Object {
+      "h1": Object {
+        "fontSize": "3rem",
+      },
+      "h2": Object {
+        "fontSize": "2.5rem",
+      },
+      "h3": Object {
+        "fontSize": "2rem",
+      },
+      "h4": Object {
+        "fontSize": "1.5rem",
+      },
+      "h5": Object {
+        "fontSize": "1.25rem",
+      },
+      "h6": Object {
+        "fontSize": "1rem",
+      },
+    },
+  },
+  "onBackground": Object {
+    "danger": Object {
+      "neutral": "#fff",
+    },
+    "primary": Object {
+      "neutral": "#fff",
+    },
+    "success": Object {
+      "neutral": "#fff",
+    },
+    "warning": Object {
+      "neutral": "#161616",
+    },
+  },
+  "opacities": Object {
+    "high": 1,
+    "low": 0.6,
+    "normal": 0.8,
+  },
+  "text": Object {
+    "sizings": Object {
+      "l": Object {
+        "fontSize": "1.25rem",
+      },
+      "m": Object {
+        "fontSize": "1rem",
+      },
+      "s": Object {
+        "fontSize": ".875rem",
+      },
+      "xs": Object {
+        "fontSize": ".75rem",
+      },
+    },
+  },
+}
+`;
