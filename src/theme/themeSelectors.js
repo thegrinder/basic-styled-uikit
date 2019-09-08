@@ -10,7 +10,6 @@ const createSelector = category => theme => {
 
 export const getTypography = createSelector('typography');
 export const getColors = createSelector('colors');
-export const getButton = createSelector('button');
 export const getForm = createSelector('form');
 export const getHeading = createSelector('heading');
 export const getText = createSelector('text');

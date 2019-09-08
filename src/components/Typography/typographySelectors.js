@@ -1,4 +1,6 @@
-import { getTypography } from '../../theme/themeSelectors';
+import { createSelector } from '../../helpers';
+
+export const getTypography = createSelector('typography');
 
 export const getBaseFontSize = theme => getTypography(theme).baseFontSize;
 

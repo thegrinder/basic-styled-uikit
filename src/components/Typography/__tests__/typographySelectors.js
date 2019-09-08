@@ -1,5 +1,6 @@
 import { typographyBaseTheme } from '../typographyTheme';
 import {
+  getTypography,
   getBaseFontSize,
   getBaseLineHeight,
   rem,
@@ -8,11 +9,18 @@ import {
 
 const theme = { typography: typographyBaseTheme };
 
-describe('typography', () => {
-  describe('theme', () => {
-    it('should be defined', () => {
-      expect(typographyBaseTheme).toBeDefined();
-      expect(typographyBaseTheme).toMatchSnapshot();
+describe('typographySelectors', () => {
+  describe('getTypography', () => {
+    it('should return typography theme', () => {
+      expect(getTypography(theme)).toEqual(typographyBaseTheme);
+    });
+
+    it('should throw if no theme found', () => {
+      expect(() => getTypography()).toThrow();
+    });
+
+    it('should throw if no typography namespace found', () => {
+      expect(() => getTypography({})).toThrow();
     });
   });
 
