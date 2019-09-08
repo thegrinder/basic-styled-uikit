@@ -1,5 +1,5 @@
 import globalTheme from '../theme';
-import buttonTheme from '../../components/Button/buttonTheme';
+import { buttonBaseTheme } from '../../components/Button/buttonTheme';
 import {
   getTypography,
   getColors,
@@ -14,7 +14,7 @@ import {
 
 const theme = {
   ...globalTheme,
-  button: buttonTheme,
+  button: buttonBaseTheme,
 };
 
 describe('themeSelectors', () => {

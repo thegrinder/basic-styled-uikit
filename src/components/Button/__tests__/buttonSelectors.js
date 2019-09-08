@@ -1,24 +1,22 @@
-import buttonTheme from '../buttonTheme';
+import { buttonBaseTheme } from '../buttonTheme';
 import {
   getBtnTypeStyle,
   getBtnSizingStyle,
   getBtnCommonStyle,
 } from '../buttonSelectors';
 
-const mode = 'light';
 const theme = {
-  mode,
-  button: buttonTheme,
+  button: buttonBaseTheme,
 };
-const { btnTypes, sizings, common } = buttonTheme;
+const { btnTypes, sizings, common } = buttonBaseTheme;
 
 describe('buttonTheme selectors', () => {
   describe('getBtnTypeStyle', () => {
     Object.keys(btnTypes).forEach(btnType => {
-      Object.keys(btnTypes[btnType][mode]).forEach(state => {
+      Object.keys(btnTypes[btnType]).forEach(state => {
         it(`should return the correct style object for ${btnType} button type and ${state} state`, () => {
           expect(getBtnTypeStyle(theme, btnType, state)).toEqual(
-            btnTypes[btnType][mode][state]
+            btnTypes[btnType][state]
           );
         });
       });

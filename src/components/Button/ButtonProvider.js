@@ -1,16 +1,31 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { object } from 'prop-types';
 import { ThemeProvider } from 'styled-components';
-
-import buttonTheme from './buttonTheme';
+import { buttonBaseTheme, buttonDarkTheme } from './buttonTheme';
+import { useMode } from '../Mode';
 
 const propTypes = {
-  theme: object,
+  baseTheme: object,
+  darkTheme: object,
 };
 
-const ButtonProvider = ({ theme = {}, ...rest }) => (
-  <ThemeProvider theme={{ button: { ...buttonTheme, ...theme } }} {...rest} />
-);
+const ButtonProvider = ({
+  baseTheme = buttonBaseTheme,
+  darkTheme = buttonDarkTheme,
+  ...rest
+}) => {
+  const { mode } = useMode();
+  const theme = useMemo(
+    () => ({
+      button: {
+        ...baseTheme,
+        ...(mode === 'dark' && darkTheme ? darkTheme : {}),
+      },
+    }),
+    [mode]
+  );
+  return <ThemeProvider theme={theme} {...rest} />;
+};
 
 ButtonProvider.propTypes = propTypes;
 

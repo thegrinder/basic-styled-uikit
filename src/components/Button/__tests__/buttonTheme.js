@@ -1,7 +1,13 @@
-import buttonTheme from '../buttonTheme';
+import { buttonBaseTheme, buttonDarkTheme } from '../buttonTheme';
 
-describe('buttonTheme', () => {
+describe('buttonBaseTheme', () => {
   it('should be defined', () => {
-    expect(buttonTheme).toBeDefined();
+    expect(buttonBaseTheme).toBeDefined();
+  });
+});
+
+describe('buttonDarkTheme', () => {
+  it('should be defined', () => {
+    expect(buttonDarkTheme).toBeDefined();
   });
 });

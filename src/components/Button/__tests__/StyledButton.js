@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
 import theme from '../../../theme/theme';
+import { ModeProvider } from '../../Mode';
 import ButtonProvider from '../ButtonProvider';
 import StyledButton from '../StyledButton';
 
@@ -9,13 +10,15 @@ const children = <span>children</span>;
 
 const renderComponent = (props = {}) =>
   render(
-    <ThemeProvider theme={theme}>
-      <ButtonProvider>
-        <StyledButton btntype="danger" sizing="s" {...props}>
-          {children}
-        </StyledButton>
-      </ButtonProvider>
-    </ThemeProvider>
+    <ModeProvider>
+      <ThemeProvider theme={theme}>
+        <ButtonProvider>
+          <StyledButton btntype="danger" sizing="s" {...props}>
+            {children}
+          </StyledButton>
+        </ButtonProvider>
+      </ThemeProvider>
+    </ModeProvider>
   );
 
 describe('<StyledButton />', () => {

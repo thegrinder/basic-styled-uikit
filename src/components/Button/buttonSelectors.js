@@ -1,8 +1,7 @@
-import { getButton, getMode } from '../../theme/themeSelectors';
+import { getButton } from '../../theme/themeSelectors';
 
 export const getBtnTypeStyle = (theme, btntype, state) => {
-  const mode = getMode(theme);
-  const typeStyle = getButton(theme).btnTypes[btntype][mode];
+  const typeStyle = getButton(theme).btnTypes[btntype];
   if (!typeStyle) {
     throw new Error(
       `There is no ${btntype} button type in the <Button /> theme`
