@@ -1,5 +1,3 @@
-import { lighten } from 'polished';
-
 export const colorBoxDarkTheme = {
   bgColors: {
     neutral: '#161616',
@@ -10,10 +8,10 @@ export const colorBoxDarkTheme = {
   },
   elevations: {
     1: {
-      backgroundColor: lighten(0.03, '#161616'),
+      backgroundColor: 'rgba(255, 255, 255, .05)',
     },
     2: {
-      backgroundColor: lighten(0.06, '#161616'),
+      backgroundColor: 'rgba(255, 255, 255, .1)',
     },
   },
 };
