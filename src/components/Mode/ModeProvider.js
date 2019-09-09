@@ -6,11 +6,7 @@ const propTypes = {
   initialMode: oneOf(['light', 'dark']),
 };
 
-const defaultProps = {
-  initialMode: 'light',
-};
-
-const ModeProvider = ({ initialMode, ...rest }) => {
+const ModeProvider = ({ initialMode = 'light', ...rest }) => {
   const [mode, setMode] = useState(initialMode);
   const toggleMode = useCallback(() => setMode(prevMode => !prevMode), []);
   const value = useMemo(
@@ -24,6 +20,5 @@ const ModeProvider = ({ initialMode, ...rest }) => {
 };
 
 ModeProvider.propTypes = propTypes;
-ModeProvider.defaultProps = defaultProps;
 
 export default ModeProvider;

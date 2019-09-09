@@ -5,15 +5,10 @@ const propTypes = {
   maxWidth: number,
 };
 
-const defaultProps = {
-  maxWidth: 300,
-};
-
 const InputWrapper = styled.div`
-  max-width: ${({ maxWidth }) => maxWidth}px;
+  max-width: ${({ maxWidth = 300 }) => maxWidth}px;
 `;
 
 InputWrapper.propTypes = propTypes;
-InputWrapper.defaultProps = defaultProps;
 
 export default InputWrapper;
