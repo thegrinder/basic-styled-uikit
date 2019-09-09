@@ -26,14 +26,14 @@ describe('<Button />', () => {
 
   it('should render correctly with custom props', () => {
     const spinner = <span data-testid="spinner" />;
-    const { getByText, getByTestId } = renderComponent({
+    const { queryByText, queryByTestId } = renderComponent({
       btnType: 'danger',
       sizing: 's',
       submitting: true,
       renderSpinner: spinner,
     });
-    expect(getByTestId('spinner')).toBeTruthy();
-    expect(getByText('children')).toBeTruthy();
+    expect(queryByTestId('spinner')).toBeTruthy();
+    expect(queryByText('children')).toBeTruthy();
   });
 
   it('should render <a> tag by default', () => {

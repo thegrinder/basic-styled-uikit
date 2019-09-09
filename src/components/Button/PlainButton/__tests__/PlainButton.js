@@ -9,12 +9,12 @@ const renderComponent = () => render(<PlainButton>{text}</PlainButton>);
 
 describe('<PlainButton />', () => {
   it('should render correctly', () => {
-    const { getByText } = renderComponent();
-    expect(getByText(text)).toBeDefined();
+    const { queryByText } = renderComponent();
+    expect(queryByText(text)).toBeTruthy();
   });
 
   it('should render <button> tag', () => {
-    const { getByText } = renderComponent();
-    expect(getByText(text).tagName).toEqual('BUTTON');
+    const { queryByText } = renderComponent();
+    expect(queryByText(text).tagName).toEqual('BUTTON');
   });
 });

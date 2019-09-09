@@ -22,15 +22,15 @@ const renderComponent = (props = {}) =>
 
 describe('<StyledButton />', () => {
   it('should render correctly with default props and children', () => {
-    const { getByText } = renderComponent();
-    expect(getByText('children')).toBeTruthy();
+    const { queryByText } = renderComponent();
+    expect(queryByText('children')).toBeTruthy();
   });
 
   it('should render correctly with custom props', () => {
-    const { getByText } = renderComponent({
+    const { queryByText } = renderComponent({
       sizing: 'm',
     });
-    expect(getByText('children')).toBeTruthy();
+    expect(queryByText('children')).toBeTruthy();
   });
 
   it('should render <button> tag by default', () => {
