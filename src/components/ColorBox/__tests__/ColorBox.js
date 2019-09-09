@@ -16,30 +16,20 @@ const renderComponent = (props = {}) =>
 
 describe('<ColorBox />', () => {
   it('should render correctly with default props and children', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent();
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toHaveTextContent(children);
-    expect(firstChild).toMatchSnapshot();
+    const { queryByText } = renderComponent();
+    expect(queryByText(children)).toBeTruthy();
   });
 
   it('should render correctly with custom props', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent({
+    const { queryByText } = renderComponent({
       bgColor: 'primary',
       borderColor: 'success',
     });
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toHaveTextContent(children);
-    expect(firstChild).toMatchSnapshot();
+    expect(queryByText(children)).toBeTruthy();
   });
 
   it('should render <div> tag', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent();
-    expect(firstChild.tagName).toEqual('DIV');
+    const { queryByText } = renderComponent();
+    expect(queryByText(children).tagName).toEqual('DIV');
   });
 });
