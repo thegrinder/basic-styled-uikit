@@ -1,41 +1,40 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { render } from '@testing-library/react';
-
+import { ModeProvider } from '../../../Mode';
+import { TypographyProvider } from '../../../Typography';
 import theme from '../../../../theme/theme';
 import Checkbox from '../Checkbox';
 
+const testId = 'checkbox';
+
 const renderComponent = (props = {}) =>
   render(
-    <ThemeProvider theme={theme}>
-      <Checkbox {...props} />
-    </ThemeProvider>
+    <ModeProvider>
+      <ThemeProvider theme={theme}>
+        <TypographyProvider>
+          <Checkbox data-testid={testId} {...props} />
+        </TypographyProvider>
+      </ThemeProvider>
+    </ModeProvider>
   );
 
 describe('<Checkbox />', () => {
   it('should render correctly with default props', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent();
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toMatchSnapshot();
+    const { queryByTestId } = renderComponent();
+    expect(queryByTestId(testId)).toBeTruthy();
   });
 
   it('should render correctly with custom props', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent({
+    const { queryByTestId } = renderComponent({
       invalid: true,
     });
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toMatchSnapshot();
+    expect(queryByTestId(testId)).toBeTruthy();
   });
 
   it('should render <input> tag with type checkbox', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent();
-    expect(firstChild.tagName).toEqual('INPUT');
-    expect(firstChild.type).toEqual('checkbox');
+    const { queryByTestId } = renderComponent();
+    expect(queryByTestId(testId).tagName).toEqual('INPUT');
+    expect(queryByTestId(testId).type).toEqual('checkbox');
   });
 });
