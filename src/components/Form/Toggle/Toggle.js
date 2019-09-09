@@ -1,8 +1,13 @@
 import React from 'react';
 import { number, bool, func } from 'prop-types';
-import ToggleLabel from './ToggleLabel';
+import styled from 'styled-components';
 import ToggleCheckbox from './ToggleCheckbox';
 import ToggleSlider from './ToggleSlider';
+
+const ToggleLabel = styled.label`
+  display: inline-block;
+  width: 100%;
+`;
 
 const propTypes = {
   /** height of the Toggle */

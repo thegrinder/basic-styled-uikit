@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<ToggleCheckbox /> should render correctly with default props 1`] = `
-<input
-  class="ToggleCheckbox-sc-1nmpw1g-0 daNQqM"
-  type="checkbox"
-/>
-`;
