@@ -21,38 +21,25 @@ const renderComponent = (props = {}) =>
 
 describe('<Link />', () => {
   it('should render correctly with default props and its children', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent();
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toHaveTextContent(children);
-    expect(firstChild).toMatchSnapshot();
+    const { queryByText } = renderComponent();
+    expect(queryByText(children)).toBeTruthy();
   });
 
   it('should render correctly with custom props', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent({
+    const { queryByText } = renderComponent({
       sizing: 'xs',
       linktype: 'muted',
     });
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toHaveTextContent(children);
-    expect(firstChild).toMatchSnapshot();
+    expect(queryByText(children)).toBeTruthy();
   });
 
   it('should render <a> tag by default', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent();
-    expect(firstChild.tagName).toEqual('A');
+    const { queryByText } = renderComponent();
+    expect(queryByText(children).tagName).toEqual('A');
   });
 
   it('should render render <button> tag', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent({ as: 'button' });
-    expect(firstChild.tagName).toEqual('BUTTON');
-    expect(firstChild).toMatchSnapshot();
+    const { queryByText } = renderComponent({ as: 'button' });
+    expect(queryByText(children).tagName).toEqual('BUTTON');
   });
 });
