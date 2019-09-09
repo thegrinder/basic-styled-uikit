@@ -1,4 +1,3 @@
-import { colors as colorPalette } from '../../../../helpers';
 import { typographyBaseTheme } from '../../typographyTheme';
 import {
   getTextSizingStyle,
@@ -64,9 +63,7 @@ describe('textTheme selectors', () => {
       Object.keys(onBackground[bgColor]).forEach(color => {
         it(`should return the correct code for ${color} color for ${bgColor} background`, () => {
           expect(getTextColorOnBg(theme, bgColor, color)).toEqual(
-            bgColor === 'warning'
-              ? colorPalette.neutral1000
-              : colorPalette.neutral0
+            bgColor === 'warning' ? '#161616' : '#fff'
           );
         });
       });

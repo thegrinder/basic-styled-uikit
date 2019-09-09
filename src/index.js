@@ -17,6 +17,5 @@ export {
 export { ButtonProvider, Button, PlainButton } from './components/Button';
 export { LinkProvider, Link } from './components/Link';
 export { ColorBoxProvider, ColorBox } from './components/ColorBox';
+export { ColorsProvider } from './components/Colors';
 export { ResetCss } from './components/ResetCss';
-
-// export { getColor } from './helpers';
