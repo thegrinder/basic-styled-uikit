@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { object } from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import { buttonBaseTheme, buttonDarkTheme } from './buttonTheme';
-import { useMode } from '../Mode';
+import { useMode } from '../../Mode';
 
 const propTypes = {
   baseTheme: object,

@@ -1,4 +1,4 @@
-import { createSelector } from '../../helpers';
+import { createSelector } from '../../../helpers';
 
 export const getButton = createSelector('button');
 

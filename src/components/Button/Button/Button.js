@@ -38,20 +38,13 @@ const propTypes = {
   children: node,
 };
 
-const defaultProps = {
-  sizing: 'm',
-  btnType: 'default',
-  submitting: false,
-  as: 'button',
-};
-
 const Button = ({
-  btnType: btntype,
-  sizing,
-  submitting,
+  btnType: btntype = 'default',
+  sizing = 'm',
+  submitting = false,
   renderSpinner,
   children,
-  as,
+  as = 'button',
   ...rest
 }) => (
   <StyledButton as={as} sizing={sizing} btntype={btntype} {...rest}>
@@ -61,6 +54,5 @@ const Button = ({
 );
 
 Button.propTypes = propTypes;
-Button.defaultProps = defaultProps;
 
 export default Button;

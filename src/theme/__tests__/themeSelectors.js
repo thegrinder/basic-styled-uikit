@@ -1,5 +1,4 @@
-import globalTheme from '../theme';
-import { buttonBaseTheme } from '../../components/Button/buttonTheme';
+import theme from '../theme';
 import {
   getTypography,
   getColors,
@@ -8,11 +7,6 @@ import {
   getLink,
   getMode,
 } from '../themeSelectors';
-
-const theme = {
-  ...globalTheme,
-  button: buttonBaseTheme,
-};
 
 describe('themeSelectors', () => {
   describe('errors', () => {
