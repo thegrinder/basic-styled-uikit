@@ -1,18 +1,34 @@
-import theme from '../../../theme/theme';
-import colorBoxTheme from '../colorBoxTheme';
-import { getBoxBgColor, getBoxElevation } from '../colorBoxSelectors';
+import { colorBoxBaseTheme } from '../colorBoxTheme';
+import {
+  getColorBox,
+  getBoxBgColor,
+  getBoxElevation,
+} from '../colorBoxSelectors';
 
-const { bgColors, elevations } = colorBoxTheme;
-const { mode } = theme;
+const theme = { colorBox: colorBoxBaseTheme };
+const { bgColors, elevations } = colorBoxBaseTheme;
 
 describe('colorBoxTheme selectors', () => {
+  describe('getColorBox', () => {
+    it('should return button theme', () => {
+      expect(getColorBox(theme)).toEqual(colorBoxBaseTheme);
+    });
+
+    it('should throw if no theme found', () => {
+      expect(() => getColorBox()).toThrow();
+    });
+
+    it('should throw if no button namespace found', () => {
+      expect(() => getColorBox({})).toThrow();
+    });
+  });
+
   describe('getBoxBgColor', () => {
-    it.each(Object.keys(bgColors[mode]))(
-      'should return the correct background color for %s',
-      bgColor => {
-        expect(getBoxBgColor(theme, bgColor)).toEqual(bgColors[mode][bgColor]);
-      }
-    );
+    Object.keys(bgColors).forEach(bgColor => {
+      it(`should return the correct ${bgColor} background color`, () => {
+        expect(getBoxBgColor(theme, bgColor)).toEqual(bgColors[bgColor]);
+      });
+    });
 
     it('should throw if background color is not defined in the theme', () => {
       expect(() => getBoxBgColor(theme, 'invalidBgColor')).toThrow();
@@ -20,14 +36,13 @@ describe('colorBoxTheme selectors', () => {
   });
 
   describe('getBoxElevation', () => {
-    it.each(Object.keys(elevations[mode]))(
-      'should return the correct elevation for % value',
-      elevation => {
+    Object.keys(elevations).forEach(elevation => {
+      it(`should return the correct elevation for ${elevation} elevation`, () => {
         expect(getBoxElevation(theme, elevation)).toEqual(
-          elevations[mode][elevation]
+          elevations[elevation]
         );
-      }
-    );
+      });
+    });
 
     it('should throw if elevation is not defined in the theme', () => {
       expect(() => getBoxElevation(theme, 'invalidElevation')).toThrow();

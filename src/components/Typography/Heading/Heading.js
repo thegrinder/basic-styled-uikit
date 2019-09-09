@@ -1,7 +1,7 @@
 import React from 'react';
 import { string, bool, oneOf } from 'prop-types';
 import StyledHeading from './StyledHeading';
-import { useColorBoxContext } from '../../ColorBox/context';
+import { useColorBoxContext } from '../../ColorBox';
 
 const propTypes = {
   /** determines the size of the heading */

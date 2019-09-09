@@ -3,7 +3,6 @@ import {
   getTypography,
   getColors,
   getForm,
-  getColorBox,
   getLink,
   getMode,
 } from '../themeSelectors';
@@ -14,7 +13,6 @@ describe('themeSelectors', () => {
       [getTypography, 'typography'],
       [getColors, 'colors'],
       [getForm, 'form'],
-      [getColorBox, 'colorBox'],
       [getLink, 'link'],
       [getMode, 'mode'],
     ])('%s should handle success and failure', (selector, namespace) => {

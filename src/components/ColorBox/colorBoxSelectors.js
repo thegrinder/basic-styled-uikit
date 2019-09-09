@@ -1,8 +1,9 @@
-import { getColorBox, getMode } from '../../theme/themeSelectors';
+import { createSelector } from '../../helpers';
+
+export const getColorBox = createSelector('colorBox');
 
 export const getBoxBgColor = (theme, bgColor) => {
-  const mode = getMode(theme);
-  const boxBgColor = getColorBox(theme).bgColors[mode][bgColor];
+  const boxBgColor = getColorBox(theme).bgColors[bgColor];
   if (!boxBgColor) {
     throw new Error(
       `There is no ${bgColor} background color in the <ColorBox /> theme`
@@ -12,8 +13,7 @@ export const getBoxBgColor = (theme, bgColor) => {
 };
 
 export const getBoxElevation = (theme, elevation) => {
-  const mode = getMode(theme);
-  const boxElevation = getColorBox(theme).elevations[mode][elevation];
+  const boxElevation = getColorBox(theme).elevations[elevation];
   if (!boxElevation) {
     throw new Error(
       `There is no ${boxElevation} elevation the <ColorBox /> theme`

@@ -1,7 +1,7 @@
 import colors from './colors';
-import { typographyBaseTheme } from '../components/Typography';
+import { typographyBaseTheme } from '../components/Typography/typographyTheme';
 import form from '../components/Form/formTheme';
-import colorBox from '../components/ColorBox/colorBoxTheme';
+import { colorBoxBaseTheme } from '../components/ColorBox/colorBoxTheme';
 import link from '../components/Link/linkTheme';
 
 const theme = {
@@ -9,7 +9,7 @@ const theme = {
   typography: typographyBaseTheme,
   colors,
   form,
-  colorBox,
+  colorBox: colorBoxBaseTheme,
   link,
 };
 

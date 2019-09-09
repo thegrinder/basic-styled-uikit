@@ -1,17 +1,18 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
 import { render } from '@testing-library/react';
-
-import theme from '../../../theme/theme';
+import { ModeProvider } from '../../Mode';
+import ColorBoxProvider from '../ColorBoxProvider';
 import ColorBox from '../ColorBox';
 
 const children = 'children';
 
 const renderComponent = (props = {}) =>
   render(
-    <ThemeProvider theme={theme}>
-      <ColorBox {...props}>{children}</ColorBox>
-    </ThemeProvider>
+    <ModeProvider>
+      <ColorBoxProvider>
+        <ColorBox {...props}>{children}</ColorBox>
+      </ColorBoxProvider>
+    </ModeProvider>
   );
 
 describe('<ColorBox />', () => {

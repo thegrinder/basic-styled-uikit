@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { ModeProvider } from '../src/components/Mode';
 import { TypographyProvider } from '../src/components/Typography';
 import { ButtonProvider } from '../src/components/Button';
+import { ColorBoxProvider } from '../src/components/ColorBox';
 import theme from '../src/theme/theme';
 
 const propTypes = {
@@ -13,11 +14,13 @@ const propTypes = {
 const Wrapper = ({ children }) => (
   <ModeProvider>
     <ThemeProvider theme={theme}>
-      <TypographyProvider>
-        <ButtonProvider>
-          <>{children}</>
-        </ButtonProvider>
-      </TypographyProvider>
+      <ColorBoxProvider>
+        <TypographyProvider>
+          <ButtonProvider>
+            <>{children}</>
+          </ButtonProvider>
+        </TypographyProvider>
+      </ColorBoxProvider>
     </ThemeProvider>
   </ModeProvider>
 );

@@ -1,7 +1,13 @@
-import colorBox from '../colorBoxTheme';
+import { colorBoxBaseTheme, colorBoxDarkTheme } from '../colorBoxTheme';
 
-describe('colorBox', () => {
+describe('colorBoxBaseTheme', () => {
   it('should be defined', () => {
-    expect(colorBox).toBeDefined();
+    expect(colorBoxBaseTheme).toBeDefined();
+  });
+});
+
+describe('colorBoxDarkTheme', () => {
+  it('should be defined', () => {
+    expect(colorBoxDarkTheme).toBeDefined();
   });
 });
