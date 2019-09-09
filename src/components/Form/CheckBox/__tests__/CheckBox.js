@@ -4,7 +4,7 @@ import { render } from '@testing-library/react';
 import { ModeProvider } from '../../../Mode';
 import { TypographyProvider } from '../../../Typography';
 import theme from '../../../../theme/theme';
-import Checkbox from '../Checkbox';
+import CheckBox from '../CheckBox';
 
 const testId = 'checkbox';
 
@@ -13,13 +13,13 @@ const renderComponent = (props = {}) =>
     <ModeProvider>
       <ThemeProvider theme={theme}>
         <TypographyProvider>
-          <Checkbox data-testid={testId} {...props} />
+          <CheckBox data-testid={testId} {...props} />
         </TypographyProvider>
       </ThemeProvider>
     </ModeProvider>
   );
 
-describe('<Checkbox />', () => {
+describe('<CheckBox />', () => {
   it('should render correctly with default props', () => {
     const { queryByTestId } = renderComponent();
     expect(queryByTestId(testId)).toBeTruthy();

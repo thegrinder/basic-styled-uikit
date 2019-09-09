@@ -16,7 +16,7 @@ export {
 export { default as Select } from './components/Form/Select/Select';
 export { default as Textarea } from './components/Form/Textarea/Textarea';
 export { default as Radio } from './components/Form/Radio/Radio';
-export { default as Checkbox } from './components/Form/Checkbox/Checkbox';
+export { default as CheckBox } from './components/Form/CheckBox/CheckBox';
 export { default as Toggle } from './components/Form/Toggle/Toggle';
 
 export { getColor } from './theme/colors';
