@@ -27,7 +27,7 @@ export const typographyBaseTheme = {
   baseLineHeight: 1.5,
   opacities: {
     high: 1,
-    normal: 0.8,
+    medium: 0.8,
     low: 0.6,
   },
   colors: {
