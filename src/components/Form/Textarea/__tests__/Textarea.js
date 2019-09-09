@@ -1,40 +1,39 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
 import { render } from '@testing-library/react';
-
+import { ThemeProvider } from 'styled-components';
+import { ModeProvider } from '../../../Mode';
+import { TypographyProvider } from '../../../Typography';
 import theme from '../../../../theme/theme';
 import Textarea from '../Textarea';
 
+const testId = 'textarea';
+
 const renderComponent = props =>
   render(
-    <ThemeProvider theme={theme}>
-      <Textarea {...props} />
-    </ThemeProvider>
+    <ModeProvider>
+      <ThemeProvider theme={theme}>
+        <TypographyProvider>
+          <Textarea data-testid={testId} {...props} />
+        </TypographyProvider>
+      </ThemeProvider>
+    </ModeProvider>
   );
 
 describe('<Textarea />', () => {
   it('should render correctly with default props', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent();
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toMatchSnapshot();
+    const { queryByTestId } = renderComponent();
+    expect(queryByTestId(testId)).toBeTruthy();
   });
 
   it('should render correctly with custom props', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent({
+    const { queryByTestId } = renderComponent({
       invalid: true,
     });
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toMatchSnapshot();
+    expect(queryByTestId(testId)).toBeTruthy();
   });
 
   it('should render <textarea> tag', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent();
-    expect(firstChild.tagName).toEqual('TEXTAREA');
+    const { queryByTestId } = renderComponent();
+    expect(queryByTestId(testId).tagName).toEqual('TEXTAREA');
   });
 });
