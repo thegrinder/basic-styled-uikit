@@ -1,8 +1,28 @@
 import React from 'react';
 import { node, bool, string, oneOfType, oneOf, func } from 'prop-types';
-import ContentWrapper from './ContentWrapper';
+import styled from 'styled-components';
 import StyledButton from './StyledButton';
-import SpinnerWrapper from './SpinnerWrapper';
+
+const ContentWrapper = styled.span`
+  display: flex;
+  align-items: center;
+  opacity: ${({ submitting }) => (submitting ? '0' : '1')};
+`;
+
+ContentWrapper.propTypes = {
+  submitting: bool.isRequired,
+};
+
+const SpinnerWrapper = styled.span`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 const propTypes = {
   /** submitting flag that shows a component passed to renderSpinner prop */
