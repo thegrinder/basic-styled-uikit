@@ -1,9 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { ThemeProvider } from 'styled-components';
 import { ModeProvider } from '../../../Mode';
 import { TypographyProvider } from '../../../Typography';
-import theme from '../../../../theme/theme';
+import FormProvider from '../../FormProvider';
 import Select from '../Select';
 
 const testId = 'select';
@@ -12,13 +11,13 @@ const option = <option>option</option>;
 const renderComponent = (props = {}) =>
   render(
     <ModeProvider>
-      <ThemeProvider theme={theme}>
-        <TypographyProvider>
+      <TypographyProvider>
+        <FormProvider>
           <Select data-testid={testId} {...props}>
             {option}
           </Select>
-        </TypographyProvider>
-      </ThemeProvider>
+        </FormProvider>
+      </TypographyProvider>
     </ModeProvider>
   );
 

@@ -1,19 +1,18 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { ThemeProvider } from 'styled-components';
 import { ModeProvider } from '../../../Mode';
 import { TypographyProvider } from '../../../Typography';
-import theme from '../../../../theme/theme';
+import FormProvider from '../../FormProvider';
 import Toggle from '../Toggle';
 
 const renderComponent = (props = {}) =>
   render(
     <ModeProvider>
-      <ThemeProvider theme={theme}>
+      <FormProvider>
         <TypographyProvider>
           <Toggle onChange={() => {}} {...props} />
         </TypographyProvider>
-      </ThemeProvider>
+      </FormProvider>
     </ModeProvider>
   );
 

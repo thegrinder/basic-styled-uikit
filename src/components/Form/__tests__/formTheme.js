@@ -1,7 +1,13 @@
-import formTheme from '../formTheme';
+import { formBaseTheme, formDarkTheme } from '../formTheme';
 
-describe('formTheme', () => {
+describe('formBaseTheme', () => {
   it('should be defined', () => {
-    expect(formTheme).toBeDefined();
+    expect(formBaseTheme).toBeDefined();
+  });
+});
+
+describe('formDarkTheme', () => {
+  it('should be defined', () => {
+    expect(formDarkTheme).toBeDefined();
   });
 });

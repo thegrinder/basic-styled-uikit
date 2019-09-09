@@ -1,9 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { ThemeProvider } from 'styled-components';
 import { ModeProvider } from '../../../Mode';
 import { TypographyProvider } from '../../../Typography';
-import theme from '../../../../theme/theme';
+import FormProvider from '../../FormProvider';
 import Textarea from '../Textarea';
 
 const testId = 'textarea';
@@ -11,11 +10,11 @@ const testId = 'textarea';
 const renderComponent = props =>
   render(
     <ModeProvider>
-      <ThemeProvider theme={theme}>
+      <FormProvider>
         <TypographyProvider>
           <Textarea data-testid={testId} {...props} />
         </TypographyProvider>
-      </ThemeProvider>
+      </FormProvider>
     </ModeProvider>
   );
 

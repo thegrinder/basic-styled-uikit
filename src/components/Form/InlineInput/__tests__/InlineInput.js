@@ -1,9 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { ThemeProvider } from 'styled-components';
 import { ModeProvider } from '../../../Mode';
 import { TypographyProvider } from '../../../Typography';
-import theme from '../../../../theme/theme';
+import FormProvider from '../../FormProvider';
 import InlineInput from '../InlineInput';
 
 const testId = 'inline-input';
@@ -11,11 +10,11 @@ const testId = 'inline-input';
 const renderComponent = (props = {}) =>
   render(
     <ModeProvider>
-      <ThemeProvider theme={theme}>
-        <TypographyProvider>
+      <TypographyProvider>
+        <FormProvider>
           <InlineInput data-testid={testId} {...props} />
-        </TypographyProvider>
-      </ThemeProvider>
+        </FormProvider>
+      </TypographyProvider>
     </ModeProvider>
   );
 
