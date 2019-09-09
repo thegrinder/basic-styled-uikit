@@ -1,6 +1,6 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
 import { render } from '@testing-library/react';
+import { ThemeProvider } from 'styled-components';
 import { ModeProvider } from '../../../Mode';
 import { TypographyProvider } from '../../../Typography';
 import theme from '../../../../theme/theme';

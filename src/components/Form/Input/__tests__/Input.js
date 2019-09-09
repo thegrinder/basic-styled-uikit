@@ -1,40 +1,39 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
 import { render } from '@testing-library/react';
-
+import { ThemeProvider } from 'styled-components';
+import { ModeProvider } from '../../../Mode';
+import { TypographyProvider } from '../../../Typography';
 import theme from '../../../../theme/theme';
 import Input from '../Input';
 
+const testId = 'input';
+
 const renderComponent = (props = {}) =>
   render(
-    <ThemeProvider theme={theme}>
-      <Input {...props} />
-    </ThemeProvider>
+    <ModeProvider>
+      <ThemeProvider theme={theme}>
+        <TypographyProvider>
+          <Input data-testid={testId} {...props} />
+        </TypographyProvider>
+      </ThemeProvider>
+    </ModeProvider>
   );
 
 describe('<Input />', () => {
   it('should render correctly with default props', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent();
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toMatchSnapshot();
+    const { queryByTestId } = renderComponent();
+    expect(queryByTestId(testId)).toBeTruthy();
   });
 
   it('should render correctly with custom props', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent({
+    const { queryByTestId } = renderComponent({
       invalid: true,
     });
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toMatchSnapshot();
+    expect(queryByTestId(testId)).toBeTruthy();
   });
 
   it('should render <input> tag', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent();
-    expect(firstChild.tagName).toEqual('INPUT');
+    const { queryByTestId } = renderComponent();
+    expect(queryByTestId(testId).tagName).toEqual('INPUT');
   });
 });
