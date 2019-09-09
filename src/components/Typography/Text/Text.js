@@ -18,22 +18,13 @@ const propTypes = {
   marginBottom: bool,
 };
 
-const defaultProps = {
-  sizing: 'm',
-  color: 'neutral',
-  ignoreBackground: false,
-  as: 'span',
-  marginBottom: false,
-  emphasis: 'high',
-};
-
 const Text = ({
-  sizing,
-  color,
-  ignoreBackground,
-  marginBottom,
-  emphasis,
-  as,
+  sizing = 'm',
+  color = 'neutral',
+  ignoreBackground = false,
+  marginBottom = false,
+  emphasis = 'high',
+  as = 'span',
   ...rest
 }) => (
   <StyledText
@@ -49,6 +40,5 @@ const Text = ({
 );
 
 Text.propTypes = propTypes;
-Text.defaultProps = defaultProps;
 
 export default Text;

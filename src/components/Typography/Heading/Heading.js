@@ -18,20 +18,13 @@ const propTypes = {
   marginBottom: bool,
 };
 
-const defaultProps = {
-  color: 'neutral',
-  emphasis: 'high',
-  ignoreBackground: false,
-  marginBottom: false,
-};
-
 const Heading = ({
+  color = 'neutral',
+  emphasis = 'high',
+  marginBottom = false,
+  ignoreBackground = false,
   sizing,
-  color,
-  emphasis,
-  marginBottom,
   as,
-  ignoreBackground,
   ...rest
 }) => (
   <StyledHeading
@@ -47,6 +40,5 @@ const Heading = ({
 );
 
 Heading.propTypes = propTypes;
-Heading.defaultProps = defaultProps;
 
 export default Heading;
