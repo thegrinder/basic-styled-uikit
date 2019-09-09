@@ -19,12 +19,11 @@ const {
 
 describe('textTheme selectors', () => {
   describe('getTextSizingStyle', () => {
-    it.each(Object.keys(sizings))(
-      'should return the correct size style object for %s size',
-      sizing => {
+    Object.keys(sizings).forEach(sizing => {
+      it(`should return the correct size style object for ${sizing} size`, () => {
         expect(getTextSizingStyle(theme, sizing)).toEqual(sizings[sizing]);
-      }
-    );
+      });
+    });
 
     it('should throw if size is not defined in the theme', () => {
       expect(() => getTextSizingStyle(theme, 'invalidSizing')).toThrow();
@@ -32,25 +31,22 @@ describe('textTheme selectors', () => {
   });
 
   describe('getTextOpacity', () => {
-    it.each(Object.keys(opacities))(
-      'should return the correct opacity for %s emphasis',
-      emphasis => {
+    Object.keys(opacities).forEach(emphasis => {
+      it(`should return the correct opacity for ${emphasis} emphasis`, () => {
         expect(getTextOpacity(theme, emphasis)).toEqual(opacities[emphasis]);
-      }
-    );
-
+      });
+    });
     it('should throw if emphasis is not defined in the theme', () => {
       expect(() => getTextOpacity(theme, 'invalidEmphasis')).toThrow();
     });
   });
 
   describe('getTextColor', () => {
-    it.each(Object.keys(colors))(
-      'should return the correct color for %s',
-      color => {
+    Object.keys(colors).forEach(color => {
+      it(`should return the correct ${color} color`, () => {
         expect(getTextColor(theme, color)).toEqual(colors[color]);
-      }
-    );
+      });
+    });
 
     it('should throw if color is not defined in the theme', () => {
       expect(() => getTextColor(theme, 'invalidColor')).toThrow();
