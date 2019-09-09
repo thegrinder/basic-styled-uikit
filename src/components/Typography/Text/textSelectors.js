@@ -1,4 +1,4 @@
-import { getTypography } from '../../../theme/themeSelectors';
+import { getTypography } from '../typographySelectors';
 
 export const getTextSizingStyle = (theme, sizing) => {
   const sizingStyle = getTypography(theme).text.sizings[sizing];

@@ -19,4 +19,4 @@ export { LinkProvider, Link } from './components/Link';
 export { ColorBoxProvider, ColorBox } from './components/ColorBox';
 export { ResetCss } from './components/ResetCss';
 
-export { getColor } from './theme/colors';
+// export { getColor } from './helpers';

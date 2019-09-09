@@ -1,4 +1,4 @@
-import colorPalette from '../../../../theme/colors';
+import { colors as colorPalette } from '../../../../helpers';
 import { typographyBaseTheme } from '../../typographyTheme';
 import {
   getHeadingSizingStyle,

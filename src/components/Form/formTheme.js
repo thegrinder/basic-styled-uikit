@@ -1,25 +1,24 @@
 import { transparentize } from 'polished';
-import colors from '../../theme/colors';
 
 export const formDarkTheme = {
   regular: {
     states: {
       valid: {
         normal: {
-          borderColor: colors.neutral400,
-          color: colors.neutral0,
+          borderColor: '#ced4da',
+          color: '#fff',
         },
         active: {
-          borderColor: colors.primary400,
+          borderColor: '#42A5F5',
         },
         disabled: {
-          borderColor: transparentize(0.8, colors.neutral400),
-          color: transparentize(0.8, colors.neutral0),
+          borderColor: transparentize(0.8, '#ced4da'),
+          color: transparentize(0.8, '#fff'),
         },
       },
       invalid: {
-        color: colors.danger400,
-        borderColor: colors.danger400,
+        color: '#FF8A65',
+        borderColor: '#FF8A65',
       },
     },
   },
@@ -27,22 +26,22 @@ export const formDarkTheme = {
     states: {
       valid: {
         normal: {
-          color: colors.neutral0,
+          color: '#fff',
         },
         hover: {
-          borderColor: colors.neutral400,
+          borderColor: '#ced4da',
         },
         active: {
-          borderColor: colors.primary600,
+          borderColor: '#1E88E5',
         },
         disabled: {
-          borderColor: transparentize(0.8, colors.neutral400),
-          color: transparentize(0.8, colors.neutral0),
+          borderColor: transparentize(0.8, '#ced4da'),
+          color: transparentize(0.8, '#fff'),
         },
       },
       invalid: {
-        color: colors.danger600,
-        borderColor: colors.danger600,
+        color: '#F4511E',
+        borderColor: '#F4511E',
       },
     },
   },
@@ -50,28 +49,28 @@ export const formDarkTheme = {
     states: {
       valid: {
         normal: {
-          borderColor: colors.neutral400,
+          borderColor: '#ced4da',
         },
         active: {
-          borderColor: colors.primary400,
+          borderColor: '#42A5F5',
         },
         checked: {
-          borderColor: colors.primary400,
-          backgroundColor: colors.primary400,
+          borderColor: '#42A5F5',
+          backgroundColor: '#42A5F5',
         },
       },
       invalid: {
-        borderColor: colors.danger400,
+        borderColor: '#FF8A65',
       },
     },
   },
   toggle: {
     states: {
       normal: {
-        backgroundColor: colors.neutral600,
+        backgroundColor: '#868e96',
       },
       checked: {
-        backgroundColor: colors.primary400,
+        backgroundColor: '#42A5F5',
       },
     },
   },
@@ -83,20 +82,20 @@ export const formBaseTheme = {
     states: {
       valid: {
         normal: {
-          borderColor: colors.neutral400,
-          color: colors.neutral1000,
+          borderColor: '#ced4da',
+          color: '#161616',
         },
         active: {
-          borderColor: colors.primary600,
+          borderColor: '#1E88E5',
         },
         disabled: {
-          color: colors.neutral600,
-          backgroundColor: colors.neutral100,
+          color: '#868e96',
+          backgroundColor: '#f8f9fa',
         },
       },
       invalid: {
-        color: colors.danger600,
-        borderColor: colors.danger600,
+        color: '#F4511E',
+        borderColor: '#F4511E',
       },
     },
   },
@@ -105,25 +104,25 @@ export const formBaseTheme = {
     states: {
       valid: {
         normal: {
-          color: colors.neutral1000,
+          color: '#161616',
         },
         hover: {
-          borderColor: colors.neutral400,
-          color: colors.neutral1000,
+          borderColor: '#ced4da',
+          color: '#161616',
         },
         active: {
-          borderColor: colors.primary600,
-          color: colors.neutral1000,
+          borderColor: '#1E88E5',
+          color: '#161616',
         },
         disabled: {
-          borderColor: colors.neutral400,
-          color: colors.neutral600,
-          backgroundColor: colors.neutral100,
+          borderColor: '#ced4da',
+          color: '#868e96',
+          backgroundColor: '#f8f9fa',
         },
       },
       invalid: {
-        color: colors.danger600,
-        borderColor: colors.danger600,
+        color: '#F4511E',
+        borderColor: '#F4511E',
       },
     },
   },
@@ -132,18 +131,18 @@ export const formBaseTheme = {
     states: {
       valid: {
         normal: {
-          borderColor: colors.neutral400,
+          borderColor: '#ced4da',
         },
         active: {
-          borderColor: colors.primary600,
+          borderColor: '#1E88E5',
         },
         checked: {
-          borderColor: colors.primary600,
-          backgroundColor: colors.primary600,
+          borderColor: '#1E88E5',
+          backgroundColor: '#1E88E5',
         },
       },
       invalid: {
-        borderColor: colors.danger600,
+        borderColor: '#F4511E',
       },
     },
   },
@@ -151,10 +150,10 @@ export const formBaseTheme = {
   toggle: {
     states: {
       normal: {
-        backgroundColor: colors.neutral400,
+        backgroundColor: '#ced4da',
       },
       checked: {
-        backgroundColor: colors.primary600,
+        backgroundColor: '#1E88E5',
       },
     },
   },

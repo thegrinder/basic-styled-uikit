@@ -1,22 +1,21 @@
 import { darken, lighten } from 'polished';
-import colors from '../../theme/colors';
 
 export const linkDarkTheme = {
   linkTypes: {
     default: {
       normal: {
-        color: colors.primary400,
+        color: '#42A5F5',
       },
       hover: {
-        color: lighten(0.1, colors.primary400),
+        color: lighten(0.1, '#42A5F5'),
       },
     },
     muted: {
       normal: {
-        color: colors.neutral400,
+        color: '#ced4da',
       },
       hover: {
-        color: lighten(0.1, colors.neutral400),
+        color: lighten(0.1, '#ced4da'),
       },
     },
   },
@@ -26,18 +25,18 @@ export const linkBaseTheme = {
   linkTypes: {
     default: {
       normal: {
-        color: colors.primary600,
+        color: '#1E88E5',
       },
       hover: {
-        color: darken(0.1, colors.primary600),
+        color: darken(0.1, '#1E88E5'),
       },
     },
     muted: {
       normal: {
-        color: colors.neutral600,
+        color: '#868e96',
       },
       hover: {
-        color: darken(0.1, colors.neutral600),
+        color: darken(0.1, '#868e96'),
       },
     },
   },

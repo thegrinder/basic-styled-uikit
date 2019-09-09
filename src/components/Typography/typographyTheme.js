@@ -1,25 +1,23 @@
-import colors from '../../theme/colors';
-
 export const typographyDarkTheme = {
   colors: {
-    neutral: colors.neutral0,
-    primary: colors.primary400,
-    success: colors.success400,
-    warning: colors.warning400,
-    danger: colors.danger400,
+    neutral: '#fff',
+    primary: '#42A5F5',
+    success: '#66BB6A',
+    warning: '#FFEE58',
+    danger: '#FF8A65',
   },
   onBackground: {
     primary: {
-      neutral: colors.neutral1000,
+      neutral: '#161616',
     },
     success: {
-      neutral: colors.neutral1000,
+      neutral: '#161616',
     },
     warning: {
-      neutral: colors.neutral1000,
+      neutral: '#161616',
     },
     danger: {
-      neutral: colors.neutral1000,
+      neutral: '#161616',
     },
   },
 };
@@ -33,24 +31,24 @@ export const typographyBaseTheme = {
     low: 0.6,
   },
   colors: {
-    neutral: colors.neutral1000,
-    primary: colors.primary600,
-    success: colors.success600,
-    warning: colors.warning600,
-    danger: colors.danger600,
+    neutral: '#161616',
+    primary: '#1E88E5',
+    success: '#43A047',
+    warning: '#FDD835',
+    danger: '#F4511E',
   },
   onBackground: {
     primary: {
-      neutral: colors.neutral0,
+      neutral: '#fff',
     },
     success: {
-      neutral: colors.neutral0,
+      neutral: '#fff',
     },
     warning: {
-      neutral: colors.neutral1000,
+      neutral: '#161616',
     },
     danger: {
-      neutral: colors.neutral0,
+      neutral: '#fff',
     },
   },
   text: {
