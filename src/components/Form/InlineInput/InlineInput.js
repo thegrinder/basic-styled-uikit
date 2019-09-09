@@ -28,16 +28,10 @@ const propTypes = {
   renderSpinner: node,
 };
 
-const defaultProps = {
-  submitting: false,
-  disabled: false,
-  invalid: false,
-};
-
 const InlineInput = ({
-  submitting,
-  disabled,
-  invalid,
+  submitting = false,
+  disabled = false,
+  invalid = false,
   renderSpinner,
   ...rest
 }) => (
@@ -53,6 +47,5 @@ const InlineInput = ({
 );
 
 InlineInput.propTypes = propTypes;
-InlineInput.defaultProps = defaultProps;
 
 export default InlineInput;

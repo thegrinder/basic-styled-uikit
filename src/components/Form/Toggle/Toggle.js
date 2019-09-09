@@ -13,12 +13,7 @@ const propTypes = {
   onChange: func.isRequired,
 };
 
-const defaultProps = {
-  h: 34,
-  disabled: false,
-};
-
-const Toggle = ({ h, disabled, onChange, ...rest }) => (
+const Toggle = ({ h = 34, disabled = false, onChange, ...rest }) => (
   <ToggleLabel>
     <ToggleCheckbox h={h} onChange={onChange} disabled={disabled} {...rest} />
     <ToggleSlider h={h} disabled={disabled} />
@@ -26,6 +21,5 @@ const Toggle = ({ h, disabled, onChange, ...rest }) => (
 );
 
 Toggle.propTypes = propTypes;
-Toggle.defaultProps = defaultProps;
 
 export default Toggle;
