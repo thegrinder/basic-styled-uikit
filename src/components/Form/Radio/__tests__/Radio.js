@@ -1,41 +1,40 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
 import { render } from '@testing-library/react';
-
+import { ThemeProvider } from 'styled-components';
+import { ModeProvider } from '../../../Mode';
+import { TypographyProvider } from '../../../Typography';
 import theme from '../../../../theme/theme';
 import Radio from '../Radio';
 
+const testId = 'radio';
+
 const renderComponent = (props = {}) =>
   render(
-    <ThemeProvider theme={theme}>
-      <Radio {...props} />
-    </ThemeProvider>
+    <ModeProvider>
+      <ThemeProvider theme={theme}>
+        <TypographyProvider>
+          <Radio data-testid={testId} {...props} />
+        </TypographyProvider>
+      </ThemeProvider>
+    </ModeProvider>
   );
 
 describe('<Radio />', () => {
   it('should render correctly with default props', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent();
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toMatchSnapshot();
+    const { queryByTestId } = renderComponent();
+    expect(queryByTestId(testId)).toBeTruthy();
   });
 
   it('should render correctly with custom props', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent({
+    const { queryByTestId } = renderComponent({
       invalid: true,
     });
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toMatchSnapshot();
+    expect(queryByTestId(testId)).toBeTruthy();
   });
 
   it('should render <input> tag with type radio', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent();
-    expect(firstChild.tagName).toEqual('INPUT');
-    expect(firstChild.type).toEqual('radio');
+    const { queryByTestId } = renderComponent();
+    expect(queryByTestId(testId).tagName).toEqual('INPUT');
+    expect(queryByTestId(testId).type).toEqual('radio');
   });
 });
