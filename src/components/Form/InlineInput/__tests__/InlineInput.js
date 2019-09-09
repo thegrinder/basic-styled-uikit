@@ -1,38 +1,38 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
 import { render } from '@testing-library/react';
-
+import { ThemeProvider } from 'styled-components';
+import { ModeProvider } from '../../../Mode';
+import { TypographyProvider } from '../../../Typography';
 import theme from '../../../../theme/theme';
 import InlineInput from '../InlineInput';
 
+const testId = 'inline-input';
+
 const renderComponent = (props = {}) =>
   render(
-    <ThemeProvider theme={theme}>
-      <InlineInput {...props} />
-    </ThemeProvider>
+    <ModeProvider>
+      <ThemeProvider theme={theme}>
+        <TypographyProvider>
+          <InlineInput data-testid={testId} {...props} />
+        </TypographyProvider>
+      </ThemeProvider>
+    </ModeProvider>
   );
 
 describe('<InlineInput />', () => {
   it('should render correctly with default props', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent();
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toMatchSnapshot();
+    const { queryByTestId } = renderComponent();
+    expect(queryByTestId(testId)).toBeTruthy();
   });
 
   it('should render correctly with custom props', () => {
     const spinner = <span data-testid="spinner" />;
-    const {
-      container: { firstChild },
-      getByTestId,
-    } = renderComponent({
+    const { queryByTestId } = renderComponent({
       invalid: false,
       submitting: true,
       renderSpinner: spinner,
     });
-    const spinnerElement = getByTestId('spinner');
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toContainElement(spinnerElement);
+    expect(queryByTestId('spinner')).toBeTruthy();
+    expect(queryByTestId(testId)).toBeTruthy();
   });
 });
