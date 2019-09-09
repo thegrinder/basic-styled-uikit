@@ -1,9 +1,8 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
 import { render } from '@testing-library/react';
 import { ModeProvider } from '../../Mode';
 import { TypographyProvider } from '../../Typography';
-import theme from '../../../theme/theme';
+import LinkProvider from '../LinkProvider';
 import Link from '../Link';
 
 const children = 'children';
@@ -11,11 +10,11 @@ const children = 'children';
 const renderComponent = (props = {}) =>
   render(
     <ModeProvider>
-      <ThemeProvider theme={theme}>
-        <TypographyProvider>
+      <TypographyProvider>
+        <LinkProvider>
           <Link {...props}>{children}</Link>
-        </TypographyProvider>
-      </ThemeProvider>
+        </LinkProvider>
+      </TypographyProvider>
     </ModeProvider>
   );
 

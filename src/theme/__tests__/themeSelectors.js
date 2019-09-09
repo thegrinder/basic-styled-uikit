@@ -1,11 +1,5 @@
 import theme from '../theme';
-import {
-  getTypography,
-  getColors,
-  getForm,
-  getLink,
-  getMode,
-} from '../themeSelectors';
+import { getTypography, getColors, getForm, getMode } from '../themeSelectors';
 
 describe('themeSelectors', () => {
   describe('errors', () => {
@@ -13,7 +7,6 @@ describe('themeSelectors', () => {
       [getTypography, 'typography'],
       [getColors, 'colors'],
       [getForm, 'form'],
-      [getLink, 'link'],
       [getMode, 'mode'],
     ])('%s should handle success and failure', (selector, namespace) => {
       expect(selector(theme)).toEqual(theme[namespace]);

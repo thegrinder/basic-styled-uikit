@@ -1,7 +1,13 @@
-import linkTheme from '../linkTheme';
+import { linkBaseTheme, linkDarkTheme } from '../linkTheme';
 
-describe('linkTheme', () => {
+describe('linkBaseTheme', () => {
   it('should be defined', () => {
-    expect(linkTheme).toBeDefined();
+    expect(linkBaseTheme).toBeDefined();
+  });
+});
+
+describe('linkDarkTheme', () => {
+  it('should be defined', () => {
+    expect(linkDarkTheme).toBeDefined();
   });
 });

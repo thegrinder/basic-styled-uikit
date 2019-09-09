@@ -13,7 +13,7 @@ const { btnTypes, sizings, common } = buttonBaseTheme;
 
 describe('buttonTheme selectors', () => {
   describe('getButton', () => {
-    it('should return button theme', () => {
+    it('should return color box theme', () => {
       expect(getButton(theme)).toEqual(buttonBaseTheme);
     });
 
@@ -21,7 +21,7 @@ describe('buttonTheme selectors', () => {
       expect(() => getButton()).toThrow();
     });
 
-    it('should throw if no button namespace found', () => {
+    it('should throw if no color box namespace found', () => {
       expect(() => getButton({})).toThrow();
     });
   });

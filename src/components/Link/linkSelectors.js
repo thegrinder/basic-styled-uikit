@@ -1,8 +1,9 @@
-import { getLink, getMode } from '../../theme/themeSelectors';
+import { createSelector } from '../../helpers';
+
+export const getLink = createSelector('link');
 
 export const getLinkTypeStyle = (theme, linktype, state) => {
-  const mode = getMode(theme);
-  const typeStyle = getLink(theme).linkTypes[linktype][mode];
+  const typeStyle = getLink(theme).linkTypes[linktype];
   if (!typeStyle) {
     throw new Error(`There is no ${linktype} link type in the <Link /> theme`);
   }

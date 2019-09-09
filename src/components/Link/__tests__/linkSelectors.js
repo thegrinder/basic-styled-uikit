@@ -1,17 +1,34 @@
-import theme from '../../../theme/theme';
-import linkTheme from '../linkTheme';
-import { getLinkTypeStyle, getLinkCommonStyle } from '../linkSelectors';
+import { linkBaseTheme } from '../linkTheme';
+import {
+  getLink,
+  getLinkTypeStyle,
+  getLinkCommonStyle,
+} from '../linkSelectors';
 
-const { linkTypes, common } = linkTheme;
-const { mode } = theme;
+const { linkTypes, common } = linkBaseTheme;
+const theme = { link: linkBaseTheme };
 
 describe('linkTheme selectors', () => {
+  describe('getLink', () => {
+    it('should return link theme', () => {
+      expect(getLink(theme)).toEqual(linkBaseTheme);
+    });
+
+    it('should throw if no theme found', () => {
+      expect(() => getLink()).toThrow();
+    });
+
+    it('should throw if no link namespace found', () => {
+      expect(() => getLink({})).toThrow();
+    });
+  });
+
   describe('getLinkTypeStyle', () => {
     Object.keys(linkTypes).forEach(linkType => {
-      Object.keys(linkTypes[linkType][mode]).forEach(state => {
+      Object.keys(linkTypes[linkType]).forEach(state => {
         it(`should return the correct style object for ${linkType} link type and ${state} state`, () => {
           expect(getLinkTypeStyle(theme, linkType, state)).toEqual(
-            linkTypes[linkType][mode][state]
+            linkTypes[linkType][state]
           );
         });
       });

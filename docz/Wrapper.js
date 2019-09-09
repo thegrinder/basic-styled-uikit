@@ -5,6 +5,7 @@ import { ModeProvider } from '../src/components/Mode';
 import { TypographyProvider } from '../src/components/Typography';
 import { ButtonProvider } from '../src/components/Button';
 import { ColorBoxProvider } from '../src/components/ColorBox';
+import { LinkProvider } from '../src/components/Link';
 import theme from '../src/theme/theme';
 
 const propTypes = {
@@ -17,7 +18,9 @@ const Wrapper = ({ children }) => (
       <ColorBoxProvider>
         <TypographyProvider>
           <ButtonProvider>
-            <>{children}</>
+            <LinkProvider>
+              <>{children}</>
+            </LinkProvider>
           </ButtonProvider>
         </TypographyProvider>
       </ColorBoxProvider>
