@@ -1,4 +1,4 @@
-import { createProvider } from '../../../helpers';
+import { createProvider } from '../../helpers';
 import { buttonBaseTheme, buttonDarkTheme } from './buttonTheme';
 
 const ButtonProvider = createProvider(
