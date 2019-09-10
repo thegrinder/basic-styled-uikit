@@ -1,22 +1,11 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { ModeProvider } from '../../../Mode';
-import { TypographyProvider } from '../../../Typography';
-import FormProvider from '../../FormProvider';
+import { render } from '../../../../test-utils';
 import CheckBox from '../CheckBox';
 
 const testId = 'checkbox';
 
 const renderComponent = (props = {}) =>
-  render(
-    <ModeProvider>
-      <TypographyProvider>
-        <FormProvider>
-          <CheckBox data-testid={testId} {...props} />
-        </FormProvider>
-      </TypographyProvider>
-    </ModeProvider>
-  );
+  render(<CheckBox data-testid={testId} {...props} />);
 
 describe('<CheckBox />', () => {
   it('should render correctly with default props', () => {

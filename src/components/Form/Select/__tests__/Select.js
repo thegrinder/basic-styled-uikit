@@ -1,8 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { ModeProvider } from '../../../Mode';
-import { TypographyProvider } from '../../../Typography';
-import FormProvider from '../../FormProvider';
+import { render } from '../../../../test-utils';
 import Select from '../Select';
 
 const testId = 'select';
@@ -10,15 +7,9 @@ const option = <option>option</option>;
 
 const renderComponent = (props = {}) =>
   render(
-    <ModeProvider>
-      <TypographyProvider>
-        <FormProvider>
-          <Select data-testid={testId} {...props}>
-            {option}
-          </Select>
-        </FormProvider>
-      </TypographyProvider>
-    </ModeProvider>
+    <Select data-testid={testId} {...props}>
+      {option}
+    </Select>
   );
 
 describe('<Select />', () => {

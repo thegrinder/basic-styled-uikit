@@ -1,19 +1,11 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { ModeProvider } from '../../../Mode';
-import TypographyProvider from '../../TypographyProvider';
+import { render } from '../../../../test-utils';
 import Text from '../Text';
 
 const children = 'children';
 
 const renderComponent = (props = {}) =>
-  render(
-    <ModeProvider>
-      <TypographyProvider>
-        <Text {...props}>{children}</Text>
-      </TypographyProvider>
-    </ModeProvider>
-  );
+  render(<Text {...props}>{children}</Text>);
 
 describe('<Text />', () => {
   it('should render correctly with default props', () => {

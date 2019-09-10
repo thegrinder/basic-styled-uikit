@@ -1,22 +1,11 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { ModeProvider } from '../../../Mode';
-import { TypographyProvider } from '../../../Typography';
-import FormProvider from '../../FormProvider';
+import { render } from '../../../../test-utils';
 import InlineInput from '../InlineInput';
 
 const testId = 'inline-input';
 
 const renderComponent = (props = {}) =>
-  render(
-    <ModeProvider>
-      <TypographyProvider>
-        <FormProvider>
-          <InlineInput data-testid={testId} {...props} />
-        </FormProvider>
-      </TypographyProvider>
-    </ModeProvider>
-  );
+  render(<InlineInput data-testid={testId} {...props} />);
 
 describe('<InlineInput />', () => {
   it('should render correctly with default props', () => {

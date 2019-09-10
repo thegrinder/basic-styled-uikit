@@ -1,22 +1,11 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { ModeProvider } from '../../../Mode';
-import { TypographyProvider } from '../../../Typography';
-import FormProvider from '../../FormProvider';
+import { render } from '../../../../test-utils';
 import Radio from '../Radio';
 
 const testId = 'radio';
 
 const renderComponent = (props = {}) =>
-  render(
-    <ModeProvider>
-      <TypographyProvider>
-        <FormProvider>
-          <Radio data-testid={testId} {...props} />
-        </FormProvider>
-      </TypographyProvider>
-    </ModeProvider>
-  );
+  render(<Radio data-testid={testId} {...props} />);
 
 describe('<Radio />', () => {
   it('should render correctly with default props', () => {

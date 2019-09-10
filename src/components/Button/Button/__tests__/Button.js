@@ -1,22 +1,11 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { TypographyProvider } from '../../../Typography';
-import { ModeProvider } from '../../../Mode';
-import ButtonProvider from '../ButtonProvider';
+import { render } from '../../../../test-utils';
 import Button from '../Button';
 
 const children = <span>children</span>;
 
 const renderComponent = (props = {}) =>
-  render(
-    <ModeProvider>
-      <TypographyProvider>
-        <ButtonProvider>
-          <Button {...props}>{children}</Button>
-        </ButtonProvider>
-      </TypographyProvider>
-    </ModeProvider>
-  );
+  render(<Button {...props}>{children}</Button>);
 
 describe('<Button />', () => {
   it('should render correctly with default props and children', () => {

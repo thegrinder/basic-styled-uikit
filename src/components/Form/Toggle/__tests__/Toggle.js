@@ -1,20 +1,9 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { ModeProvider } from '../../../Mode';
-import { TypographyProvider } from '../../../Typography';
-import FormProvider from '../../FormProvider';
+import { render } from '../../../../test-utils';
 import Toggle from '../Toggle';
 
 const renderComponent = (props = {}) =>
-  render(
-    <ModeProvider>
-      <FormProvider>
-        <TypographyProvider>
-          <Toggle onChange={() => {}} {...props} />
-        </TypographyProvider>
-      </FormProvider>
-    </ModeProvider>
-  );
+  render(<Toggle onChange={() => {}} {...props} />);
 
 describe('<Toggle />', () => {
   it('should render correctly with default props', () => {

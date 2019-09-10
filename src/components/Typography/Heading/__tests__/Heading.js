@@ -1,20 +1,14 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { ModeProvider } from '../../../Mode';
-import TypographyProvider from '../../TypographyProvider';
+import { render } from '../../../../test-utils';
 import Heading from '../Heading';
 
 const children = 'children';
 
 const renderComponent = (props = {}) =>
   render(
-    <ModeProvider>
-      <TypographyProvider>
-        <Heading as="h1" {...props}>
-          {children}
-        </Heading>
-      </TypographyProvider>
-    </ModeProvider>
+    <Heading as="h1" {...props}>
+      {children}
+    </Heading>
   );
 
 describe('<Heading />', () => {

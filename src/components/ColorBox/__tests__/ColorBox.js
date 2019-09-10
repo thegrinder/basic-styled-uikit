@@ -1,19 +1,11 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { ModeProvider } from '../../Mode';
-import ColorBoxProvider from '../ColorBoxProvider';
+import { render } from '../../../test-utils';
 import ColorBox from '../ColorBox';
 
 const children = 'children';
 
 const renderComponent = (props = {}) =>
-  render(
-    <ModeProvider>
-      <ColorBoxProvider>
-        <ColorBox {...props}>{children}</ColorBox>
-      </ColorBoxProvider>
-    </ModeProvider>
-  );
+  render(<ColorBox {...props}>{children}</ColorBox>);
 
 describe('<ColorBox />', () => {
   it('should render correctly with default props and children', () => {

@@ -1,22 +1,11 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { ModeProvider } from '../../Mode';
-import { TypographyProvider } from '../../Typography';
-import LinkProvider from '../LinkProvider';
+import { render } from '../../../test-utils';
 import Link from '../Link';
 
 const children = 'children';
 
 const renderComponent = (props = {}) =>
-  render(
-    <ModeProvider>
-      <TypographyProvider>
-        <LinkProvider>
-          <Link {...props}>{children}</Link>
-        </LinkProvider>
-      </TypographyProvider>
-    </ModeProvider>
-  );
+  render(<Link {...props}>{children}</Link>);
 
 describe('<Link />', () => {
   it('should render correctly with default props and its children', () => {

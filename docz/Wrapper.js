@@ -20,7 +20,7 @@ const Wrapper = ({ children }) => (
         <ButtonProvider>
           <LinkProvider>
             <FormProvider>
-              <div>{children}</div>
+              <>{children}</>
             </FormProvider>
           </LinkProvider>
         </ButtonProvider>
