@@ -1,0 +1,282 @@
+---
+name: Form
+menu: Components
+---
+
+import { Playground, Props } from 'docz';
+import ColorBox from '../ColorBox/ColorBox';
+import Input from './Input/Input';
+import InlineInput from './InlineInput/InlineInput';
+import Textarea from './Textarea/Textarea';
+import Select from './Select/Select';
+import Radio from './Radio/Radio';
+import CheckBox from './CheckBox/CheckBox';
+import Toggle from './Toggle/Toggle';
+import { InputWrapper, Spinner } from '../../../docz';
+
+## **FormProvider**
+
+
+
+---
+
+
+
+## **Input**
+
+<Props of={Input} />
+
+
+### Input
+
+<Playground>
+  <InputWrapper>
+    <Input />
+  </InputWrapper>
+</Playground>
+
+
+### Invalid Input
+
+<Playground>
+  <InputWrapper>
+    <Input invalid={true} />
+  </InputWrapper>
+</Playground>
+
+
+### Disabled Input
+
+<Playground>
+  <InputWrapper>
+    <Input disabled={true} value="disabled" />
+  </InputWrapper>
+</Playground>
+
+
+
+---
+
+
+
+## **InlineInput**
+
+<Props of={InlineInput} />
+
+
+### InlineInput
+
+<Playground>
+  <InputWrapper>
+    <InlineInput placeholder="Hover here"/>
+  </InputWrapper>
+</Playground>
+
+
+### Invalid InlineInput
+
+<Playground>
+  <InputWrapper>
+    <InlineInput invalid={true} />
+  </InputWrapper>
+</Playground>
+
+
+### Disabled InlineInput
+
+<Playground>
+  <InputWrapper>
+    <InlineInput disabled={true} value="disabled" />
+  </InputWrapper>
+</Playground>
+
+
+### Disabled InlineInput with a spinner
+
+<Playground>
+  <InputWrapper>
+    <InlineInput
+      disabled={true}
+      submitting={true}
+      renderSpinner={<Spinner color="#ccc" />}
+    />
+  </InputWrapper>
+</Playground>
+
+
+
+---
+
+
+
+## **Textarea**
+
+<Props of={Textarea} />
+
+
+### Textarea
+
+<Playground>
+  <Textarea />
+</Playground>
+
+
+### Invalid Textarea
+
+<Playground>
+  <Textarea invalid={true} />
+</Playground>
+
+
+### Disabled Textarea
+
+<Playground>
+  <Textarea disabled={true} />
+</Playground>
+
+
+
+---
+
+
+
+## **Select**
+
+<Props of={Select} />
+
+
+### Select
+
+<Playground>
+  <InputWrapper>
+    <Select>
+      <ColorBox bgColor="neutral" as="option">option one</ColorBox>
+      <ColorBox bgColor="neutral" as="option">option two</ColorBox>
+    </Select>
+  </InputWrapper>
+</Playground>
+
+
+### Invalid Select
+
+<Playground>
+  <InputWrapper>
+    <Select invalid={true}>
+      <ColorBox bgColor="neutral" as="option">option one</ColorBox>
+      <ColorBox bgColor="neutral" as="option">option two</ColorBox>
+    </Select>
+  </InputWrapper>
+</Playground>
+
+
+### Disabled Select
+
+<Playground>
+  <InputWrapper>
+    <Select disabled={true}>
+      <ColorBox bgColor="neutral" as="option">option one</ColorBox>
+      <ColorBox bgColor="neutral" as="option">option two</ColorBox>
+    </Select>
+  </InputWrapper>
+</Playground>
+
+
+
+---
+
+
+
+## **Radio**
+
+<Props of={Radio} />
+
+
+### Radio
+
+<Playground>
+  <Radio />
+</Playground>
+
+
+### Invalid Radio
+
+<Playground>
+  <Radio invalid={true} />
+</Playground>
+
+
+### Disabled Radio
+
+<Playground>
+  <Radio disabled={true} />
+  <Radio checked={true} disabled={true} />
+</Playground>
+
+
+
+---
+
+
+
+## **CheckBox**
+
+<Props of={CheckBox} />
+
+
+### CheckBox
+
+<Playground>
+  <CheckBox />
+</Playground>
+
+
+### Invalid CheckBox
+
+<Playground>
+  <CheckBox invalid={true} />
+</Playground>
+
+
+### Disabled CheckBox
+
+<Playground>
+  <CheckBox disabled={true} />
+  <CheckBox checked={true} disabled={true} />
+</Playground>
+
+
+
+---
+
+
+
+## **Toggle**
+
+<Props of={Toggle} />
+
+
+### Toggle
+
+<Playground>
+  <InputWrapper maxWidth={70}>
+    <Toggle onChange={() => {}} />
+  </InputWrapper>
+</Playground>
+
+
+### Disabled Toggle
+
+<Playground>
+  <InputWrapper maxWidth={70}>
+    <Toggle disabled={true} onChange={() => {}} />
+  </InputWrapper>
+</Playground>
+
+
+### Toggle with a custom height
+
+<Playground>
+  <InputWrapper maxWidth={70}>
+    <Toggle h={24} onChange={() => {}} />
+  </InputWrapper>
+</Playground>
