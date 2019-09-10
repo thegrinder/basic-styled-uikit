@@ -66,6 +66,9 @@ export const typographyBaseTheme = {
         fontSize: '.75rem',
       },
     },
+    common: {
+      fontFamily: `'Inter var', sans-serif`,
+    },
   },
   heading: {
     sizings: {
@@ -87,6 +90,9 @@ export const typographyBaseTheme = {
       h6: {
         fontSize: '1rem',
       },
+    },
+    common: {
+      fontFamily: `'Inter var', sans-serif`,
     },
   },
 };

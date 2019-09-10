@@ -98,7 +98,7 @@ export const buttonBaseTheme = {
     },
   },
   common: {
-    fontWeight: '700',
-    fontFamily: 'Lato, Arial, Helvetica, sans-serif',
+    fontWeight: '600',
+    fontFamily: `'Inter var', sans-serif`,
   },
 };

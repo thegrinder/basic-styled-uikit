@@ -6,6 +6,7 @@ import { ButtonProvider } from '../src/components/Button';
 import { ColorBoxProvider } from '../src/components/ColorBox';
 import { LinkProvider } from '../src/components/Link';
 import { FormProvider } from '../src/components/Form';
+import GlobalStyle from './GlobalStyle';
 
 const propTypes = {
   children: node.isRequired,
@@ -13,12 +14,13 @@ const propTypes = {
 
 const Wrapper = ({ children }) => (
   <ModeProvider>
+    <GlobalStyle />
     <ColorBoxProvider>
       <TypographyProvider>
         <ButtonProvider>
           <LinkProvider>
             <FormProvider>
-              <>{children}</>
+              <div>{children}</div>
             </FormProvider>
           </LinkProvider>
         </ButtonProvider>

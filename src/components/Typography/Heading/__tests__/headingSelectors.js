@@ -11,9 +11,8 @@ const theme = { typography: typographyBaseTheme };
 const {
   opacities,
   colors,
-  common,
   onBackground,
-  heading: { sizings },
+  heading: { sizings, common },
 } = typographyBaseTheme;
 
 describe('headingTheme selectors', () => {

@@ -160,11 +160,11 @@ export const formBaseTheme = {
   common: {
     regular: {
       fontSize: '1rem',
-      fontFamily: 'Lato, Arial, Helvetica, sans-serif',
+      fontFamily: `'Inter var', sans-serif`,
     },
     inline: {
       fontSize: '1rem',
-      fontFamily: 'Lato, Arial, Helvetica, sans-serif',
+      fontFamily: `'Inter var', sans-serif`,
     },
     misc: {
       // to change the size of checkbox and radio input you can increase/decrease the font size

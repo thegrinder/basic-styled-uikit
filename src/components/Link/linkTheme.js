@@ -41,6 +41,6 @@ export const linkBaseTheme = {
     },
   },
   common: {
-    fontFamily: 'Lato, Arial, Helvetica, sans-serif',
+    fontFamily: `'Inter var', sans-serif`,
   },
 };
