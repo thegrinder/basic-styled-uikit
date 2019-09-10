@@ -14,15 +14,17 @@ const createProvider = (key, defaultTheme, defaultDarkTheme) => {
     darkTheme = defaultDarkTheme,
     ...rest
   }) => {
-    const { mode } = useMode();
+    const modeContext = useMode();
     const memoizedTheme = useMemo(
       () => ({
         [key]: {
           ...theme,
-          ...(mode === 'dark' && darkTheme ? darkTheme : {}),
+          ...(modeContext && modeContext.mode === 'dark' && darkTheme
+            ? darkTheme
+            : {}),
         },
       }),
-      [mode]
+      [modeContext]
     );
     return <ThemeProvider theme={memoizedTheme} {...rest} />;
   };
