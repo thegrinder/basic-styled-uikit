@@ -4,13 +4,13 @@ import StyledText from './StyledText';
 import { useBoxContext } from '../../Box';
 
 const propTypes = {
-  /** determines the size of the text; one of: l, m, s, xs */
+  /** sizings keys in the theme passed to <TypographyProvider /> */
   sizing: string,
-  /** one of: neutral, primary, success, danger, warning */
+  /** colors keys in the theme passed to <TypographyProvider /> */
   color: string,
-  /** one of: high, normal, low */
+  /** opacities keys in the theme passed to <TypographyProvider /> */
   emphasis: string,
-  /** determines whether colors defined for the background are ignored */
+  /** determines whether the color defined for the background is ignored */
   ignoreBackground: bool,
   /** rendered html tag */
   as: oneOf(['span', 'p']),

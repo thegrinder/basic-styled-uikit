@@ -4,16 +4,16 @@ import StyledHeading from './StyledHeading';
 import { useBoxContext } from '../../Box';
 
 const propTypes = {
-  /** determines the size of the heading */
+  /** sizings keys in the theme passed to <TypographyProvider /> */
   sizing: oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
-  /** one of: high, normal, low */
+  /** colors keys in the theme passed to <TypographyProvider /> */
+  color: string,
+  /** opacities keys in the theme passed to <TypographyProvider /> */
   emphasis: string,
-  /** determines whether colors defined for the background are ignored */
+  /** determines whether the color defined for the background is ignored */
   ignoreBackground: bool,
   /** determines the html tag and size, if sizing prop is not specified */
   as: oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).isRequired,
-  /** one of: neutral, primary, success, danger, warning */
-  color: string,
   /** if true adds a bottom margin according to vertical rhythm */
   marginBottom: bool,
 };
