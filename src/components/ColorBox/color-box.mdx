@@ -5,64 +5,126 @@ route: /components/color-box
 ---
 
 import { Playground, Props } from 'docz';
+import ColorBoxProvider from './ColorBoxProvider';
 import ColorBox from './ColorBox';
 import { Text } from '../Typography';
 import { Spacer } from '../../../docz';
 
 ## **ColorBoxProvider**
 
+`<ColorBoxProvider />` is responsible for passing down the theme to the `<ColorBox />` component. It expects the theme to be of certain structure. You can use any valid css properties written in camel case.
 
+
+### **Example**
+
+The minimal color box theme has to include one background color and one elevation variation.
+
+<Playground>
+  {() => {
+    const colorBoxTheme = {
+      bgColors: {
+        primary: '#1e88e5',
+      },
+      elevations: {
+        1: {
+          boxShadow:
+            '0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)',
+        },
+      },
+    };
+
+    const Example = () => (
+      <ColorBoxProvider theme={colorBoxTheme}>
+        <>
+          <ColorBox bgColor="primary">background color primary</ColorBox>
+          <Spacer />
+          <ColorBox elevation={1}>elevation one</ColorBox>
+        </>
+      </ColorBoxProvider>
+    );
+
+    return <Example />;
+  }}
+</Playground>
+
+
+However, you can easily add as many background colors and variations as you wish.
+
+<Playground>
+  {() => {
+    const colorBoxTheme = {
+      bgColors: {
+        neutral: '#fff',
+        primary: '#1E88E5',
+        success: '#43A047',
+        warning: '#FDD835',
+        danger: '#F4511E',
+      },
+      elevations: {
+        1: {
+          boxShadow:
+            '0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)',
+        },
+        2: {
+          boxShadow:
+            '0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12)',
+        },
+      },
+    };
+
+    const Example = () => (
+      <ColorBoxProvider theme={colorBoxTheme}>
+        <>
+
+          <ColorBox bgColor="primary">
+            primary
+          </ColorBox>
+          <Spacer />
+          <ColorBox bgColor="danger">
+            danger
+          </ColorBox>
+          <Spacer />
+          <ColorBox bgColor="success">
+            success
+          </ColorBox>
+          <Spacer />
+          <ColorBox bgColor="warning">
+            warning
+          </ColorBox>
+          <Spacer />
+          <ColorBox bgColor="neutral">
+            neutral
+          </ColorBox>
+          <Spacer />
+
+          <ColorBox bgColor="neutral" style={{ padding: '20px' }}>
+            <ColorBox elevation={1} style={{ padding: '20px' }}>
+              <span>one</span>
+              <ColorBox elevation={1} style={{ padding: '20px' }}>
+                <span>one</span>
+                <ColorBox elevation={1} style={{ padding: '20px' }}>
+                  <span>one</span>
+                </ColorBox>
+              </ColorBox>
+            </ColorBox>
+            <Spacer />
+            <ColorBox elevation={2}>
+              <span>two</span>
+            </ColorBox>
+          </ColorBox>
+
+        </>
+      </ColorBoxProvider>
+    );
+
+    return <Example />;
+  }}
+</Playground>
 
 ---
 
-
-
 ## **ColorBox**
 
+ColorBox component grabs the theme given to [ColorBoxProvider](/basic-styled-uikit/components/color-box#colorboxprovider) and applies the style defined there based on the given `bgColor` and `elevation` prop value.
+
 <Props of={ColorBox} />
-
-
-### ColorBox backgrounds
-
-<Playground>
-  <ColorBox bgColor="primary">
-    <Text>primary</Text>
-  </ColorBox>
-  <Spacer />
-  <ColorBox bgColor="danger">
-    <Text>danger</Text>
-  </ColorBox>
-  <Spacer />
-  <ColorBox bgColor="success">
-    <Text>success</Text>
-  </ColorBox>
-  <Spacer />
-  <ColorBox bgColor="warning">
-    <Text>warning</Text>
-  </ColorBox>
-  <Spacer />
-  <ColorBox bgColor="neutral">
-    <Text>neutral0</Text>
-  </ColorBox>
-</Playground>
-
-
-### ColorBox elevation
-
-<Playground>
-  <ColorBox bgColor="neutral" style={{ padding: '20px' }}>
-    <ColorBox elevation={1} style={{ padding: '20px' }}>
-      <Text>one</Text>
-      <ColorBox elevation={1} style={{ padding: '20px' }}>
-        <Text>one</Text>
-        <ColorBox elevation={1} style={{ padding: '20px' }}>
-          <Text>one</Text>
-        </ColorBox>
-      </ColorBox>
-    </ColorBox>
-    <Spacer />
-    <ColorBox elevation={2}>
-      <Text>two</Text>
-    </ColorBox>
-  </ColorBox>
-</Playground>
