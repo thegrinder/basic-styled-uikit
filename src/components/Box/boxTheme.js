@@ -1,4 +1,4 @@
-export const colorBoxDarkTheme = {
+export const boxDarkTheme = {
   bgColors: {
     neutral: '#161616',
     primary: '#42A5F5',
@@ -16,7 +16,7 @@ export const colorBoxDarkTheme = {
   },
 };
 
-export const colorBoxBaseTheme = {
+export const boxBaseTheme = {
   bgColors: {
     neutral: '#fff',
     primary: '#1E88E5',

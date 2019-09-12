@@ -1,7 +1,7 @@
 import React from 'react';
 import { string, bool, oneOf } from 'prop-types';
 import StyledText from './StyledText';
-import { useColorBoxContext } from '../../ColorBox';
+import { useBoxContext } from '../../Box';
 
 const propTypes = {
   /** determines the size of the text; one of: l, m, s, xs */
@@ -34,7 +34,7 @@ const Text = ({
     color={color}
     emphasis={emphasis}
     ignoreBackground={ignoreBackground}
-    bgColor={useColorBoxContext()}
+    bgColor={useBoxContext()}
     {...rest}
   />
 );

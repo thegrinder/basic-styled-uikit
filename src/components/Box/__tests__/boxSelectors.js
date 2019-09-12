@@ -1,25 +1,21 @@
-import { colorBoxBaseTheme } from '../colorBoxTheme';
-import {
-  getColorBox,
-  getBoxBgColor,
-  getBoxElevation,
-} from '../colorBoxSelectors';
+import { boxBaseTheme } from '../boxTheme';
+import { getBox, getBoxBgColor, getBoxElevation } from '../boxSelectors';
 
-const theme = { colorBox: colorBoxBaseTheme };
-const { bgColors, elevations } = colorBoxBaseTheme;
+const theme = { box: boxBaseTheme };
+const { bgColors, elevations } = boxBaseTheme;
 
-describe('colorBoxTheme selectors', () => {
-  describe('getColorBox', () => {
+describe('boxTheme selectors', () => {
+  describe('getBox', () => {
     it('should return button theme', () => {
-      expect(getColorBox(theme)).toEqual(colorBoxBaseTheme);
+      expect(getBox(theme)).toEqual(boxBaseTheme);
     });
 
     it('should throw if no theme found', () => {
-      expect(() => getColorBox()).toThrow();
+      expect(() => getBox()).toThrow();
     });
 
     it('should throw if no button namespace found', () => {
-      expect(() => getColorBox({})).toThrow();
+      expect(() => getBox({})).toThrow();
     });
   });
 

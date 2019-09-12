@@ -1,18 +1,18 @@
 ---
-name: ColorBox
+name: Box
 menu: Components
-route: /components/color-box
+route: /components/box
 ---
 
 import { Playground, Props } from 'docz';
-import ColorBoxProvider from './ColorBoxProvider';
-import ColorBox from './ColorBox';
+import BoxProvider from './BoxProvider';
+import Box from './Box';
 import { Text } from '../Typography';
 import { Spacer } from '../../../docz';
 
-## **ColorBoxProvider**
+## **BoxProvider**
 
-`<ColorBoxProvider />` is responsible for passing down the theme to the `<ColorBox />` component. It expects the theme to be of certain structure. You can use any valid css properties written in camel case.
+`<BoxProvider />` is responsible for passing down the theme to the `<Box />` component. It expects the theme to be of certain structure. You can use any valid css properties written in camel case.
 
 
 ### **Example**
@@ -21,7 +21,7 @@ The minimal color box theme has to include one background color and one elevatio
 
 <Playground>
   {() => {
-    const colorBoxTheme = {
+    const boxTheme = {
       bgColors: {
         primary: '#1e88e5',
       },
@@ -34,13 +34,13 @@ The minimal color box theme has to include one background color and one elevatio
     };
 
     const Example = () => (
-      <ColorBoxProvider theme={colorBoxTheme}>
+      <BoxProvider theme={boxTheme}>
         <>
-          <ColorBox bgColor="primary">background color primary</ColorBox>
+          <Box bgColor="primary">background color primary</Box>
           <Spacer />
-          <ColorBox elevation={1}>elevation one</ColorBox>
+          <Box elevation={1}>elevation one</Box>
         </>
-      </ColorBoxProvider>
+      </BoxProvider>
     );
 
     return <Example />;
@@ -52,7 +52,7 @@ However, you can easily add as many background colors and variations as you wish
 
 <Playground>
   {() => {
-    const colorBoxTheme = {
+    const boxTheme = {
       bgColors: {
         neutral: '#fff',
         primary: '#1E88E5',
@@ -73,48 +73,48 @@ However, you can easily add as many background colors and variations as you wish
     };
 
     const Example = () => (
-      <ColorBoxProvider theme={colorBoxTheme}>
+      <BoxProvider theme={boxTheme}>
         <>
 
-          <ColorBox bgColor="primary">
+          <Box bgColor="primary">
             primary
-          </ColorBox>
+          </Box>
           <Spacer />
-          <ColorBox bgColor="danger">
+          <Box bgColor="danger">
             danger
-          </ColorBox>
+          </Box>
           <Spacer />
-          <ColorBox bgColor="success">
+          <Box bgColor="success">
             success
-          </ColorBox>
+          </Box>
           <Spacer />
-          <ColorBox bgColor="warning">
+          <Box bgColor="warning">
             warning
-          </ColorBox>
+          </Box>
           <Spacer />
-          <ColorBox bgColor="neutral">
+          <Box bgColor="neutral">
             neutral
-          </ColorBox>
+          </Box>
           <Spacer />
 
-          <ColorBox bgColor="neutral" style={{ padding: '20px' }}>
-            <ColorBox elevation={1} style={{ padding: '20px' }}>
+          <Box bgColor="neutral" style={{ padding: '20px' }}>
+            <Box elevation={1} style={{ padding: '20px' }}>
               <span>one</span>
-              <ColorBox elevation={1} style={{ padding: '20px' }}>
+              <Box elevation={1} style={{ padding: '20px' }}>
                 <span>one</span>
-                <ColorBox elevation={1} style={{ padding: '20px' }}>
+                <Box elevation={1} style={{ padding: '20px' }}>
                   <span>one</span>
-                </ColorBox>
-              </ColorBox>
-            </ColorBox>
+                </Box>
+              </Box>
+            </Box>
             <Spacer />
-            <ColorBox elevation={2}>
+            <Box elevation={2}>
               <span>two</span>
-            </ColorBox>
-          </ColorBox>
+            </Box>
+          </Box>
 
         </>
-      </ColorBoxProvider>
+      </BoxProvider>
     );
 
     return <Example />;
@@ -123,8 +123,8 @@ However, you can easily add as many background colors and variations as you wish
 
 ---
 
-## **ColorBox**
+## **Box**
 
-ColorBox component grabs the theme given to [ColorBoxProvider](/basic-styled-uikit/components/color-box#colorboxprovider) and applies the style defined there based on the given `bgColor` and `elevation` prop value.
+Box component grabs the theme given to [BoxProvider](/basic-styled-uikit/components/box#BoxProvider) and applies the style defined there based on the given `bgColor` and `elevation` prop value.
 
-<Props of={ColorBox} />
+<Props of={Box} />

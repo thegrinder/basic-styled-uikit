@@ -1,13 +1,13 @@
 import React from 'react';
 import { render } from '../../../test-utils';
-import ColorBox from '../ColorBox';
+import Box from '../Box';
 
 const children = 'children';
 
 const renderComponent = (props = {}) =>
-  render(<ColorBox {...props}>{children}</ColorBox>);
+  render(<Box {...props}>{children}</Box>);
 
-describe('<ColorBox />', () => {
+describe('<Box />', () => {
   it('should render correctly with default props and children', () => {
     const { queryByText } = renderComponent();
     expect(queryByText(children)).toBeTruthy();

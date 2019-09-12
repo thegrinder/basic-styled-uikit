@@ -3,7 +3,7 @@ import { node } from 'prop-types';
 import { ModeProvider } from '../src/components/Mode';
 import { TypographyProvider } from '../src/components/Typography';
 import { ButtonProvider } from '../src/components/Button';
-import { ColorBoxProvider } from '../src/components/ColorBox';
+import { BoxProvider } from '../src/components/Box';
 import { LinkProvider } from '../src/components/Link';
 import { FormProvider } from '../src/components/Form';
 import GlobalStyle from './GlobalStyle';
@@ -15,7 +15,7 @@ const propTypes = {
 const Wrapper = ({ children }) => (
   <ModeProvider>
     <GlobalStyle />
-    <ColorBoxProvider>
+    <BoxProvider>
       <TypographyProvider>
         <ButtonProvider>
           <LinkProvider>
@@ -25,7 +25,7 @@ const Wrapper = ({ children }) => (
           </LinkProvider>
         </ButtonProvider>
       </TypographyProvider>
-    </ColorBoxProvider>
+    </BoxProvider>
   </ModeProvider>
 );
 

@@ -7,7 +7,7 @@ route: /components/typography
 import { Playground, Props } from 'docz';
 import Text from './Text/Text';
 import Heading from './Heading/Heading';
-import ColorBox from '../ColorBox/ColorBox';
+import Box from '../Box/Box';
 
 
 ## **TypographyProvider**
@@ -52,23 +52,23 @@ import ColorBox from '../ColorBox/ColorBox';
 ### Heading colors on different backgrounds
 
 <Playground>
-  <ColorBox bgColor="primary">
+  <Box bgColor="primary">
     <Heading as="h4">neutral on primary background</Heading>
-  </ColorBox>
-  <ColorBox bgColor="success">
+  </Box>
+  <Box bgColor="success">
     <Heading as="h4">neutral on success background</Heading>
-  </ColorBox>
-  <ColorBox bgColor="danger">
+  </Box>
+  <Box bgColor="danger">
     <Heading as="h4">neutral on danger background</Heading>
-  </ColorBox>
-  <ColorBox bgColor="warning">
+  </Box>
+  <Box bgColor="warning">
     <Heading as="h4">neutral on warning background</Heading>
-  </ColorBox>
-  <ColorBox bgColor="warning">
+  </Box>
+  <Box bgColor="warning">
     <Heading as="h4" ignoreBackground={true} color="primary">
       background ignored - primary heading
     </Heading>
-  </ColorBox>
+  </Box>
 </Playground>
 
 ### Heading with a bottom margin
@@ -123,23 +123,23 @@ import ColorBox from '../ColorBox/ColorBox';
 ### Text colors on different backgrounds
 
 <Playground>
-  <ColorBox bgColor="primary">
+  <Box bgColor="primary">
     <Text>neutral on primary background</Text>
-  </ColorBox>
-  <ColorBox bgColor="success">
+  </Box>
+  <Box bgColor="success">
     <Text>neutral on success background</Text>
-  </ColorBox>
-  <ColorBox bgColor="danger">
+  </Box>
+  <Box bgColor="danger">
     <Text>neutral on danger background</Text>
-  </ColorBox>
-  <ColorBox bgColor="warning">
+  </Box>
+  <Box bgColor="warning">
     <Text>neutral on warning background</Text>
-  </ColorBox>
-  <ColorBox bgColor="warning">
+  </Box>
+  <Box bgColor="warning">
     <Text ignoreBackground={true} color="primary">
       background ignored - primary text
     </Text>
-  </ColorBox>
+  </Box>
 </Playground>
 
 

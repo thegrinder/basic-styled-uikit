@@ -38,7 +38,7 @@ import {
   ModeProvider,
   TypographyProvider,
   ButtonProvider,
-  ColorBoxProvider,
+  BoxProvider,
   LinkProvider,
   FormProvider,
   ColorsProvider,
@@ -48,7 +48,7 @@ import {
 import {
   typographyTheme,
   buttonTheme,
-  colorBoxTheme,
+  boxTheme,
   linkTheme,
   formTheme,
   colorsTheme,
@@ -59,7 +59,7 @@ import {
 const App = ({ children }) => (
   <ModeProvider>
     <TypographyProvider theme={typographyTheme.base} darkTheme={typographyTheme.dark}>
-      <ColorBoxProvider theme={colorBoxTheme} darkTheme={colorBoxTheme.dark}>
+      <BoxProvider theme={boxTheme} darkTheme={boxTheme.dark}>
         <ButtonProvider theme={buttonTheme} darkTheme={buttonTheme.dark}>
           <LinkProvider theme={linkTheme} darkTheme={linkTheme.dark}>
             <FormProvider theme={formTheme} darkTheme={formTheme.dark}>
@@ -69,7 +69,7 @@ const App = ({ children }) => (
             </FormProvider>
           </LinkProvider>
         </ButtonProvider>
-      </ColorBoxProvider>
+      </BoxProvider>
     </TypographyProvider>
   </ModeProvider>
 );
