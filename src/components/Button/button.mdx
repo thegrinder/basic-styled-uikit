@@ -18,7 +18,7 @@ import { Spacer, Spinner } from '../../../docz';
 
 ### **Minimal example**
 
-The minimal button theme has to include `m` sizing and `default` button type. `common` is not required but it's included in the example to show how to apply style to all button types and sizes.
+The minimal button theme has to include `m` sizing and `default` button type.
 
 <Playground>
   {() => {
@@ -34,14 +34,10 @@ The minimal button theme has to include `m` sizing and `default` button type. `c
       },
       sizings: {
         m: {
+          /* you can put any valid css properties here */
           fontSize: '1rem',
           padding: '0.5rem 1rem',
         },
-      },
-      common: {
-        /* style defined here is applied regardless of button type or sizing */
-        fontWeight: '600',
-        fontFamily: `'Inter var', sans-serif`,
       },
     };
 
@@ -49,9 +45,7 @@ The minimal button theme has to include `m` sizing and `default` button type. `c
       /* TypographyProvider is required for ButtonProvider to work */
       <TypographyProvider>
         <ButtonProvider theme={buttonTheme}>
-          <>
-            <Button>simple button</Button>
-          </>
+          <Button>simple button</Button>
         </ButtonProvider>
       </TypographyProvider>
     );
@@ -88,18 +82,12 @@ You can style different button states.
           padding: '0.5rem 1rem',
         },
       },
-      common: {
-        fontWeight: '600',
-        fontFamily: `'Inter var', sans-serif`,
-      },
     };
 
     const Example = () => (
       <TypographyProvider>
         <ButtonProvider theme={buttonTheme}>
-          <>
-            <Button>hover and click</Button>
-          </>
+          <Button>hover and click</Button>
         </ButtonProvider>
       </TypographyProvider>
     );
@@ -109,7 +97,7 @@ You can style different button states.
 </Playground>
 
 
-### **Theme with different button types and sizings**
+### **Theme with different button types, sizings and common style**
 
 Also, you can add different button types and sizings.
 

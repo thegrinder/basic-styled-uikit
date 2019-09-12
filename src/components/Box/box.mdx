@@ -12,10 +12,10 @@ import { Spacer } from '../../../docz';
 
 ## **BoxProvider**
 
-`<BoxProvider />` is responsible for passing down the theme to the `<Box />` component. It expects the theme to be of certain structure. You can use any valid css properties written in camel case.
+`<BoxProvider />` is responsible for passing down the theme to the `<Box />` component. It expects the theme to be of certain structure.
 
 
-### **Example**
+### **Minimal example**
 
 The minimal color box theme has to include one background color and one elevation variation.
 
@@ -27,6 +27,7 @@ The minimal color box theme has to include one background color and one elevatio
       },
       elevations: {
         1: {
+          /* You can use any valid css properties */
           boxShadow:
             '0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)',
         },
@@ -47,6 +48,7 @@ The minimal color box theme has to include one background color and one elevatio
   }}
 </Playground>
 
+## **Complete example**
 
 However, you can easily add as many background colors and elevation variations as you want.
 

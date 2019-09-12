@@ -12,7 +12,7 @@ import { Spacer } from '../../../docz';
 
 ## **LinkProvider**
 
-`<LinkProvider />` is responsible for passing down the theme to the `<Link />` component. It expects the theme to be of certain structure. You can use any valid css properties written in camel case.
+`<LinkProvider />` is responsible for passing down the theme to the `<Link />` component. It expects the theme to be of certain structure.
 
 
 ### **Minimal Example**
@@ -29,10 +29,6 @@ The minimal link theme has to include `default` link type. `common` is not requi
             color: '#1e88e5',
           },
         },
-      },
-      common: {
-        /* style defined here is applied regardless of link type */
-        fontFamily: `'Inter var', sans-serif`,
       },
     };
 
@@ -67,9 +63,6 @@ You can style different link states.
           },
         },
       },
-      common: {
-        fontFamily: `'Inter var', sans-serif`,
-      },
     };
 
     const Example = () => (
@@ -85,7 +78,7 @@ You can style different link states.
 </Playground>
 
 
-### **Theme with different link types**
+### **Theme with different link types and common style**
 
 Also, you can add different link types.
 
@@ -111,6 +104,7 @@ Also, you can add different link types.
         },
       },
       common: {
+        fontWeight: 'bold',
         fontFamily: `'Inter var', sans-serif`,
       },
     };
