@@ -1,13 +1,13 @@
 import React from 'react';
 import { render } from '../../../../test-utils';
-import CheckBox from '../CheckBox';
+import Checkbox from '../Checkbox';
 
 const testId = 'checkbox';
 
 const renderComponent = (props = {}) =>
-  render(<CheckBox data-testid={testId} {...props} />);
+  render(<Checkbox data-testid={testId} {...props} />);
 
-describe('<CheckBox />', () => {
+describe('<Checkbox />', () => {
   it('should render correctly with default props', () => {
     const { queryByTestId } = renderComponent();
     expect(queryByTestId(testId)).toBeTruthy();

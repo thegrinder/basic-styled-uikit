@@ -6,7 +6,7 @@ export {
 } from './components/Typography';
 export {
   FormProvider,
-  CheckBox,
+  Checkbox,
   InlineInput,
   Input,
   Radio,

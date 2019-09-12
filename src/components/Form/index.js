@@ -1,5 +1,5 @@
 export { default as FormProvider } from './FormProvider';
-export { default as CheckBox } from './CheckBox/CheckBox';
+export { default as Checkbox } from './Checkbox/Checkbox';
 export { default as InlineInput } from './InlineInput/InlineInput';
 export { default as Input } from './Input/Input';
 export { default as Radio } from './Radio/Radio';

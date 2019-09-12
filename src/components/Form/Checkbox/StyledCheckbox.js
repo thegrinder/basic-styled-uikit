@@ -6,7 +6,7 @@ const propTypes = {
   invalid: bool.isRequired,
 };
 
-const StyledCheckBox = styled.input.attrs({
+const StyledCheckbox = styled.input.attrs({
   type: 'checkbox',
 })`
   ${miscInputStyles}
@@ -29,6 +29,6 @@ const StyledCheckBox = styled.input.attrs({
   }
 `;
 
-StyledCheckBox.propTypes = propTypes;
+StyledCheckbox.propTypes = propTypes;
 
-export default StyledCheckBox;
+export default StyledCheckbox;
