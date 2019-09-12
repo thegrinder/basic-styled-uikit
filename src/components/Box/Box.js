@@ -5,9 +5,9 @@ import StyledBox from './StyledBox';
 import { BoxContext } from './context';
 
 const propTypes = {
-  /** one of: neutral, primary, success, danger, warning */
+  /** bgColors keys in the theme passed to <BoxProvider /> */
   bgColor: string,
-  /** one of: 1, 2 */
+  /** elevations keys in the theme passed to <BoxProvider /> */
   elevation: number,
 };
 

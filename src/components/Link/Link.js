@@ -3,9 +3,9 @@ import { string, oneOf, oneOfType, func } from 'prop-types';
 import StyledLink from './StyledLink';
 
 const propTypes = {
-  /** one of: s, m, l */
+  /** sizings keys in the theme passed to <TypographyProvider /> */
   sizing: string,
-  /** one of: default, muted */
+  /** linkTypes keys in the theme passed to <LinkProvider /> */
   linkType: string,
   /** rendered html tag or custom router link component */
   as: oneOfType([oneOf(['a', 'button']), func]),

@@ -1,6 +1,11 @@
 import { createProvider } from '../../helpers';
-import { linkBaseTheme, linkDarkTheme } from './linkTheme';
 
-const LinkProvider = createProvider('link', linkBaseTheme, linkDarkTheme);
+const minimalTheme = {
+  linkTypes: {
+    default: {},
+  },
+};
+
+const LinkProvider = createProvider('link', minimalTheme);
 
 export default LinkProvider;

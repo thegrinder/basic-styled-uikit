@@ -5,12 +5,131 @@ route: /components/link
 ---
 
 import { Playground, Props } from 'docz';
+import { TypographyProvider } from '../Typography';
+import LinkProvider from './LinkProvider';
 import Link from './Link';
 import { Spacer } from '../../../docz';
 
 ## **LinkProvider**
 
+`<LinkProvider />` is responsible for passing down the theme to the `<Link />` component. It expects the theme to be of certain structure. You can use any valid css properties written in camel case.
 
+
+### **Minimal Example**
+
+The minimal link theme has to include `default` link type. `common` is not required but it's included in the example to show how to apply style to all link types.
+
+<Playground>
+  {() => {
+    const linkTheme = {
+      linkTypes: {
+        default: {
+          normal: {
+            /* you can put any valid css properties here */
+            color: '#1e88e5',
+          },
+        },
+      },
+      common: {
+        /* style defined here is applied regardless of link type */
+        fontFamily: `'Inter var', sans-serif`,
+      },
+    };
+
+    const Example = () => (
+      /* TypographyProvider is required for LinkProvider to work */
+      <TypographyProvider>
+        <LinkProvider theme={linkTheme}>
+          <Link>simple link</Link>
+        </LinkProvider>
+      </TypographyProvider>
+    );
+
+    return <Example />;
+  }}
+</Playground>
+
+
+### **Theme with different link states**
+
+You can style different link states.
+
+<Playground>
+  {() => {
+    const linkTheme = {
+      linkTypes: {
+        default: {
+          normal: {
+            color: '#1e88e5',
+          },
+          hover: {
+            color: '#166dba',
+          },
+        },
+      },
+      common: {
+        fontFamily: `'Inter var', sans-serif`,
+      },
+    };
+
+    const Example = () => (
+      <TypographyProvider>
+        <LinkProvider theme={linkTheme}>
+          <Link>hover here</Link>
+        </LinkProvider>
+      </TypographyProvider>
+    );
+
+    return <Example />;
+  }}
+</Playground>
+
+
+### **Theme with different link types**
+
+Also, you can add different link types.
+
+<Playground>
+  {() => {
+    const linkTheme = {
+      linkTypes: {
+        default: {
+          normal: {
+            color: '#1e88e5',
+          },
+          hover: {
+            color: '#166dba',
+          },
+        },
+        muted: {
+          normal: {
+            color: '#868e96',
+          },
+          hover: {
+            color: '#6c747d',
+          },
+        },
+      },
+      common: {
+        fontFamily: `'Inter var', sans-serif`,
+      },
+    };
+
+    const Example = () => (
+      <TypographyProvider>
+        <LinkProvider theme={linkTheme}>
+          <>
+            <Link>default link</Link>
+            <Spacer />
+            <Link linkType="muted">muted link</Link>
+          </>
+        </LinkProvider>
+      </TypographyProvider>
+    );
+
+    return <Example />;
+  }}
+</Playground>
 
 ---
 
@@ -18,32 +137,6 @@ import { Spacer } from '../../../docz';
 
 ## **Link**
 
+Link component grabs the theme given to [LinkProvider](/basic-styled-uikit/components/link#linkprovider) and applies the style defined there based on the given `linkType` prop value.
+
 <Props of={Link} />
-
-
-### Link types
-
-<Playground>
-  <Link href="#" linkType="default">default link</Link>
-  <Spacer />
-  <Link href="#" linkType="muted">muted link</Link>
-</Playground>
-
-
-### Link sizes
-
-<Playground>
-  <Link sizing="l">large</Link>
-  <Spacer />
-  <Link sizing="m">medium</Link>
-  <Spacer />
-  <Link sizing="s">small</Link>
-  <Spacer />
-  <Link sizing="xs">extra small</Link>
-</Playground>
-
-### Link as button
-
-<Playground>
-  <Link href="#" as="button">button link</Link>
-</Playground>

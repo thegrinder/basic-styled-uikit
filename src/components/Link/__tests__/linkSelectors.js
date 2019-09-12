@@ -1,17 +1,29 @@
-import { linkBaseTheme } from '../linkTheme';
 import {
   getLink,
   getLinkTypeStyle,
   getLinkCommonStyle,
 } from '../linkSelectors';
 
-const { linkTypes, common } = linkBaseTheme;
-const theme = { link: linkBaseTheme };
+const linkTheme = {
+  linkTypes: {
+    default: {
+      normal: {
+        color: '#1e88e5',
+      },
+    },
+  },
+  common: {
+    fontFamily: 'sans-serif',
+  },
+};
+
+const { linkTypes, common } = linkTheme;
+const theme = { link: linkTheme };
 
 describe('linkTheme selectors', () => {
   describe('getLink', () => {
     it('should return link theme', () => {
-      expect(getLink(theme)).toEqual(linkBaseTheme);
+      expect(getLink(theme)).toEqual(linkTheme);
     });
 
     it('should throw if no theme found', () => {
@@ -26,7 +38,7 @@ describe('linkTheme selectors', () => {
   describe('getLinkTypeStyle', () => {
     Object.keys(linkTypes).forEach(linkType => {
       Object.keys(linkTypes[linkType]).forEach(state => {
-        it(`should return the correct style object for ${linkType} link type and ${state} state`, () => {
+        it(`should return the correct style object for specific link type in ${state} state`, () => {
           expect(getLinkTypeStyle(theme, linkType, state)).toEqual(
             linkTypes[linkType][state]
           );
