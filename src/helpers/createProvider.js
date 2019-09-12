@@ -1,19 +1,15 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, memo } from 'react';
 import { object } from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import { useMode } from '../components/Mode';
 
-const createProvider = (key, defaultTheme, defaultDarkTheme) => {
+const createProvider = (key, defaultTheme) => {
   const propTypes = {
     theme: object,
     darkTheme: object,
   };
 
-  const Provider = ({
-    theme = defaultTheme,
-    darkTheme = defaultDarkTheme,
-    ...rest
-  }) => {
+  const Provider = ({ theme = defaultTheme, darkTheme, ...rest }) => {
     const modeContext = useMode();
     const memoizedTheme = useMemo(
       () => ({
@@ -24,14 +20,14 @@ const createProvider = (key, defaultTheme, defaultDarkTheme) => {
             : {}),
         },
       }),
-      [modeContext]
+      [darkTheme, modeContext, theme]
     );
     return <ThemeProvider theme={memoizedTheme} {...rest} />;
   };
 
   Provider.propTypes = propTypes;
 
-  return Provider;
+  return memo(Provider);
 };
 
 export default createProvider;

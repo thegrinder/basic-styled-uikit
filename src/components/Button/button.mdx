@@ -5,11 +5,179 @@ route: /components/button
 ---
 
 import { Playground, Props } from 'docz';
+import { TypographyProvider } from '../Typography';
+import { ModeProvider, useMode } from '../Mode';
+import ButtonProvider from './ButtonProvider';
 import Button from './Button';
 import { Spacer, Spinner } from '../../../docz';
 
 ## **ButtonProvider**
 
+`<ButtonProvider />` is responsible for passing down the theme to the `<Button />` component. It expects the theme to be of certain structure. You can use any valid css properties written in camel case.
+
+
+### **Minimal example**
+
+The minimal button theme has to include `m` sizing and `default` button type. `common` is not required but it's included in the example to show how to apply style to all button types and sizes.
+
+<Playground>
+  {() => {
+    const buttonTheme = {
+      btnTypes: {
+        default: {
+          normal: {
+            /* you can put any valid css properties here */
+            color: '#fff',
+            backgroundColor: '#1e88e5',
+          },
+        },
+      },
+      sizings: {
+        m: {
+          fontSize: '1rem',
+          padding: '0.5rem 1rem',
+        },
+      },
+      common: {
+        /* style defined here is applied regardless of button type or sizing */
+        fontWeight: '600',
+        fontFamily: `'Inter var', sans-serif`,
+      },
+    };
+
+    const Example = () => (
+      /* TypographyProvider is required for any other provider to work */
+      <TypographyProvider>
+        <ButtonProvider theme={buttonTheme}>
+          <>
+            <Button>simple button</Button>
+          </>
+        </ButtonProvider>
+      </TypographyProvider>
+    );
+
+    return <Example />;
+  }}
+</Playground>
+
+
+### **Theme with different button states**
+
+You can style different button states.
+
+<Playground>
+  {() => {
+    const buttonTheme = {
+      btnTypes: {
+        default: {
+          normal: {
+            color: '#fff',
+            backgroundColor: '#1e88e5',
+          },
+          hover: {
+            backgroundColor: '#3594e8',
+          },
+          active: {
+            backgroundColor: '#187bd1',
+          },
+        },
+      },
+      sizings: {
+        m: {
+          fontSize: '1rem',
+          padding: '0.5rem 1rem',
+        },
+      },
+      common: {
+        fontWeight: '600',
+        fontFamily: `'Inter var', sans-serif`,
+      },
+    };
+
+    const Example = () => (
+      <TypographyProvider>
+        <ButtonProvider theme={buttonTheme}>
+          <>
+            <Button>hover and click</Button>
+          </>
+        </ButtonProvider>
+      </TypographyProvider>
+    );
+
+    return <Example />;
+  }}
+</Playground>
+
+
+### **Theme with different button types and sizings**
+
+Also, you can add different button types and sizings.
+
+<Playground>
+  {() => {
+    const buttonTheme = {
+      btnTypes: {
+        default: {
+          normal: {
+            color: '#fff',
+            backgroundColor: '#1e88e5',
+          },
+          hover: {
+            backgroundColor: '#3594e8',
+          },
+          active: {
+            backgroundColor: '#187bd1',
+          },
+        },
+        danger: {
+          normal: {
+            color: '#fff',
+            backgroundColor: '#f4511e',
+          },
+          hover: {
+            backgroundColor: '#f56436',
+          },
+          active: {
+            backgroundColor: '#ed410c',
+          },
+        },
+      },
+      sizings: {
+        m: {
+          fontSize: '1rem',
+          padding: '0.5rem 1rem',
+        },
+        l: {
+          fontSize: '1.5rem',
+          padding: '0.75rem 1.25rem',
+        },
+      },
+      common: {
+        fontWeight: '600',
+        fontFamily: `'Inter var', sans-serif`,
+      },
+    };
+
+    const Example = () => (
+      <TypographyProvider>
+        <ButtonProvider theme={buttonTheme}>
+          <>
+            <Button>default button type</Button>
+            <Spacer />
+            <Button btnType="danger">danger button type</Button>
+            <Spacer />
+            <Button>default sizing m</Button>
+            <Spacer />
+            <Button sizing="l">sizing l</Button>
+            <Spacer />
+          </>
+        </ButtonProvider>
+      </TypographyProvider>
+    );
+
+    return <Example />;
+  }}
+</Playground>
 
 
 ---
@@ -18,56 +186,6 @@ import { Spacer, Spinner } from '../../../docz';
 
 ## **Button**
 
+Button component grabs the theme given to [ButtonProvider](/basic-styled-uikit/components/button#buttonprovider) and applies the style defined there based on the given `btnType` and `sizing` prop value. It also accepts a few different non-theme related props for convenience reasons.
+
 <Props of={Button} />
-
-
-### Button types
-
-<Playground>
-  <Button className="mb">default</Button>
-  <Spacer />
-  <Button btnType="primary">primary</Button>
-  <Spacer />
-  <Button btnType="danger">danger</Button>
-</Playground>
-
-
-### Button sizes
-
-<Playground>
-  <Button sizing="s">small</Button>
-  <Spacer />
-  <Button sizing="m">medium</Button>
-  <Spacer />
-  <Button sizing="l">large</Button>
-</Playground>
-
-
-### Disabled button
-
-<Playground>
-  <Button className="mb" disabled={true}>default</Button>
-  <Spacer />
-  <Button btnType="primary" disabled={true}>primary</Button>
-  <Spacer />
-  <Button btnType="danger" disabled={true}>danger</Button>
-</Playground>
-
-
-### Disabled Button with a spinner
-
-<Playground>
-  <Button
-    disabled={true}
-    submitting={true}
-    renderSpinner={<Spinner />}
-  >
-    submitting
-  </Button>
-</Playground>
-
-### Button as Link
-
-<Playground>
-  <Button as="a">Link</Button>
-</Playground>

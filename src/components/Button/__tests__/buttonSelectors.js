@@ -1,4 +1,3 @@
-import { buttonBaseTheme } from '../buttonTheme';
 import {
   getButton,
   getBtnTypeStyle,
@@ -6,22 +5,41 @@ import {
   getBtnCommonStyle,
 } from '../buttonSelectors';
 
-const theme = {
-  button: buttonBaseTheme,
+const buttonTheme = {
+  btnTypes: {
+    primary: {
+      normal: {
+        color: '#fff',
+        backgroundColor: '#000',
+      },
+    },
+  },
+  sizings: {
+    m: {
+      fontSize: '1rem',
+    },
+  },
+  common: {
+    fontWeight: 'bold',
+  },
 };
-const { btnTypes, sizings, common } = buttonBaseTheme;
+
+const theme = {
+  button: buttonTheme,
+};
+const { btnTypes, sizings, common } = buttonTheme;
 
 describe('buttonTheme selectors', () => {
   describe('getButton', () => {
-    it('should return color box theme', () => {
-      expect(getButton(theme)).toEqual(buttonBaseTheme);
+    it('should return button theme', () => {
+      expect(getButton(theme)).toEqual(buttonTheme);
     });
 
     it('should throw if no theme found', () => {
       expect(() => getButton()).toThrow();
     });
 
-    it('should throw if no color box namespace found', () => {
+    it('should throw if no button namespace found', () => {
       expect(() => getButton({})).toThrow();
     });
   });
@@ -29,7 +47,7 @@ describe('buttonTheme selectors', () => {
   describe('getBtnTypeStyle', () => {
     Object.keys(btnTypes).forEach(btnType => {
       Object.keys(btnTypes[btnType]).forEach(state => {
-        it(`should return the correct style object for ${btnType} button type and ${state} state`, () => {
+        it(`should return the correct style object for specific button type in ${state} state`, () => {
           expect(getBtnTypeStyle(theme, btnType, state)).toEqual(
             btnTypes[btnType][state]
           );

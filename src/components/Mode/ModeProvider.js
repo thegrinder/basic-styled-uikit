@@ -8,13 +8,16 @@ const propTypes = {
 
 const ModeProvider = ({ initialMode = 'light', ...rest }) => {
   const [mode, setMode] = useState(initialMode);
-  const toggleMode = useCallback(() => setMode(prevMode => !prevMode), []);
+  const toggleMode = useCallback(
+    () => setMode(prevMode => (prevMode === 'light' ? 'dark' : 'light')),
+    []
+  );
   const value = useMemo(
     () => ({
       mode,
       toggleMode,
     }),
-    [mode]
+    [mode, toggleMode]
   );
   return <ModeContext.Provider value={value} {...rest} />;
 };

@@ -16,8 +16,6 @@ describe('<Button />', () => {
   it('should render correctly with custom props', () => {
     const spinner = <span data-testid="spinner" />;
     const { queryByText, queryByTestId } = renderComponent({
-      btnType: 'danger',
-      sizing: 's',
       submitting: true,
       renderSpinner: spinner,
     });

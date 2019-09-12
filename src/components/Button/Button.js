@@ -27,9 +27,9 @@ const SpinnerWrapper = styled.span`
 const propTypes = {
   /** submitting flag that shows a component passed to renderSpinner prop */
   submitting: bool,
-  /** one of: default, primary, danger */
+  /** btnTypes keys in the theme passed to <ButtonProvider /> */
   btnType: string,
-  /** one of: s, m, l */
+  /** sizings keys in the theme passed to <ButtonProvider /> */
   sizing: string,
   /** spinner component shown when submitting flag is true */
   renderSpinner: node,

@@ -6,7 +6,7 @@
     "jest": true
   },
   "extends": ["airbnb", "prettier"],
-  "plugins": ["react", "prettier"],
+  "plugins": ["react", "react-hooks", "prettier"],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -18,6 +18,8 @@
     "react/require-default-props": "off",
     "react/forbid-prop-types": "off",
     "import/prefer-default-export": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "prettier/prettier": [
       "error",
       {
