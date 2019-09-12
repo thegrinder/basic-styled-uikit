@@ -13,14 +13,6 @@ describe('<Box />', () => {
     expect(queryByText(children)).toBeTruthy();
   });
 
-  it('should render correctly with custom props', () => {
-    const { queryByText } = renderComponent({
-      bgColor: 'primary',
-      borderColor: 'success',
-    });
-    expect(queryByText(children)).toBeTruthy();
-  });
-
   it('should render <div> tag', () => {
     const { queryByText } = renderComponent();
     expect(queryByText(children).tagName).toEqual('DIV');

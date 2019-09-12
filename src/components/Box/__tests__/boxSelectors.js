@@ -1,13 +1,24 @@
-import { boxBaseTheme } from '../boxTheme';
 import { getBox, getBoxBgColor, getBoxElevation } from '../boxSelectors';
 
-const theme = { box: boxBaseTheme };
-const { bgColors, elevations } = boxBaseTheme;
+const boxTheme = {
+  bgColors: {
+    primary: '#1e88e5',
+  },
+  elevations: {
+    1: {
+      boxShadow:
+        '0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)',
+    },
+  },
+};
+
+const theme = { box: boxTheme };
+const { bgColors, elevations } = boxTheme;
 
 describe('boxTheme selectors', () => {
   describe('getBox', () => {
     it('should return button theme', () => {
-      expect(getBox(theme)).toEqual(boxBaseTheme);
+      expect(getBox(theme)).toEqual(boxTheme);
     });
 
     it('should throw if no theme found', () => {
@@ -21,7 +32,7 @@ describe('boxTheme selectors', () => {
 
   describe('getBoxBgColor', () => {
     Object.keys(bgColors).forEach(bgColor => {
-      it(`should return the correct ${bgColor} background color`, () => {
+      it(`should return the correct background color`, () => {
         expect(getBoxBgColor(theme, bgColor)).toEqual(bgColors[bgColor]);
       });
     });
