@@ -5,7 +5,8 @@ route: /components/form
 ---
 
 import { Playground, Props } from 'docz';
-import Box from '../Box/Box';
+import { TypographyProvider } from '../Typography';
+import FormProvider from './FormProvider';
 import Input from './Input/Input';
 import InlineInput from './InlineInput/InlineInput';
 import Textarea from './Textarea/Textarea';
@@ -16,6 +17,239 @@ import Toggle from './Toggle/Toggle';
 import { Spinner } from '../../../docz';
 
 ## **FormProvider**
+
+`<FormProvider />` is responsible for passing down the theme to the all the form components. It expects the theme to be of certain structure.
+
+
+### **Minimal example**
+
+The minimal form theme has to include styles for valid and invalid states of form components.
+
+<Playground>
+  {() => {
+    const formTheme = {
+      // text input, textarea, and select
+      regular: {
+        states: {
+          valid: {
+            normal: {
+              color: '#161616',
+              borderColor: '#ced4da',
+            },
+          },
+          invalid: {
+            color: '#f4511e',
+            borderColor: '#f4511e',
+          },
+        },
+      },
+      // inline input (i.e. no border)
+      inline: {
+        states: {
+          valid: {
+            normal: {
+              color: '#161616',
+            },
+          },
+          invalid: {
+            color: '#F4511E',
+            borderColor: '#F4511E',
+          },
+        },
+      },
+      // radio and checkbox
+      misc: {
+        states: {
+          valid: {
+            normal: {
+              borderColor: '#ced4da',
+            },
+            checked: {
+              backgroundColor: '#1E88E5',
+            },
+          },
+          invalid: {
+            borderColor: '#F4511E',
+          },
+        },
+      },
+      // toggle
+      toggle: {
+        states: {
+          normal: {
+            backgroundColor: '#ced4da',
+          },
+          checked: {
+            backgroundColor: '#1E88E5',
+          },
+        },
+      },
+    };
+
+    const Example = () => (
+      /* TypographyProvider is required for FormProvider to work */
+      <TypographyProvider>
+        <FormProvider theme={formTheme}>
+          <div className="max-width-m">
+            <Input className="margin-bottom" />
+            <InlineInput placeholder="Inline input" className="margin-bottom"/>
+            <Textarea className="margin-bottom" />
+            <Select className="margin-bottom">
+              <option>option one</option>
+              <option>option two</option>
+            </Select>
+            <Radio className="margin-bottom" />
+            <Checkbox className="margin-bottom" />
+            <div className="max-width-s">
+              <Toggle onChange={() => {}} />
+            </div>
+          </div>
+        </FormProvider>
+      </TypographyProvider>
+    );
+
+    return <Example />
+  }}
+</Playground>
+
+
+### **Theme with different form component states and common style**
+
+You can style form component states and add common style for each of the form component group.
+
+<Playground>
+  {() => {
+    const formTheme = {
+      regular: {
+        states: {
+          valid: {
+            normal: {
+              borderColor: '#ced4da',
+              color: '#161616',
+            },
+            active: {
+              borderColor: '#1E88E5',
+            },
+            disabled: {
+              color: '#868e96',
+              backgroundColor: '#f8f9fa',
+            },
+          },
+          invalid: {
+            color: '#F4511E',
+            borderColor: '#F4511E',
+          },
+        },
+      },
+      inline: {
+        states: {
+          valid: {
+            normal: {
+              color: '#161616',
+            },
+            hover: {
+              borderColor: '#ced4da',
+              color: '#161616',
+            },
+            active: {
+              borderColor: '#1E88E5',
+              color: '#161616',
+            },
+            disabled: {
+              borderColor: '#ced4da',
+              color: '#868e96',
+              backgroundColor: '#f8f9fa',
+            },
+          },
+          invalid: {
+            color: '#F4511E',
+            borderColor: '#F4511E',
+          },
+        },
+      },
+      misc: {
+        states: {
+          valid: {
+            normal: {
+              borderColor: '#ced4da',
+            },
+            active: {
+              borderColor: '#1E88E5',
+            },
+            checked: {
+              borderColor: '#1E88E5',
+              backgroundColor: '#1E88E5',
+            },
+          },
+          invalid: {
+            borderColor: '#F4511E',
+          },
+        },
+      },
+      toggle: {
+        states: {
+          normal: {
+            backgroundColor: '#ced4da',
+          },
+          checked: {
+            backgroundColor: '#1E88E5',
+          },
+        },
+      },
+      common: {
+        regular: {
+          fontSize: '1rem',
+          fontFamily: `'Inter var', sans-serif`,
+        },
+        inline: {
+          fontSize: '1rem',
+          fontFamily: `'Inter var', sans-serif`,
+        },
+        misc: {
+          // to change the size of checkbox and radio input you can increase/decrease the font size
+          fontSize: '1rem',
+        },
+      },
+    };
+
+    const Example = () => (
+      /* TypographyProvider is required for FormProvider to work */
+      <TypographyProvider>
+        <FormProvider theme={formTheme}>
+          <div className="max-width-m">
+            <Input invalid={true} className="margin-bottom" />
+            <Input disabled={true} value="disabled" className="margin-bottom" />
+            <InlineInput invalid={true} placeholder="Inline input" className="margin-bottom"/>
+            <InlineInput disabled={true} placeholder="Inline input" className="margin-bottom"/>
+            <Textarea invalid={true} className="margin-bottom" />
+            <Textarea disabled={true} className="margin-bottom" />
+            <Select invalid={true} className="margin-bottom">
+              <option>option one</option>
+              <option>option two</option>
+            </Select>
+            <Select disabled={true} className="margin-bottom">
+              <option>option one</option>
+              <option>option two</option>
+            </Select>
+            <div className="margin-bottom">
+              <Radio invalid={true} />
+              <Radio disabled={true} />
+            </div>
+            <div className="margin-bottom">
+              <Checkbox invalid={true} />
+              <Checkbox disabled={true} />
+            </div>
+            <div className="max-width-s">
+              <Toggle disabled={true} onChange={() => {}} />
+            </div>
+          </div>
+        </FormProvider>
+      </TypographyProvider>
+    );
+
+    return <Example />
+  }}
+</Playground>
 
 
 
@@ -28,27 +262,6 @@ import { Spinner } from '../../../docz';
 <Props of={Input} />
 
 
-### Input
-
-<Playground>
-  <Input className="max-width-m" />
-</Playground>
-
-
-### Invalid Input
-
-<Playground>
-  <Input invalid={true} className="max-width-m" />
-</Playground>
-
-
-### Disabled Input
-
-<Playground>
-  <Input disabled={true} value="disabled" className="max-width-m" />
-</Playground>
-
-
 
 ---
 
@@ -57,43 +270,6 @@ import { Spinner } from '../../../docz';
 ## **InlineInput**
 
 <Props of={InlineInput} className="max-width-m" />
-
-
-### InlineInput
-
-<Playground>
-  <InlineInput placeholder="Hover here" className="max-width-m"/>
-</Playground>
-
-
-### Invalid InlineInput
-
-<Playground>
-  <InlineInput invalid={true} className="max-width-m" />
-</Playground>
-
-
-### Disabled InlineInput
-
-<Playground>
-  <InlineInput
-    disabled={true}
-    value="disabled"
-    className="max-width-m"
-  />
-</Playground>
-
-
-### Disabled InlineInput with a spinner
-
-<Playground>
-  <InlineInput
-    disabled={true}
-    submitting={true}
-    renderSpinner={<Spinner color="#ccc" />}
-    className="max-width-m"
-  />
-</Playground>
 
 
 
@@ -106,27 +282,6 @@ import { Spinner } from '../../../docz';
 <Props of={Textarea} />
 
 
-### Textarea
-
-<Playground>
-  <Textarea className="max-width-m" />
-</Playground>
-
-
-### Invalid Textarea
-
-<Playground>
-  <Textarea invalid={true} className="max-width-m" />
-</Playground>
-
-
-### Disabled Textarea
-
-<Playground>
-  <Textarea disabled={true} className="max-width-m" />
-</Playground>
-
-
 
 ---
 
@@ -135,36 +290,6 @@ import { Spinner } from '../../../docz';
 ## **Select**
 
 <Props of={Select} />
-
-
-### Select
-
-<Playground>
-    <Select className="max-width-m">
-      <Box bgColor="neutral" as="option">option one</Box>
-      <Box bgColor="neutral" as="option">option two</Box>
-    </Select>
-</Playground>
-
-
-### Invalid Select
-
-<Playground>
-    <Select invalid={true} className="max-width-m">
-      <Box bgColor="neutral" as="option">option one</Box>
-      <Box bgColor="neutral" as="option">option two</Box>
-    </Select>
-</Playground>
-
-
-### Disabled Select
-
-<Playground>
-    <Select disabled={true} className="max-width-m">
-      <Box bgColor="neutral" as="option">option one</Box>
-      <Box bgColor="neutral" as="option">option two</Box>
-    </Select>
-</Playground>
 
 
 
@@ -177,28 +302,6 @@ import { Spinner } from '../../../docz';
 <Props of={Radio} />
 
 
-### Radio
-
-<Playground>
-  <Radio />
-</Playground>
-
-
-### Invalid Radio
-
-<Playground>
-  <Radio invalid={true} />
-</Playground>
-
-
-### Disabled Radio
-
-<Playground>
-  <Radio disabled={true} />
-  <Radio checked={true} disabled={true} />
-</Playground>
-
-
 
 ---
 
@@ -207,28 +310,6 @@ import { Spinner } from '../../../docz';
 ## **Checkbox**
 
 <Props of={Checkbox} />
-
-
-### Checkbox
-
-<Playground>
-  <Checkbox />
-</Playground>
-
-
-### Invalid Checkbox
-
-<Playground>
-  <Checkbox invalid={true} />
-</Playground>
-
-
-### Disabled Checkbox
-
-<Playground>
-  <Checkbox disabled={true} />
-  <Checkbox checked={true} disabled={true} />
-</Playground>
 
 
 
@@ -241,28 +322,3 @@ import { Spinner } from '../../../docz';
 <Props of={Toggle} />
 
 
-### Toggle
-
-<Playground>
-  <div className="max-width-s">
-    <Toggle onChange={() => {}} />
-  </div>
-</Playground>
-
-
-### Disabled Toggle
-
-<Playground>
-  <div className="max-width-s">
-    <Toggle disabled={true} onChange={() => {}} />
-  </div>
-</Playground>
-
-
-### Toggle with a custom height
-
-<Playground>
-  <div className="max-width-s">
-    <Toggle h={24} onChange={() => {}} />
-  </div>
-</Playground>

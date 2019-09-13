@@ -77,7 +77,6 @@ export const formDarkTheme = {
 };
 
 export const formBaseTheme = {
-  // text input, textarea, and select
   regular: {
     states: {
       valid: {

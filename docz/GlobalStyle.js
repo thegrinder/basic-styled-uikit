@@ -11,20 +11,20 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Inter', sans-serif;
   }
 
-  .margin-bottom {
+  html .margin-bottom {
     display: block;
     margin-bottom: 16px;
   }
 
-  .padding {
+  html .padding {
     padding: 16px;
   }
 
-  .max-width-m {
+  html .max-width-m {
     max-width: 300px;
   }
 
-  .max-width-s {
+  html .max-width-s {
     max-width: 70px;
   }
 

@@ -1,4 +1,4 @@
-import { formBaseTheme } from '../formTheme';
+import { minimalTheme } from '../FormProvider';
 import {
   getForm,
   getRegularInputStyle,
@@ -10,13 +10,13 @@ import {
   getToggleStyle,
 } from '../formSelectors';
 
-const theme = { form: formBaseTheme };
-const { regular, inline, misc, toggle, common } = formBaseTheme;
+const theme = { form: minimalTheme };
+const { regular, inline, misc, toggle } = minimalTheme;
 
 describe('formTheme selectors', () => {
   describe('getForm', () => {
     it('should return button theme', () => {
-      expect(getForm(theme)).toEqual(formBaseTheme);
+      expect(getForm(theme)).toEqual(minimalTheme);
     });
 
     it('should throw if no theme found', () => {
@@ -44,7 +44,7 @@ describe('formTheme selectors', () => {
 
   describe('getRegularInputCommonStyle', () => {
     it('should return the correct common style object', () => {
-      expect(getRegularInputCommonStyle(theme)).toEqual(common.regular);
+      expect(getRegularInputCommonStyle(theme)).toEqual(undefined);
     });
   });
 
@@ -64,7 +64,7 @@ describe('formTheme selectors', () => {
 
   describe('getInlineInputCommonStyle', () => {
     it('should return the correct common style object for inline input', () => {
-      expect(getInlineInputCommonStyle(theme)).toEqual(common.inline);
+      expect(getInlineInputCommonStyle(theme)).toEqual(undefined);
     });
   });
 
@@ -86,7 +86,7 @@ describe('formTheme selectors', () => {
 
   describe('getMiscInputCommonStyle', () => {
     it('should return the correct common style object', () => {
-      expect(getMiscInputCommonStyle(theme)).toEqual(common.misc);
+      expect(getMiscInputCommonStyle(theme)).toEqual(undefined);
     });
   });
 
