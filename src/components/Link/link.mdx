@@ -8,7 +8,6 @@ import { Playground, Props } from 'docz';
 import { TypographyProvider } from '../Typography';
 import LinkProvider from './LinkProvider';
 import Link from './Link';
-import { Spacer } from '../../../docz';
 
 ## **LinkProvider**
 
@@ -113,8 +112,7 @@ Also, you can add different link types.
       <TypographyProvider>
         <LinkProvider theme={linkTheme}>
           <>
-            <Link>default link</Link>
-            <Spacer />
+            <Link className="margin-bottom">default link</Link>
             <Link linkType="muted">muted link</Link>
           </>
         </LinkProvider>
@@ -131,6 +129,6 @@ Also, you can add different link types.
 
 ## **Link**
 
-Link component grabs the theme given to [LinkProvider](/basic-styled-uikit/components/link#linkprovider) and applies the style defined there based on the given `linkType` prop value.
+Link component grabs the theme given to `<LinkProvider />` and applies the style defined there based on the given `linkType` prop value.
 
 <Props of={Link} />

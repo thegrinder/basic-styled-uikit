@@ -8,7 +8,6 @@ import { Playground, Props } from 'docz';
 import BoxProvider from './BoxProvider';
 import Box from './Box';
 import { Text } from '../Typography';
-import { Spacer } from '../../../docz';
 
 ## **BoxProvider**
 
@@ -37,8 +36,9 @@ The minimal color box theme has to include one background color and one elevatio
     const Example = () => (
       <BoxProvider theme={boxTheme}>
         <>
-          <Box bgColor="primary">background color primary</Box>
-          <Spacer />
+          <Box bgColor="primary" className="margin-bottom">
+            background color primary
+          </Box>
           <Box elevation={1}>elevation one</Box>
         </>
       </BoxProvider>
@@ -78,38 +78,23 @@ However, you can easily add as many background colors and elevation variations a
       <BoxProvider theme={boxTheme}>
         <>
 
-          <Box bgColor="primary">
-            primary
-          </Box>
-          <Spacer />
-          <Box bgColor="danger">
-            danger
-          </Box>
-          <Spacer />
-          <Box bgColor="success">
-            success
-          </Box>
-          <Spacer />
-          <Box bgColor="warning">
-            warning
-          </Box>
-          <Spacer />
-          <Box bgColor="neutral">
-            neutral
-          </Box>
-          <Spacer />
+          <Box bgColor="primary" className="margin-bottom">primary</Box>
+          <Box bgColor="danger" className="margin-bottom">danger</Box>
+          <Box bgColor="success" className="margin-bottom">success</Box>
+          <Box bgColor="warning" className="margin-bottom">warning</Box>
+          <Box bgColor="neutral" className="margin-bottom">neutral</Box>
 
-          <Box bgColor="neutral" style={{ padding: '20px' }}>
-            <Box elevation={1} style={{ padding: '20px' }}>
+          <Box bgColor="neutral" className="padding">
+            <Box elevation={1} className="padding">
               <span>one</span>
-              <Box elevation={1} style={{ padding: '20px' }}>
+              <Box elevation={1} className="padding">
                 <span>one</span>
-                <Box elevation={1} style={{ padding: '20px' }}>
+                <Box elevation={1} className="padding">
                   <span>one</span>
                 </Box>
               </Box>
             </Box>
-            <Spacer />
+
             <Box elevation={2}>
               <span>two</span>
             </Box>
@@ -127,6 +112,6 @@ However, you can easily add as many background colors and elevation variations a
 
 ## **Box**
 
-Box component grabs the theme given to [BoxProvider](/basic-styled-uikit/components/box#BoxProvider) and applies the style defined there based on the given `bgColor` and `elevation` prop value.
+Box component grabs the theme given to `<BoxProvider />` and applies the style defined there based on the given `bgColor` and `elevation` prop value.
 
 <Props of={Box} />

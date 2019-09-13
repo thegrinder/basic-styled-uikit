@@ -6,6 +6,7 @@ import StyledInlineInput from './StyledInlineInput';
 
 const Wrapper = styled.div`
   position: relative;
+  display: inline-block;
 `;
 
 const SpinnerWrapper = styled.div`
@@ -35,15 +36,17 @@ const InlineInput = ({
   renderSpinner,
   ...rest
 }) => (
-  <Wrapper>
-    <StyledInlineInput
-      submitting={submitting}
-      disabled={submitting || disabled}
-      invalid={invalid}
-      {...rest}
-    />
-    {submitting && <SpinnerWrapper>{renderSpinner}</SpinnerWrapper>}
-  </Wrapper>
+  <div>
+    <Wrapper>
+      <StyledInlineInput
+        submitting={submitting}
+        disabled={submitting || disabled}
+        invalid={invalid}
+        {...rest}
+      />
+      {submitting && <SpinnerWrapper>{renderSpinner}</SpinnerWrapper>}
+    </Wrapper>
+  </div>
 );
 
 InlineInput.propTypes = propTypes;

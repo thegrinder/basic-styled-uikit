@@ -13,7 +13,7 @@ import Select from './Select/Select';
 import Radio from './Radio/Radio';
 import Checkbox from './Checkbox/Checkbox';
 import Toggle from './Toggle/Toggle';
-import { InputWrapper, Spinner } from '../../../docz';
+import { Spinner } from '../../../docz';
 
 ## **FormProvider**
 
@@ -31,27 +31,21 @@ import { InputWrapper, Spinner } from '../../../docz';
 ### Input
 
 <Playground>
-  <InputWrapper>
-    <Input />
-  </InputWrapper>
+  <Input className="max-width-m" />
 </Playground>
 
 
 ### Invalid Input
 
 <Playground>
-  <InputWrapper>
-    <Input invalid={true} />
-  </InputWrapper>
+  <Input invalid={true} className="max-width-m" />
 </Playground>
 
 
 ### Disabled Input
 
 <Playground>
-  <InputWrapper>
-    <Input disabled={true} value="disabled" />
-  </InputWrapper>
+  <Input disabled={true} value="disabled" className="max-width-m" />
 </Playground>
 
 
@@ -62,46 +56,43 @@ import { InputWrapper, Spinner } from '../../../docz';
 
 ## **InlineInput**
 
-<Props of={InlineInput} />
+<Props of={InlineInput} className="max-width-m" />
 
 
 ### InlineInput
 
 <Playground>
-  <InputWrapper>
-    <InlineInput placeholder="Hover here"/>
-  </InputWrapper>
+  <InlineInput placeholder="Hover here" className="max-width-m"/>
 </Playground>
 
 
 ### Invalid InlineInput
 
 <Playground>
-  <InputWrapper>
-    <InlineInput invalid={true} />
-  </InputWrapper>
+  <InlineInput invalid={true} className="max-width-m" />
 </Playground>
 
 
 ### Disabled InlineInput
 
 <Playground>
-  <InputWrapper>
-    <InlineInput disabled={true} value="disabled" />
-  </InputWrapper>
+  <InlineInput
+    disabled={true}
+    value="disabled"
+    className="max-width-m"
+  />
 </Playground>
 
 
 ### Disabled InlineInput with a spinner
 
 <Playground>
-  <InputWrapper>
-    <InlineInput
-      disabled={true}
-      submitting={true}
-      renderSpinner={<Spinner color="#ccc" />}
-    />
-  </InputWrapper>
+  <InlineInput
+    disabled={true}
+    submitting={true}
+    renderSpinner={<Spinner color="#ccc" />}
+    className="max-width-m"
+  />
 </Playground>
 
 
@@ -118,21 +109,21 @@ import { InputWrapper, Spinner } from '../../../docz';
 ### Textarea
 
 <Playground>
-  <Textarea />
+  <Textarea className="max-width-m" />
 </Playground>
 
 
 ### Invalid Textarea
 
 <Playground>
-  <Textarea invalid={true} />
+  <Textarea invalid={true} className="max-width-m" />
 </Playground>
 
 
 ### Disabled Textarea
 
 <Playground>
-  <Textarea disabled={true} />
+  <Textarea disabled={true} className="max-width-m" />
 </Playground>
 
 
@@ -149,36 +140,30 @@ import { InputWrapper, Spinner } from '../../../docz';
 ### Select
 
 <Playground>
-  <InputWrapper>
-    <Select>
+    <Select className="max-width-m">
       <Box bgColor="neutral" as="option">option one</Box>
       <Box bgColor="neutral" as="option">option two</Box>
     </Select>
-  </InputWrapper>
 </Playground>
 
 
 ### Invalid Select
 
 <Playground>
-  <InputWrapper>
-    <Select invalid={true}>
+    <Select invalid={true} className="max-width-m">
       <Box bgColor="neutral" as="option">option one</Box>
       <Box bgColor="neutral" as="option">option two</Box>
     </Select>
-  </InputWrapper>
 </Playground>
 
 
 ### Disabled Select
 
 <Playground>
-  <InputWrapper>
-    <Select disabled={true}>
+    <Select disabled={true} className="max-width-m">
       <Box bgColor="neutral" as="option">option one</Box>
       <Box bgColor="neutral" as="option">option two</Box>
     </Select>
-  </InputWrapper>
 </Playground>
 
 
@@ -259,25 +244,25 @@ import { InputWrapper, Spinner } from '../../../docz';
 ### Toggle
 
 <Playground>
-  <InputWrapper maxWidth={70}>
+  <div className="max-width-s">
     <Toggle onChange={() => {}} />
-  </InputWrapper>
+  </div>
 </Playground>
 
 
 ### Disabled Toggle
 
 <Playground>
-  <InputWrapper maxWidth={70}>
+  <div className="max-width-s">
     <Toggle disabled={true} onChange={() => {}} />
-  </InputWrapper>
+  </div>
 </Playground>
 
 
 ### Toggle with a custom height
 
 <Playground>
-  <InputWrapper maxWidth={70}>
+  <div className="max-width-s">
     <Toggle h={24} onChange={() => {}} />
-  </InputWrapper>
+  </div>
 </Playground>
