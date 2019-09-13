@@ -10,6 +10,11 @@ export const rem = pxValue => ({ theme }) =>
   `${pxValue / getBaseFontSize(theme)}rem`;
 
 export const calcLineHeight = (remValue, baseLineHeight) => {
+  if (!remValue.includes('rem')) {
+    throw new Error(
+      '<Text /> and <Heading /> sizings have to be set in rem units'
+    );
+  }
   const value = Number(remValue.replace('rem', ''));
   return `${(Math.ceil(value / baseLineHeight) * baseLineHeight) / value}`;
 };

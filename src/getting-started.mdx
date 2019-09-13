@@ -49,10 +49,10 @@ import {
 const App = ({ children }) => (
   <ModeProvider>
     <TypographyProvider theme={typographyTheme.base} darkTheme={typographyTheme.dark}>
-      <BoxProvider theme={boxTheme} darkTheme={boxTheme.dark}>
-        <ButtonProvider theme={buttonTheme} darkTheme={buttonTheme.dark}>
-          <LinkProvider theme={linkTheme} darkTheme={linkTheme.dark}>
-            <FormProvider theme={formTheme} darkTheme={formTheme.dark}>
+      <BoxProvider theme={boxTheme.base} darkTheme={boxTheme.dark}>
+        <ButtonProvider theme={buttonTheme.base} darkTheme={buttonTheme.dark}>
+          <LinkProvider theme={linkTheme.base} darkTheme={linkTheme.dark}>
+            <FormProvider theme={formTheme.base} darkTheme={formTheme.dark}>
               <>{children}</>
             </FormProvider>
           </LinkProvider>

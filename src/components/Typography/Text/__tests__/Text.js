@@ -15,8 +15,6 @@ describe('<Text />', () => {
 
   it('should render correctly with custom props', () => {
     const { queryByText } = renderComponent({
-      sizing: 'xs',
-      color: 'primary',
       marginBottom: true,
       ignoreBackground: true,
     });

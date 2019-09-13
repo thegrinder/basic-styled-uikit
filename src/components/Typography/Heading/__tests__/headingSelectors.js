@@ -1,19 +1,19 @@
-import { typographyBaseTheme } from '../../typographyTheme';
+import { minimalTheme } from '../../TypographyProvider';
 import {
   getHeadingSizingStyle,
   getHeadingColor,
-  getHeadingColorOnBg,
   getHeadingCommonStyle,
   getHeadingOpacity,
 } from '../headingSelectors';
 
-const theme = { typography: typographyBaseTheme };
+const theme = {
+  typography: minimalTheme,
+};
 const {
   opacities,
   colors,
-  onBackground,
   heading: { sizings, common },
-} = typographyBaseTheme;
+} = minimalTheme;
 
 describe('headingTheme selectors', () => {
   describe('getHeadingSizingStyle', () => {
@@ -49,24 +49,6 @@ describe('headingTheme selectors', () => {
 
     it('should throw if color is not defined in the theme', () => {
       expect(() => getHeadingColor(theme, 'invalidColor')).toThrow();
-    });
-  });
-
-  describe('getHeadingColorOnBg', () => {
-    it('should default to the main heading color theme if no corresponding background is found', () => {
-      expect(getHeadingColorOnBg(theme, 'noop', 'primary')).toEqual(
-        colors.primary
-      );
-    });
-
-    Object.keys(onBackground).forEach(bgColor => {
-      Object.keys(onBackground[bgColor]).forEach(color => {
-        it(`should return the correct code for ${color} color for ${bgColor} background`, () => {
-          expect(getHeadingColorOnBg(theme, bgColor, color)).toEqual(
-            bgColor === 'warning' ? '#161616' : '#fff'
-          );
-        });
-      });
     });
   });
 

@@ -20,7 +20,6 @@ describe('<Heading />', () => {
   it('should render correctly with custom props', () => {
     const { queryByText } = renderComponent({
       as: 'h3',
-      color: 'primary',
       marginBottom: true,
     });
     expect(queryByText(children)).toBeTruthy();
@@ -35,7 +34,7 @@ describe('<Heading />', () => {
     });
   });
 
-  it('should render should large <h6> heading', () => {
+  it('should render large <h6> heading', () => {
     const { queryByText } = renderComponent({
       sizing: 'h1',
       as: 'h6',
