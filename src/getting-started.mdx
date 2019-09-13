@@ -18,17 +18,9 @@ yarn add basic-styled-uikit
 ```
 
 
-## Quick setup
+## Setup
 
-Basic-styled-uikit uses styled-components under the hood and that's why you have to wrap your application with a few theme providers responsible for passing style down to its respective copmonents. The quickest way to get going is to install and use the default theme.
-
-```
-# Using npm
-npm install basic-styled-uikit-theme --save
-
-# Using Yarn
-yarn add basic-styled-uikit-theme
-```
+Basic-styled-uikit uses styled-components under the hood and that's why you have to wrap your application with a few theme providers responsible for passing style down to its respective copmonents. The main reason basic-styled-uikit was created was to have totally customizable and themeable base components that you can build on top of. That's why you can pack virtually any style properties into each of the themes. Please refer to the documentation of each of them for more information.
 
 ```js
 import React from 'react';
@@ -43,14 +35,14 @@ import {
   FormProvider,
 } from 'basic-styled-uikit';
 
-// respective themes from basic-styled-uikit-theme
+// corresponding themes
 import {
   typographyTheme,
   buttonTheme,
   boxTheme,
   linkTheme,
   formTheme,
-} from 'basic-styled-uikit-theme';
+} from 'path/to/your/custom/theme';
 
 
 // root component
@@ -66,50 +58,6 @@ const App = ({ children }) => (
           </LinkProvider>
         </ButtonProvider>
       </BoxProvider>
-    </TypographyProvider>
-  </ModeProvider>
-);
-
-App.propTypes = propTypes;
-
-export default App;
-```
-
-
-## Custom setup
-
-The main reason basic-styled-uikit was created was to have totally customizable and themeable base components that you can build on top of. That's why you can pack virtually any style properties into each of the themes. You can just pick the providers/components you need and ignore the rest. Please refer to the documentation of each of them for more information.
-
-```js
-import React from 'react';
-
-// basic-styled-uikit providers
-import {
-  // the only required provider
-  TypographyProvider,
-  // providers you want to use
-  ModeProvider,
-  ButtonProvider,
-  FormProvider,
-} from 'basic-styled-uikit';
-
-import {
-  customTypographyTheme,
-  customButtonTheme,
-  customFormTheme,
-} from 'path/to/your/custom/theme';
-
-
-// root component
-const App = ({ children }) => (
-  <ModeProvider>
-    {/* TypographyProvider is required */}
-    <TypographyProvider theme={customTypographyTheme.base} darkTheme={customTypographyTheme.dark}>
-      <ButtonProvider theme={customButtonTheme} darkTheme={customButtonTheme.dark}>
-        <FormProvider theme={customFormTheme} darkTheme={customFormTheme.dark}>
-          <>{children}</>
-        </FormProvider>
-      </ButtonProvider>
     </TypographyProvider>
   </ModeProvider>
 );
