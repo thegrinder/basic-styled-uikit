@@ -2,7 +2,7 @@ import { createSelector } from '../../helpers';
 
 export const getTypography = createSelector('typography');
 
-export const getColor = ({ theme }) => color => {
+export const getColor = color => ({ theme }) => {
   const fontColor = getTypography(theme).colors;
   if (!fontColor) {
     throw new Error(`There is no ${color} color in the typography theme`);
