@@ -1,4 +1,4 @@
-import { typographyBaseTheme } from '../typographyTheme';
+import { minimalTheme } from '../TypographyProvider';
 import {
   getTypography,
   getBaseFontSize,
@@ -7,12 +7,12 @@ import {
   calcLineHeight,
 } from '../typographySelectors';
 
-const theme = { typography: typographyBaseTheme };
+const theme = { typography: minimalTheme };
 
 describe('typographySelectors', () => {
   describe('getTypography', () => {
     it('should return typography theme', () => {
-      expect(getTypography(theme)).toEqual(typographyBaseTheme);
+      expect(getTypography(theme)).toEqual(minimalTheme);
     });
 
     it('should throw if no theme found', () => {
