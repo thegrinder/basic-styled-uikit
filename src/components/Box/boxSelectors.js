@@ -12,6 +12,9 @@ export const getBoxBgColor = (theme, bgColor) => {
   return boxBgColor;
 };
 
+export const getBackgroundColor = ({ theme }) => bgColor =>
+  getBoxBgColor(theme, bgColor);
+
 export const getBoxElevation = (theme, elevation) => {
   const boxElevation = getBox(theme).elevations[elevation];
   if (!boxElevation) {

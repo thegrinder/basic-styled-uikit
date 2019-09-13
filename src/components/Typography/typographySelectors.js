@@ -2,6 +2,14 @@ import { createSelector } from '../../helpers';
 
 export const getTypography = createSelector('typography');
 
+export const getColor = ({ theme }) => color => {
+  const fontColor = getTypography(theme).colors;
+  if (!fontColor) {
+    throw new Error(`There is no ${color} color in the typography theme`);
+  }
+  return fontColor;
+};
+
 export const getBaseFontSize = theme => getTypography(theme).baseFontSize;
 
 export const getBaseLineHeight = theme => getTypography(theme).baseLineHeight;
