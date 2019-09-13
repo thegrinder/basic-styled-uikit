@@ -41,7 +41,6 @@ import {
   BoxProvider,
   LinkProvider,
   FormProvider,
-  ColorsProvider,
 } from 'basic-styled-uikit';
 
 // respective themes from basic-styled-uikit-theme
@@ -51,7 +50,6 @@ import {
   boxTheme,
   linkTheme,
   formTheme,
-  colorsTheme,
 } from 'basic-styled-uikit-theme';
 
 
@@ -63,9 +61,7 @@ const App = ({ children }) => (
         <ButtonProvider theme={buttonTheme} darkTheme={buttonTheme.dark}>
           <LinkProvider theme={linkTheme} darkTheme={linkTheme.dark}>
             <FormProvider theme={formTheme} darkTheme={formTheme.dark}>
-              <ColorsProvider theme={colorsTheme} darkTheme={colorsTheme.dark}>
-                <>{children}</>
-              </ColorsProvider>
+              <>{children}</>
             </FormProvider>
           </LinkProvider>
         </ButtonProvider>
