@@ -29,7 +29,6 @@ const StyledButton = styled.button`
   background-color: transparent;
   border-radius: ${rem(6)};
   &:disabled {
-    opacity: 0.6;
     cursor: default;
   }
   ${({ theme, btntype, sizing }) => css`
@@ -44,7 +43,7 @@ const StyledButton = styled.button`
       ${getBtnTypeStyle(theme, btntype, 'active')}
     }
     &:disabled {
-      ${getBtnTypeStyle(theme, btntype, 'normal')}
+      ${getBtnTypeStyle(theme, btntype, 'disabled')}
     }
   `}
 `;

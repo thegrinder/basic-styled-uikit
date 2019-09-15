@@ -14,13 +14,15 @@ const propTypes = {
 
 const Wrapper = ({ children }) => (
   <ModeProvider>
-    <GlobalStyle />
     <BoxProvider>
       <TypographyProvider>
         <ButtonProvider>
           <LinkProvider>
             <FormProvider>
-              <>{children}</>
+              <>
+                <GlobalStyle />
+                {children}
+              </>
             </FormProvider>
           </LinkProvider>
         </ButtonProvider>

@@ -74,6 +74,9 @@ You can style different button states.
           active: {
             backgroundColor: '#187bd1',
           },
+          disabled: {
+            backgroundColor: '#ddd',
+          }
         },
       },
       sizings: {
@@ -87,7 +90,12 @@ You can style different button states.
     const Example = () => (
       <TypographyProvider>
         <ButtonProvider theme={buttonTheme}>
-          <Button>hover and click</Button>
+          <>
+            <Button className="margin-bottom">
+              hover and click
+            </Button>
+            <Button disabled={true}>disabled</Button>
+          </>
         </ButtonProvider>
       </TypographyProvider>
     );
