@@ -5,4 +5,8 @@ export default {
   themeConfig: {
     mode: 'light',
   },
+  modifyBabelRc: babelRc => ({
+    ...babelRc,
+    plugins: [...babelRc.plugins, '@babel/plugin-proposal-optional-chaining'],
+  }),
 };

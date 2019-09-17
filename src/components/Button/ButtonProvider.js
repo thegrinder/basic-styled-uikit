@@ -1,14 +1,5 @@
 import { createProvider } from '../../helpers';
 
-const minimalTheme = {
-  btnTypes: {
-    default: {},
-  },
-  sizings: {
-    m: {},
-  },
-};
-
-const ButtonProvider = createProvider('button', minimalTheme);
+const ButtonProvider = createProvider('button', {});
 
 export default ButtonProvider;

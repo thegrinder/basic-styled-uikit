@@ -55,10 +55,10 @@ describe('buttonTheme selectors', () => {
       });
     });
 
-    it('should throw if button type is not defined in the theme', () => {
-      expect(() =>
-        getBtnTypeStyle(theme, 'invalidBtnType', 'normal')
-      ).toThrow();
+    it('should return undefined if the btnType is invalid ', () => {
+      expect(getBtnTypeStyle(theme, 'invalidBtnType', 'normal')).toEqual(
+        undefined
+      );
     });
   });
 
@@ -70,7 +70,7 @@ describe('buttonTheme selectors', () => {
     });
 
     it('should return empty object if sizing is invalid', () => {
-      expect(getBtnSizingStyle(theme, 'invalidSizing')).toEqual({});
+      expect(getBtnSizingStyle(theme, 'invalidSizing')).toEqual(undefined);
     });
   });
 
