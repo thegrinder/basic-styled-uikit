@@ -14,69 +14,6 @@ import Link from './Link';
 `<LinkProvider />` is responsible for passing down the theme to the `<Link />` component. It expects the theme to be of certain structure.
 
 
-### **Minimal Example**
-
-The minimal link theme has to include `default` link type. `common` is not required but it's included in the example to show how to apply style to all link types.
-
-<Playground>
-  {() => {
-    const linkTheme = {
-      linkTypes: {
-        default: {
-          normal: {
-            /* you can put any valid css properties here */
-            color: '#1e88e5',
-          },
-        },
-      },
-    };
-
-    const Example = () => (
-      /* TypographyProvider is required for LinkProvider to work */
-      <TypographyProvider>
-        <LinkProvider theme={linkTheme}>
-          <Link>simple link</Link>
-        </LinkProvider>
-      </TypographyProvider>
-    );
-
-    return <Example />;
-  }}
-</Playground>
-
-
-### **Theme with different link states**
-
-You can style different link states.
-
-<Playground>
-  {() => {
-    const linkTheme = {
-      linkTypes: {
-        default: {
-          normal: {
-            color: '#1e88e5',
-          },
-          hover: {
-            color: '#166dba',
-          },
-        },
-      },
-    };
-
-    const Example = () => (
-      <TypographyProvider>
-        <LinkProvider theme={linkTheme}>
-          <Link>hover here</Link>
-        </LinkProvider>
-      </TypographyProvider>
-    );
-
-    return <Example />;
-  }}
-</Playground>
-
-
 ### **Theme with different link types and common style**
 
 Also, you can add different link types.

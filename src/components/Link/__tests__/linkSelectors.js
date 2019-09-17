@@ -46,10 +46,10 @@ describe('linkTheme selectors', () => {
       });
     });
 
-    it('should throw if link type is not defined in the theme', () => {
-      expect(() =>
-        getLinkTypeStyle(theme, 'invalidLinkType', 'normal')
-      ).toThrow();
+    it('should return undefined if link type is not defined in the theme', () => {
+      expect(getLinkTypeStyle(theme, 'invalidLinkType', 'normal')).toEqual(
+        undefined
+      );
     });
   });
 

@@ -1,11 +1,5 @@
 import { createProvider } from '../../helpers';
 
-const minimalTheme = {
-  linkTypes: {
-    default: {},
-  },
-};
-
-const LinkProvider = createProvider('link', minimalTheme);
+const LinkProvider = createProvider('link', {});
 
 export default LinkProvider;
