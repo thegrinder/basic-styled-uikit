@@ -38,7 +38,7 @@ const StyledHeading = styled.h1`
           ? getHeadingColor(theme, color)
           : getHeadingColorOnBg(theme, bgColor, color)
       };
-      line-height: ${calcLineHeight(sizingStyle.fontSize, baseLineHeight)};
+      line-height: ${calcLineHeight(sizingStyle?.fontSize, baseLineHeight)};
       margin-bottom: ${marginBottom ? `${baseLineHeight}rem` : '0'};
       opacity: ${getHeadingOpacity(theme, emphasis)};
       ${sizingStyle}

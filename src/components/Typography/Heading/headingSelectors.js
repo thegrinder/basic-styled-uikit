@@ -1,71 +1,27 @@
 import { getTypography } from '../typographySelectors';
 
-export const getHeadingSizingStyle = (theme, sizing) => {
-  const sizingStyle = getTypography(theme).heading.sizings[sizing];
-  if (!sizingStyle) {
-    throw new Error(`There is no ${sizing} size in the <Heading /> theme`);
-  }
-  return sizingStyle;
-};
+export const getHeadingSizingStyle = (theme, sizing) =>
+  getTypography(theme)?.heading?.sizings?.[sizing];
 
 export const getHeadingColor = (theme, color) => {
-  let headingColor;
-
-  const baseColors = getTypography(theme).colors;
-  if (baseColors && baseColors[color]) {
-    headingColor = baseColors[color];
-  }
-
-  const headingColors = getTypography(theme).heading.colors;
-  if (headingColors && headingColors[color]) {
-    headingColor = headingColors[color];
-  }
-
-  if (!headingColor) {
-    throw new Error(`There is no ${color} color in the <Heading /> theme`);
-  }
-  return headingColor;
+  const headingColor = getTypography(theme)?.heading?.colors?.[color];
+  const baseColor = getTypography(theme)?.colors?.[color];
+  return headingColor || baseColor;
 };
 
 export const getHeadingColorOnBg = (theme, bgColor, color) => {
-  let headingColor;
+  const typography = getTypography(theme);
 
-  const baseColors = getTypography(theme).colors;
-  if (baseColors && baseColors[color]) {
-    headingColor = baseColors[color];
-  }
+  const headingColorOnBg =
+    typography?.heading?.onBackground?.[bgColor]?.[color];
 
-  const baseBgColors = getTypography(theme).onBackground;
-  if (baseBgColors && baseBgColors[bgColor] && baseBgColors[bgColor][color]) {
-    headingColor = baseBgColors[bgColor][color];
-  }
+  const baseColorOnBg = typography?.onBackground?.[bgColor]?.[color];
 
-  const headingTheme = getTypography(theme).heading;
-  if (
-    headingTheme &&
-    headingTheme.onBackground &&
-    headingTheme.onBackground[bgColor] &&
-    headingTheme.onBackground[bgColor][color]
-  ) {
-    headingColor = headingTheme.onBackground[bgColor][color];
-  }
-
-  if (!headingColor) {
-    throw new Error(
-      `There is no ${color} color set for ${bgColor} background color in typography theme`
-    );
-  }
-
-  return headingColor;
+  return headingColorOnBg || baseColorOnBg || getHeadingColor(theme, color);
 };
 
-export const getHeadingOpacity = (theme, emphasis) => {
-  const textOpacity = getTypography(theme).opacities[emphasis];
-  if (!textOpacity) {
-    throw new Error(`There is no ${emphasis} opacity in the <Heading /> theme`);
-  }
-  return textOpacity;
-};
+export const getHeadingOpacity = (theme, emphasis) =>
+  getTypography(theme)?.opacities?.[emphasis];
 
 export const getHeadingCommonStyle = theme =>
-  getTypography(theme).heading.common;
+  getTypography(theme)?.heading?.common;

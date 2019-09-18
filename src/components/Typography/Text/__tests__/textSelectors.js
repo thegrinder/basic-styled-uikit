@@ -1,4 +1,3 @@
-import { minimalTheme } from '../../TypographyProvider';
 import {
   getTextSizingStyle,
   getTextColor,
@@ -6,15 +5,33 @@ import {
   getTextOpacity,
 } from '../textSelectors';
 
+export const typographyTheme = {
+  baseFontSize: 16,
+  baseLineHeight: 1.5,
+  opacities: {
+    high: 1,
+  },
+  colors: {
+    neutral: '#000',
+  },
+  text: {
+    sizings: {
+      m: {
+        fontSize: '1rem',
+      },
+    },
+  },
+};
+
 const theme = {
-  typography: minimalTheme,
+  typography: typographyTheme,
 };
 
 const {
   opacities,
   colors,
   text: { sizings, common },
-} = minimalTheme;
+} = typographyTheme;
 
 describe('textTheme selectors', () => {
   describe('getTextSizingStyle', () => {
@@ -24,8 +41,8 @@ describe('textTheme selectors', () => {
       });
     });
 
-    it('should throw if size is not defined in the theme', () => {
-      expect(() => getTextSizingStyle(theme, 'invalidSizing')).toThrow();
+    it('should return undefined if size is not defined in the theme', () => {
+      expect(getTextSizingStyle(theme, 'invalidSizing')).toEqual(undefined);
     });
   });
 
@@ -35,8 +52,8 @@ describe('textTheme selectors', () => {
         expect(getTextOpacity(theme, emphasis)).toEqual(opacities[emphasis]);
       });
     });
-    it('should throw if emphasis is not defined in the theme', () => {
-      expect(() => getTextOpacity(theme, 'invalidEmphasis')).toThrow();
+    it('should return undefined if emphasis is not defined in the theme', () => {
+      expect(getTextOpacity(theme, 'invalidEmphasis')).toEqual(undefined);
     });
   });
 
@@ -47,8 +64,8 @@ describe('textTheme selectors', () => {
       });
     });
 
-    it('should throw if color is not defined in the theme', () => {
-      expect(() => getTextColor(theme, 'invalidColor')).toThrow();
+    it('should return undefined if color is not defined in the theme', () => {
+      expect(getTextColor(theme, 'invalidColor')).toEqual(undefined);
     });
   });
 

@@ -1,70 +1,25 @@
 import { getTypography } from '../typographySelectors';
 
-export const getTextSizingStyle = (theme, sizing) => {
-  const sizingStyle = getTypography(theme).text.sizings[sizing];
-  if (!sizingStyle) {
-    throw new Error(`There is no ${sizing} size in the <Text /> theme`);
-  }
-  return sizingStyle;
-};
+export const getTextSizingStyle = (theme, sizing) =>
+  getTypography(theme)?.text?.sizings?.[sizing];
 
 export const getTextColor = (theme, color) => {
-  let textColor;
-
-  const baseColors = getTypography(theme).colors;
-  if (baseColors && baseColors[color]) {
-    textColor = baseColors[color];
-  }
-
-  const textColors = getTypography(theme).text.colors;
-  if (textColors && textColors[color]) {
-    textColor = textColors[color];
-  }
-
-  if (!textColor) {
-    throw new Error(`There is no ${color} color in the <Text /> theme`);
-  }
-  return textColor;
+  const textColor = getTypography(theme)?.text?.colors?.[color];
+  const baseColor = getTypography(theme)?.colors?.[color];
+  return textColor || baseColor;
 };
 
 export const getTextColorOnBg = (theme, bgColor, color) => {
-  let textColor;
+  const typography = getTypography(theme);
 
-  const baseColors = getTypography(theme).colors;
-  if (baseColors && baseColors[color]) {
-    textColor = baseColors[color];
-  }
+  const textColorOnBg = typography?.text?.onBackground?.[bgColor]?.[color];
 
-  const baseBgColors = getTypography(theme).onBackground;
-  if (baseBgColors && baseBgColors[bgColor] && baseBgColors[bgColor][color]) {
-    textColor = baseBgColors[bgColor][color];
-  }
+  const baseColorOnBg = typography?.onBackground?.[bgColor]?.[color];
 
-  const textTheme = getTypography(theme).text;
-  if (
-    textTheme &&
-    textTheme.onBackground &&
-    textTheme.onBackground[bgColor] &&
-    textTheme.onBackground[bgColor][color]
-  ) {
-    textColor = textTheme.onBackground[bgColor][color];
-  }
-
-  if (!textColor) {
-    throw new Error(
-      `There is no ${color} color set for ${bgColor} background color in typography theme`
-    );
-  }
-
-  return textColor;
+  return textColorOnBg || baseColorOnBg || getTextColor(theme, color);
 };
 
-export const getTextOpacity = (theme, emphasis) => {
-  const textOpacity = getTypography(theme).opacities[emphasis];
-  if (!textOpacity) {
-    throw new Error(`There is no ${emphasis} opacity in the <Text /> theme`);
-  }
-  return textOpacity;
-};
+export const getTextOpacity = (theme, emphasis) =>
+  getTypography(theme)?.opacities?.[emphasis];
 
-export const getTextCommonStyle = theme => getTypography(theme).text.common;
+export const getTextCommonStyle = theme => getTypography(theme)?.text?.common;

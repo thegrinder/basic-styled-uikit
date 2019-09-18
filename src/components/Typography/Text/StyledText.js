@@ -39,7 +39,7 @@ const StyledText = styled.span`
           ? getTextColor(theme, color)
           : getTextColorOnBg(theme, bgColor, color)
       };
-      line-height: ${calcLineHeight(sizingStyle.fontSize, baseLineHeight)};
+      line-height: ${calcLineHeight(sizingStyle?.fontSize, baseLineHeight)};
       margin-bottom: ${marginBottom ? `${getBaseLineHeight(theme)}rem` : '0'};
       opacity: ${getTextOpacity(theme, emphasis)};
       ${sizingStyle}

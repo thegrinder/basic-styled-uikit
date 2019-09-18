@@ -1,4 +1,3 @@
-import { minimalTheme } from '../../TypographyProvider';
 import {
   getHeadingSizingStyle,
   getHeadingColor,
@@ -6,14 +5,48 @@ import {
   getHeadingOpacity,
 } from '../headingSelectors';
 
-const theme = {
-  typography: minimalTheme,
+export const typographyTheme = {
+  baseFontSize: 16,
+  baseLineHeight: 1.5,
+  opacities: {
+    high: 1,
+  },
+  colors: {
+    neutral: '#000',
+  },
+  heading: {
+    sizings: {
+      h1: {
+        fontSize: '3rem',
+      },
+      h2: {
+        fontSize: '2.5rem',
+      },
+      h3: {
+        fontSize: '2rem',
+      },
+      h4: {
+        fontSize: '1.5rem',
+      },
+      h5: {
+        fontSize: '1.25rem',
+      },
+      h6: {
+        fontSize: '1rem',
+      },
+    },
+  },
 };
+
+const theme = {
+  typography: typographyTheme,
+};
+
 const {
   opacities,
   colors,
   heading: { sizings, common },
-} = minimalTheme;
+} = typographyTheme;
 
 describe('headingTheme selectors', () => {
   describe('getHeadingSizingStyle', () => {
@@ -23,8 +56,8 @@ describe('headingTheme selectors', () => {
       });
     });
 
-    it('should throw if size is not defined in the theme', () => {
-      expect(() => getHeadingSizingStyle(theme, 'invalidSizing')).toThrow();
+    it('should return undefined if size is not defined in the theme', () => {
+      expect(getHeadingSizingStyle(theme, 'invalidSizing')).toEqual(undefined);
     });
   });
 
@@ -35,8 +68,8 @@ describe('headingTheme selectors', () => {
       });
     });
 
-    it('should throw if emphasis is not defined in the theme', () => {
-      expect(() => getHeadingOpacity(theme, 'invalidEmphasis')).toThrow();
+    it('should return undefined if emphasis is not defined in the theme', () => {
+      expect(getHeadingOpacity(theme, 'invalidEmphasis')).toEqual(undefined);
     });
   });
 
@@ -48,7 +81,7 @@ describe('headingTheme selectors', () => {
     });
 
     it('should throw if color is not defined in the theme', () => {
-      expect(() => getHeadingColor(theme, 'invalidColor')).toThrow();
+      expect(getHeadingColor(theme, 'invalidColor')).toEqual(undefined);
     });
   });
 
