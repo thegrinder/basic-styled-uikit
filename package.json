@@ -93,7 +93,6 @@
     "react": "^16.9.0"
   },
   "dependencies": {
-    "polished": "^3.4.1",
     "prop-types": "^15.7.2"
   }
 }
