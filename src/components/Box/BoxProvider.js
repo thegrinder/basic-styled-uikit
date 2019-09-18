@@ -1,10 +1,5 @@
 import { createProvider } from '../../helpers';
 
-const minimalTheme = {
-  bgColors: {},
-  elevations: {},
-};
-
-const BoxProvider = createProvider('box', minimalTheme);
+const BoxProvider = createProvider('box', {});
 
 export default BoxProvider;

@@ -37,8 +37,8 @@ describe('boxTheme selectors', () => {
       });
     });
 
-    it('should throw if background color is not defined in the theme', () => {
-      expect(() => getBoxBgColor(theme, 'invalidBgColor')).toThrow();
+    it('should return undefined if background color is not defined in the theme', () => {
+      expect(getBoxBgColor(theme, 'invalidBgColor')).toEqual(undefined);
     });
   });
 
@@ -51,8 +51,8 @@ describe('boxTheme selectors', () => {
       });
     });
 
-    it('should throw if elevation is not defined in the theme', () => {
-      expect(() => getBoxElevation(theme, 'invalidElevation')).toThrow();
+    it('should return undefined if elevation is not defined in the theme', () => {
+      expect(getBoxElevation(theme, 'invalidElevation')).toEqual(undefined);
     });
   });
 });
