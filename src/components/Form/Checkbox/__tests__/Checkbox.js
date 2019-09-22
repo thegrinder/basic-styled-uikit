@@ -41,19 +41,20 @@ const renderComponent = (props = {}) =>
   );
 
 describe('<Checkbox />', () => {
-  it('should render correctly with default props', () => {
+  it('should render with default styles', () => {
     const { getByTestId } = renderComponent();
     const checkbox = getByTestId(testId);
     expect(checkbox).toHaveStyleRule('border-color', color);
     expect(checkbox).toHaveStyleRule('font-size', fontSize);
   });
 
-  it('should render correct invalid state styles', () => {
+  it('should render with invalid state styles', () => {
     const { getByTestId } = renderComponent({
       invalid: true,
     });
     const checkbox = getByTestId(testId);
     expect(checkbox).toHaveStyleRule('border-color', invalidColor);
+    expect(checkbox).toHaveStyleRule('font-size', fontSize);
   });
 
   it('should render <input> tag with type checkbox', () => {

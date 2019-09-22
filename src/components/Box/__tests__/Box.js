@@ -26,7 +26,7 @@ const renderComponent = (props = {}) =>
   );
 
 describe('<Box />', () => {
-  it('should render correctly with no props and children', () => {
+  it('should render children', () => {
     const { queryByText } = renderComponent();
     expect(queryByText(children)).toBeTruthy();
   });

@@ -47,7 +47,7 @@ const renderComponent = (props = {}) =>
   );
 
 describe('<Button />', () => {
-  it('should render correctly with default props and children', () => {
+  it('should render with default styles and children', () => {
     const { getByTestId } = renderComponent();
     const button = getByTestId(testId);
     expect(button).toHaveStyleRule('background-color', defaultBgColor);
