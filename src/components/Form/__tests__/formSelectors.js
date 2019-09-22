@@ -1,4 +1,3 @@
-import { minimalTheme } from '../FormProvider';
 import {
   getForm,
   getRegularInputStyle,
@@ -10,13 +9,92 @@ import {
   getToggleStyle,
 } from '../formSelectors';
 
-const theme = { form: minimalTheme };
-const { regular, inline, misc, toggle } = minimalTheme;
+const formTheme = {
+  regular: {
+    states: {
+      valid: {
+        normal: {
+          borderColor: '#ced4da',
+          color: '#161616',
+        },
+        active: {
+          borderColor: '#1E88E5',
+        },
+        disabled: {
+          color: '#868e96',
+          backgroundColor: '#f8f9fa',
+        },
+      },
+      invalid: {
+        color: '#f4511e',
+        borderColor: '#f4511e',
+      },
+    },
+  },
+  inline: {
+    states: {
+      valid: {
+        normal: {
+          color: '#161616',
+        },
+        hover: {
+          borderColor: '#ced4da',
+          color: '#161616',
+        },
+        active: {
+          borderColor: '#1E88E5',
+          color: '#161616',
+        },
+        disabled: {
+          borderColor: '#ced4da',
+          color: '#868e96',
+          backgroundColor: '#f8f9fa',
+        },
+      },
+      invalid: {
+        color: '#f4511e',
+        borderColor: '#f4511e',
+      },
+    },
+  },
+  misc: {
+    states: {
+      valid: {
+        normal: {
+          borderColor: '#ced4da',
+        },
+        active: {
+          borderColor: '#1E88E5',
+        },
+        checked: {
+          borderColor: '#1E88E5',
+          backgroundColor: '#1E88E5',
+        },
+      },
+      invalid: {
+        borderColor: '#f4511e',
+      },
+    },
+  },
+  toggle: {
+    states: {
+      normal: {
+        backgroundColor: '#ced4da',
+      },
+      checked: {
+        backgroundColor: '#1E88E5',
+      },
+    },
+  },
+};
+
+const theme = { form: formTheme };
+const { regular, inline, misc, toggle } = formTheme;
 
 describe('formTheme selectors', () => {
   describe('getForm', () => {
     it('should return button theme', () => {
-      expect(getForm(theme)).toEqual(minimalTheme);
+      expect(getForm(theme)).toEqual(formTheme);
     });
 
     it('should throw if no theme found', () => {

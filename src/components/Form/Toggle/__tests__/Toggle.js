@@ -1,25 +1,41 @@
 import React from 'react';
 import { render } from '../../../../test-utils';
+import FormProvider from '../../FormProvider';
 import Toggle from '../Toggle';
 
+const theme = {
+  toggle: {
+    states: {
+      normal: {
+        backgroundColor: '#ced4da',
+      },
+      checked: {
+        backgroundColor: '#1E88E5',
+      },
+    },
+  },
+};
+
+const testId = 'toggle';
+
 const renderComponent = (props = {}) =>
-  render(<Toggle onChange={() => {}} {...props} />);
+  render(
+    <FormProvider theme={theme}>
+      <Toggle data-testid={testId} onChange={() => {}} {...props} />
+    </FormProvider>
+  );
 
 describe('<Toggle />', () => {
-  it('should render correctly with default props', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent();
-    expect(firstChild).toBeTruthy();
+  it('should render with default props', () => {
+    const { queryByTestId } = renderComponent();
+    expect(queryByTestId(testId)).toBeTruthy();
   });
 
-  it('should render correctly with custom props', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent({
+  it('should render with custom props', () => {
+    const { queryByTestId } = renderComponent({
       h: 100,
       disabled: true,
     });
-    expect(firstChild).toBeTruthy();
+    expect(queryByTestId(testId)).toBeTruthy();
   });
 });
