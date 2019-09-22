@@ -16,22 +16,53 @@ import { Spinner } from '../../../docz';
 `<ButtonProvider />` is responsible for passing down the theme to the `<Button />` component. It expects the theme to be of certain structure.
 
 
+---
+
+
+## **Button**
+
+Button component grabs the theme given to `<ButtonProvider />` and applies the style defined there based on the given `btnType` and `sizing` prop value. It also accepts a few different non-theme related props for convenience reasons.
+
+<Props of={Button} />
+
+
+---
+
+
 ### **Example**
 
 <Playground>
   {() => {
-    const buttonTheme = {
+    const theme = {
       btnTypes: {
         default: {
+          normal: {
+            color: '#fff',
+            backgroundColor: '#868e96',
+          },
+          hover: {
+            backgroundColor: '#a1a7ae',
+          },
+          active: {
+            backgroundColor: '#6c747d',
+          },
+          disabled: {
+            backgroundColor: '#868e964d',
+          },
+        },
+        primary: {
           normal: {
             color: '#fff',
             backgroundColor: '#1e88e5',
           },
           hover: {
-            backgroundColor: '#3594e8',
+            backgroundColor: '#4ca0ea',
           },
           active: {
-            backgroundColor: '#187bd1',
+            backgroundColor: '#166dba',
+          },
+          disabled: {
+            backgroundColor: '#1e88e566',
           },
         },
         danger: {
@@ -40,21 +71,31 @@ import { Spinner } from '../../../docz';
             backgroundColor: '#f4511e',
           },
           hover: {
-            backgroundColor: '#f56436',
+            backgroundColor: '#f6774f',
           },
           active: {
-            backgroundColor: '#ed410c',
+            backgroundColor: '#d53b0a',
+          },
+          disabled: {
+            backgroundColor: '#f4511e4d',
           },
         },
       },
       sizings: {
+        s: {
+          padding: '0 1rem',
+          lineHeight: '1.75rem',
+          fontSize: '.875rem',
+        },
         m: {
+          padding: '0 1.875rem',
           fontSize: '1rem',
-          padding: '0.5rem 1rem',
+          lineHeight: '2.375rem',
         },
         l: {
-          fontSize: '1.5rem',
-          padding: '0.75rem 1.25rem',
+          padding: '0 2.5rem',
+          lineHeight: '3.375rem',
+          fontSize: '1.375rem',
         },
       },
       common: {
@@ -65,15 +106,37 @@ import { Spinner } from '../../../docz';
 
     const Example = () => (
       <TypographyProvider>
-        <ButtonProvider theme={buttonTheme}>
+        <ButtonProvider theme={theme}>
           <>
-            <Button className="margin-bottom">default button type</Button>
-            <Button btnType="danger" className="margin-bottom">
-              danger button type
-            </Button>
-            <Button className="margin-bottom">default sizing m</Button>
+            <h3>Button sizes</h3>
             <Button sizing="l" className="margin-bottom">
-              sizing l
+              small size
+            </Button>
+            <Button sizing="m" className="margin-bottom">
+              medium size
+            </Button>
+            <Button sizing="s" className="margin-bottom">
+              large size
+            </Button>
+
+            <h3>Button types</h3>
+            <Button btnType="default" className="margin-bottom">
+              default type
+            </Button>
+            <Button btnType="default" disabled className="margin-bottom">
+              disabled
+            </Button>
+            <Button btnType="primary" className="margin-bottom">
+              primary type
+            </Button>
+            <Button btnType="primary" disabled className="margin-bottom">
+              disabled
+            </Button>
+            <Button btnType="danger" className="margin-bottom">
+              danger type
+            </Button>
+            <Button btnType="danger" disabled className="margin-bottom">
+              disabled
             </Button>
           </>
         </ButtonProvider>
@@ -83,14 +146,3 @@ import { Spinner } from '../../../docz';
     return <Example />;
   }}
 </Playground>
-
-
----
-
-
-
-## **Button**
-
-Button component grabs the theme given to `<ButtonProvider />` and applies the style defined there based on the given `btnType` and `sizing` prop value. It also accepts a few different non-theme related props for convenience reasons.
-
-<Props of={Button} />
