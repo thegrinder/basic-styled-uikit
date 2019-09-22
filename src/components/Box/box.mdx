@@ -14,6 +14,19 @@ import { Text } from '../Typography';
 `<BoxProvider />` is responsible for passing down the theme to the `<Box />` component. It expects the theme to be of certain structure.
 
 
+---
+
+
+## **Box**
+
+Box component grabs the theme given to `<BoxProvider />` and applies the style defined there based on the given `bgColor` and `elevation` prop value.
+
+<Props of={Box} />
+
+
+---
+
+
 ### **Example**
 
 <Playground>
@@ -21,10 +34,10 @@ import { Text } from '../Typography';
     const boxTheme = {
       bgColors: {
         neutral: '#fff',
-        primary: '#1E88E5',
-        success: '#43A047',
-        warning: '#FDD835',
-        danger: '#F4511E',
+        primary: '#1e88e5',
+        success: '#43a047',
+        warning: '#fdd835',
+        danger: '#f4511e',
       },
       elevations: {
         1: {
@@ -41,12 +54,11 @@ import { Text } from '../Typography';
     const Example = () => (
       <BoxProvider theme={boxTheme}>
         <>
-
+          <Box bgColor="neutral" className="margin-bottom">neutral</Box>
           <Box bgColor="primary" className="margin-bottom">primary</Box>
           <Box bgColor="danger" className="margin-bottom">danger</Box>
           <Box bgColor="success" className="margin-bottom">success</Box>
           <Box bgColor="warning" className="margin-bottom">warning</Box>
-          <Box bgColor="neutral" className="margin-bottom">neutral</Box>
 
           <Box bgColor="neutral" className="padding">
             <Box elevation={1} className="padding">
@@ -71,11 +83,3 @@ import { Text } from '../Typography';
     return <Example />;
   }}
 </Playground>
-
----
-
-## **Box**
-
-Box component grabs the theme given to `<BoxProvider />` and applies the style defined there based on the given `bgColor` and `elevation` prop value.
-
-<Props of={Box} />
