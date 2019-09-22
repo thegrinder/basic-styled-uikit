@@ -1,4 +1,9 @@
-import { getBox, getBoxBgColor, getBoxElevation } from '../boxSelectors';
+import {
+  getBox,
+  getBoxBgColor,
+  getBoxElevation,
+  getBackgroundColor,
+} from '../boxSelectors';
 
 const boxTheme = {
   bgColors: {
@@ -30,15 +35,21 @@ describe('boxTheme selectors', () => {
     });
   });
 
-  describe('getBoxBgColor', () => {
+  describe('getBoxBgColor and public getBackgroundColor', () => {
     Object.keys(bgColors).forEach(bgColor => {
       it(`should return the correct background color`, () => {
         expect(getBoxBgColor(theme, bgColor)).toEqual(bgColors[bgColor]);
+        expect(getBackgroundColor(bgColor)({ theme })).toEqual(
+          bgColors[bgColor]
+        );
       });
     });
 
     it('should return undefined if background color is not defined in the theme', () => {
       expect(getBoxBgColor(theme, 'invalidBgColor')).toEqual(undefined);
+      expect(getBackgroundColor('invalidBgColor')({ theme })).toEqual(
+        undefined
+      );
     });
   });
 
