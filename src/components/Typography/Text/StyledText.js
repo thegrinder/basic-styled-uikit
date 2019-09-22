@@ -30,7 +30,6 @@ const StyledText = styled.span`
     ignoreBackground,
     bgColor,
   }) => {
-    const baseLineHeight = getBaseLineHeight(theme);
     const sizingStyle = getTextSizingStyle(theme, sizing);
     return css`
       ${getTextCommonStyle(theme)}
@@ -39,7 +38,7 @@ const StyledText = styled.span`
           ? getTextColor(theme, color)
           : getTextColorOnBg(theme, bgColor, color)
       };
-      line-height: ${calcLineHeight(sizingStyle?.fontSize, baseLineHeight)};
+      line-height: ${calcLineHeight(sizingStyle?.fontSize)};
       margin-bottom: ${marginBottom ? `${getBaseLineHeight(theme)}rem` : '0'};
       opacity: ${getTextOpacity(theme, emphasis)};
       ${sizingStyle}

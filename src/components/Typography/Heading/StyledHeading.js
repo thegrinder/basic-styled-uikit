@@ -29,7 +29,6 @@ const StyledHeading = styled.h1`
     ignoreBackground,
     bgColor,
   }) => {
-    const baseLineHeight = getBaseLineHeight(theme);
     const sizingStyle = getHeadingSizingStyle(theme, sizing);
     return css`
       ${getHeadingCommonStyle(theme, sizing)}
@@ -38,8 +37,8 @@ const StyledHeading = styled.h1`
           ? getHeadingColor(theme, color)
           : getHeadingColorOnBg(theme, bgColor, color)
       };
-      line-height: ${calcLineHeight(sizingStyle?.fontSize, baseLineHeight)};
-      margin-bottom: ${marginBottom ? `${baseLineHeight}rem` : '0'};
+      line-height: ${calcLineHeight(sizingStyle?.fontSize)};
+      margin-bottom: ${marginBottom ? `${getBaseLineHeight(theme)}rem` : '0'};
       opacity: ${getHeadingOpacity(theme, emphasis)};
       ${sizingStyle}
     `;

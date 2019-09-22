@@ -14,10 +14,17 @@ export const rem = pxValue => ({ theme }) => {
   return `${pxValue / baseFontSize}rem`;
 };
 
-export const calcLineHeight = (remValue, baseLineHeight) => {
-  if (!remValue || !baseLineHeight || !remValue.includes('rem')) {
+export const calcLineHeight = fontSize => ({ theme }) => {
+  const baseLineHeight = getBaseLineHeight(theme);
+
+  if (!fontSize || !baseLineHeight) {
     return 1.5;
   }
-  const value = Number(remValue.replace('rem', ''));
-  return `${(Math.ceil(value / baseLineHeight) * baseLineHeight) / value}`;
+
+  const remValue = fontSize.includes('rem')
+    ? fontSize
+    : rem(Number(fontSize.replace('px', '')))({ theme });
+  const num = Number(remValue.replace('rem', ''));
+
+  return `${(Math.ceil(num / baseLineHeight) * baseLineHeight) / num}`;
 };

@@ -61,9 +61,9 @@ describe('typographySelectors', () => {
 
   describe('calcLineHeight', () => {
     it('should return the correct line height according to vertical rhythm and base line height', () => {
-      expect(calcLineHeight('1rem', 1.5)).toEqual('1.5');
-      expect(calcLineHeight('2rem', 1.5)).toEqual('1.5');
-      expect(calcLineHeight('3rem', 1.5)).toEqual('1');
+      expect(calcLineHeight('1rem')({ theme })).toEqual('1.5');
+      expect(calcLineHeight('2rem')({ theme })).toEqual('1.5');
+      expect(calcLineHeight('3rem')({ theme })).toEqual('1');
     });
   });
 });
