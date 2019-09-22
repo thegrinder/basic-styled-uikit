@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import { node } from 'prop-types';
 import { ModeProvider } from '../components/Mode';
 import { TypographyProvider } from '../components/Typography';
@@ -36,4 +36,4 @@ const customRender = (ui, options) =>
 
 export * from '@testing-library/react';
 
-export { customRender as render };
+export { customRender as render, fireEvent };

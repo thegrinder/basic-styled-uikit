@@ -10,7 +10,7 @@ const theme = {
         backgroundColor: '#ced4da',
       },
       checked: {
-        backgroundColor: '#1E88E5',
+        backgroundColor: '#1e88e5',
       },
     },
   },

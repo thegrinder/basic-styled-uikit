@@ -18,7 +18,7 @@ const formTheme = {
           color: '#161616',
         },
         active: {
-          borderColor: '#1E88E5',
+          borderColor: '#1e88e5',
         },
         disabled: {
           color: '#868e96',
@@ -42,7 +42,7 @@ const formTheme = {
           color: '#161616',
         },
         active: {
-          borderColor: '#1E88E5',
+          borderColor: '#1e88e5',
           color: '#161616',
         },
         disabled: {
@@ -64,11 +64,11 @@ const formTheme = {
           borderColor: '#ced4da',
         },
         active: {
-          borderColor: '#1E88E5',
+          borderColor: '#1e88e5',
         },
         checked: {
-          borderColor: '#1E88E5',
-          backgroundColor: '#1E88E5',
+          borderColor: '#1e88e5',
+          backgroundColor: '#1e88e5',
         },
       },
       invalid: {
@@ -82,7 +82,7 @@ const formTheme = {
         backgroundColor: '#ced4da',
       },
       checked: {
-        backgroundColor: '#1E88E5',
+        backgroundColor: '#1e88e5',
       },
     },
   },
