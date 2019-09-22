@@ -19,7 +19,7 @@ import { Text } from '../Typography';
 
 ## **Box**
 
-Box component grabs the theme given to `<BoxProvider />` and applies the style defined there based on the given `bgColor` and `elevation` prop value.
+Box component grabs the theme given to `<BoxProvider />` and applies the style defined there based on the given `bgColor` and `elevation` prop values.
 
 <Props of={Box} />
 
@@ -54,12 +54,14 @@ Box component grabs the theme given to `<BoxProvider />` and applies the style d
     const Example = () => (
       <BoxProvider theme={boxTheme}>
         <>
+          <h2>Background colors:</h2>
           <Box bgColor="neutral" className="margin-bottom">neutral</Box>
           <Box bgColor="primary" className="margin-bottom">primary</Box>
           <Box bgColor="danger" className="margin-bottom">danger</Box>
           <Box bgColor="success" className="margin-bottom">success</Box>
           <Box bgColor="warning" className="margin-bottom">warning</Box>
 
+          <h2>Elevations:</h2>
           <Box bgColor="neutral" className="padding">
             <Box elevation={1} className="padding">
               <span>one</span>

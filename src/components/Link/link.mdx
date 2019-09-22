@@ -14,12 +14,24 @@ import Link from './Link';
 `<LinkProvider />` is responsible for passing down the theme to the `<Link />` component. It expects the theme to be of certain structure.
 
 
+---
+
+
+## **Link**
+
+Link component grabs the theme given to `<LinkProvider />` and applies the style defined there based on the given `linkType` prop value.
+
+<Props of={Link} />
+
+
+---
+
 
 ### **Example**
 
 <Playground>
   {() => {
-    const linkTheme = {
+    const theme = {
       linkTypes: {
         default: {
           normal: {
@@ -39,15 +51,15 @@ import Link from './Link';
         },
       },
       common: {
-        fontWeight: 'bold',
         fontFamily: `'Inter var', sans-serif`,
       },
     };
 
     const Example = () => (
       <TypographyProvider>
-        <LinkProvider theme={linkTheme}>
+        <LinkProvider theme={theme}>
           <>
+            <h2>Link types:</h2>
             <Link className="margin-bottom">default link</Link>
             <Link linkType="muted">muted link</Link>
           </>
@@ -60,11 +72,3 @@ import Link from './Link';
 </Playground>
 
 ---
-
-
-
-## **Link**
-
-Link component grabs the theme given to `<LinkProvider />` and applies the style defined there based on the given `linkType` prop value.
-
-<Props of={Link} />
