@@ -25,14 +25,6 @@ describe('boxTheme selectors', () => {
     it('should return button theme', () => {
       expect(getBox(theme)).toEqual(boxTheme);
     });
-
-    it('should throw if no theme found', () => {
-      expect(() => getBox()).toThrow();
-    });
-
-    it('should throw if no button namespace found', () => {
-      expect(() => getBox({})).toThrow();
-    });
   });
 
   describe('getBoxBgColor and public getBackgroundColor', () => {

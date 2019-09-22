@@ -20,14 +20,6 @@ describe('typographySelectors', () => {
     it('should return typography theme', () => {
       expect(getTypography(theme)).toEqual(typographyTheme);
     });
-
-    it('should throw if no theme found', () => {
-      expect(() => getTypography()).toThrow();
-    });
-
-    it('should throw if no typography namespace found', () => {
-      expect(() => getTypography({})).toThrow();
-    });
   });
 
   describe('getBaseFontSize', () => {

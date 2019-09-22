@@ -25,14 +25,6 @@ describe('linkTheme selectors', () => {
     it('should return link theme', () => {
       expect(getLink(theme)).toEqual(linkTheme);
     });
-
-    it('should throw if no theme found', () => {
-      expect(() => getLink()).toThrow();
-    });
-
-    it('should throw if no link namespace found', () => {
-      expect(() => getLink({})).toThrow();
-    });
   });
 
   describe('getLinkTypeStyle', () => {

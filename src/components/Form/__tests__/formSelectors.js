@@ -96,14 +96,6 @@ describe('formTheme selectors', () => {
     it('should return button theme', () => {
       expect(getForm(theme)).toEqual(formTheme);
     });
-
-    it('should throw if no theme found', () => {
-      expect(() => getForm()).toThrow();
-    });
-
-    it('should throw if no button namespace found', () => {
-      expect(() => getForm({})).toThrow();
-    });
   });
 
   describe('getRegularInputStyle', () => {

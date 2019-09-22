@@ -34,14 +34,6 @@ describe('buttonTheme selectors', () => {
     it('should return button theme', () => {
       expect(getButton(theme)).toEqual(buttonTheme);
     });
-
-    it('should throw if no theme found', () => {
-      expect(() => getButton()).toThrow();
-    });
-
-    it('should throw if no button namespace found', () => {
-      expect(() => getButton({})).toThrow();
-    });
   });
 
   describe('getBtnTypeStyle', () => {
