@@ -1,28 +1,64 @@
 import React from 'react';
 import { render } from '../../../../test-utils';
+import FormProvider from '../../FormProvider';
 import Checkbox from '../Checkbox';
+
+const color = '#ced4da';
+const checkedColor = '#1e88e5';
+const invalidColor = '#f4511e';
+const fontSize = '1rem';
+
+const theme = {
+  misc: {
+    states: {
+      valid: {
+        normal: {
+          borderColor: color,
+        },
+        checked: {
+          borderColor: checkedColor,
+        },
+      },
+      invalid: {
+        borderColor: invalidColor,
+      },
+    },
+  },
+  common: {
+    misc: {
+      fontSize,
+    },
+  },
+};
 
 const testId = 'checkbox';
 
 const renderComponent = (props = {}) =>
-  render(<Checkbox data-testid={testId} {...props} />);
+  render(
+    <FormProvider theme={theme}>
+      <Checkbox data-testid={testId} {...props} />
+    </FormProvider>
+  );
 
 describe('<Checkbox />', () => {
   it('should render correctly with default props', () => {
-    const { queryByTestId } = renderComponent();
-    expect(queryByTestId(testId)).toBeTruthy();
+    const { getByTestId } = renderComponent();
+    const checkbox = getByTestId(testId);
+    expect(checkbox).toHaveStyleRule('border-color', color);
+    expect(checkbox).toHaveStyleRule('font-size', fontSize);
   });
 
-  it('should render correctly with custom props', () => {
-    const { queryByTestId } = renderComponent({
+  it('should render correct invalid state styles', () => {
+    const { getByTestId } = renderComponent({
       invalid: true,
     });
-    expect(queryByTestId(testId)).toBeTruthy();
+    const checkbox = getByTestId(testId);
+    expect(checkbox).toHaveStyleRule('border-color', invalidColor);
   });
 
   it('should render <input> tag with type checkbox', () => {
-    const { queryByTestId } = renderComponent();
-    expect(queryByTestId(testId).tagName).toEqual('INPUT');
-    expect(queryByTestId(testId).type).toEqual('checkbox');
+    const { getByTestId } = renderComponent();
+    expect(getByTestId(testId).tagName).toEqual('INPUT');
+    expect(getByTestId(testId).type).toEqual('checkbox');
   });
 });

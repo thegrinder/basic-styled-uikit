@@ -32,16 +32,16 @@ describe('<Box />', () => {
   });
 
   it('should render with correct styles based on the props', () => {
-    const { queryByText } = renderComponent({
+    const { getByText } = renderComponent({
       bgColor: 'neutral',
       elevation: 1,
     });
-    expect(queryByText(children)).toHaveStyleRule('background-color', neutral);
-    expect(queryByText(children)).toHaveStyleRule('box-shadow', boxShadow);
+    expect(getByText(children)).toHaveStyleRule('background-color', neutral);
+    expect(getByText(children)).toHaveStyleRule('box-shadow', boxShadow);
   });
 
   it('should render <div> tag', () => {
-    const { queryByText } = renderComponent();
-    expect(queryByText(children).tagName).toEqual('DIV');
+    const { getByText } = renderComponent();
+    expect(getByText(children).tagName).toEqual('DIV');
   });
 });

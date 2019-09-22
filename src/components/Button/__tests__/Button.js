@@ -48,21 +48,19 @@ const renderComponent = (props = {}) =>
 
 describe('<Button />', () => {
   it('should render correctly with default props and children', () => {
-    const { queryByTestId } = renderComponent();
-    const button = queryByTestId(testId);
-    expect(button).toBeTruthy();
+    const { getByTestId } = renderComponent();
+    const button = getByTestId(testId);
     expect(button).toHaveStyleRule('background-color', defaultBgColor);
     expect(button).toHaveStyleRule('font-size', mediumFontSize);
     expect(button).toHaveStyleRule('font-weight', fontWeight);
   });
 
   it('should render with correct styles based on custom props', () => {
-    const { queryByTestId } = renderComponent({
+    const { getByTestId } = renderComponent({
       btnType: 'primary',
       sizing: 's',
     });
-    const button = queryByTestId(testId);
-    expect(button).toBeTruthy();
+    const button = getByTestId(testId);
     expect(button).toHaveStyleRule('background-color', primaryBgColor);
     expect(button).toHaveStyleRule('font-size', smallFontSize);
     expect(button).toHaveStyleRule('font-weight', fontWeight);
@@ -79,16 +77,12 @@ describe('<Button />', () => {
   });
 
   it('should render <a> tag by default', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent({ as: 'a' });
-    expect(firstChild.tagName).toEqual('A');
+    const { getByTestId } = renderComponent({ as: 'a' });
+    expect(getByTestId(testId).tagName).toEqual('A');
   });
 
   it('should render render <button> tag', () => {
-    const {
-      container: { firstChild },
-    } = renderComponent();
-    expect(firstChild.tagName).toEqual('BUTTON');
+    const { getByTestId } = renderComponent();
+    expect(getByTestId(testId).tagName).toEqual('BUTTON');
   });
 });
