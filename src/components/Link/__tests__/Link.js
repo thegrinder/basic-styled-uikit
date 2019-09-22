@@ -32,7 +32,7 @@ const renderComponent = (props = {}) =>
   );
 
 describe('<Link />', () => {
-  it('should render correctly with default props and its children', () => {
+  it('should render with default styles and its children', () => {
     const { queryByText } = renderComponent();
     const link = queryByText(children);
     expect(link).toBeTruthy();
@@ -40,20 +40,20 @@ describe('<Link />', () => {
   });
 
   it('should render with correct styles based on custom props', () => {
-    const { queryByText } = renderComponent({
+    const { getByText } = renderComponent({
       linkType: 'muted',
     });
-    const link = queryByText(children);
+    const link = getByText(children);
     expect(link).toHaveStyleRule('color', mutedColor);
   });
 
   it('should render <a> tag by default', () => {
-    const { queryByText } = renderComponent();
-    expect(queryByText(children).tagName).toEqual('A');
+    const { getByText } = renderComponent();
+    expect(getByText(children).tagName).toEqual('A');
   });
 
   it('should render render <button> tag', () => {
-    const { queryByText } = renderComponent({ as: 'button' });
-    expect(queryByText(children).tagName).toEqual('BUTTON');
+    const { getByText } = renderComponent({ as: 'button' });
+    expect(getByText(children).tagName).toEqual('BUTTON');
   });
 });

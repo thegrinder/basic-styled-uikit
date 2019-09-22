@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import ModeContext from './ModeContext';
 
 const propTypes = {
+  /** initial mode */
   initialMode: oneOf(['light', 'dark']),
   children: node.isRequired,
 };
