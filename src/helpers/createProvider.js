@@ -3,13 +3,13 @@ import { object } from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import { useMode } from '../components/Mode';
 
-const createProvider = (key, defaultTheme) => {
+const createProvider = key => {
   const propTypes = {
     theme: object,
     darkTheme: object,
   };
 
-  const Provider = ({ theme = defaultTheme, darkTheme, ...rest }) => {
+  const Provider = ({ theme = {}, darkTheme, ...rest }) => {
     const modeContext = useMode();
     const memoizedTheme = useMemo(
       () => ({
