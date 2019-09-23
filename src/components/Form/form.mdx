@@ -1,0 +1,258 @@
+---
+name: Form
+menu: Components
+route: /components/form
+---
+
+import { Playground, Props } from 'docz';
+import { TypographyProvider } from '../Typography';
+import FormProvider from './FormProvider';
+import Input from './Input/Input';
+import InlineInput from './InlineInput/InlineInput';
+import Textarea from './Textarea/Textarea';
+import Select from './Select/Select';
+import Radio from './Radio/Radio';
+import Checkbox from './Checkbox/Checkbox';
+import Toggle from './Toggle/Toggle';
+import { Spinner } from '../../../docz';
+
+## **FormProvider**
+
+`<FormProvider />` is responsible for passing down the theme to the all the form components. It expects the theme to be of certain structure.
+
+
+---
+
+## **Input**
+
+Input component grabs the theme given to `<FormProvider />` and applies the style defined there based on the given `invalid` prop value or its state. You can use any props you would use on a regular input (i.e. the props are spread over the `<input />` element)
+
+<Props of={Input} />
+
+
+---
+
+
+## **InlineInput**
+
+InlineInput component grabs the theme given to `<FormProvider />` and applies the style defined there based on the given `invalid` prop value or its state. You can use any props you would use on a regular input (i.e. the props are spread over the `<input />` element). Since forms with inline inputs do not usually have submit buttons (i.e. inline editing), it offers a few other custom props to deal with the loading state: `submitting` and `renderSpinner`.
+
+<Props of={InlineInput} className="max-width-m" />
+
+
+---
+
+
+## **Textarea**
+
+Textarea component grabs the theme given to `<FormProvider />` and applies the style defined there based on the given `invalid` prop value or its state. You can use any props you would use on a regular textarea (i.e. the props are spread over the `<textarea />` element)
+
+<Props of={Textarea} />
+
+
+---
+
+
+## **Select**
+
+Select component grabs the theme given to `<FormProvider />` and applies the style defined there based on the given `invalid` prop value or its state. You can use any props you would use on a regular select (i.e. the props are spread over the `<select />` element)
+
+<Props of={Select} />
+
+
+---
+
+
+## **Radio**
+
+Radio component grabs the theme given to `<FormProvider />` and applies the style defined there based on the given `invalid` prop value or its state. You can use any props you would use on a regular radio input (i.e. the props are spread over the `<input type="radio" />` element)
+
+<Props of={Radio} />
+
+
+---
+
+
+## **Checkbox**
+
+Checkbox component grabs the theme given to `<FormProvider />` and applies the style defined there based on the given `invalid` prop value or its state. You can use any props you would use on a regular checkbox input (i.e. the props are spread over the `<input type="checkbox" />` element)
+
+<Props of={Checkbox} />
+
+
+---
+
+
+## **Toggle**
+
+Checkbox component grabs the theme given to `<FormProvider />` and applies the style defined there under the toggle key. Since there is no native toggle component, it only accepts the following props:
+
+<Props of={Toggle} />
+
+
+---
+
+
+### **Example**
+
+<Playground>
+  {() => {
+    const theme = {
+      regular: {
+        states: {
+          valid: {
+            normal: {
+              borderColor: '#ced4da',
+              color: '#161616',
+            },
+            active: {
+              borderColor: '#1e88e5',
+            },
+            disabled: {
+              color: '#868e96',
+              backgroundColor: '#f8f9fa',
+            },
+          },
+          invalid: {
+            color: '#f4511e',
+            borderColor: '#f4511e',
+          },
+        },
+      },
+      inline: {
+        states: {
+          valid: {
+            normal: {
+              color: '#161616',
+            },
+            hover: {
+              borderColor: '#ced4da',
+              color: '#161616',
+            },
+            active: {
+              borderColor: '#1e88e5',
+              color: '#161616',
+            },
+            disabled: {
+              borderColor: '#ced4da',
+              color: '#868e96',
+              backgroundColor: '#f8f9fa',
+            },
+          },
+          invalid: {
+            color: '#f4511e',
+            borderColor: '#f4511e',
+          },
+        },
+      },
+      misc: {
+        states: {
+          valid: {
+            normal: {
+              borderColor: '#ced4da',
+            },
+            active: {
+              borderColor: '#1e88e5',
+            },
+            checked: {
+              borderColor: '#1e88e5',
+              backgroundColor: '#1e88e5',
+            },
+          },
+          invalid: {
+            borderColor: '#f4511e',
+          },
+        },
+      },
+      toggle: {
+        states: {
+          normal: {
+            backgroundColor: '#ced4da',
+          },
+          checked: {
+            backgroundColor: '#1e88e5',
+          },
+        },
+      },
+      common: {
+        regular: {
+          fontSize: '1rem',
+          fontFamily: `'Inter var', sans-serif`,
+        },
+        inline: {
+          fontSize: '1rem',
+          fontFamily: `'Inter var', sans-serif`,
+        },
+        misc: {
+          fontSize: '1rem',
+        },
+      },
+    };
+
+    const Example = () => (
+      /* TypographyProvider is required for FormProvider to work */
+      <TypographyProvider>
+        <FormProvider theme={theme}>
+          <div className="max-width-m">
+            <h2>Input:</h2>
+            <Input className="margin-bottom" />
+            <Input invalid className="margin-bottom" />
+            <Input disabled value="disabled" className="margin-bottom" />
+
+            <h2>Inline input:</h2>
+            <InlineInput placeholder="Inline input" className="margin-bottom"/>
+            <InlineInput invalid placeholder="Inline input" className="margin-bottom"/>
+            <InlineInput disabled placeholder="Disabled" className="margin-bottom"/>
+
+            <h2>Textarea:</h2>
+            <Textarea className="margin-bottom" />
+            <Textarea invalid className="margin-bottom" />
+            <Textarea disabled className="margin-bottom" />
+
+            <h2>Select:</h2>
+            <Select className="margin-bottom">
+              <option>option one</option>
+              <option>option two</option>
+            </Select>
+            <Select invalid className="margin-bottom">
+              <option>option one</option>
+              <option>option two</option>
+            </Select>
+            <Select disabled className="margin-bottom">
+              <option>option one</option>
+              <option>option two</option>
+            </Select>
+
+            <h2>Radio:</h2>
+            <div className="margin-bottom">
+              <Radio />
+              <Radio invalid />
+              <Radio disabled />
+            </div>
+
+            <h2>Checkbox:</h2>
+            <div className="margin-bottom">
+              <Checkbox />
+              <Checkbox invalid />
+              <Checkbox disabled />
+            </div>
+
+            <h2>Toggle:</h2>
+            <div className="max-width-s">
+              <Toggle onChange={() => {}} />
+            </div>
+            <div className="max-width-s">
+              <Toggle disabled onChange={() => {}} />
+            </div>
+          </div>
+        </FormProvider>
+      </TypographyProvider>
+    );
+
+    return <Example />
+  }}
+</Playground>
+
+
+
+---

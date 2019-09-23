@@ -1,8 +1,22 @@
 import React from 'react';
 import { bool, node } from 'prop-types';
-import Wrapper from './Wrapper';
-import SpinnerWrapper from './SpinnerWrapper';
+import styled from 'styled-components';
+import { rem } from '../../Typography';
 import StyledInlineInput from './StyledInlineInput';
+
+const Wrapper = styled.div`
+  position: relative;
+  display: inline-block;
+`;
+
+const SpinnerWrapper = styled.div`
+  position: absolute;
+  right: ${rem(8)};
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+`;
 
 const propTypes = {
   /** submitting flag that shows a component passed to renderSpinner prop */
@@ -15,19 +29,14 @@ const propTypes = {
   renderSpinner: node,
 };
 
-const defaultProps = {
-  submitting: false,
-  disabled: false,
-  invalid: false,
-};
-
 const InlineInput = ({
-  submitting,
-  disabled,
-  invalid,
+  submitting = false,
+  disabled = false,
+  invalid = false,
   renderSpinner,
   ...rest
 }) => (
+  <div>
     <Wrapper>
       <StyledInlineInput
         submitting={submitting}
@@ -35,15 +44,11 @@ const InlineInput = ({
         invalid={invalid}
         {...rest}
       />
-      {submitting && (
-        <SpinnerWrapper>
-          {renderSpinner}
-        </SpinnerWrapper>
-      )}
+      {submitting && <SpinnerWrapper>{renderSpinner}</SpinnerWrapper>}
     </Wrapper>
+  </div>
 );
 
 InlineInput.propTypes = propTypes;
-InlineInput.defaultProps = defaultProps;
 
 export default InlineInput;

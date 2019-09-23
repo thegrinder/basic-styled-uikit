@@ -1,39 +1,64 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
-import { render, cleanup } from '@testing-library/react';
-
-
-import theme from '../../../../theme/theme';
+import { render } from '../../../../test-utils';
+import FormProvider from '../../FormProvider';
 import Radio from '../Radio';
 
+const color = '#ced4da';
+const checkedColor = '#1e88e5';
+const invalidColor = '#f4511e';
+const fontSize = '1rem';
 
-const renderComponent = (props = {}) => render(
-  <ThemeProvider theme={theme}>
-    <Radio {...props} />
-  </ThemeProvider>,
-);
+const theme = {
+  misc: {
+    states: {
+      valid: {
+        normal: {
+          borderColor: color,
+        },
+        checked: {
+          borderColor: checkedColor,
+        },
+      },
+      invalid: {
+        borderColor: invalidColor,
+      },
+    },
+  },
+  common: {
+    misc: {
+      fontSize,
+    },
+  },
+};
+const testId = 'radio';
+
+const renderComponent = (props = {}) =>
+  render(
+    <FormProvider theme={theme}>
+      <Radio data-testid={testId} {...props} />
+    </FormProvider>
+  );
 
 describe('<Radio />', () => {
-  afterEach(cleanup);
-
-  it('should render correctly with default props', () => {
-    const { container: { firstChild } } = renderComponent();
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toMatchSnapshot();
+  it('should render with default props', () => {
+    const { getByTestId } = renderComponent();
+    const radio = getByTestId(testId);
+    expect(radio).toHaveStyleRule('border-color', color);
+    expect(radio).toHaveStyleRule('font-size', fontSize);
   });
 
-  it('should render correctly with custom props', () => {
-    const { container: { firstChild } } = renderComponent({
+  it('should render with invalid state styles', () => {
+    const { getByTestId } = renderComponent({
       invalid: true,
     });
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toMatchSnapshot();
+    const radio = getByTestId(testId);
+    expect(radio).toHaveStyleRule('border-color', invalidColor);
+    expect(radio).toHaveStyleRule('font-size', fontSize);
   });
 
   it('should render <input> tag with type radio', () => {
-    const { container: { firstChild } } = renderComponent();
-    expect(firstChild.tagName).toEqual('INPUT');
-    expect(firstChild.type).toEqual('radio');
-    expect(firstChild).toMatchSnapshot();
+    const { getByTestId } = renderComponent();
+    expect(getByTestId(testId).tagName).toEqual('INPUT');
+    expect(getByTestId(testId).type).toEqual('radio');
   });
 });

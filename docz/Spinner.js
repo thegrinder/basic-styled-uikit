@@ -10,15 +10,11 @@ const propTypes = {
   color: string,
 };
 
-const defaultProps = {
-  color: '#fff',
-};
-
 const Spinner = styled.span`
   width: 20px;
   height: 20px;
   border-radius: 100%;
-  border: 2px solid ${({ color }) => color};
+  border: 2px solid ${({ color = '#fff' }) => color};
   border-bottom-color: transparent;
   animation: ${loading} 0.75s 0s infinite linear;
   vertical-align: middle;
@@ -26,6 +22,5 @@ const Spinner = styled.span`
 `;
 
 Spinner.propTypes = propTypes;
-Spinner.defaultProps = defaultProps;
 
 export default Spinner;

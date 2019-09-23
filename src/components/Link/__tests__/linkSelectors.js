@@ -1,24 +1,47 @@
-import theme from '../../../theme/theme';
-import linkTheme from '../linkTheme';
-import { getLinkTypeStyle, getLinkCommonStyle } from '../linkSelectors';
+import {
+  getLink,
+  getLinkTypeStyle,
+  getLinkCommonStyle,
+} from '../linkSelectors';
 
-const {
-  linkTypes,
-  common,
-} = linkTheme;
+const linkTheme = {
+  linkTypes: {
+    default: {
+      normal: {
+        color: '#1e88e5',
+      },
+    },
+  },
+  common: {
+    fontFamily: 'sans-serif',
+  },
+};
+
+const { linkTypes, common } = linkTheme;
+const theme = { link: linkTheme };
 
 describe('linkTheme selectors', () => {
+  describe('getLink', () => {
+    it('should return link theme', () => {
+      expect(getLink(theme)).toEqual(linkTheme);
+    });
+  });
+
   describe('getLinkTypeStyle', () => {
-    Object.keys(linkTypes).forEach((linkType) => {
-      Object.keys(linkTypes[linkType]).forEach((state) => {
-        it('should return the correct linkType style object', () => {
-          expect(getLinkTypeStyle(theme, linkType, state)).toEqual(linkTypes[linkType][state]);
+    Object.keys(linkTypes).forEach(linkType => {
+      Object.keys(linkTypes[linkType]).forEach(state => {
+        it(`should return the correct style object for specific link type in ${state} state`, () => {
+          expect(getLinkTypeStyle(theme, linkType, state)).toEqual(
+            linkTypes[linkType][state]
+          );
         });
       });
     });
 
-    it('should return empty object if linkType is invalid', () => {
-      expect(getLinkTypeStyle(theme, 'invalidLinkType', 'normal')).toEqual({});
+    it('should return undefined if link type is not defined in the theme', () => {
+      expect(getLinkTypeStyle(theme, 'invalidLinkType', 'normal')).toEqual(
+        undefined
+      );
     });
   });
 

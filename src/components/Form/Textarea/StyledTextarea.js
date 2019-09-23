@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { bool } from 'prop-types';
 import { commonInputStyles } from '../commonFormStyles';
-import { rem } from '../../../theme/typography';
+import { rem } from '../../Typography';
 
 const propTypes = {
   invalid: bool.isRequired,

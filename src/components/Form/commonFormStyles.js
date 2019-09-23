@@ -5,7 +5,7 @@ import {
   getMiscInputCommonStyle,
   getMiscInputStyle,
 } from './formSelectors';
-import { rem } from '../../theme/typography';
+import { rem } from '../Typography';
 
 export const commonInputStyles = css`
   -webkit-appearance: none;
@@ -13,11 +13,16 @@ export const commonInputStyles = css`
   width: 100%;
   border-width: 1px;
   border-style: solid;
-  transition: .2s ease-in-out;
+  border-color: transparent;
+  background-color: transparent;
+  transition: 0.2s ease-in-out;
   transition-property: color, background-color, border;
   border-radius: ${rem(6)};
   &:focus {
     outline: none;
+  }
+  &::placeholder {
+    color: inherit;
   }
   ${({ theme, invalid }) => css`
     ${getRegularInputCommonStyle(theme)}
@@ -34,16 +39,19 @@ export const commonInputStyles = css`
 export const miscInputStyles = css`
   -webkit-appearance: none;
   overflow: hidden;
+  box-szing: border-box;
   display: inline-block;
-  height: ${rem(24)};
-  width: ${rem(24)};
-  margin-top: ${rem(-4)};
+  font-size: ${rem(16)};
+  height: 1.5em;
+  width: 1.5em;
+  margin-top: -0.4em;
   vertical-align: middle;
+  background-color: transparent;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   border-width: 1px;
   border-style: solid;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
   transition-property: background-color, border;
   cursor: pointer;
   &:focus {
@@ -51,7 +59,7 @@ export const miscInputStyles = css`
   }
   &:disabled {
     cursor: default;
-    opacity: .6;
+    opacity: 0.6;
   }
   ${({ theme, invalid }) => css`
     ${getMiscInputCommonStyle(theme)}

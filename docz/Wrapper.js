@@ -1,13 +1,18 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
-import theme from '../src/theme/theme';
+import { node } from 'prop-types';
+import GlobalStyle from './GlobalStyle';
+
+const propTypes = {
+  children: node.isRequired,
+};
 
 const Wrapper = ({ children }) => (
-  <ThemeProvider theme={theme}>
-    <div>
-      {children}
-    </div>
-  </ThemeProvider>
+  <>
+    <GlobalStyle />
+    {children}
+  </>
 );
+
+Wrapper.propTypes = propTypes;
 
 export default Wrapper;

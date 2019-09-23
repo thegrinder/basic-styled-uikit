@@ -1,38 +1,60 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
-import { render, cleanup } from '@testing-library/react';
-
-
-import theme from '../../../../theme/theme';
+import { render } from '../../../../test-utils';
+import FormProvider from '../../FormProvider';
 import Input from '../Input';
 
+const color = '#161616';
+const invalidColor = '#f4511e';
+const fontSize = '1rem';
 
-const renderComponent = (props = {}) => render(
-  <ThemeProvider theme={theme}>
-    <Input {...props} />
-  </ThemeProvider>,
-);
+const theme = {
+  regular: {
+    states: {
+      valid: {
+        normal: {
+          color,
+        },
+      },
+      invalid: {
+        color: invalidColor,
+      },
+    },
+  },
+  common: {
+    regular: {
+      fontSize,
+    },
+  },
+};
+
+const testId = 'input';
+
+const renderComponent = (props = {}) =>
+  render(
+    <FormProvider theme={theme}>
+      <Input data-testid={testId} {...props} />
+    </FormProvider>
+  );
 
 describe('<Input />', () => {
-  afterEach(cleanup);
-
-  it('should render correctly with default props', () => {
-    const { container: { firstChild } } = renderComponent();
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toMatchSnapshot();
+  it('should render with default styles', () => {
+    const { getByTestId } = renderComponent();
+    const input = getByTestId(testId);
+    expect(input).toHaveStyleRule('color', color);
+    expect(input).toHaveStyleRule('font-size', fontSize);
   });
 
-  it('should render correctly with custom props', () => {
-    const { container: { firstChild } } = renderComponent({
+  it('should render with invalid state styles', () => {
+    const { getByTestId } = renderComponent({
       invalid: true,
     });
-    expect(firstChild).toBeDefined();
-    expect(firstChild).toMatchSnapshot();
+    const input = getByTestId(testId);
+    expect(input).toHaveStyleRule('color', invalidColor);
+    expect(input).toHaveStyleRule('font-size', fontSize);
   });
 
   it('should render <input> tag', () => {
-    const { container: { firstChild } } = renderComponent();
-    expect(firstChild.tagName).toEqual('INPUT');
-    expect(firstChild).toMatchSnapshot();
+    const { getByTestId } = renderComponent();
+    expect(getByTestId(testId).tagName).toEqual('INPUT');
   });
 });

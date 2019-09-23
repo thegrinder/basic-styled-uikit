@@ -1,0 +1,149 @@
+---
+name: Button
+menu: Components
+route: /components/button
+---
+
+import { Playground, Props } from 'docz';
+import { TypographyProvider } from '../Typography';
+import { ModeProvider, useMode } from '../Mode';
+import ButtonProvider from './ButtonProvider';
+import Button from './Button';
+import { Spinner } from '../../../docz';
+
+## **ButtonProvider**
+
+`<ButtonProvider />` is responsible for passing down the theme to the `<Button />` component. It expects the theme to be of certain structure.
+
+
+---
+
+
+## **Button**
+
+Button component grabs the theme given to `<ButtonProvider />` and applies the style defined there based on the given `btnType` and `sizing` prop values. It also accepts a few different non-theme related props for convenience reasons.
+
+<Props of={Button} />
+
+
+---
+
+
+### **Example**
+
+<Playground>
+  {() => {
+    const theme = {
+      btnTypes: {
+        default: {
+          normal: {
+            color: '#fff',
+            backgroundColor: '#868e96',
+          },
+          hover: {
+            backgroundColor: '#a1a7ae',
+          },
+          active: {
+            backgroundColor: '#6c747d',
+          },
+          disabled: {
+            backgroundColor: '#868e964d',
+          },
+        },
+        primary: {
+          normal: {
+            color: '#fff',
+            backgroundColor: '#1e88e5',
+          },
+          hover: {
+            backgroundColor: '#4ca0ea',
+          },
+          active: {
+            backgroundColor: '#166dba',
+          },
+          disabled: {
+            backgroundColor: '#1e88e566',
+          },
+        },
+        danger: {
+          normal: {
+            color: '#fff',
+            backgroundColor: '#f4511e',
+          },
+          hover: {
+            backgroundColor: '#f6774f',
+          },
+          active: {
+            backgroundColor: '#d53b0a',
+          },
+          disabled: {
+            backgroundColor: '#f4511e4d',
+          },
+        },
+      },
+      sizings: {
+        s: {
+          padding: '0 1rem',
+          lineHeight: '1.75rem',
+          fontSize: '.875rem',
+        },
+        m: {
+          padding: '0 1.875rem',
+          fontSize: '1rem',
+          lineHeight: '2.375rem',
+        },
+        l: {
+          padding: '0 2.5rem',
+          lineHeight: '3.375rem',
+          fontSize: '1.375rem',
+        },
+      },
+      common: {
+        fontWeight: '600',
+        fontFamily: `'Inter var', sans-serif`,
+      },
+    };
+
+    const Example = () => (
+      /* TypographyProvider is required for ButtonProvider to work */
+      <TypographyProvider>
+        <ButtonProvider theme={theme}>
+          <>
+            <h2>Button sizes:</h2>
+            <Button sizing="l" className="margin-bottom">
+              small size
+            </Button>
+            <Button sizing="m" className="margin-bottom">
+              medium size
+            </Button>
+            <Button sizing="s" className="margin-bottom">
+              large size
+            </Button>
+
+            <h2>Button types:</h2>
+            <Button btnType="default" className="margin-bottom">
+              default type
+            </Button>
+            <Button btnType="default" disabled className="margin-bottom">
+              disabled
+            </Button>
+            <Button btnType="primary" className="margin-bottom">
+              primary type
+            </Button>
+            <Button btnType="primary" disabled className="margin-bottom">
+              disabled
+            </Button>
+            <Button btnType="danger" className="margin-bottom">
+              danger type
+            </Button>
+            <Button btnType="danger" disabled className="margin-bottom">
+              disabled
+            </Button>
+          </>
+        </ButtonProvider>
+      </TypographyProvider>
+    );
+
+    return <Example />;
+  }}
+</Playground>

@@ -12,18 +12,20 @@ const StyledRadio = styled.input.attrs({
   ${miscInputStyles}
   border-radius: 50%;
   position: relative;
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background-color: #fff;
-    width: 25%;
-    height: 25%;
-    border-radius: 50%;
+  &:checked {
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 0.5em;
+      height: 0.5em;
+      border-radius: 50%;
+      background-color: #fff;
+    }
   }
 `;
 
