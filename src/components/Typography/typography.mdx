@@ -16,60 +16,44 @@ import Heading from './Heading/Heading';
 `<TypographyProvider />` is responsible for passing down the theme to the `<Heading />` and `<Text />` component. It expects the theme to be of certain structure.
 
 
-### **Minimal example**
+---
 
-The minimal typography theme has to include `baseFontSize`, `baseLineHeight`, `neutral` color, and `high` opacity value. You also need to provide the default `m` text size and the heading sizes you'll use (normally `h1` - `h6`).
+
+## **Heading**
+
+Heading component grabs the theme given to `<TypographyProvider />` and applies the style defined there based on the given `color`, `sizing`, and `emphasis` prop values. It also accepts a few different non-theme related props for convenience reasons.
+
+<Props of={Heading} />
+
+
+---
+
+
+## **Text**
+
+Text component grabs the theme given to `<TypographyProvider />` and applies the style defined there based on the given `color`, `sizing`, and `emphasis` prop values. It also accepts a few different non-theme related props for convenience reasons.
+
+<Props of={Text} />
+
+
+---
+
+
+### Example
+
 
 <Playground>
   {() => {
-    const typographyTheme = {
-      baseFontSize: 16,
-      baseLineHeight: 1.5,
-      opacities: {
-        high: 1,
-      },
-      colors: {
-        neutral: '#161616',
-      },
-      text: {
-        sizings: {
-          m: {
-            fontSize: '1rem',
-          },
-        },
-      },
-      heading: {
-        sizings: {
-          h1: {
-            fontSize: '3rem',
-          },
-          h2: {
-            fontSize: '2.5rem',
-          },
-        },
+    const boxTheme = {
+      bgColors: {
+        neutral: '#fff',
+        primary: '#1e88e5',
+        success: '#43a047',
+        warning: '#fdd835',
+        danger: '#f4511e',
       },
     };
 
-    const Example = () => (
-      <TypographyProvider theme={typographyTheme}>
-        <>
-          <Heading as="h1">Neutral heading H1</Heading>
-          <Heading as="h2">Neutral heading H2</Heading>
-          <Text>Neutral color and size m text</Text>
-        </>
-      </TypographyProvider>
-    );
-
-    return <Example />;
-  }}
-</Playground>
-
-
-However, you can easily add as many colors, opacities and sizes as you want. You can also add common style for heading or text under the `common` key.
-
-
-<Playground>
-  {() => {
     const typographyTheme = {
       baseFontSize: 16,
       baseLineHeight: 1.5,
@@ -84,6 +68,20 @@ However, you can easily add as many colors, opacities and sizes as you want. You
         success: '#43a047',
         warning: '#fdd835',
         danger: '#f4511e',
+      },
+      onBackground: {
+        primary: {
+          neutral: '#fff',
+        },
+        success: {
+          neutral: '#fff',
+        },
+        warning: {
+          neutral: '#161616',
+        },
+        danger: {
+          neutral: '#fff',
+        },
       },
       text: {
         sizings: {
@@ -127,83 +125,7 @@ However, you can easily add as many colors, opacities and sizes as you want. You
         },
         common: {
           fontFamily: `'Inter var', sans-serif`,
-        },
-      },
-    };
-
-    const Example = () => (
-      <TypographyProvider theme={typographyTheme}>
-        <>
-          <Heading as="h1" color="primary">primary heading</Heading>
-          <Heading as="h2" color="danger">danger heading</Heading>
-          <Heading as="h3" color="success">success heading</Heading>
-          <Heading as="h4" color="warning">warning heading</Heading>
-          <Heading as="h5" color="primary">primary heading</Heading>
-          <Heading as="h6">neutral heading</Heading>
-          <Text emphasis="high">text neutral emphasis high</Text>
-          <Text emphasis="medium">text neutral emphasis medium</Text>
-          <Text emphasis="low">text neutral emphasis low</Text>
-        </>
-      </TypographyProvider>
-    );
-
-    return <Example />;
-  }}
-</Playground>
-
-
-### **Theme with different backgrounds**
-
-The color of the font usually depends on its background and that's why you can also account for that interdependency in the theme. You can define colors for the corresponding backgrounds specified in `<Box />` component.
-
-<Playground>
-  {() => {
-    const boxTheme = {
-      bgColors: {
-        neutral: '#fff',
-        primary: '#1e88e5',
-        success: '#43a047',
-        warning: '#fdd835',
-        danger: '#f4511e',
-      },
-    };
-
-    const typographyTheme = {
-      baseFontSize: 16,
-      baseLineHeight: 1.5,
-      opacities: {
-        high: 1,
-      },
-      colors: {
-        neutral: '#161616',
-        primary: '#1e88e5',
-      },
-      onBackground: {
-        primary: {
-          neutral: '#fff',
-        },
-        success: {
-          neutral: '#fff',
-        },
-        warning: {
-          neutral: '#161616',
-        },
-        danger: {
-          neutral: '#fff',
-        },
-      },
-      text: {
-        sizings: {
-          m: {
-            fontSize: '1rem',
-          },
-        },
-      },
-      heading: {
-        sizings: {
-          h4: {
-            fontSize: '1.5rem',
-          },
+          fontWeight: 600,
         },
       },
     };
@@ -212,23 +134,75 @@ The color of the font usually depends on its background and that's why you can a
       <BoxProvider theme={boxTheme}>
         <TypographyProvider theme={typographyTheme}>
           <>
+            <h2>Heading sizes:</h2>
+            <Heading as="h1">h1 heading</Heading>
+            <Heading as="h2">h2 heading</Heading>
+            <Heading as="h3">h3 heading</Heading>
+            <Heading as="h4">h4 heading</Heading>
+            <Heading as="h5">h5 heading</Heading>
+            <Heading as="h6">h6 heading</Heading>
+            <Heading sizing="h6" as="h1" marginBottom>
+              small h1 heading
+            </Heading>
+
+            <h2>Heading colors:</h2>
+            <Heading as="h6" color="neutral">neutral heading</Heading>
+            <Heading as="h6" color="primary">primary heading</Heading>
+            <Heading as="h6" color="danger">danger heading</Heading>
+            <Heading as="h6" color="warning">warning heading</Heading>
+            <Heading as="h6" color="success" marginBottom>
+              success heading
+            </Heading>
+
+            <h2>Heading colors on different backgrounds:</h2>
+            <Box bgColor="neutral">
+              <Heading as="h6">heading on neutral backgroud</Heading>
+            </Box>
             <Box bgColor="primary">
-              <Heading as="h4">neutral heading on primary background</Heading>
+              <Heading as="h6">heading on primary backgroud</Heading>
             </Box>
             <Box bgColor="success">
-              <Heading as="h4">neutral heading on success background</Heading>
+              <Heading as="h6">heading on success backgroud</Heading>
+            </Box>
+            <Box bgColor="warning">
+              <Heading as="h6">heading on warning backgroud</Heading>
+            </Box>
+            <Box bgColor="danger" className="margin-bottom">
+              <Heading as="h6">heading on danger backgroud</Heading>
+            </Box>
+
+            <h2>Text sizes:</h2>
+            <Text sizing="l">large text</Text>
+            <Text sizing="m">medium text</Text>
+            <Text sizing="s">small text</Text>
+            <Text sizing="xs" marginBottom>
+              extra small text
+            </Text>
+
+            <h2>Text colors:</h2>
+            <Text color="neutral">neutral text</Text>
+            <Text color="primary">primary text</Text>
+            <Text color="danger">danger text</Text>
+            <Text color="warning">warning text</Text>
+            <Text color="success">success text</Text>
+
+            <h2>Text colors on different backgrounds:</h2>
+            <Box bgColor="neutral">
+              <Text>text on neutral backgroud</Text>
+            </Box>
+            <Box bgColor="primary">
+              <Text>text on primary backgroud</Text>
+            </Box>
+            <Box bgColor="success">
+              <Text>text on success backgroud</Text>
+            </Box>
+            <Box bgColor="warning">
+              <Text>text on warning backgroud</Text>
             </Box>
             <Box bgColor="danger">
-              <Text>neutral text on danger background</Text>
+              <Text>text on danger backgroud</Text>
             </Box>
-            <Box bgColor="warning">
-              <Text>neutral text on warning background</Text>
-            </Box>
-            <Box bgColor="warning">
-              <Heading as="h4" ignoreBackground={true} color="primary">
-                background ignored - primary heading
-              </Heading>
-            </Box>
+
           </>
         </TypographyProvider>
       </BoxProvider>
@@ -237,26 +211,3 @@ The color of the font usually depends on its background and that's why you can a
     return <Example />;
   }}
 </Playground>
-
-
----
-
-
-
-## **Heading**
-
-Heading component grabs the theme given to `<TypographyProvider />` and applies the style defined there based on the given `color`, `sizing`, and `emphasis` prop values. It also accepts a few different non-theme related props for convenience reasons.
-
-<Props of={Heading} />
-
-
-
----
-
-
-
-## **Text**
-
-Text component grabs the theme given to `<TypographyProvider />` and applies the style defined there based on the given `color`, `sizing`, and `emphasis` prop values. It also accepts a few different non-theme related props for convenience reasons.
-
-<Props of={Text} />
