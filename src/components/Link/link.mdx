@@ -56,6 +56,7 @@ Link component grabs the theme given to `<LinkProvider />` and applies the style
     };
 
     const Example = () => (
+      /* TypographyProvider is required for LinkProvider to work */
       <TypographyProvider>
         <LinkProvider theme={theme}>
           <>

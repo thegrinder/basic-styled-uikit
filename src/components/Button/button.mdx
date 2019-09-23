@@ -105,6 +105,7 @@ Button component grabs the theme given to `<ButtonProvider />` and applies the s
     };
 
     const Example = () => (
+      /* TypographyProvider is required for ButtonProvider to work */
       <TypographyProvider>
         <ButtonProvider theme={theme}>
           <>
