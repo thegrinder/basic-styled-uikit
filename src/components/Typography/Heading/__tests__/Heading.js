@@ -70,7 +70,6 @@ describe('<Heading />', () => {
   it('should render with default styles and children', () => {
     const { getByText } = renderComponent();
     const heading = getByText(children);
-    expect(heading).toBeTruthy();
     expect(heading).toHaveStyleRule('color', neutralColor);
     expect(heading).toHaveStyleRule('opacity', highEmphasis);
     expect(heading).toHaveStyleRule('font-size', h1FontSize);
@@ -93,19 +92,19 @@ describe('<Heading />', () => {
 
   ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].forEach(sizing => {
     it(`should render <${sizing}> tag`, () => {
-      const { queryByText } = renderComponent({
+      const { getByText } = renderComponent({
         as: sizing,
       });
-      expect(queryByText(children).tagName).toEqual(sizing.toUpperCase());
+      expect(getByText(children).tagName).toEqual(sizing.toUpperCase());
     });
   });
 
   it('should render large <h6> heading', () => {
-    const { queryByText } = renderComponent({
+    const { getByText } = renderComponent({
       sizing: 'h1',
       as: 'h6',
     });
-    expect(queryByText(children).tagName).toEqual('H6');
+    expect(getByText(children).tagName).toEqual('H6');
   });
 
   it('should render the correct color depending on the background', () => {
