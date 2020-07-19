@@ -1,11 +1,12 @@
-import { createSelector } from '../../helpers';
+import { getButton } from '../../theme/themeSelectors';
 
-export const getButton = createSelector('button');
+export const getBtnTypeStyle = (theme, btntype, state) => {
+  const typeStyle = getButton(theme).btnTypes[btntype];
+  return typeStyle && typeStyle[state]
+    ? typeStyle[state]
+    : {};
+};
 
-export const getBtnTypeStyle = (theme, btntype, state) =>
-  getButton(theme)?.btnTypes?.[btntype]?.[state];
+export const getBtnSizingStyle = (theme, sizing) => getButton(theme).sizings[sizing] || {};
 
-export const getBtnSizingStyle = (theme, sizing) =>
-  getButton(theme)?.sizings?.[sizing];
-
-export const getBtnCommonStyle = theme => getButton(theme)?.common;
+export const getBtnCommonStyle = theme => getButton(theme).common;

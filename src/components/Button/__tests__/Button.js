@@ -1,88 +1,58 @@
 import React from 'react';
-import { render } from '../../../test-utils';
-import ButtonProvider from '../ButtonProvider';
+import { ThemeProvider } from 'styled-components';
+import { render, cleanup } from '@testing-library/react';
+
+
+import theme from '../../../theme/theme';
 import Button from '../Button';
 
-const defaultBgColor = '#868e96';
-const primaryBgColor = '#1e88e5';
-const smallFontSize = '.875rem';
-const mediumFontSize = '1rem';
-const fontWeight = '600';
-const theme = {
-  btnTypes: {
-    default: {
-      normal: {
-        backgroundColor: defaultBgColor,
-      },
-    },
-    primary: {
-      normal: {
-        backgroundColor: primaryBgColor,
-      },
-    },
-  },
-  sizings: {
-    s: {
-      fontSize: smallFontSize,
-    },
-    m: {
-      fontSize: mediumFontSize,
-    },
-  },
-  common: {
-    fontWeight,
-  },
-};
 
-const testId = 'button';
 const children = <span>children</span>;
 
-const renderComponent = (props = {}) =>
-  render(
-    <ButtonProvider theme={theme}>
-      <Button data-testid={testId} {...props}>
-        {children}
-      </Button>
-    </ButtonProvider>
-  );
+const renderComponent = (props = {}) => render(
+  <ThemeProvider theme={theme}>
+    <Button {...props}>{children}</Button>
+  </ThemeProvider>,
+);
 
 describe('<Button />', () => {
-  it('should render with default styles and children', () => {
-    const { getByTestId } = renderComponent();
-    const button = getByTestId(testId);
-    expect(button).toHaveStyleRule('background-color', defaultBgColor);
-    expect(button).toHaveStyleRule('font-size', mediumFontSize);
-    expect(button).toHaveStyleRule('font-weight', fontWeight);
+  afterEach(cleanup);
+
+  it('should render correctly with default props and children', () => {
+    const { container: { firstChild }, getByText } = renderComponent();
+    const childrenElement = getByText('children');
+    expect(firstChild).toBeDefined();
+    expect(firstChild).toContainElement(childrenElement);
+    expect(firstChild).toMatchSnapshot();
   });
 
-  it('should render with correct styles based on custom props', () => {
-    const { getByTestId } = renderComponent({
-      btnType: 'primary',
-      sizing: 's',
-    });
-    const button = getByTestId(testId);
-    expect(button).toHaveStyleRule('background-color', primaryBgColor);
-    expect(button).toHaveStyleRule('font-size', smallFontSize);
-    expect(button).toHaveStyleRule('font-weight', fontWeight);
-  });
-
-  it('should render correctly with a spinner', () => {
+  it('should render correctly with custom props', () => {
     const spinner = <span data-testid="spinner" />;
-    const { queryByText, queryByTestId } = renderComponent({
+    const { container: { firstChild }, getByText, getByTestId } = renderComponent({
+      btnType: 'danger',
+      sizing: 's',
       submitting: true,
       renderSpinner: spinner,
     });
-    expect(queryByTestId('spinner')).toBeTruthy();
-    expect(queryByText('children')).toBeTruthy();
+
+    const spinnerElement = getByTestId('spinner');
+    const childrenElement = getByText('children');
+
+    expect(firstChild).toBeDefined();
+    expect(firstChild).toContainElement(spinnerElement);
+    expect(firstChild).toContainElement(childrenElement);
+    expect(firstChild).toMatchSnapshot();
   });
 
   it('should render <a> tag by default', () => {
-    const { getByTestId } = renderComponent({ as: 'a' });
-    expect(getByTestId(testId).tagName).toEqual('A');
+    const { container: { firstChild } } = renderComponent({ as: 'a' });
+    expect(firstChild.tagName).toEqual('A');
+    expect(firstChild).toMatchSnapshot();
   });
 
   it('should render render <button> tag', () => {
-    const { getByTestId } = renderComponent();
-    expect(getByTestId(testId).tagName).toEqual('BUTTON');
+    const { container: { firstChild } } = renderComponent();
+    expect(firstChild.tagName).toEqual('BUTTON');
+    expect(firstChild).toMatchSnapshot();
   });
 });

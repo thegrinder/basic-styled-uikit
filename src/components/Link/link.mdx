@@ -1,75 +1,41 @@
 ---
 name: Link
 menu: Components
-route: /components/link
 ---
 
 import { Playground, Props } from 'docz';
-import { TypographyProvider } from '../Typography';
-import LinkProvider from './LinkProvider';
 import Link from './Link';
-
-## **LinkProvider**
-
-`<LinkProvider />` is responsible for passing down the theme to the `<Link />` component. It expects the theme to be of certain structure.
+import { Spacer } from '../../../docz';
 
 
----
-
-
-## **Link**
-
-Link component grabs the theme given to `<LinkProvider />` and applies the style defined there based on the given `linkType` prop value.
+# Link
 
 <Props of={Link} />
 
 
----
-
-
-### **Example**
+### Link types
 
 <Playground>
-  {() => {
-    const theme = {
-      linkTypes: {
-        default: {
-          normal: {
-            color: '#1e88e5',
-          },
-          hover: {
-            color: '#166dba',
-          },
-        },
-        muted: {
-          normal: {
-            color: '#868e96',
-          },
-          hover: {
-            color: '#6c747d',
-          },
-        },
-      },
-      common: {
-        fontFamily: `'Inter var', sans-serif`,
-      },
-    };
-
-    const Example = () => (
-      /* TypographyProvider is required for LinkProvider to work */
-      <TypographyProvider>
-        <LinkProvider theme={theme}>
-          <>
-            <h2>Link types:</h2>
-            <Link className="margin-bottom">default link</Link>
-            <Link linkType="muted">muted link</Link>
-          </>
-        </LinkProvider>
-      </TypographyProvider>
-    );
-
-    return <Example />;
-  }}
+  <Link href="#" linkType="default">default link</Link>
+  <Spacer />
+  <Link href="#" linkType="muted">muted link</Link>
 </Playground>
 
----
+
+### Link sizes
+
+<Playground>
+  <Link sizing="l">large</Link>
+  <Spacer />
+  <Link sizing="m">medium</Link>
+  <Spacer />
+  <Link sizing="s">small</Link>
+  <Spacer />
+  <Link sizing="xs">extra small</Link>
+</Playground>
+
+### Link as button
+
+<Playground>
+  <Link href="#" as="button">button link</Link>
+</Playground>

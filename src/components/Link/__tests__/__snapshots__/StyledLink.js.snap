@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StyledLink /> should render <a> tag 1`] = `
+<a
+  class="StyledLink-sc-1s1vukk-0 iwauZx"
+>
+  children
+</a>
+`;
+
+exports[`<StyledLink /> should render correctly with children 1`] = `
+<a
+  class="StyledLink-sc-1s1vukk-0 iwauZx"
+>
+  children
+</a>
+`;

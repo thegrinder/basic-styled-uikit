@@ -8,10 +8,13 @@ const propTypes = {
   invalid: bool,
 };
 
-const Select = ({ invalid = false, ...rest }) => (
-  <StyledSelect invalid={invalid} {...rest} />
-);
+const defaultProps = {
+  invalid: false,
+};
+
+const Select = props => <StyledSelect {...props} />;
 
 Select.propTypes = propTypes;
+Select.defaultProps = defaultProps;
 
 export default Select;

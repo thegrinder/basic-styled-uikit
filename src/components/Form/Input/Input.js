@@ -8,10 +8,14 @@ const propTypes = {
   invalid: bool,
 };
 
-const Input = ({ invalid = false, ...rest }) => (
-  <StyledInput invalid={invalid} {...rest} />
-);
+const defaultProps = {
+  invalid: false,
+};
+
+const Input = props => <StyledInput {...props} />;
 
 Input.propTypes = propTypes;
+Input.defaultProps = defaultProps;
+
 
 export default Input;

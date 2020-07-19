@@ -1,41 +1,33 @@
 import React from 'react';
-import { render } from '../../../../test-utils';
-import FormProvider from '../../FormProvider';
+import { ThemeProvider } from 'styled-components';
+import { render, cleanup } from '@testing-library/react';
+
+
+import theme from '../../../../theme/theme';
 import Toggle from '../Toggle';
 
-const theme = {
-  toggle: {
-    states: {
-      normal: {
-        backgroundColor: '#ced4da',
-      },
-      checked: {
-        backgroundColor: '#1e88e5',
-      },
-    },
-  },
-};
 
-const testId = 'toggle';
-
-const renderComponent = (props = {}) =>
-  render(
-    <FormProvider theme={theme}>
-      <Toggle data-testid={testId} onChange={() => {}} {...props} />
-    </FormProvider>
-  );
+const renderComponent = (props = {}) => render(
+  <ThemeProvider theme={theme}>
+    <Toggle onChange={() => { }} {...props} />
+  </ThemeProvider>,
+);
 
 describe('<Toggle />', () => {
-  it('should render with default props', () => {
-    const { queryByTestId } = renderComponent();
-    expect(queryByTestId(testId)).toBeTruthy();
+  afterEach(cleanup);
+
+  it('should render correctly with default props', () => {
+    const { container: { firstChild } } = renderComponent();
+    expect(firstChild).toBeDefined();
+    expect(firstChild).toMatchSnapshot();
   });
 
-  it('should render with custom props', () => {
-    const { queryByTestId } = renderComponent({
+  it('should render correctly with custom props', () => {
+    const { container: { firstChild } } = renderComponent({
       h: 100,
       disabled: true,
     });
-    expect(queryByTestId(testId)).toBeTruthy();
+    expect(firstChild).toBeDefined();
+    expect(firstChild).toMatchSnapshot();
   });
 });

@@ -18,6 +18,7 @@ const config = {
   mode: 'production',
   entry: {
     index: './src/index.js',
+    theme: './src/theme/theme.js',
   },
   devtool: 'source-map',
   output: {

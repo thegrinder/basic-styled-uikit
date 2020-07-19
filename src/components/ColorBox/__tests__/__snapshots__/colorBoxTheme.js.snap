@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`colorBox should be defined 1`] = `
+Object {
+  "bgColors": Object {
+    "danger": "#f44336",
+    "dark": "#ced4da",
+    "darker": "#adb5bd",
+    "darkest": "#868e96",
+    "inherit": "inherit",
+    "light": "#e9ecef",
+    "lighter": "#f8f9fa",
+    "lightest": "#fafafa",
+    "normal": "#dee2e6",
+    "primary": "#2196f3",
+    "success": "#4caf50",
+    "transparent": "transparent",
+    "warning": "#ffeb3b",
+    "washedDanger": "#ffebee",
+    "washedPrimary": "#e3f2fd",
+    "washedSuccess": "#e8f5e9",
+    "washedWarning": "#fffde7",
+    "white": "#fff",
+  },
+  "borderColors": Object {
+    "danger": "#ffcdd2",
+    "dark": "#dee2e6",
+    "light": "#f8f9fa",
+    "normal": "#e9ecef",
+    "primary": "#bbdefb",
+    "success": "#c8e6c9",
+    "transparent": "transparent",
+    "warning": "#fff9c4",
+    "white": "#fff",
+  },
+}
+`;
