@@ -1,0 +1,50 @@
+---
+name: Heading
+menu: Components
+---
+
+import { Playground, Props } from 'docz';
+import Heading from './Heading';
+import ColorBox from '../ColorBox/ColorBox';
+
+# Heading
+
+<Props of={Heading} />
+
+
+### Heading sizes
+
+<Playground>
+  <Heading as="h1">Heading H1</Heading>
+  <Heading as="h2">Heading H2</Heading>
+  <Heading as="h3">Heading H3</Heading>
+  <Heading as="h4">Heading H4</Heading>
+  <Heading as="h5">Heading H5</Heading>
+  <Heading as="h6">Heading H6</Heading>
+  <Heading as="h6" sizing="h1">Big H6 heading</Heading>
+  <Heading as="h1" sizing="h6">Small H1 heading</Heading>
+</Playground>
+
+
+### Heading colors
+
+<Playground>
+  <ColorBox bgColor="darkest">
+    <Heading as="h3" color="white">White color heading</Heading>
+  </ColorBox>
+  <Heading as="h3" color="light">Light color heading</Heading>
+  <Heading as="h3" color="default">Default color heading</Heading>
+  <Heading as="h3" color="dark">Dark color heading</Heading>
+  <Heading as="h3" color="black">Black color heading</Heading>
+  <Heading as="h3" color="primary">Primary color heading</Heading>
+  <Heading as="h3" color="success">Success color heading</Heading>
+  <Heading as="h3" color="danger">Danger color heading</Heading>
+  <Heading as="h3" color="warning">Warning color heading</Heading>
+</Playground>
+
+### Heading with a bottom margin
+
+<Playground>
+  <Heading as="h3" marginBottom={true}>Heading with margin</Heading>
+  <p>Sample paragraph.</p>
+</Playground>

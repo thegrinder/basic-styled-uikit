@@ -1,59 +1,49 @@
 import React from 'react';
-import { render } from '../../../test-utils';
-import LinkProvider from '../LinkProvider';
+import { ThemeProvider } from 'styled-components';
+import { render, cleanup } from '@testing-library/react';
+
+
+import theme from '../../../theme/theme';
 import Link from '../Link';
 
-const defaultColor = '#1e88e5';
-const mutedColor = '#868e96';
-const theme = {
-  linkTypes: {
-    default: {
-      normal: {
-        color: defaultColor,
-      },
-    },
-    muted: {
-      normal: {
-        color: mutedColor,
-      },
-    },
-  },
-  common: {
-    fontFamily: `'Inter var', sans-serif`,
-  },
-};
+
 const children = 'children';
 
-const renderComponent = (props = {}) =>
-  render(
-    <LinkProvider theme={theme}>
-      <Link {...props}>{children}</Link>
-    </LinkProvider>
-  );
+const renderComponent = (props = {}) => render(
+  <ThemeProvider theme={theme}>
+    <Link {...props}>{children}</Link>
+  </ThemeProvider>,
+);
 
 describe('<Link />', () => {
-  it('should render with default styles and its children', () => {
-    const { queryByText } = renderComponent();
-    const link = queryByText(children);
-    expect(link).toBeTruthy();
-    expect(link).toHaveStyleRule('color', defaultColor);
+  afterEach(cleanup);
+
+  it('should render correctly with default props and its children', () => {
+    const { container: { firstChild } } = renderComponent();
+    expect(firstChild).toBeDefined();
+    expect(firstChild).toHaveTextContent(children);
+    expect(firstChild).toMatchSnapshot();
   });
 
-  it('should render with correct styles based on custom props', () => {
-    const { getByText } = renderComponent({
-      linkType: 'muted',
+  it('should render correctly with custom props', () => {
+    const { container: { firstChild } } = renderComponent({
+      sizing: 'xs',
+      linktype: 'muted',
     });
-    const link = getByText(children);
-    expect(link).toHaveStyleRule('color', mutedColor);
+    expect(firstChild).toBeDefined();
+    expect(firstChild).toHaveTextContent(children);
+    expect(firstChild).toMatchSnapshot();
   });
 
   it('should render <a> tag by default', () => {
-    const { getByText } = renderComponent();
-    expect(getByText(children).tagName).toEqual('A');
+    const { container: { firstChild } } = renderComponent();
+    expect(firstChild.tagName).toEqual('A');
+    expect(firstChild).toMatchSnapshot();
   });
 
   it('should render render <button> tag', () => {
-    const { getByText } = renderComponent({ as: 'button' });
-    expect(getByText(children).tagName).toEqual('BUTTON');
+    const { container: { firstChild } } = renderComponent({ as: 'button' });
+    expect(firstChild.tagName).toEqual('BUTTON');
+    expect(firstChild).toMatchSnapshot();
   });
 });

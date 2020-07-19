@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SpinnerWrapper /> should render correctly with children 1`] = `
+<div
+  class="SpinnerWrapper-afeq4w-0 dNWeqV"
+>
+  <span>
+    children
+  </span>
+</div>
+`;

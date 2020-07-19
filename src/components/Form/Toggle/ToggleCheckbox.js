@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { number } from 'prop-types';
 import { getToggleStyle } from '../formSelectors';
-import { rem } from '../../Typography';
+import { rem } from '../../../theme/typography';
 
 const propTypes = {
   h: number.isRequired,

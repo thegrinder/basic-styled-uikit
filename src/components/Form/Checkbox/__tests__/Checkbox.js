@@ -1,65 +1,39 @@
 import React from 'react';
-import { render } from '../../../../test-utils';
-import FormProvider from '../../FormProvider';
+import { ThemeProvider } from 'styled-components';
+import { render, cleanup } from '@testing-library/react';
+
+
+import theme from '../../../../theme/theme';
 import Checkbox from '../Checkbox';
 
-const color = '#ced4da';
-const checkedColor = '#1e88e5';
-const invalidColor = '#f4511e';
-const fontSize = '1rem';
 
-const theme = {
-  misc: {
-    states: {
-      valid: {
-        normal: {
-          borderColor: color,
-        },
-        checked: {
-          borderColor: checkedColor,
-        },
-      },
-      invalid: {
-        borderColor: invalidColor,
-      },
-    },
-  },
-  common: {
-    misc: {
-      fontSize,
-    },
-  },
-};
-
-const testId = 'checkbox';
-
-const renderComponent = (props = {}) =>
-  render(
-    <FormProvider theme={theme}>
-      <Checkbox data-testid={testId} {...props} />
-    </FormProvider>
-  );
+const renderComponent = (props = {}) => render(
+  <ThemeProvider theme={theme}>
+    <Checkbox {...props} />
+  </ThemeProvider>,
+);
 
 describe('<Checkbox />', () => {
-  it('should render with default styles', () => {
-    const { getByTestId } = renderComponent();
-    const checkbox = getByTestId(testId);
-    expect(checkbox).toHaveStyleRule('border-color', color);
-    expect(checkbox).toHaveStyleRule('font-size', fontSize);
+  afterEach(cleanup);
+
+  it('should render correctly with default props', () => {
+    const { container: { firstChild } } = renderComponent();
+    expect(firstChild).toBeDefined();
+    expect(firstChild).toMatchSnapshot();
   });
 
-  it('should render with invalid state styles', () => {
-    const { getByTestId } = renderComponent({
+  it('should render correctly with custom props', () => {
+    const { container: { firstChild } } = renderComponent({
       invalid: true,
     });
-    const checkbox = getByTestId(testId);
-    expect(checkbox).toHaveStyleRule('border-color', invalidColor);
-    expect(checkbox).toHaveStyleRule('font-size', fontSize);
+    expect(firstChild).toBeDefined();
+    expect(firstChild).toMatchSnapshot();
   });
 
   it('should render <input> tag with type checkbox', () => {
-    const { getByTestId } = renderComponent();
-    expect(getByTestId(testId).tagName).toEqual('INPUT');
-    expect(getByTestId(testId).type).toEqual('checkbox');
+    const { container: { firstChild } } = renderComponent();
+    expect(firstChild.tagName).toEqual('INPUT');
+    expect(firstChild.type).toEqual('checkbox');
+    expect(firstChild).toMatchSnapshot();
   });
 });

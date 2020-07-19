@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ToggleLabel /> should render correctly with children 1`] = `
+<label
+  class="ToggleLabel-sc-1p6qi5g-0 eRLkxH"
+>
+  <span>
+    children
+  </span>
+</label>
+`;

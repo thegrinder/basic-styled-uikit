@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { string } from 'prop-types';
-import { getTextSizingStyle } from '../Typography/Text/textSelectors';
+import { getTextSizingStyle } from '../Text/textSelectors';
 import { getLinkTypeStyle, getLinkCommonStyle } from './linkSelectors';
 
 const propTypes = {

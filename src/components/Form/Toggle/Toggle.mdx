@@ -1,0 +1,40 @@
+---
+name: Toggle
+menu: Components
+---
+
+import { Playground, Props } from 'docz';
+import Toggle from './Toggle';
+import { InputWrapper } from '../../../../docz';
+
+
+# Toggle
+
+<Props of={Toggle} />
+
+
+### Toggle
+
+<Playground>
+  <InputWrapper maxWidth={70}>
+    <Toggle onChange={() => {}} />
+  </InputWrapper>
+</Playground>
+
+
+### Disabled Toggle
+
+<Playground>
+  <InputWrapper maxWidth={70}>
+    <Toggle disabled={true} onChange={() => {}} />
+  </InputWrapper>
+</Playground>
+
+
+### Toggle with a custom height
+
+<Playground>
+  <InputWrapper maxWidth={70}>
+    <Toggle h={24} onChange={() => {}} />
+  </InputWrapper>
+</Playground>

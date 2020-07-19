@@ -8,10 +8,13 @@ const propTypes = {
   invalid: bool,
 };
 
-const Checkbox = ({ invalid = false, ...rest }) => (
-  <StyledCheckbox invalid={invalid} {...rest} />
-);
+const defaultProps = {
+  invalid: false,
+};
+
+const Checkbox = props => <StyledCheckbox {...props} />;
 
 Checkbox.propTypes = propTypes;
+Checkbox.defaultProps = defaultProps;
 
 export default Checkbox;

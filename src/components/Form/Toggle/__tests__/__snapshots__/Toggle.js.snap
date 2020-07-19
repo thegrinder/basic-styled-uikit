@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Toggle /> should render correctly with custom props 1`] = `
+<label
+  class="ToggleLabel-sc-1p6qi5g-0 eRLkxH"
+>
+  <input
+    class="ToggleCheckbox-sc-1nmpw1g-0 eOBzZF"
+    disabled=""
+    type="checkbox"
+  />
+  <span
+    class="ToggleSlider-sc-1lsczbh-0 culcUE"
+    disabled=""
+  />
+</label>
+`;
+
+exports[`<Toggle /> should render correctly with default props 1`] = `
+<label
+  class="ToggleLabel-sc-1p6qi5g-0 eRLkxH"
+>
+  <input
+    class="ToggleCheckbox-sc-1nmpw1g-0 isYkPP"
+    type="checkbox"
+  />
+  <span
+    class="ToggleSlider-sc-1lsczbh-0 eZyibu"
+  />
+</label>
+`;

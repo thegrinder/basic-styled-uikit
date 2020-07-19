@@ -7,10 +7,13 @@ const propTypes = {
   invalid: bool,
 };
 
-const Radio = ({ invalid = false, ...rest }) => (
-  <StyledRadio invalid={invalid} {...rest} />
-);
+const defaultProps = {
+  invalid: false,
+};
+
+const Radio = props => <StyledRadio {...props} />;
 
 Radio.propTypes = propTypes;
+Radio.defaultProps = defaultProps;
 
 export default Radio;

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { bool } from 'prop-types';
 import { miscInputStyles } from '../commonFormStyles';
+import { rem } from '../../../theme/typography';
 
 const propTypes = {
   invalid: bool.isRequired,
@@ -10,22 +11,20 @@ const StyledCheckbox = styled.input.attrs({
   type: 'checkbox',
 })`
   ${miscInputStyles}
-  border-radius: 0.25em;
+  border-radius: ${rem(4)};
   position: relative;
-  &:checked {
-    &:after {
-      content: '';
-      position: absolute;
-      top: 25%;
-      left: 0;
-      right: 0;
-      margin: auto;
-      width: 50%;
-      height: 25%;
-      transform: rotate(-50deg);
-      border-bottom: 0.125em solid #fff;
-      border-left: 0.125em solid #fff;
-    }
+  &:after {
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+    top: 25%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50%;
+    height: 25%;
+    transform: rotate(-50deg);
   }
 `;
 

@@ -1,23 +1,42 @@
 import React from 'react';
-import { string, oneOf, oneOfType, func } from 'prop-types';
+import {
+  string,
+  oneOf,
+  oneOfType,
+  func,
+} from 'prop-types';
 import StyledLink from './StyledLink';
 
 const propTypes = {
-  /** sizings keys in the theme passed to <TypographyProvider /> */
+  /** one of: s, m, l */
   sizing: string,
-  /** linkTypes keys in the theme passed to <LinkProvider /> */
+  /** one of: default, muted */
   linkType: string,
   /** rendered html tag or custom router link component */
   as: oneOfType([oneOf(['a', 'button']), func]),
 };
 
+const defaultProps = {
+  sizing: 'm',
+  linkType: 'default',
+  as: 'a',
+};
+
 const Link = ({
-  sizing = 'm',
-  linkType: linktype = 'default',
-  as = 'a',
+  sizing,
+  linkType: linktype,
+  as,
   ...rest
-}) => <StyledLink sizing={sizing} linktype={linktype} as={as} {...rest} />;
+}) => (
+    <StyledLink
+      sizing={sizing}
+      linktype={linktype}
+      as={as}
+      {...rest}
+    />
+);
 
 Link.propTypes = propTypes;
+Link.defaultProps = defaultProps;
 
 export default Link;
