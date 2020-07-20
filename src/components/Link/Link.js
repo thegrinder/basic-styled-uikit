@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  string,
-  oneOf,
-  oneOfType,
-  func,
-} from 'prop-types';
+import { string, oneOf, oneOfType, func } from 'prop-types';
 import StyledLink from './StyledLink';
 
 const propTypes = {
@@ -22,18 +17,8 @@ const defaultProps = {
   as: 'a',
 };
 
-const Link = ({
-  sizing,
-  linkType: linktype,
-  as,
-  ...rest
-}) => (
-    <StyledLink
-      sizing={sizing}
-      linktype={linktype}
-      as={as}
-      {...rest}
-    />
+const Link = ({ sizing, linkType: linktype, as, ...rest }) => (
+  <StyledLink sizing={sizing} linktype={linktype} as={as} {...rest} />
 );
 
 Link.propTypes = propTypes;

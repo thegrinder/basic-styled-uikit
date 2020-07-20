@@ -2,13 +2,13 @@
 
 exports[`<PlainButton /> should render correctly 1`] = `
 <button
-  class="PlainButton-e9bw3w-0 idFpfa"
+  class="PlainButton-e9bw3w-0 cyHGv"
 />
 `;
 
 exports[`<PlainButton /> should render text correctly 1`] = `
 <button
-  class="PlainButton-e9bw3w-0 idFpfa"
+  class="PlainButton-e9bw3w-0 cyHGv"
 >
   text
 </button>

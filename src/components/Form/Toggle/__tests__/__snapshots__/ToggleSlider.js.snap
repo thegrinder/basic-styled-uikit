@@ -2,12 +2,12 @@
 
 exports[`<ToggleSlider /> should render <span> tag with type checkbox 1`] = `
 <span
-  class="ToggleSlider-sc-1lsczbh-0 kgfYUV"
+  class="ToggleSlider-sc-1lsczbh-0 bOTuaD"
 />
 `;
 
 exports[`<ToggleSlider /> should render correctly 1`] = `
 <span
-  class="ToggleSlider-sc-1lsczbh-0 kgfYUV"
+  class="ToggleSlider-sc-1lsczbh-0 bOTuaD"
 />
 `;

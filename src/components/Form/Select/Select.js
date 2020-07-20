@@ -12,7 +12,7 @@ const defaultProps = {
   invalid: false,
 };
 
-const Select = props => <StyledSelect {...props} />;
+const Select = (props) => <StyledSelect {...props} />;
 
 Select.propTypes = propTypes;
 Select.defaultProps = defaultProps;

@@ -7,7 +7,6 @@ const propTypes = {
   invalid: bool.isRequired,
 };
 
-
 const StyledSelect = styled.select`
   ${commonInputStyles}
   text-transform: none;

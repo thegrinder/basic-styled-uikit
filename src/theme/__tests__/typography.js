@@ -17,7 +17,7 @@ describe('typography', () => {
   describe('getBaseFontSize', () => {
     it('should return the correct base font size', () => {
       expect(getBaseFontSize(theme)).toEqual(
-        theme.uiKit.typography.baseFontSize,
+        theme.uiKit.typography.baseFontSize
       );
     });
   });
@@ -25,7 +25,7 @@ describe('typography', () => {
   describe('getBaseLineHeight', () => {
     it('should return the correct base line height', () => {
       expect(getBaseLineHeight(theme)).toEqual(
-        theme.uiKit.typography.baseLineHeight,
+        theme.uiKit.typography.baseLineHeight
       );
     });
   });

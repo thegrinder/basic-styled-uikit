@@ -1,7 +1,10 @@
 import { bool } from 'prop-types';
 import styled, { css } from 'styled-components';
 
-import { getInlineInputCommonStyle, getInlineInputStyle } from '../formSelectors';
+import {
+  getInlineInputCommonStyle,
+  getInlineInputStyle,
+} from '../formSelectors';
 import { rem } from '../../../theme/typography';
 
 const propTypes = {
@@ -15,7 +18,7 @@ const StyledInlineInput = styled.input`
   width: 100%;
   border-width: 1px;
   border-style: solid;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
   transition-property: color, background-color, border;
   overflow: visible;
 

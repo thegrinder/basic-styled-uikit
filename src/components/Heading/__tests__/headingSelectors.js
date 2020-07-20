@@ -6,11 +6,7 @@ import {
   getHeadingCommonStyle,
 } from '../headingSelectors';
 
-const {
-  sizings,
-  colors,
-  common,
-} = headingTheme;
+const { sizings, colors, common } = headingTheme;
 
 describe('headingTheme selectors', () => {
   describe('getHeadingSizingStyle', () => {

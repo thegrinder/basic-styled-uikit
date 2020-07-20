@@ -18,20 +18,14 @@ const defaultProps = {
   marginBottom: false,
 };
 
-const Heading = ({
-  sizing,
-  color,
-  marginBottom,
-  as,
-  ...rest
-}) => (
-    <StyledHeading
-      as={as}
-      sizing={sizing || as}
-      marginBottom={marginBottom}
-      color={color}
-      {...rest}
-    />
+const Heading = ({ sizing, color, marginBottom, as, ...rest }) => (
+  <StyledHeading
+    as={as}
+    sizing={sizing || as}
+    marginBottom={marginBottom}
+    color={color}
+    {...rest}
+  />
 );
 
 Heading.propTypes = propTypes;

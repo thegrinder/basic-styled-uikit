@@ -12,7 +12,7 @@ const defaultProps = {
   invalid: false,
 };
 
-const Textarea = props => <StyledTextarea {...props} />;
+const Textarea = (props) => <StyledTextarea {...props} />;
 
 Textarea.propTypes = propTypes;
 Textarea.defaultProps = defaultProps;
