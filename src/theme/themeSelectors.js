@@ -1,4 +1,4 @@
-const createSelector = category => theme => theme.uiKit[category];
+const createSelector = (category) => (theme) => theme.uiKit[category];
 
 export const getTypography = createSelector('typography');
 export const getColors = createSelector('colors');

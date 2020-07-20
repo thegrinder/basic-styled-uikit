@@ -1,4 +1,3 @@
-
 import theme from '../../../theme/theme';
 import colorBoxTheme from '../colorBoxTheme';
 import { getBoxBgColor, getBoxBorderColor } from '../colorBoxSelectors';
@@ -17,8 +16,9 @@ describe('colorBoxTheme selectors', () => {
   describe('getBoxBgColor', () => {
     Object.keys(borderColors).forEach((borderColor) => {
       it('should return the correct background color', () => {
-        expect(getBoxBorderColor(theme, borderColor))
-          .toEqual(borderColors[borderColor]);
+        expect(getBoxBorderColor(theme, borderColor)).toEqual(
+          borderColors[borderColor]
+        );
       });
     });
   });

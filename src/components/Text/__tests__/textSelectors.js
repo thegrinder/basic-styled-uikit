@@ -6,11 +6,7 @@ import {
   getTextCommonStyle,
 } from '../textSelectors';
 
-const {
-  sizings,
-  colors,
-  common,
-} = textTheme;
+const { sizings, colors, common } = textTheme;
 
 describe('textTheme selectors', () => {
   describe('getTextSizingStyle', () => {

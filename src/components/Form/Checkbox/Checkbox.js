@@ -12,7 +12,7 @@ const defaultProps = {
   invalid: false,
 };
 
-const Checkbox = props => <StyledCheckbox {...props} />;
+const Checkbox = (props) => <StyledCheckbox {...props} />;
 
 Checkbox.propTypes = propTypes;
 Checkbox.defaultProps = defaultProps;

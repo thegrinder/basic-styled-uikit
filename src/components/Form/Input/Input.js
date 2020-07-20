@@ -12,10 +12,9 @@ const defaultProps = {
   invalid: false,
 };
 
-const Input = props => <StyledInput {...props} />;
+const Input = (props) => <StyledInput {...props} />;
 
 Input.propTypes = propTypes;
 Input.defaultProps = defaultProps;
-
 
 export default Input;

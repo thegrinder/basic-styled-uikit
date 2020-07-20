@@ -11,7 +11,7 @@ const defaultProps = {
   invalid: false,
 };
 
-const Radio = props => <StyledRadio {...props} />;
+const Radio = (props) => <StyledRadio {...props} />;
 
 Radio.propTypes = propTypes;
 Radio.defaultProps = defaultProps;

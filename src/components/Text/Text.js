@@ -20,20 +20,14 @@ const defaultProps = {
   marginBottom: false,
 };
 
-const Text = ({
-  sizing,
-  color,
-  marginBottom,
-  as,
-  ...rest
-}) => (
-    <StyledText
-      as={as}
-      marginBottom={marginBottom}
-      sizing={sizing}
-      color={color}
-      {...rest}
-    />
+const Text = ({ sizing, color, marginBottom, as, ...rest }) => (
+  <StyledText
+    as={as}
+    marginBottom={marginBottom}
+    sizing={sizing}
+    color={color}
+    {...rest}
+  />
 );
 
 Text.propTypes = propTypes;

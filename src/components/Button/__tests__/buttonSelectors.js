@@ -6,18 +6,16 @@ import {
   getBtnCommonStyle,
 } from '../buttonSelectors';
 
-const {
-  btnTypes,
-  sizings,
-  common,
-} = buttonTheme;
+const { btnTypes, sizings, common } = buttonTheme;
 
 describe('buttonTheme selectors', () => {
   describe('getBtnTypeStyle', () => {
     Object.keys(btnTypes).forEach((btnType) => {
       Object.keys(btnTypes[btnType]).forEach((state) => {
         it('should return the correct btnType style object', () => {
-          expect(getBtnTypeStyle(theme, btnType, state)).toEqual(btnTypes[btnType][state]);
+          expect(getBtnTypeStyle(theme, btnType, state)).toEqual(
+            btnTypes[btnType][state]
+          );
         });
       });
     });

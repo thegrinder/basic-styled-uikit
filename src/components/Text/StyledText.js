@@ -2,7 +2,11 @@ import styled, { css } from 'styled-components';
 import { string, bool } from 'prop-types';
 
 import { getBaseLineHeight, calcLineHeight } from '../../theme/typography';
-import { getTextSizingStyle, getTextColor, getTextCommonStyle } from './textSelectors';
+import {
+  getTextSizingStyle,
+  getTextColor,
+  getTextCommonStyle,
+} from './textSelectors';
 
 const propTypes = {
   color: string.isRequired,
@@ -12,12 +16,7 @@ const propTypes = {
 
 const StyledText = styled.span`
   display: block;
-  ${({
-    theme,
-    color,
-    sizing,
-    marginBottom,
-  }) => {
+  ${({ theme, color, sizing, marginBottom }) => {
     const baseLineHeight = getBaseLineHeight(theme);
     const sizingStyle = getTextSizingStyle(theme, sizing);
     return css`

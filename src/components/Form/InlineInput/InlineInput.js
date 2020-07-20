@@ -28,19 +28,15 @@ const InlineInput = ({
   renderSpinner,
   ...rest
 }) => (
-    <Wrapper>
-      <StyledInlineInput
-        submitting={submitting}
-        disabled={submitting || disabled}
-        invalid={invalid}
-        {...rest}
-      />
-      {submitting && (
-        <SpinnerWrapper>
-          {renderSpinner}
-        </SpinnerWrapper>
-      )}
-    </Wrapper>
+  <Wrapper>
+    <StyledInlineInput
+      submitting={submitting}
+      disabled={submitting || disabled}
+      invalid={invalid}
+      {...rest}
+    />
+    {submitting && <SpinnerWrapper>{renderSpinner}</SpinnerWrapper>}
+  </Wrapper>
 );
 
 InlineInput.propTypes = propTypes;

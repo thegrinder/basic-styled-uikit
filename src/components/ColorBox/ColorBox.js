@@ -22,7 +22,7 @@ const StyledColorBox = styled.div`
 
 StyledColorBox.propTypes = propTypes;
 
-const ColorBox = props => <StyledColorBox {...props} />;
+const ColorBox = (props) => <StyledColorBox {...props} />;
 
 ColorBox.propTypes = propTypes;
 

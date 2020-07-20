@@ -13,7 +13,7 @@ export const commonInputStyles = css`
   width: 100%;
   border-width: 1px;
   border-style: solid;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
   transition-property: color, background-color, border;
   border-radius: ${rem(6)};
   &:focus {
@@ -43,7 +43,7 @@ export const miscInputStyles = css`
   background-position: 50% 50%;
   border-width: 1px;
   border-style: solid;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
   transition-property: background-color, border;
   cursor: pointer;
   &:focus {
@@ -51,7 +51,7 @@ export const miscInputStyles = css`
   }
   &:disabled {
     cursor: default;
-    opacity: .6;
+    opacity: 0.6;
   }
   ${({ theme, invalid }) => css`
     ${getMiscInputCommonStyle(theme)}
